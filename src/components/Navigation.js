@@ -16,6 +16,11 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const handleHomeClick = () => {
+    router.push('/');
+    setIsMenuOpen(false);
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -35,7 +40,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <button
-                onClick={() => router.push('/')}
+                onClick={handleHomeClick}
                 className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
               >
                 <span className="text-2xl mr-2">🐍</span>

@@ -4,6 +4,8 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'out',
+  basePath: process.env.NODE_ENV === 'production' ? '/github-io-game' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/github-io-game/' : '',
   images: {
     unoptimized: true,
     domains: ['images.unsplash.com', 'via.placeholder.com']
