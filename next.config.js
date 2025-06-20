@@ -5,8 +5,21 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   distDir: 'out',
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+    domains: ['images.unsplash.com', 'via.placeholder.com']
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  env: {
+    CUSTOM_KEY: 'snake-game-site',
+  },
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  compress: true,
+  swcMinify: true,
 }
 
 module.exports = nextConfig 

@@ -9,7 +9,13 @@
     "start": "next start",
     "export": "next export",
     "deploy": "npm run build && npm run export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:github": "bash ./scripts/deploy-github.sh",
+    "deploy:vercel": "bash ./scripts/deploy.sh",
+    "build:analyze": "ANALYZE=true npm run build",
+    "test:build": "npm run build && echo '✅ 构建测试通过'",
+    "clean": "rm -rf .next out node_modules/.cache",
+    "prepare": "chmod +x scripts/*.sh"
   },
   "dependencies": {
     "next": "14.0.0",
