@@ -1,0 +1,96 @@
+{
+  "site": {
+    "name": "Snake Game - Play Classic Snake Online Free",
+    "shortName": "Snake Game",
+    "description": "Play the classic Snake game online for free! Control the snake to eat food and grow longer. No download required, play directly in your browser.",
+    "keywords": "snake game, classic games, arcade games, online games, free games, browser games",
+    "url": "https://snake-game-site.vercel.app",
+    "logo": "/images/logo.png",
+    "favicon": "/favicon.ico",
+    "ogImage": "/images/og-snake-game.jpg"
+  },
+  "homepage": {
+    "mainGame": "snake-game",
+    "featuredGames": ["snake-game", "tetris"],
+    "popularGames": ["pac-man", "frogger", "breakout", "space-invaders"],
+    "topCategories": ["arcade", "puzzle", "shooter", "racing", "action"]
+  },
+  "navigation": {
+    "topItems": [
+      {
+        "type": "game",
+        "id": "snake-game",
+        "title": "Snake Game",
+        "url": "/snake-game"
+      },
+      {
+        "type": "category",
+        "id": "arcade",
+        "title": "Arcade Games",
+        "url": "/games/arcade"
+      },
+      {
+        "type": "game",
+        "id": "tetris",
+        "title": "Tetris",
+        "url": "/tetris"
+      },
+      {
+        "type": "category",
+        "id": "puzzle",
+        "title": "Puzzle Games",
+        "url": "/games/puzzle"
+      },
+      {
+        "type": "game",
+        "id": "pac-man",
+        "title": "Pac-Man",
+        "url": "/pac-man"
+      }
+    ]
+  },
+  "layout": {
+    "maxGamesPerRow": 6,
+    "gameCardAspectRatio": "4:3",
+    "sidebarGameCount": 8,
+    "relatedGameCount": 5
+  },
+  "seo": {
+    "titleTemplate": "%s | Snake Game Online",
+    "defaultTitle": "Snake Game - Play Classic Snake Online Free",
+    "defaultDescription": "Play the classic Snake game online for free! Control the snake to eat food and grow longer. No download required, play directly in your browser.",
+    "googleAnalyticsId": "G-XXXXXXXXXX",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Snake Game Online",
+      "description": "Free online Snake game and other classic arcade games",
+      "url": "https://snake-game-site.vercel.app"
+    }
+  },
+  "footer": {
+    "links": [
+      {
+        "title": "About Us",
+        "url": "/about",
+        "external": false
+      },
+      {
+        "title": "Contact Us",
+        "url": "/contact",
+        "external": false
+      },
+      {
+        "title": "Privacy Policy",
+        "url": "/privacy",
+        "external": false
+      },
+      {
+        "title": "Terms of Service",
+        "url": "/terms",
+        "external": false
+      }
+    ],
+    "copyright": "© 2024 Snake Game Online. All rights reserved."
+  }
+} 

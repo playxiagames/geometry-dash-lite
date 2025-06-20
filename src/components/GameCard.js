@@ -1,0 +1,278 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { formatPlayCount, formatRating, generateStarRating } from '../utils/gameData';
+
+// Single Game Card Component
+const GameCard = ({ 
+  game, 
+  size = 'medium', 
+  showStats = true, 
+  showDescription = false,
+  className = '' 
+}) => {
+  const [imageError, setImageError] = useState(false);
+  const router = useRouter();
+
+  const handleGameClick = () => {
+    router.push(`/${game.slug}`);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
+  // Size configurations
+  const sizeConfig = {
+    small: {
+      container: 'rounded-lg shadow-sm hover:shadow-md',
+      image: 'h-24',
+      title: 'text-sm font-medium',
+      description: 'text-xs',
+      stats: 'text-xs'
+    },
+    medium: {
+      container: 'rounded-lg shadow-md hover:shadow-lg',
+      image: 'h-32',
+      title: 'text-base font-semibold',
+      description: 'text-sm',
+      stats: 'text-sm'
+    },
+    large: {
+      container: 'rounded-lg shadow-lg hover:shadow-xl',
+      image: 'h-40',
+      title: 'text-lg font-bold',
+      description: 'text-base',
+      stats: 'text-base'
+    }
+  };
+
+  const config = sizeConfig[size];
+  const starRating = generateStarRating(game.rating);
+
+  return (
+    <div 
+      className={`game-card bg-white ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
+      onClick={handleGameClick}
+    >
+      {/* Game Image */}
+      <div className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 relative`}>
+        {!imageError ? (
+          <img
+            src={game.screenshot}
+            alt={game.title}
+            className="w-full h-full object-cover"
+            onError={handleImageError}
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white">
+            <div className="text-center">
+              <div className="text-2xl mb-1">🎮</div>
+              <div className="text-xs font-medium">{game.title}</div>
+            </div>
+          </div>
+        )}
+        
+        {/* Rating Badge */}
+        {showStats && (
+          <div className="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded-full">
+            ⭐ {formatRating(game.rating)}
+          </div>
+        )}
+      </div>
+
+      {/* Game Info */}
+      <div className="p-3">
+        <h3 className={`${config.title} text-gray-900 mb-1 line-clamp-2`}>
+          {game.title}
+        </h3>
+        
+        {showDescription && (
+          <p className={`${config.description} text-gray-600 mb-2 line-clamp-2`}>
+            {game.description}
+          </p>
+        )}
+
+        {showStats && (
+          <div className="flex items-center justify-between mt-2">
+            <div className="flex items-center space-x-2">
+              {/* Star Rating */}
+              <div className="flex items-center">
+                {[...Array(starRating.full)].map((_, i) => (
+                  <span key={i} className="text-yellow-400">⭐</span>
+                ))}
+                {starRating.half === 1 && <span className="text-yellow-400">⭐</span>}
+                {[...Array(starRating.empty)].map((_, i) => (
+                  <span key={i} className="text-gray-300">⭐</span>
+                ))}
+              </div>
+            </div>
+            
+            <div className={`${config.stats} text-gray-500`}>
+              🎮 {formatPlayCount(game.playCount)}
+            </div>
+          </div>
+        )}
+
+        {/* Game Tags */}
+        {game.tags && game.tags.length > 0 && size !== 'small' && (
+          <div className="mt-2 flex flex-wrap gap-1">
+            {game.tags.slice(0, 2).map((tag, index) => (
+              <span
+                key={index}
+                className="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+// Games Grid Component
+export const GameGrid = ({ 
+  games, 
+  title,
+  showMore = false,
+  onShowMore,
+  className = '',
+  gridCols = 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'
+}) => {
+  if (!games || games.length === 0) {
+    return (
+      <div className={`games-grid ${className}`}>
+        {title && (
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+          </div>
+        )}
+        <div className="text-center py-12">
+          <div className="text-gray-400 text-6xl mb-4">🎮</div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">No games available</h3>
+          <p className="text-gray-600">Check back later for new games!</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`games-grid ${className}`}>
+      {title && (
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+          {showMore && (
+            <button
+              onClick={onShowMore}
+              className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+            >
+              View All →
+            </button>
+          )}
+        </div>
+      )}
+      
+      <div className={`grid ${gridCols} gap-4`}>
+        {games.map((game) => (
+          <GameCard
+            key={game.id}
+            game={game}
+            size="medium"
+            showStats={true}
+            showDescription={false}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Sidebar Game List Component
+export const SidebarGameList = ({ 
+  games, 
+  title = "Popular Games",
+  className = '' 
+}) => {
+  if (!games || games.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className={`sidebar-game-list ${className}`}>
+      {title && (
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
+      )}
+      
+      <div className="space-y-3">
+        {games.map((game, index) => (
+          <SidebarGameItem 
+            key={game.id} 
+            game={game} 
+            rank={index + 1}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Sidebar Game Item Component
+const SidebarGameItem = ({ game, rank }) => {
+  const [imageError, setImageError] = useState(false);
+  const router = useRouter();
+
+  const handleGameClick = () => {
+    router.push(`/${game.slug}`);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
+  return (
+    <div 
+      className="sidebar-game-item flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+      onClick={handleGameClick}
+    >
+      {/* Rank Badge */}
+      <div className="flex-shrink-0 w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
+        {rank}
+      </div>
+      
+      {/* Game Image */}
+      <div className="flex-shrink-0 w-12 h-12 rounded-md overflow-hidden bg-gray-200">
+        {!imageError ? (
+          <img
+            src={game.screenshot}
+            alt={game.title}
+            className="w-full h-full object-cover"
+            onError={handleImageError}
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white text-xs">
+            🎮
+          </div>
+        )}
+      </div>
+      
+      {/* Game Info */}
+      <div className="flex-1 min-w-0">
+        <h4 className="text-sm font-medium text-gray-900 truncate">
+          {game.title}
+        </h4>
+        <div className="flex items-center space-x-2 text-xs text-gray-500">
+          <span>⭐ {formatRating(game.rating)}</span>
+          <span>•</span>
+          <span>🎮 {formatPlayCount(game.playCount)}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default GameCard; 

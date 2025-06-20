@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "id": "arcade",
+      "name": "Arcade Games",
+      "slug": "arcade",
+      "description": "Classic arcade games that defined gaming history",
+      "icon": "🕹️",
+      "color": "#FF6B6B",
+      "isTopLevel": true,
+      "gameCount": 5
+    },
+    {
+      "id": "puzzle",
+      "name": "Puzzle Games",
+      "slug": "puzzle",
+      "description": "Brain-teasing puzzle games to challenge your mind",
+      "icon": "🧩",
+      "color": "#4ECDC4",
+      "isTopLevel": true,
+      "gameCount": 1
+    },
+    {
+      "id": "shooter",
+      "name": "Shooter Games",
+      "slug": "shooter",
+      "description": "Action-packed shooting games",
+      "icon": "🚀",
+      "color": "#45B7D1",
+      "isTopLevel": true,
+      "gameCount": 1
+    },
+    {
+      "id": "racing",
+      "name": "Racing Games",
+      "slug": "racing",
+      "description": "High-speed racing and driving games",
+      "icon": "🏎️",
+      "color": "#96CEB4",
+      "isTopLevel": true,
+      "gameCount": 0
+    },
+    {
+      "id": "action",
+      "name": "Action Games",
+      "slug": "action",
+      "description": "Fast-paced action and adventure games",
+      "icon": "⚡",
+      "color": "#FFEAA7",
+      "isTopLevel": true,
+      "gameCount": 0
+    }
+  ]
+} 

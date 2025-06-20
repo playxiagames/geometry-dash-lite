@@ -1,0 +1,164 @@
+{
+  "games": [
+    {
+      "id": "snake-game",
+      "title": "Snake Game",
+      "slug": "snake-game",
+      "description": "Classic Snake Game - Control the snake to eat food and grow longer without hitting walls or yourself!",
+      "longDescription": "Snake Game is one of the most popular classic arcade games of all time. Guide your snake around the screen to eat food and grow longer, but be careful not to run into walls or your own tail! The game gets progressively faster and more challenging as your snake grows. This timeless game has entertained players for decades and remains a favorite for its simple yet addictive gameplay.",
+      "category": "arcade",
+      "tags": ["snake", "classic", "arcade", "retro", "pixel"],
+      "iframeUrl": "https://snake-game-js.vercel.app/",
+      "thumbnail": "/images/games/thumbnails/snake-game.jpg",
+      "screenshot": "/images/games/screenshots/snake-game.jpg",
+      "isPopular": true,
+      "isFeatured": true,
+      "playCount": 2500000,
+      "rating": 4.8,
+      "controls": [
+        "Arrow keys or WASD to move the snake",
+        "Space bar to pause/unpause the game",
+        "R key to restart the game"
+      ],
+      "tips": [
+        "Plan your moves ahead to avoid getting trapped",
+        "Use the edges of the screen strategically",
+        "Don't rush - steady movement wins the game",
+        "Create spirals to maximize space usage"
+      ],
+      "relatedGameIds": ["tetris", "pac-man", "frogger", "breakout"]
+    },
+    {
+      "id": "tetris",
+      "title": "Tetris",
+      "slug": "tetris",
+      "description": "The classic falling blocks puzzle game. Arrange tetromino pieces to clear lines!",
+      "longDescription": "Tetris is the legendary puzzle game where falling blocks called tetrominoes must be arranged to create complete horizontal lines. When a line is completed, it disappears, and you score points. The game speeds up as you progress, making it increasingly challenging.",
+      "category": "puzzle",
+      "tags": ["tetris", "puzzle", "blocks", "classic"],
+      "iframeUrl": "https://tetris-game-online.vercel.app/",
+      "thumbnail": "/images/games/thumbnails/tetris.jpg",
+      "screenshot": "/images/games/screenshots/tetris.jpg",
+      "isPopular": true,
+      "isFeatured": true,
+      "playCount": 3200000,
+      "rating": 4.9,
+      "controls": [
+        "Arrow keys to move and rotate pieces",
+        "Space bar for hard drop",
+        "P key to pause"
+      ],
+      "tips": [
+        "Keep the stack low and even",
+        "Save space for I-pieces (Tetris lines)",
+        "Don't panic when speed increases"
+      ],
+      "relatedGameIds": ["snake-game", "pac-man", "breakout"]
+    },
+    {
+      "id": "pac-man",
+      "title": "Pac-Man",
+      "slug": "pac-man",
+      "description": "Navigate the maze, eat dots, and avoid ghosts in this arcade classic!",
+      "longDescription": "Pac-Man is the iconic arcade game where you control a yellow character through a maze, eating dots while avoiding colorful ghosts. Eat power pellets to temporarily turn the tables and chase the ghosts for bonus points!",
+      "category": "arcade",
+      "tags": ["pac-man", "maze", "arcade", "retro"],
+      "iframeUrl": "https://pacman-game-online.vercel.app/",
+      "thumbnail": "/images/games/thumbnails/pac-man.jpg",
+      "screenshot": "/images/games/screenshots/pac-man.jpg",
+      "isPopular": true,
+      "isFeatured": false,
+      "playCount": 1800000,
+      "rating": 4.7,
+      "controls": [
+        "Arrow keys to move Pac-Man",
+        "Collect dots and avoid ghosts"
+      ],
+      "tips": [
+        "Learn ghost movement patterns",
+        "Use corners to your advantage",
+        "Save power pellets for strategic moments"
+      ],
+      "relatedGameIds": ["snake-game", "frogger", "breakout"]
+    },
+    {
+      "id": "frogger",
+      "title": "Frogger",
+      "slug": "frogger",
+      "description": "Help the frog cross busy roads and rivers safely in this classic arcade game!",
+      "longDescription": "Guide your frog across busy highways and dangerous rivers. Dodge cars, trucks, and other obstacles while timing your jumps perfectly. This classic arcade game tests your reflexes and timing skills.",
+      "category": "arcade",
+      "tags": ["frogger", "crossing", "arcade", "timing"],
+      "iframeUrl": "https://frogger-game-online.vercel.app/",
+      "thumbnail": "/images/games/thumbnails/frogger.jpg",
+      "screenshot": "/images/games/screenshots/frogger.jpg",
+      "isPopular": true,
+      "isFeatured": false,
+      "playCount": 950000,
+      "rating": 4.5,
+      "controls": [
+        "Arrow keys to move the frog",
+        "Time your movements carefully"
+      ],
+      "tips": [
+        "Watch traffic patterns before moving",
+        "Use lily pads and logs to rest",
+        "Don't stay in one place too long"
+      ],
+      "relatedGameIds": ["snake-game", "pac-man", "breakout"]
+    },
+    {
+      "id": "breakout",
+      "title": "Breakout",
+      "slug": "breakout",
+      "description": "Break all the bricks with your paddle and ball in this classic arcade game!",
+      "longDescription": "Control a paddle to bounce a ball and break all the colored bricks above. This classic arcade game requires precision, timing, and strategy to clear all levels without losing your ball.",
+      "category": "arcade",
+      "tags": ["breakout", "paddle", "ball", "bricks"],
+      "iframeUrl": "https://breakout-game-online.vercel.app/",
+      "thumbnail": "/images/games/thumbnails/breakout.jpg",
+      "screenshot": "/images/games/screenshots/breakout.jpg",
+      "isPopular": true,
+      "isFeatured": false,
+      "playCount": 750000,
+      "rating": 4.4,
+      "controls": [
+        "Left/Right arrow keys or mouse to move paddle",
+        "Keep the ball in play"
+      ],
+      "tips": [
+        "Aim for the corners to create angles",
+        "Control ball speed with paddle movement",
+        "Target hard-to-reach bricks first"
+      ],
+      "relatedGameIds": ["snake-game", "tetris", "pac-man"]
+    },
+    {
+      "id": "space-invaders",
+      "title": "Space Invaders",
+      "slug": "space-invaders",
+      "description": "Defend Earth from alien invasion in this classic space shooter!",
+      "longDescription": "The legendary space shooter where you control a cannon defending Earth from waves of descending aliens. Shoot the invaders before they reach the bottom while using barriers for protection.",
+      "category": "shooter",
+      "tags": ["space", "shooter", "aliens", "retro"],
+      "iframeUrl": "https://space-invaders-online.vercel.app/",
+      "thumbnail": "/images/games/thumbnails/space-invaders.jpg",
+      "screenshot": "/images/games/screenshots/space-invaders.jpg",
+      "isPopular": true,
+      "isFeatured": false,
+      "playCount": 1200000,
+      "rating": 4.6,
+      "controls": [
+        "Left/Right arrow keys to move",
+        "Space bar to shoot",
+        "Destroy all aliens to advance"
+      ],
+      "tips": [
+        "Use barriers strategically for cover",
+        "Target UFOs for bonus points",
+        "Clear columns to reduce alien fire"
+      ],
+      "relatedGameIds": ["snake-game", "pac-man", "breakout"]
+    }
+  ]
+} 
