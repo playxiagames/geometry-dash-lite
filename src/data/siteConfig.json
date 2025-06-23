@@ -1,17 +1,16 @@
 {
   "site": {
-    "name": "Snake Game - Play Classic Snake Online Free",
-    "shortName": "Snake Game",
-    "description": "Play the classic Snake game online for free! Control the snake to eat food and grow longer. No download required, play directly in your browser.",
-    "keywords": "snake game, classic games, arcade games, online games, free games, browser games",
-    "url": "https://snake-game-site.vercel.app",
+    "name": "Geometry Dash Lite - Play Geometry Dash Online Free",
+    "shortName": "Geometry Dash Lite",
+    "description": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer. No download required, play directly in your browser.",
+    "url": "https://geometry-dash-lite.org/",
     "logo": "/images/logo.png",
     "favicon": "/favicon.ico",
-    "ogImage": "/images/og-snake-game.jpg"
+    "ogImage": "/images/og-geometry-dash-lite.jpg"
   },
   "homepage": {
-    "mainGame": "snake-game",
-    "featuredGames": ["snake-game", "tetris"],
+    "mainGame": "geometry-dash-lite",
+    "featuredGames": ["geometry-dash-lite", "tetris"],
     "popularGames": ["pac-man", "frogger", "breakout", "space-invaders"],
     "topCategories": ["arcade", "puzzle", "shooter", "racing", "action"]
   },
@@ -19,9 +18,9 @@
     "topItems": [
       {
         "type": "game",
-        "id": "snake-game",
-        "title": "Snake Game",
-        "url": "/snake-game"
+        "id": "geometry-dash-lite",
+        "title": "Geometry Dash Lite",
+        "url": "/geometry-dash-lite"
       },
       {
         "type": "category",
@@ -56,16 +55,16 @@
     "relatedGameCount": 5
   },
   "seo": {
-    "titleTemplate": "%s | Snake Game Online",
-    "defaultTitle": "Snake Game - Play Classic Snake Online Free",
-    "defaultDescription": "Play the classic Snake game online for free! Control the snake to eat food and grow longer. No download required, play directly in your browser.",
-    "googleAnalyticsId": "G-XXXXXXXXXX",
+    "titleTemplate": "%s | Geometry Dash Lite Online",
+    "defaultTitle": "Geometry Dash Lite - Play Geometry Dash Online Free",
+    "defaultDescription": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer. No download required, play directly in your browser.",
+    "googleAnalyticsId": "G-F1S6GMESB8",
     "structuredData": {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Snake Game Online",
-      "description": "Free online Snake game and other classic arcade games",
-      "url": "https://snake-game-site.vercel.app"
+      "name": "Geometry Dash Lite Online",
+      "description": "Free online Geometry Dash Lite and other classic platform games",
+      "url": "https://geometry-dash-lite.org/"
     }
   },
   "footer": {
@@ -91,6 +90,6 @@
         "external": false
       }
     ],
-    "copyright": "© 2024 Snake Game Online. All rights reserved."
+    "copyright": "© 2025 Geometry Dash Lite Online. All rights reserved."
   }
 } 

@@ -1,19 +1,18 @@
 {
-  "name": "snake-game-site",
+  "name": "geometry-dash-lite-site",
   "version": "1.0.0",
-  "description": "Universal game website template with Snake Game",
+  "description": "Universal game website template with Geometry Dash Lite",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run build && npm run export",
-    "lint": "next lint",
-    "deploy:github": "bash ./scripts/deploy-github.sh",
+    "deploy": "bash scripts/deploy.sh",
+    "deploy:github": "bash scripts/deploy-github.sh",
     "deploy:vercel": "bash ./scripts/deploy.sh",
     "build:analyze": "ANALYZE=true npm run build",
-    "test:build": "npm run build && echo '✅ 构建测试通过'",
+    "test:build": "npm run build && echo '✅ Build test passed'",
     "clean": "rm -rf .next out node_modules/.cache",
     "prepare": "chmod +x scripts/*.sh"
   },
@@ -29,7 +28,6 @@
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5"
   },
-  "keywords": ["snake game", "online games", "arcade games", "free games"],
-  "author": "Snake Game Site",
+  "author": "Geometry Dash Lite Site",
   "license": "MIT"
 } 

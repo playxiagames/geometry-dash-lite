@@ -16,6 +16,10 @@ const GameCard = ({
   const router = useRouter();
 
   const handleGameClick = () => {
+    // 追踪游戏卡片点击事件
+    if (typeof window.trackGameEvent === 'function') {
+      window.trackGameEvent('game_card_click', game.title, 'Navigation');
+    }
     router.push(`/${game.slug}`);
   };
 
@@ -77,28 +81,27 @@ const GameCard = ({
         
         {/* Rating Badge */}
         {showStats && (
-          <div className="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded-full">
+          <div className="absolute top-1 right-1 bg-black bg-opacity-70 text-white text-[10px] px-1 py-0.5 rounded-full">
             ⭐ {formatRating(game.rating)}
           </div>
         )}
       </div>
 
       {/* Game Info */}
-      <div className="p-3">
-        <h3 className={`${config.title} text-gray-900 mb-1 line-clamp-2`}>
+      <div className="p-2">
+        <div className={`${config.title} text-gray-900 mb-1 line-clamp-2 text-left font-semibold`}>
           {game.title}
-        </h3>
+        </div>
         
         {showDescription && (
-          <p className={`${config.description} text-gray-600 mb-2 line-clamp-2`}>
+          <p className={`${config.description} text-gray-600 mb-1 line-clamp-2 text-left`}>
             {game.description}
           </p>
         )}
 
-        {showStats && (
-          <div className="flex items-center justify-between mt-2">
-            <div className="flex items-center space-x-2">
-              {/* Star Rating */}
+        {/* {showStats && (
+          <div className="flex items-center justify-between mt-1">
+            <div className="flex items-center space-x-1">
               <div className="flex items-center">
                 {[...Array(starRating.full)].map((_, i) => (
                   <span key={i} className="text-yellow-400">⭐</span>
@@ -114,15 +117,15 @@ const GameCard = ({
               🎮 {formatPlayCount(game.playCount)}
             </div>
           </div>
-        )}
+        )} */}
 
         {/* Game Tags */}
         {game.tags && game.tags.length > 0 && size !== 'small' && (
-          <div className="mt-2 flex flex-wrap gap-1">
+          <div className="mt-1 flex flex-wrap gap-1">
             {game.tags.slice(0, 2).map((tag, index) => (
               <span
                 key={index}
-                className="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full"
+                className="inline-block bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded-full"
               >
                 {tag}
               </span>
@@ -204,15 +207,14 @@ export const SidebarGameList = ({
   return (
     <div className={`sidebar-game-list ${className}`}>
       {title && (
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
+        <h3 className="text-base font-semibold text-gray-900 mb-3 text-left">{title}</h3>
       )}
       
-      <div className="space-y-3">
+      <div className="space-y-2">
         {games.map((game, index) => (
           <SidebarGameItem 
             key={game.id} 
             game={game} 
-            rank={index + 1}
           />
         ))}
       </div>
@@ -221,11 +223,15 @@ export const SidebarGameList = ({
 };
 
 // Sidebar Game Item Component
-const SidebarGameItem = ({ game, rank }) => {
+const SidebarGameItem = ({ game }) => {
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
 
   const handleGameClick = () => {
+    // 追踪侧边栏游戏点击事件
+    if (typeof window.trackGameEvent === 'function') {
+      window.trackGameEvent('sidebar_game_click', game.title, 'Navigation');
+    }
     router.push(`/${game.slug}`);
   };
 
@@ -235,16 +241,11 @@ const SidebarGameItem = ({ game, rank }) => {
 
   return (
     <div 
-      className="sidebar-game-item flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+      className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
       onClick={handleGameClick}
     >
-      {/* Rank Badge */}
-      <div className="flex-shrink-0 w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
-        {rank}
-      </div>
-      
       {/* Game Image */}
-      <div className="flex-shrink-0 w-12 h-12 rounded-md overflow-hidden bg-gray-200">
+      <div className="flex-shrink-0 w-32 h-18 rounded-md overflow-hidden bg-gray-200">
         {!imageError ? (
           <img
             src={game.screenshot}
@@ -262,10 +263,10 @@ const SidebarGameItem = ({ game, rank }) => {
       
       {/* Game Info */}
       <div className="flex-1 min-w-0">
-        <h4 className="text-sm font-medium text-gray-900 truncate">
+        <div className="text-sm font-medium text-gray-900 truncate text-left">
           {game.title}
-        </h4>
-        <div className="flex items-center space-x-2 text-xs text-gray-500">
+        </div>
+        <div className="flex items-center space-x-1 text-xs text-gray-500">
           <span>⭐ {formatRating(game.rating)}</span>
           <span>•</span>
           <span>🎮 {formatPlayCount(game.playCount)}</span>

@@ -3,7 +3,7 @@
 This directory should contain the following images:
 
 ## Game Thumbnails (/images/games/thumbnails/)
-- snake-game.jpg (200x150px)
+- geometry-dash-lite.jpg (200x150px)
 - tetris.jpg (200x150px)
 - pac-man.jpg (200x150px)
 - frogger.jpg (200x150px)
@@ -11,7 +11,7 @@ This directory should contain the following images:
 - space-invaders.jpg (200x150px)
 
 ## Game Screenshots (/images/games/screenshots/)
-- snake-game.jpg (800x600px)
+- geometry-dash-lite.jpg (800x600px)
 - tetris.jpg (800x600px)
 - pac-man.jpg (800x600px)
 - frogger.jpg (800x600px)
@@ -20,7 +20,7 @@ This directory should contain the following images:
 
 ## Site Images
 - logo.png (Site logo)
-- og-snake-game.jpg (1200x630px - Open Graph image)
+- og-geometry-dash-lite.jpg (1200x630px - Open Graph image)
 - apple-touch-icon.png (180x180px)
 - favicon.svg (Site favicon in SVG format)
 

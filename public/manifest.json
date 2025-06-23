@@ -1,7 +1,7 @@
 {
-  "name": "Snake Game - Play Classic Snake Online Free",
-  "short_name": "Snake Game",
-  "description": "Play the classic Snake game online for free! Control the snake to eat food and grow longer.",
+  "name": "Geometry Dash Lite - Play Geometry Dash Online Free",
+  "short_name": "Geometry Dash Lite",
+  "description": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f3f4f6",

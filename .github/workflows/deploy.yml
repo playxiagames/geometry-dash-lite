@@ -1,9 +1,7 @@
-name: Deploy Snake Game to GitHub Pages
+name: Deploy Geometry Dash Lite Site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
   workflow_dispatch:
 
@@ -16,6 +14,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NODE_VERSION: '18'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
       - name: Install dependencies
@@ -34,6 +35,27 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Verify CNAME file
+        run: |
+          if [ -f "out/CNAME" ]; then
+            echo "✅ CNAME file found in build output:"
+            cat out/CNAME
+          else
+            echo "❌ CNAME file not found in build output"
+            exit 1
+          fi
+
+      - name: Verify sitemap.xml
+        run: |
+          if [ -f "out/sitemap.xml" ]; then
+            echo "✅ Sitemap.xml found in build output"
+            echo "URL count: $(grep -c '<url>' out/sitemap.xml)"
+          else
+            echo "❌ Sitemap.xml not found in build output"
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -52,4 +74,10 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
+
+      - name: Verify deployment
+        run: |
+          echo "🚀 Deployment completed!"
+          echo "🌐 Site URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📄 Custom domain: geometry-dash-lite.org" 

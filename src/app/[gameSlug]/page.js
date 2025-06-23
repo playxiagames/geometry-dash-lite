@@ -26,16 +26,14 @@ export async function generateMetadata({ params }) {
 
 // 生成静态参数
 export async function generateStaticParams() {
-  const games = [
-    { gameSlug: 'snake-game' },
-    { gameSlug: 'tetris' },
-    { gameSlug: 'pac-man' },
-    { gameSlug: 'frogger' },
-    { gameSlug: 'breakout' },
-    { gameSlug: 'space-invaders' }
-  ];
+  // 导入游戏数据
+  const gamesData = await import('../../data/games.json');
+  const games = gamesData.games || [];
   
-  return games;
+  // 返回所有游戏的slug参数
+  return games.map((game) => ({
+    gameSlug: game.slug
+  }));
 }
 
 export default function GamePage({ params }) {
@@ -72,7 +70,7 @@ export default function GamePage({ params }) {
           {/* Sidebar - Related Games */}
           <div className="lg:col-span-1">
             <div className="sticky top-20">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">🎮 More Games</h2>
+              {/* <h2 className="text-xl font-bold text-gray-900 mb-4">🎮 More Games</h2> */}
               <SidebarGameList games={relatedGames} />
             </div>
           </div>

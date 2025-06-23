@@ -101,7 +101,6 @@ export const generateGameMetadata = (game) => {
   return {
     title: `${game.title} - Play ${game.title} Online Free`,
     description: game.description,
-    keywords: game.tags.join(', '),
     openGraph: {
       title: game.title,
       description: game.description,

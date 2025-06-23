@@ -25,15 +25,14 @@ export async function generateMetadata({ params }) {
 
 // 生成静态参数
 export async function generateStaticParams() {
-  const categories = [
-    { categorySlug: 'arcade' },
-    { categorySlug: 'puzzle' },
-    { categorySlug: 'shooter' },
-    { categorySlug: 'racing' },
-    { categorySlug: 'action' }
-  ];
+  // 导入分类数据
+  const categoriesData = await import('../../../data/categories.json');
+  const categories = categoriesData.categories || [];
   
-  return categories;
+  // 返回所有分类的slug参数
+  return categories.map((category) => ({
+    categorySlug: category.slug
+  }));
 }
 
 export default function CategoryPage({ params }) {
@@ -123,7 +122,7 @@ export default function CategoryPage({ params }) {
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Arcade games are the heart of classic gaming. These games are designed to be easy to learn but challenging to master, 
-                  offering quick gameplay sessions that keep you coming back for more. From the simple yet addictive Snake game to 
+                  offering quick gameplay sessions that keep you coming back for more. From the exciting rhythm-based Geometry Dash Lite to 
                   complex puzzle challenges, arcade games provide instant fun and entertainment.
                 </p>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Popular Arcade Game Features:</h3>

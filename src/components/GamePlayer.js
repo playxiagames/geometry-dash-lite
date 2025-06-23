@@ -10,6 +10,11 @@ const GamePlayer = ({ game, className = '' }) => {
   const handleIframeLoad = () => {
     setIsLoading(false);
     setError(null);
+    
+    // 追踪游戏加载成功事件
+    if (typeof window.trackGameEvent === 'function') {
+      window.trackGameEvent('game_loaded', game.title, 'Gameplay');
+    }
   };
 
   const handleIframeError = () => {
@@ -21,11 +26,23 @@ const GamePlayer = ({ game, className = '' }) => {
     const gameContainer = document.getElementById('game-container');
     if (!document.fullscreenElement) {
       gameContainer.requestFullscreen()
-        .then(() => setIsFullscreen(true))
+        .then(() => {
+          setIsFullscreen(true);
+          // 追踪全屏事件
+          if (typeof window.trackGameEvent === 'function') {
+            window.trackGameEvent('fullscreen_enter', game.title, 'User Interaction');
+          }
+        })
         .catch(err => console.error('Fullscreen error:', err));
     } else {
       document.exitFullscreen()
-        .then(() => setIsFullscreen(false))
+        .then(() => {
+          setIsFullscreen(false);
+          // 追踪退出全屏事件
+          if (typeof window.trackGameEvent === 'function') {
+            window.trackGameEvent('fullscreen_exit', game.title, 'User Interaction');
+          }
+        })
         .catch(err => console.error('Exit fullscreen error:', err));
     }
   };
@@ -40,13 +57,23 @@ const GamePlayer = ({ game, className = '' }) => {
     if (navigator.share) {
       try {
         await navigator.share(shareData);
+        // 追踪分享成功事件
+        if (typeof window.trackGameEvent === 'function') {
+          window.trackGameEvent('game_shared', game.title, 'Social');
+        }
       } catch (err) {
         console.log('Share cancelled or failed');
       }
     } else {
       // Fallback to clipboard
       navigator.clipboard.writeText(window.location.href)
-        .then(() => alert('Game link copied to clipboard!'))
+        .then(() => {
+          alert('Game link copied to clipboard!');
+          // 追踪复制链接事件
+          if (typeof window.trackGameEvent === 'function') {
+            window.trackGameEvent('game_link_copied', game.title, 'Social');
+          }
+        })
         .catch(() => alert('Failed to copy link'));
     }
   };
@@ -57,8 +84,14 @@ const GamePlayer = ({ game, className = '' }) => {
     };
 
     document.addEventListener('fullscreenchange', handleFullscreenChange);
+    
+    // 追踪游戏页面访问事件
+    if (typeof window.trackGameEvent === 'function') {
+      window.trackGameEvent('game_page_view', game.title, 'Navigation');
+    }
+    
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, []);
+  }, [game.title]);
 
   if (!game) {
     return (
@@ -74,10 +107,10 @@ const GamePlayer = ({ game, className = '' }) => {
   return (
     <div className={`game-player-container ${className}`}>
       {/* Game Title Header */}
-      <div className="game-title-header mb-4">
+      <div className="game-title-header mb-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <h1 className="text-2xl font-bold text-gray-900">{game.title}</h1>
+            <h2 className="text-xl font-bold text-gray-900 text-left">{game.title}</h2>
             <div className="flex items-center space-x-2 text-sm text-gray-500">
               <span>⭐ {game.rating}</span>
               <span>•</span>
@@ -90,8 +123,12 @@ const GamePlayer = ({ game, className = '' }) => {
       {/* Game Container */}
       <div 
         id="game-container"
-        className="game-iframe-container relative bg-black rounded-lg overflow-hidden"
-        style={{ aspectRatio: '16/9' }}
+        className="game-iframe-container relative bg-black rounded-lg overflow-hidden w-full"
+        style={{ 
+          aspectRatio: '16/9',
+          maxHeight: '70vh',
+          minHeight: '400px'
+        }}
       >
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900 text-white">
@@ -124,11 +161,16 @@ const GamePlayer = ({ game, className = '' }) => {
         <iframe
           src={game.iframeUrl}
           title={game.title}
-          className="w-full h-full border-0"
+          className="w-full h-full border-0 block"
           allowFullScreen
           onLoad={handleIframeLoad}
           onError={handleIframeError}
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          style={{ 
+            display: 'block',
+            width: '100%',
+            height: '100%'
+          }}
         />
       </div>
 
@@ -168,7 +210,7 @@ const GamePlayer = ({ game, className = '' }) => {
       </div>
 
       {/* Game Controls Info */}
-      {game.controls && game.controls.length > 0 && (
+      {/* {game.controls && game.controls.length > 0 && (
         <div className="game-controls-info mt-4 p-4 bg-gray-50 rounded-lg">
           <h3 className="font-semibold text-gray-900 mb-2">🎮 How to Play</h3>
           <ul className="text-sm text-gray-600 space-y-1">
@@ -180,7 +222,7 @@ const GamePlayer = ({ game, className = '' }) => {
             ))}
           </ul>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

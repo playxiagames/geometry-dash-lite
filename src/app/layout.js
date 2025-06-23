@@ -1,43 +1,43 @@
 import './globals.css'
 import { getSiteConfig, getSEOConfig } from '../utils/gameData'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 export const metadata = {
-  title: 'Snake Game - Play Classic Snake Online Free',
-  description: 'Play the classic Snake game online for free! Control the snake to eat food and grow longer. No download required, play directly in your browser.',
-  keywords: 'snake game, classic games, arcade games, online games, free games, browser games',
-  authors: [{ name: 'Snake Game Online' }],
-  creator: 'Snake Game Online',
-  publisher: 'Snake Game Online',
+  title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
+  description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!',
+  authors: [{ name: 'Geometry Dash Lite Online' }],
+  creator: 'Geometry Dash Lite Online',
+  publisher: 'Geometry Dash Lite Online',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://snake-game-site.vercel.app'),
+  metadataBase: new URL('https://geometry-dash-lite.org/'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://snake-game-site.vercel.app',
-    title: 'Snake Game - Play Classic Snake Online Free',
-    description: 'Play the classic Snake game online for free! Control the snake to eat food and grow longer. No download required, play directly in your browser.',
-    siteName: 'Snake Game Online',
+    url: 'https://geometry-dash-lite.org/',
+    title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
+    description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!',
+    siteName: 'Geometry Dash Lite Online',
     images: [
       {
-        url: '/images/og-snake-game.jpg',
+        url: '/images/og-geometry-dash-lite.jpg',
         width: 1200,
         height: 630,
-        alt: 'Snake Game - Play Online Free',
+        alt: 'Geometry Dash Lite - Play Online Free',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Snake Game - Play Classic Snake Online Free',
-    description: 'Play the classic Snake game online for free! Control the snake to eat food and grow longer.',
-    images: ['/images/og-snake-game.jpg'],
+    title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
+    description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels and amazing music.',
+    images: ['/images/og-geometry-dash-lite.jpg'],
   },
   robots: {
     index: true,
@@ -56,6 +56,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const seoConfig = getSEOConfig()
+  const gaId = seoConfig?.googleAnalyticsId
+
   return (
     <html lang="en">
       <head>
@@ -66,8 +69,51 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#3b82f6" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Snake Game" />
+        <meta name="apple-mobile-web-app-title" content="Geometry Dash Lite" />
         <meta name="mobile-web-app-capable" content="yes" />
+        
+        {/* Google Analytics - 添加到 head */}
+        {gaId && process.env.NODE_ENV === 'production' && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}', {
+                    page_title: document.title,
+                    page_location: window.location.href,
+                    anonymize_ip: true,
+                    send_page_view: true
+                  });
+                  
+                  // 游戏事件追踪函数
+                  window.trackGameEvent = function(action, gameName, category) {
+                    if (typeof gtag === 'function') {
+                      gtag('event', action, {
+                        event_category: category || 'Game',
+                        event_label: gameName,
+                        value: 1
+                      });
+                    }
+                  };
+                  
+                  // 自定义事件追踪函数
+                  window.trackCustomEvent = function(eventName, parameters) {
+                    if (typeof gtag === 'function') {
+                      gtag('event', eventName, parameters || {});
+                    }
+                  };
+                `,
+              }}
+            />
+          </>
+        )}
         
         {/* Structured Data */}
         <script
@@ -76,19 +122,19 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "@id": "https://snake-game-site.vercel.app/#website",
-              "url": "https://snake-game-site.vercel.app",
-              "name": "Snake Game Online",
-              "description": "Play the classic Snake game online for free! Control the snake to eat food and grow longer.",
+              "@id": "https://geometry-dash-lite.org/#website",
+              "url": "https://geometry-dash-lite.org/",
+              "name": "Geometry Dash Lite Online",
+              "description": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer.",
               "publisher": {
                 "@type": "Organization",
-                "name": "Snake Game Online"
+                "name": "Geometry Dash Lite Online"
               },
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://snake-game-site.vercel.app/search?q={search_term_string}"
+                  "urlTemplate": "https://geometry-dash-lite.org/search?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               }
@@ -103,17 +149,17 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Game",
-              "name": "Snake Game",
-              "description": "Classic Snake Game - Control the snake to eat food and grow longer without hitting walls or yourself!",
-              "url": "https://snake-game-site.vercel.app",
-              "image": "https://snake-game-site.vercel.app/images/snake-game-screenshot.jpg",
+              "name": "Geometry Dash Lite",
+              "description": "Geometry Dash Lite - Jump and fly your way through danger in this rhythm-based action platformer!",
+              "url": "https://geometry-dash-lite.org/",
+              "image": "https://geometry-dash-lite.org/images/geometry-dash-lite-screenshot.jpg",
               "author": {
                 "@type": "Organization",
-                "name": "Snake Game Online"
+                "name": "Geometry Dash Lite Online"
               },
               "gameItem": {
                 "@type": "Thing",
-                "name": "Snake Game"
+                "name": "Geometry Dash Lite"
               },
               "genre": "Arcade",
               "audience": {
@@ -136,29 +182,8 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         
-        {/* Analytics Script Placeholder */}
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            {/* Google Analytics */}
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}', {
-                    page_title: document.title,
-                    page_location: window.location.href,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
+        {/* 客户端 Google Analytics 组件 */}
+        <GoogleAnalytics />
       </body>
     </html>
   )

@@ -49,6 +49,16 @@
       "color": "#FFEAA7",
       "isTopLevel": true,
       "gameCount": 0
+    },
+    {
+      "id": "platform",
+      "name": "Platform Games",
+      "slug": "platform",
+      "description": "Jump and run through challenging platform adventures",
+      "icon": "🎮",
+      "color": "#A29BFE",
+      "isTopLevel": true,
+      "gameCount": 1
     }
   ]
 } 

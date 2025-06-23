@@ -17,7 +17,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   env: {
-    CUSTOM_KEY: 'snake-game-site',
+    CUSTOM_KEY: 'geometry-dash-lite-site',
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   compress: true,
