@@ -1,7 +1,7 @@
 import { getAllGames, getAllCategories } from '../utils/gameData';
 
 export default function sitemap() {
-  const baseUrl = 'https://geometry-dash-lite.org/';
+  const baseUrl = 'https://geometry-dash-lite.org';
   
   // 获取所有游戏和分类数据
   const games = getAllGames();
