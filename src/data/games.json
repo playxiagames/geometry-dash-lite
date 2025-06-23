@@ -7,14 +7,12 @@
       "description": "Geometry Dash Lite - Jump and fly your way through danger in this rhythm-based action platformer!",
       "longDescription": "Geometry Dash Lite is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
       "category": "platform",
-      "tags": ["geometry dash", "platform", "rhythm", "jumping", "obstacles"],
+      "tags": ["geometry dash", "rhythm", "jumping", "obstacles"],
       "iframeUrl": "https://1games.io/game/geometry-lite/",
       "thumbnail": "/images/games/thumbnails/geometry-dash-lite-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-lite-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 1000000,
+      "rating": 5.0,
       "controls": [
         "Space bar or Click to jump",
         "Hold to keep flying in ship mode",
@@ -26,7 +24,7 @@
         "Watch for visual cues and patterns",
         "Don't give up - persistence is key!"
       ],
-      "relatedGameIds": ["tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": ["geometry-dash", "geometry-dash-unblocked", "geometry-dash-subzero", "geometry-dash-meltdown", "geometry-dash-wave", "geometry-dash-spam", "geometry-dash-breeze", "pac-man"]
     },
     {
       "id": "retro-bowl",
@@ -35,12 +33,10 @@
       "description": "Retro Bowl - Build your dream football team and lead them to victory in this classic sports management game!",
       "longDescription": "Retro Bowl is a classic sports management game that challenges you to build your dream football team and lead them to victory. Manage your team's roster, schedule, and training to maximize your chances of success. This game combines strategic management with addictive gameplay for an engaging experience.",
       "category": "sports",
-      "tags": ["retro bowl", "sports", "management", "football", "strategy"],
+      "tags": ["retro bowl", "sports", "football"],
       "iframeUrl": "https://1games.io/embed/retro-bowl",
       "thumbnail": "/images/games/thumbnails/retro-bowl-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/retro-bowl-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -53,7 +49,7 @@
         "Train your players to improve their skills",
         "Use your budget wisely to build a competitive team"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": ["retro-bowl-college", "retro-bowl-unblocked", "retro-bowl-25", "retro-bowl-3kh0"]
     },
     {
       "id": "doodle-baseball",
@@ -62,12 +58,10 @@
       "description": "Doodle Baseball - Hit the ball and run the bases in this classic sports game!",
       "longDescription": "Doodle Baseball is a classic sports game that challenges you to hit the ball and run the bases. Hit the ball and run the bases in this classic sports game!",
       "category": "sports",
-      "tags": ["doodle baseball", "sports", "baseball", "classic", "game"],
+      "tags": ["doodle baseball", "sports", "baseball", "classic"],
       "iframeUrl": "https://1games.io/game/doodle-baseball/",
       "thumbnail": "/images/games/thumbnails/doodle-baseball-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/doodle-baseball-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -80,7 +74,7 @@
         "Train your players to improve their skills",
         "Use your budget wisely to build a competitive team"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": ["google-doodle-baseball"]
     },
     {
       "id": "wordle",
@@ -89,12 +83,10 @@
       "description": "Wordle - Guess the word in 6 tries. A new word every day.",
       "longDescription": "Wordle is a word game where you have to guess the word in 6 tries. A new word every day.",
       "category": "word",
-      "tags": ["wordle", "word", "game", "word game"],
+      "tags": ["wordle", "word", "word game"],
       "iframeUrl": "https://1games.io/embed/wordle",
       "thumbnail": "/images/games/thumbnails/wordle-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/wordle-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -107,7 +99,7 @@
         "Use the keyboard to input letters",
         "Click to submit your guess"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": [""]
     },
     {
       "id": "solitaire",
@@ -116,12 +108,10 @@
       "description": "Solitaire - Play the classic card game of solitaire!",
       "longDescription": "Solitaire is a classic card game where you have to build a pyramid of cards. The game is played with a deck of 52 cards, and the goal is to build a pyramid of cards by moving cards from one pile to another. The game is played with a deck of 52 cards, and the goal is to build a pyramid of cards by moving cards from one pile to another.",
       "category": "card",
-      "tags": ["solitaire", "card", "game", "card game"],
-      "iframeUrl": "https://www.treecardgames.com/games_browser.htm",
+      "tags": ["solitaire", "card game"],
+      "iframeUrl": "https://www.free-freecell-solitaire.com/",
       "thumbnail": "/images/games/thumbnails/solitaire-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/solitaire-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -134,7 +124,7 @@
         "Use the keyboard to input cards",
         "Click to submit your move"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": []
     },
     {
       "id": "sudoku",
@@ -143,12 +133,10 @@
       "description": "Sudoku - Solve the puzzle and complete the grid!",
       "longDescription": "Sudoku is a puzzle game where you have to solve the puzzle and complete the grid. The game is played with a grid of 9x9 cells, and the goal is to fill the grid with numbers from 1 to 9. The game is played with a grid of 9x9 cells, and the goal is to fill the grid with numbers from 1 to 9.",
       "category": "puzzle",
-      "tags": ["sudoku", "puzzle", "game", "puzzle game"],
+      "tags": ["sudoku", "puzzle game"],
       "iframeUrl": "https://1games.io/embed/sudoku",
       "thumbnail": "/images/games/thumbnails/sudoku-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/sudoku-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -161,7 +149,7 @@
         "Use the keyboard to input numbers",
         "Click to submit your move"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": []
     },
     {
       "id": "pacman",
@@ -170,12 +158,10 @@
       "description": "Pac-Man - Eat all the dots and avoid the ghosts!",
       "longDescription": "Pac-Man is a classic arcade game where you have to eat all the dots and avoid the ghosts. The game is played with a grid of 28x36 cells, and the goal is to eat all the dots and avoid the ghosts. The game is played with a grid of 28x36 cells, and the goal is to eat all the dots and avoid the ghosts.",
       "category": "arcade",
-      "tags": ["pacman", "arcade", "game", "arcade game"],
+      "tags": ["pacman", "arcade game"],
       "iframeUrl": "https://1games.io/game/doodle-pacman/pacman.html",
       "thumbnail": "/images/games/thumbnails/pacman-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/pacman-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -188,7 +174,7 @@
         "Use the keyboard to input letters",
         "Click to submit your guess"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": []
     },
     {
       "id": "atari-breakout",
@@ -197,12 +183,10 @@
       "description": "Atari Breakout - Break the bricks and save the ball!",
       "longDescription": "Atari Breakout is a classic arcade game where you have to break the bricks and save the ball. The game is played with a grid of 28x36 cells, and the goal is to break the bricks and save the ball. The game is played with a grid of 28x36 cells, and the goal is to break the bricks and save the ball.",
       "category": "arcade",
-      "tags": ["atari breakout", "arcade", "game", "arcade game"],
+      "tags": ["atari breakout", "arcade game"],
       "iframeUrl": "https://1games.io/embed/atari-breakout",
       "thumbnail": "/images/games/thumbnails/atari-breakout-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/atari-breakout-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -215,7 +199,7 @@
         "Use the keyboard to input letters",
         "Click to submit your guess"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": []
     },
     {
       "id": "basketball",
@@ -224,12 +208,10 @@
       "description": "Basketball - Shoot the ball and score points!",
       "longDescription": "Basketball is a classic arcade game where you have to shoot the ball and score points. The game is played with a grid of 28x36 cells, and the goal is to shoot the ball and score points. The game is played with a grid of 28x36 cells, and the goal is to shoot the ball and score points.",
       "category": "arcade",
-      "tags": ["basketball", "arcade", "game", "arcade game"],
+      "tags": ["basketball", "arcade game"],
       "iframeUrl": "https://1games.io/game/basketball-2012/",
       "thumbnail": "/images/games/thumbnails/basketball-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/basketball-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -242,7 +224,7 @@
         "Use the keyboard to input letters",
         "Click to submit your guess"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": []
     },
     {
       "id": "2048",
@@ -251,12 +233,10 @@
       "description": "2048 - Slide the tiles and combine them to reach 2048!",
       "longDescription": "2048 is a puzzle game where you have to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048.",
       "category": "puzzle",
-      "tags": ["2048", "puzzle", "game", "puzzle game"],
+      "tags": ["2048", "puzzle game"],
       "iframeUrl": "https://1games.io/embed/2048",
       "thumbnail": "/images/games/thumbnails/2048-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/2048-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -269,7 +249,7 @@
         "Use the keyboard to input numbers",
         "Click to submit your move"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": ["2048-drop"]
     },
     {
       "id": "2048-drop",
@@ -278,12 +258,10 @@
       "description": "2048 Drop - Slide the tiles and combine them to reach 2048!",
       "longDescription": "2048 Drop is a puzzle game where you have to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048.",
       "category": "puzzle",
-      "tags": ["2048 drop", "puzzle", "game", "puzzle game"],
+      "tags": ["2048 drop", "puzzle game"],
       "iframeUrl": "https://1games.io/embed/2048-drop",
       "thumbnail": "/images/games/thumbnails/2048-drop-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/2048-drop-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -296,7 +274,7 @@
         "Use the keyboard to input numbers",
         "Click to submit your move"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": ["2048"]
     },
     {
       "id": "sprunki",
@@ -305,12 +283,10 @@
       "description": "Sprunki - Jump and fly your way through danger in this rhythm-based action platformer!",
       "longDescription": "Sprunki is a rhythm-based action platformer where you have to jump and fly your way through danger. The game is played with a grid of 28x36 cells, and the goal is to jump and fly your way through danger. The game is played with a grid of 28x36 cells, and the goal is to jump and fly your way through danger.",
       "category": "platform",
-      "tags": ["sprunki", "platform", "rhythm", "jumping", "obstacles"],
+      "tags": ["sprunki", "rhythm"],
       "iframeUrl": "https://1games.io/game/sprunki/",
       "thumbnail": "/images/games/thumbnails/sprunki-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/sprunki-thumbnail.webp",
-      "isPopular": true,
-      "isFeatured": true,
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [
@@ -323,7 +299,7 @@
         "Use the keyboard to input letters",
         "Click to submit your guess"
       ],
-      "relatedGameIds": ["geometry-dash-lite", "tetris", "pac-man", "frogger", "breakout"]
+      "relatedGameIds": []
     }
   ]
 } 

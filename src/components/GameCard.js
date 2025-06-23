@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { formatPlayCount, formatRating, generateStarRating } from '../utils/gameData';
+import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
 
 // Single Game Card Component
 const GameCard = ({ 
@@ -14,6 +14,7 @@ const GameCard = ({
 }) => {
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
+  const homepageConfig = getHomepageConfig();
 
   const handleGameClick = () => {
     // 追踪游戏卡片点击事件
@@ -26,6 +27,10 @@ const GameCard = ({
   const handleImageError = () => {
     setImageError(true);
   };
+
+  // 检查游戏标签类型
+  const isNewGame = homepageConfig?.newGames?.includes(game.id);
+  const isHotGame = homepageConfig?.hotGames?.includes(game.id);
 
   // Size configurations
   const sizeConfig = {
@@ -79,7 +84,23 @@ const GameCard = ({
           </div>
         )}
         
-        {/* Rating Badge */}
+        {/* New/Hot Badge - 左上角 */}
+        {(isNewGame || isHotGame) && (
+          <div className="absolute top-1 left-1">
+            {isNewGame && (
+              <span className="bg-green-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
+                NEW
+              </span>
+            )}
+            {isHotGame && !isNewGame && (
+              <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
+                HOT
+              </span>
+            )}
+          </div>
+        )}
+        
+        {/* Rating Badge - 右上角 */}
         {showStats && (
           <div className="absolute top-1 right-1 bg-black bg-opacity-70 text-white text-[10px] px-1 py-0.5 rounded-full">
             ⭐ {formatRating(game.rating)}
@@ -197,7 +218,7 @@ export const GameGrid = ({
 // Sidebar Game List Component
 export const SidebarGameList = ({ 
   games, 
-  title = "Popular Games",
+  title = "Related Games",
   className = '' 
 }) => {
   if (!games || games.length === 0) {

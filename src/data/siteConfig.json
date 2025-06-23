@@ -10,9 +10,29 @@
   },
   "homepage": {
     "mainGame": "geometry-dash-lite",
-    "featuredGames": ["geometry-dash-lite", "tetris"],
-    "popularGames": ["pac-man", "frogger", "breakout", "space-invaders"],
-    "topCategories": ["arcade", "puzzle", "shooter", "racing", "action"]
+    "featuredGames": [
+      "geometry-dash-lite",
+      "retro-bowl", 
+      "doodle-baseball",
+      "wordle",
+      "solitaire",
+      "sudoku",
+      "pacman",
+      "atari-breakout"
+    ],
+    "popularGames": [
+      "pac-man",
+      "geometry-dash-lite",
+      "retro-bowl",
+      "doodle-baseball",
+      "wordle",
+      "solitaire",
+      "sudoku",
+      "atari-breakout",
+      "basketball"
+    ],
+    "newGames": ["wordle", "sudoku", "basketball"],
+    "hotGames": ["geometry-dash-lite", "retro-bowl", "pacman"]
   },
   "navigation": {
     "topItems": [
@@ -23,28 +43,28 @@
         "url": "/geometry-dash-lite"
       },
       {
-        "type": "category",
-        "id": "arcade",
-        "title": "Arcade Games",
-        "url": "/games/arcade"
+        "type": "game",
+        "id": "retro-bowl",
+        "title": "Retro Bowl",
+        "url": "/retro-bowl"
       },
       {
         "type": "game",
-        "id": "tetris",
-        "title": "Tetris",
-        "url": "/tetris"
+        "id": "solitaire",
+        "title": "Solitaire",
+        "url": "/solitaire"
+      },
+      {
+        "type": "sprunki",
+        "id": "sprunki",
+        "title": "Sprunki",
+        "url": "/sprunki"
       },
       {
         "type": "category",
-        "id": "puzzle",
-        "title": "Puzzle Games",
-        "url": "/games/puzzle"
-      },
-      {
-        "type": "game",
-        "id": "pac-man",
-        "title": "Pac-Man",
-        "url": "/pac-man"
+        "id": "google-games",
+        "title": "Google Games",
+        "url": "/games/google-games"
       }
     ]
   },

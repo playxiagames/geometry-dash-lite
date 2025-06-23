@@ -1,12 +1,7 @@
 import { getAllGames, getAllCategories } from '../utils/gameData';
 
-// 为静态导出添加generateStaticParams
-export async function generateStaticParams() {
-  return [];
-}
-
 export default function sitemap() {
-  const baseUrl = 'https://geometry-dash-lite.org';
+  const baseUrl = 'https://geometry-dash-lite.org/';
   
   // 获取所有游戏和分类数据
   const games = getAllGames();
@@ -15,31 +10,31 @@ export default function sitemap() {
   // 静态页面
   const staticPages = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/contact/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/privacy`,
+      url: `${baseUrl}/privacy/`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.4,
     },
     {
-      url: `${baseUrl}/terms`,
+      url: `${baseUrl}/terms/`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.4,
@@ -48,7 +43,7 @@ export default function sitemap() {
 
   // 动态游戏页面
   const gamePages = games.map((game) => ({
-    url: `${baseUrl}/${game.slug}`,
+    url: `${baseUrl}/${game.slug}/`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -56,7 +51,7 @@ export default function sitemap() {
 
   // 动态分类页面
   const categoryPages = categories.map((category) => ({
-    url: `${baseUrl}/games/${category.slug}`,
+    url: `${baseUrl}/games/${category.slug}/`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,

@@ -7,6 +7,8 @@ import { GameDescription } from '../components/Layout';
 import { 
   getGameById, 
   getHomepageConfig,
+  getRelatedGames,
+  getFeaturedGames,
   getRandomGames,
   getPopularGames, 
   getAllGames
@@ -37,8 +39,8 @@ export default function HomePage() {
     );
   }
   
-  const relatedGames = getRandomGames(4, mainGame.id);
-  const relatedGames2 = getRandomGames(8, mainGame.id);
+  const relatedGames = getRelatedGames(mainGame.id);
+  const featureGames = getFeaturedGames();
   const popularGames = getPopularGames();
   const allGames = getAllGames();
 
@@ -56,14 +58,33 @@ export default function HomePage() {
           {/* Sidebar - Related Games */}
           <div className="lg:col-span-1">
             <div className="sticky top-20">
-              <h2 className="text-lg font-bold text-gray-900 mb-3 text-left">🎮 Popular Games</h2>
               <SidebarGameList games={relatedGames} />
             </div>
           </div>
         </div>
 
+        {/* Featured Games Grid */}
+        <div className="mt-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4 text-left">🎯 Featured Games</h2>
+          <GameGrid games={featureGames} />
+        </div>
+
+        {/* Popular Games Grid */}
+        <div className="mt-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4 text-left">🎯 Popular Games</h2>
+          <GameGrid games={popularGames} />
+        </div>
+
+        {/* More Games Grid */}
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold text-gray-900 text-left">🕹️ Explore More Free Online Games</h2>
+          </div>
+          <GameGrid games={allGames} />
+        </div>
+
         {/* SEO Content Section - 主要H1标签 */}
-        <div className="mt-8 bg-white rounded-lg shadow-sm p-6">
+        <div className="mt-6 bg-white rounded-lg shadow-sm p-6">
           <h1 className="text-3xl font-bold text-gray-900 mb-4 text-left">
             Play Geometry Dash Lite Online - Free Browser Game
           </h1>
@@ -141,25 +162,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Related Games Grid */}
-        <div className="mt-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4 text-left">🎯 More Challenging Games Like Geometry Dash Lite</h2>
-          <GameGrid games={popularGames} />
-        </div>
-
         {/* Game Description - 修改为不显示游戏标题的版本 */}
         <div className="mt-6">
           <GameDescription game={mainGame} hideTitle={true} />
         </div>
-
-        {/* More Games Grid */}
-        <div className="mt-8">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-bold text-gray-900 text-left">🕹️ Explore More Free Online Games</h2>
-          </div>
-          <GameGrid games={allGames} />
-        </div>
-
       </div>
     </Layout>
   );

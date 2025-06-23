@@ -22,21 +22,28 @@ export const getGamesByCategory = (category) => {
   return gamesData.games.filter(game => game.category === category);
 };
 
-// 获取精选游戏
+// 获取精选游戏 - 从 siteConfig.json 的 featuredGames 字段获取
 export const getFeaturedGames = () => {
-  return gamesData.games.filter(game => game.isFeatured);
+  const featuredGameIds = siteConfig.homepage.featuredGames || [];
+  return gamesData.games.filter(game => featuredGameIds.includes(game.id));
 };
 
-// 获取热门游戏
+// 获取流行游戏 - 从 siteConfig.json 的 popularGames 字段获取
 export const getPopularGames = () => {
-  return gamesData.games.filter(game => game.isPopular)
+  const popularGameIds = siteConfig.homepage.popularGames || [];
+  return gamesData.games.filter(game => popularGameIds.includes(game.id))
     .sort((a, b) => b.playCount - a.playCount);
 };
 
-// 获取相关游戏
-export const getRelatedGames = (gameIds, excludeId = null) => {
-  return gamesData.games.filter(game => 
-    gameIds.includes(game.id) && game.id !== excludeId
+// 获取相关游戏 - 从 games.json 中每个游戏的 relatedGameIds 字段获取
+export const getRelatedGames = (gameId, excludeId = null) => {
+  const game = gamesData.games.find(g => g.id === gameId);
+  if (!game || !game.relatedGameIds) {
+    return [];
+  }
+  
+  return gamesData.games.filter(g => 
+    game.relatedGameIds.includes(g.id) && g.id !== excludeId
   );
 };
 
