@@ -126,8 +126,8 @@ const GamePlayer = ({ game, className = '' }) => {
         className="game-iframe-container relative bg-black rounded-lg overflow-hidden w-full"
         style={{ 
           aspectRatio: '16/9',
-          maxHeight: '70vh',
-          minHeight: '400px'
+          maxHeight: '100vh',
+          minHeight: '580px'
         }}
       >
         {isLoading && (
