@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { getSiteConfig, getNavigationConfig, searchGames, getAllCategories } from '../utils/gameData';
 
 const Navigation = () => {
@@ -17,12 +18,10 @@ const Navigation = () => {
   const navigationConfig = getNavigationConfig();
 
   const handleNavigationClick = (item) => {
-    router.push(item.url);
     setIsMenuOpen(false);
   };
 
   const handleHomeClick = () => {
-    router.push('/');
     setIsMenuOpen(false);
   };
 
@@ -137,13 +136,14 @@ const Navigation = () => {
           {/* Logo / Brand */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <button
+              <Link
+                href="/"
                 onClick={handleHomeClick}
-                className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+                className="text-xl flex items-center font-bold text-gray-900 hover:text-blue-600 transition-colors"
               >
-                <span className="text-2xl mr-2">🎮</span>
+                <img src="/images/logo.png" alt="logo" className="w-12 h-9 mr-2" />
                 {siteConfig.shortName}
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -153,8 +153,9 @@ const Navigation = () => {
               
               {/* Navigation Items */}
               {navigationConfig.topItems.map((item) => (
-                <button
+                <Link
                   key={item.id}
+                  href={item.url}
                   onClick={() => handleNavigationClick(item)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActiveItem(item)
@@ -163,7 +164,7 @@ const Navigation = () => {
                   }`}
                 >
                   {item.title}
-                </button>
+                </Link>
               ))}
 
               {/* Search Box */}
@@ -410,8 +411,9 @@ const Navigation = () => {
 
               {/* Navigation Items */}
               {navigationConfig.topItems.map((item) => (
-                <button
+                <Link
                   key={item.id}
+                  href={item.url}
                   onClick={() => handleNavigationClick(item)}
                   className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActiveItem(item)
@@ -436,7 +438,7 @@ const Navigation = () => {
                     </span>
                   )}
                   {item.title}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -462,9 +464,9 @@ export const Breadcrumb = ({ items, className = '' }) => {
                 </svg>
               )}
               {item.url ? (
-                <a href={item.url} className="hover:text-gray-700 transition-colors">
+                <Link href={item.url} className="hover:text-gray-700 transition-colors">
                   {item.title}
-                </a>
+                </Link>
               ) : (
                 <span className="text-gray-900 font-medium">{item.title}</span>
               )}

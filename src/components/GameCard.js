@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
 
 // Single Game Card Component
@@ -13,16 +13,7 @@ const GameCard = ({
   className = '' 
 }) => {
   const [imageError, setImageError] = useState(false);
-  const router = useRouter();
   const homepageConfig = getHomepageConfig();
-
-  const handleGameClick = () => {
-    // 追踪游戏卡片点击事件
-    if (typeof window.trackGameEvent === 'function') {
-      window.trackGameEvent('game_card_click', game.title, 'Navigation');
-    }
-    router.push(`/${game.slug}`);
-  };
 
   const handleImageError = () => {
     setImageError(true);
@@ -61,100 +52,81 @@ const GameCard = ({
   const starRating = generateStarRating(game.rating);
 
   return (
-    <div 
-      className={`game-card bg-white ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
-      onClick={handleGameClick}
-    >
-      {/* Game Image */}
-      <div className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 relative`}>
-        {!imageError ? (
-          <img
-            src={game.screenshot}
-            alt={game.title}
-            className="w-full h-full object-cover"
-            onError={handleImageError}
-            loading="lazy"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white">
-            <div className="text-center">
-              <div className="text-2xl mb-1">🎮</div>
-              <div className="text-xs font-medium">{game.title}</div>
-            </div>
-          </div>
-        )}
-        
-        {/* New/Hot Badge - 左上角 */}
-        {(isNewGame || isHotGame) && (
-          <div className="absolute top-1 left-1">
-            {isNewGame && (
-              <span className="bg-green-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
-                NEW
-              </span>
-            )}
-            {isHotGame && !isNewGame && (
-              <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
-                HOT
-              </span>
-            )}
-          </div>
-        )}
-        
-        {/* Rating Badge - 右上角 */}
-        {showStats && (
-          <div className="absolute top-1 right-1 bg-black bg-opacity-70 text-white text-[10px] px-1 py-0.5 rounded-full">
-            ⭐ {formatRating(game.rating)}
-          </div>
-        )}
-      </div>
-
-      {/* Game Info */}
-      <div className="p-2">
-        <div className={`${config.title} text-gray-900 mb-1 line-clamp-2 text-left font-semibold`}>
-          {game.title}
-        </div>
-        
-        {showDescription && (
-          <p className={`${config.description} text-gray-600 mb-1 line-clamp-2 text-left`}>
-            {game.description}
-          </p>
-        )}
-
-        {/* {showStats && (
-          <div className="flex items-center justify-between mt-1">
-            <div className="flex items-center space-x-1">
-              <div className="flex items-center">
-                {[...Array(starRating.full)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">⭐</span>
-                ))}
-                {starRating.half === 1 && <span className="text-yellow-400">⭐</span>}
-                {[...Array(starRating.empty)].map((_, i) => (
-                  <span key={i} className="text-gray-300">⭐</span>
-                ))}
+    <Link href={`/${game.slug}`} className="block">
+      <div 
+        className={`game-card bg-white ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
+      >
+        {/* Game Image */}
+        <div className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 relative`}>
+          {!imageError ? (
+            <img
+              src={game.screenshot}
+              alt={game.title}
+              className="w-full h-full object-cover"
+              onError={handleImageError}
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white">
+              <div className="text-center">
+                <div className="text-2xl mb-1">🎮</div>
+                <div className="text-xs font-medium">{game.title}</div>
               </div>
             </div>
-            
-            <div className={`${config.stats} text-gray-500`}>
-              🎮 {formatPlayCount(game.playCount)}
+          )}
+          
+          {/* New/Hot Badge - 左上角 */}
+          {(isNewGame || isHotGame) && (
+            <div className="absolute top-1 left-1">
+              {isNewGame && (
+                <span className="bg-green-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
+                  NEW
+                </span>
+              )}
+              {isHotGame && !isNewGame && (
+                <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
+                  HOT
+                </span>
+              )}
             </div>
-          </div>
-        )} */}
+          )}
+          
+          {/* Rating Badge - 右上角 */}
+          {showStats && (
+            <div className="absolute top-1 right-1 bg-black bg-opacity-70 text-white text-[10px] px-1 py-0.5 rounded-full">
+              ⭐ {formatRating(game.rating)}
+            </div>
+          )}
+        </div>
 
-        {/* Game Tags */}
-        {game.tags && game.tags.length > 0 && size !== 'small' && (
-          <div className="mt-1 flex flex-wrap gap-1">
-            {game.tags.slice(0, 2).map((tag, index) => (
-              <span
-                key={index}
-                className="inline-block bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
+        {/* Game Info */}
+        <div className="p-2">
+          <div className={`${config.title} text-gray-900 mb-1 line-clamp-2 text-left font-semibold`}>
+            {game.title}
           </div>
-        )}
+          
+          {showDescription && (
+            <p className={`${config.description} text-gray-600 mb-1 line-clamp-2 text-left`}>
+              {game.description}
+            </p>
+          )}
+
+          {/* Game Tags */}
+          {game.tags && game.tags.length > 0 && size !== 'small' && (
+            <div className="mt-1 flex flex-wrap gap-1">
+              {game.tags.slice(0, 2).map((tag, index) => (
+                <span
+                  key={index}
+                  className="inline-block bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -246,54 +218,46 @@ export const SidebarGameList = ({
 // Sidebar Game Item Component
 const SidebarGameItem = ({ game }) => {
   const [imageError, setImageError] = useState(false);
-  const router = useRouter();
-
-  const handleGameClick = () => {
-    // 追踪侧边栏游戏点击事件
-    if (typeof window.trackGameEvent === 'function') {
-      window.trackGameEvent('sidebar_game_click', game.title, 'Navigation');
-    }
-    router.push(`/${game.slug}`);
-  };
 
   const handleImageError = () => {
     setImageError(true);
   };
 
   return (
-    <div 
-      className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
-      onClick={handleGameClick}
-    >
-      {/* Game Image */}
-      <div className="flex-shrink-0 w-32 h-18 rounded-md overflow-hidden bg-gray-200">
-        {!imageError ? (
-          <img
-            src={game.screenshot}
-            alt={game.title}
-            className="w-full h-full object-cover"
-            onError={handleImageError}
-            loading="lazy"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white text-xs">
-            🎮
+    <Link href={`/${game.slug}`} className="block">
+      <div 
+        className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+      >
+        {/* Game Image */}
+        <div className="flex-shrink-0 w-32 h-18 rounded-md overflow-hidden bg-gray-200">
+          {!imageError ? (
+            <img
+              src={game.screenshot}
+              alt={game.title}
+              className="w-full h-full object-cover"
+              onError={handleImageError}
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white text-xs">
+              🎮
+            </div>
+          )}
+        </div>
+        
+        {/* Game Info */}
+        <div className="flex-1 min-w-0">
+          <div className="text-sm font-medium text-gray-900 truncate text-left">
+            {game.title}
           </div>
-        )}
-      </div>
-      
-      {/* Game Info */}
-      <div className="flex-1 min-w-0">
-        <div className="text-sm font-medium text-gray-900 truncate text-left">
-          {game.title}
-        </div>
-        <div className="flex items-center space-x-1 text-xs text-gray-500">
-          <span>⭐ {formatRating(game.rating)}</span>
-          <span>•</span>
-          <span>🎮 {formatPlayCount(game.playCount)}</span>
+          <div className="flex items-center space-x-1 text-xs text-gray-500">
+            <span>⭐ {formatRating(game.rating)}</span>
+            <span>•</span>
+            <span>🎮 {formatPlayCount(game.playCount)}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,6 +1,16 @@
 {
   "categories": [
     {
+      "id": "geometry-dash",
+      "name": "Geometry Dash",
+      "slug": "geometry-dash",
+      "description": "Geometry Dash - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "icon": "🎮",
+      "color": "#A29BFE",
+      "isTopLevel": true,
+      "gameCount": 6
+    },
+    {
       "id": "google games",
       "name": "Google Games",
       "slug": "google-games",
