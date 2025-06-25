@@ -141,7 +141,7 @@ const Navigation = () => {
                 onClick={handleHomeClick}
                 className="text-xl flex items-center font-bold text-gray-900 hover:text-blue-600 transition-colors"
               >
-                <img src="/images/logo.png" alt="logo" className="w-12 h-9 mr-2" />
+                <img src="/images/logo.png" alt="logo" className="w-9 h-9 mr-2" />
                 {siteConfig.shortName}
               </Link>
             </div>

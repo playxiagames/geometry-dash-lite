@@ -10,8 +10,31 @@ import {
   generateGameMetadata 
 } from '../../utils/gameData';
 
+// 验证游戏 slug 是否有效
+function isValidGameSlug(slug) {
+  // 检查是否包含文件扩展名
+  if (/\.(txt|xml|json|pdf|doc|docx|html|css|js)$/i.test(slug)) {
+    return false;
+  }
+  
+  // 检查是否包含特殊字符（只允许字母、数字、连字符）
+  if (!/^[a-z0-9-]+$/i.test(slug)) {
+    return false;
+  }
+  
+  return true;
+}
+
 // 生成元数据
 export async function generateMetadata({ params }) {
+  // 验证 slug 格式
+  if (!isValidGameSlug(params.gameSlug)) {
+    return {
+      title: 'Invalid Game URL',
+      description: 'The requested game URL format is invalid.'
+    };
+  }
+  
   const game = getGameBySlug(params.gameSlug);
   
   if (!game) {
@@ -30,13 +53,20 @@ export async function generateStaticParams() {
   const gamesData = await import('../../data/games.json');
   const games = gamesData.games || [];
   
-  // 返回所有游戏的slug参数
-  return games.map((game) => ({
-    gameSlug: game.slug
-  }));
+  // 返回所有游戏的slug参数，只包含有效的slug
+  return games
+    .filter(game => isValidGameSlug(game.slug))
+    .map((game) => ({
+      gameSlug: game.slug
+    }));
 }
 
 export default function GamePage({ params }) {
+  // 验证 slug 格式
+  if (!isValidGameSlug(params.gameSlug)) {
+    notFound();
+  }
+  
   const game = getGameBySlug(params.gameSlug);
 
   if (!game) {
