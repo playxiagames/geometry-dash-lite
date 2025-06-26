@@ -40,31 +40,31 @@
         "type": "game",
         "id": "geometry-dash-lite",
         "title": "Geometry Dash Lite",
-        "url": "/geometry-dash-lite"
+        "url": "/games/geometry-dash-lite"
       },
       {
         "type": "game",
         "id": "retro-bowl",
         "title": "Retro Bowl",
-        "url": "/retro-bowl"
+        "url": "/games/retro-bowl"
       },
       {
         "type": "game",
         "id": "solitaire",
         "title": "Solitaire",
-        "url": "/solitaire"
+        "url": "/games/solitaire"
       },
       {
-        "type": "sprunki",
+        "type": "game",
         "id": "sprunki",
         "title": "Sprunki",
-        "url": "/sprunki"
+        "url": "/games/sprunki"
       },
       {
         "type": "category",
         "id": "google-games",
         "title": "Google Games",
-        "url": "/games/google-games"
+        "url": "/category/google-games"
       }
     ]
   },
