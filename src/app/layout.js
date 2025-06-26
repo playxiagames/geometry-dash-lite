@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="Geometry Dash Lite" />
         <meta name="mobile-web-app-capable" content="yes" />
         
-        {/* Google Analytics - 添加到 head */}
+        {/* Google Analytics */}
         {gaId && process.env.NODE_ENV === 'production' && (
           <>
             <script
@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
                     send_page_view: true
                   });
                   
-                  // 游戏事件追踪函数
+                  // Game event tracking function
                   window.trackGameEvent = function(action, gameName, category) {
                     if (typeof gtag === 'function') {
                       gtag('event', action, {
@@ -102,7 +102,7 @@ export default function RootLayout({ children }) {
                     }
                   };
                   
-                  // 自定义事件追踪函数
+                  // Custom event tracking function
                   window.trackCustomEvent = function(eventName, parameters) {
                     if (typeof gtag === 'function') {
                       gtag('event', eventName, parameters || {});
@@ -181,7 +181,7 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         
-        {/* 客户端 Google Analytics 组件 */}
+        {/* Client-side Google Analytics component */}
         <GoogleAnalytics />
       </body>
     </html>
