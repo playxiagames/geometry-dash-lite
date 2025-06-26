@@ -95,6 +95,14 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/sitemap"
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  🗺️ 网站地图
+                </a>
+              </li>
             </ul>
           </div>
         </div>

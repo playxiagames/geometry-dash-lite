@@ -1,15 +1,15 @@
 import { notFound } from 'next/navigation';
-import Layout from '../../components/Layout';
-import GamePlayer from '../../components/GamePlayer';
-import { GameGrid, SidebarGameList } from '../../components/GameCard';
-import { GameDescription } from '../../components/Layout';
-import { Breadcrumb } from '../../components/Navigation';
+import Layout from '../../../components/Layout';
+import GamePlayer from '../../../components/GamePlayer';
+import { GameGrid, SidebarGameList } from '../../../components/GameCard';
+import { GameDescription } from '../../../components/Layout';
+import { Breadcrumb } from '../../../components/Navigation';
 import { 
   getGameBySlug, 
   getRandomGames,
   generateGameMetadata 
-} from '../../utils/gameData';
-import { generateGamePageMetadata } from '../../utils/seoUtils';
+} from '../../../utils/gameData';
+import { generateGamePageMetadata } from '../../../utils/seoUtils';
 
 // 验证游戏 slug 是否有效
 function isValidGameSlug(slug) {
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }) {
 // 生成静态参数
 export async function generateStaticParams() {
   // 导入游戏数据
-  const gamesData = await import('../../data/games.json');
+  const gamesData = await import('../../../data/games.json');
   const games = gamesData.games || [];
   
   // 返回所有游戏的slug参数，只包含有效的slug

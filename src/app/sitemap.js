@@ -39,11 +39,17 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.4,
     },
+    {
+      url: `${baseUrl}/sitemap/`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
   ];
 
   // 动态游戏页面
   const gamePages = games.map((game) => ({
-    url: `${baseUrl}/${game.slug}/`,
+    url: `${baseUrl}/games/${game.slug}/`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -51,7 +57,7 @@ export default function sitemap() {
 
   // 动态分类页面
   const categoryPages = categories.map((category) => ({
-    url: `${baseUrl}/games/${category.slug}/`,
+    url: `${baseUrl}/category/${category.slug}/`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,
