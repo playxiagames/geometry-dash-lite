@@ -95,10 +95,10 @@ const Navigation = () => {
     
     if (index < totalGames) {
       const game = searchResults.games[index];
-      router.push(`/${game.slug}`);
+      router.push(`/games/${game.slug}`);
     } else {
       const category = searchResults.categories[index - totalGames];
-      router.push(`/games/${category.slug}`);
+      router.push(`/category/${category.slug}`);
     }
     
     setIsSearchOpen(false);

@@ -44,7 +44,7 @@ export default function CategoryPage({ params }) {
   // 面包屑导航
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
-    { label: 'Games', href: '/games' },
+    { label: 'Categories', href: '/category' },
     { label: category.name }
   ];
 

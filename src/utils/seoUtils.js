@@ -155,7 +155,7 @@ export const generateGamePageMetadata = (game) => {
   return generatePageMetadata({
     title: gameTitle,
     description: gameDescription,
-    path: `/${game.slug}`,
+    path: `/games/${game.slug}`,
     additionalMeta: {
       other: {
         'game:name': game.title,
@@ -189,7 +189,7 @@ export const generateCategoryPageMetadata = (category) => {
   return generatePageMetadata({
     title: categoryTitle,
     description: categoryDescription,
-    path: `/games/${category.slug}`,
+    path: `/category/${category.slug}`,
   });
 };
 
