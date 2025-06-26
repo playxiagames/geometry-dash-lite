@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { getAllGames, getAllCategories } from '../../utils/gameData';
 import { generatePageMetadata } from '../../utils/seoUtils';
 
-// 生成页面 metadata
+// Generate page metadata
 export async function generateMetadata() {
   return generatePageMetadata({
-    title: '网站地图 - 所有页面导航',
-    description: '查看 Geometry Dash Lite 游戏网站的完整页面结构，包括所有游戏、分类和重要页面的导航链接。',
+    title: 'Sitemap - All Pages Navigation',
+    description: 'View the complete page structure of Geometry Dash Lite gaming website, including all games, categories and important page navigation links.',
     path: '/sitemap'
   });
 }
@@ -15,13 +15,13 @@ export default function SitemapPage() {
   const games = getAllGames();
   const categories = getAllCategories();
 
-  // 静态页面
+  // Static pages
   const staticPages = [
-    { title: '首页', url: '/', description: '探索最好玩的在线游戏', icon: '🏠' },
-    { title: '关于我们', url: '/about', description: '了解我们的使命和团队', icon: 'ℹ️' },
-    { title: '联系我们', url: '/contact', description: '与我们取得联系', icon: '📧' },
-    { title: '隐私政策', url: '/privacy', description: '了解我们如何保护您的隐私', icon: '🔒' },
-    { title: '服务条款', url: '/terms', description: '查看我们的服务条款', icon: '📋' },
+    { title: 'Home', url: '/', description: 'Explore the best online games', icon: '🏠' },
+    { title: 'About Us', url: '/about', description: 'Learn about our mission and team', icon: 'ℹ️' },
+    { title: 'Contact Us', url: '/contact', description: 'Get in touch with us', icon: '📧' },
+    { title: 'Privacy Policy', url: '/privacy', description: 'Learn how we protect your privacy', icon: '🔒' },
+    { title: 'Terms of Service', url: '/terms', description: 'View our terms of service', icon: '📋' },
   ];
 
   return (
@@ -33,9 +33,9 @@ export default function SitemapPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4">
             <span className="text-2xl">🗺️</span>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">网站地图</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Sitemap</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            探索我们网站的所有内容，快速找到您想要的游戏和信息
+            Explore all content on our website and quickly find the games and information you're looking for
           </p>
         </div>
 
@@ -43,30 +43,30 @@ export default function SitemapPage() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white rounded-lg shadow-sm p-6 text-center">
             <div className="text-3xl font-bold text-blue-600 mb-2">{staticPages.length}</div>
-            <div className="text-gray-600">主要页面</div>
+            <div className="text-gray-600">Main Pages</div>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-6 text-center">
             <div className="text-3xl font-bold text-green-600 mb-2">{categories.length}</div>
-            <div className="text-gray-600">游戏分类</div>
+            <div className="text-gray-600">Game Categories</div>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-6 text-center">
             <div className="text-3xl font-bold text-purple-600 mb-2">{games.length}</div>
-            <div className="text-gray-600">精选游戏</div>
+            <div className="text-gray-600">Featured Games</div>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-6 text-center">
             <div className="text-3xl font-bold text-orange-600 mb-2">{staticPages.length + categories.length + games.length}</div>
-            <div className="text-gray-600">总页面数</div>
+            <div className="text-gray-600">Total Pages</div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* 主要页面 */}
+          {/* Main Pages */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <span className="mr-3">🏠</span>
-                主要页面
+                Main Pages
               </h2>
               <div className="space-y-4">
                 {staticPages.map((page, index) => (
@@ -94,12 +94,12 @@ export default function SitemapPage() {
             </div>
           </div>
 
-          {/* 游戏分类 */}
+          {/* Game Categories */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <span className="mr-3">🎮</span>
-                游戏分类
+                Game Categories
               </h2>
               <div className="space-y-4">
                 {categories.map((category, index) => (
@@ -117,7 +117,7 @@ export default function SitemapPage() {
                           {category.name}
                         </h3>
                         <p className="text-sm text-gray-600 mt-1">
-                          {category.description || `探索 ${category.name} 类游戏`}
+                          {category.description || `Explore ${category.name} games`}
                         </p>
                       </div>
                     </div>
@@ -127,12 +127,12 @@ export default function SitemapPage() {
             </div>
           </div>
 
-          {/* 精选游戏 */}
+          {/* Featured Games */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <span className="mr-3">🌟</span>
-                精选游戏
+                Featured Games
               </h2>
               <div className="space-y-3 max-h-96 overflow-y-auto">
                 {games.map((game, index) => (
@@ -168,29 +168,29 @@ export default function SitemapPage() {
 
         {/* Bottom Section */}
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">找不到您想要的内容？</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Can't Find What You're Looking For?</h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            我们持续添加新的游戏和内容。如果您有任何建议或找不到特定的游戏，请随时联系我们。
+            We're constantly adding new games and content. If you have any suggestions or can't find a specific game, feel free to contact us.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
             >
-              📧 联系我们
+              📧 Contact Us
             </Link>
             <Link
               href="/"
               className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
             >
-              🏠 返回首页
+              🏠 Back to Home
             </Link>
           </div>
         </div>
 
         {/* SEO Footer */}
         <div className="mt-8 text-center text-sm text-gray-500">
-          <p>最后更新: {new Date().toLocaleDateString('zh-CN')}</p>
+          <p>Last updated: {new Date().toLocaleDateString('en-US')}</p>
         </div>
       </div>
     </div>

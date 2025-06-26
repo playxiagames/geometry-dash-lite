@@ -273,9 +273,9 @@ const Navigation = () => {
                     {/* 快捷键提示 */}
                     <div className="px-3 py-2 bg-gray-50 border-t border-gray-200 text-xs text-gray-500">
                       <div className="flex items-center justify-center space-x-3">
-                        <span>↑↓ 选择</span>
-                        <span>Enter 确认</span>
-                        <span>Esc 关闭</span>
+                        <span>↑↓ Select</span>
+                        <span>Enter Confirm</span>
+                        <span>Esc Close</span>
                       </div>
                     </div>
                   </div>
