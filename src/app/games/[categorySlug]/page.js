@@ -8,19 +8,14 @@ import {
   getAllCategories,
   generateCategoryMetadata 
 } from '../../../utils/gameData';
+import { generateCategoryPageMetadata } from '../../../utils/seoUtils';
 
 // 生成元数据
 export async function generateMetadata({ params }) {
   const category = getCategoryBySlug(params.categorySlug);
   
-  if (!category) {
-    return {
-      title: 'Category Not Found',
-      description: 'The requested game category could not be found.'
-    };
-  }
-
-  return generateCategoryMetadata(category);
+  // 使用新的 SEO 工具函数生成 metadata
+  return generateCategoryPageMetadata(category);
 }
 
 // 生成静态参数

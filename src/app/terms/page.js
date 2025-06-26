@@ -1,10 +1,12 @@
 import Layout from '../../components/Layout';
 import { Breadcrumb } from '../../components/Navigation';
+import { generatePageMetadata } from '../../utils/seoUtils';
 
-export const metadata = {
-  title: 'Terms of Service - Geometry Dash Lite Online',
-  description: 'Read our terms of service to understand the rules and guidelines for using Geometry Dash Lite Online platform.',
-};
+export const metadata = generatePageMetadata({
+  title: 'Terms of Service',
+  description: 'Read our Terms of Service to understand the rules and regulations for using Geometry Dash Lite Online platform and our free online games.',
+  path: '/terms',
+});
 
 export default function TermsPage() {
   const breadcrumbItems = [

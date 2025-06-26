@@ -1,10 +1,12 @@
 import Layout from '../../components/Layout';
 import { Breadcrumb } from '../../components/Navigation';
+import { generatePageMetadata } from '../../utils/seoUtils';
 
-export const metadata = {
-  title: 'About Us - Geometry Dash Lite Online',
-  description: 'Learn about Geometry Dash Lite Online, our mission to provide free online games, and our commitment to the gaming community.',
-};
+export const metadata = generatePageMetadata({
+  title: 'About Us',
+  description: 'Learn about Geometry Dash Lite Online, our mission to provide free online games, and our commitment to delivering the best gaming experience.',
+  path: '/about',
+});
 
 export default function AboutPage() {
   const breadcrumbItems = [

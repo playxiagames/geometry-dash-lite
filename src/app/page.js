@@ -14,6 +14,8 @@ import {
   getAllGames
 } from '../utils/gameData';
 
+// 主页的 metadata 在 layout.js 中处理，因为这是客户端组件
+
 export default function HomePage() {
   const homepageConfig = getHomepageConfig();
   const mainGame = getGameById(homepageConfig?.mainGame);
@@ -58,16 +60,16 @@ export default function HomePage() {
           {/* Sidebar - Related Games */}
           <div className="lg:col-span-1">
             <div className="sticky top-20">
-              <SidebarGameList games={relatedGames} />
+              <SidebarGameList games={featureGames} title="Featured Games" />
             </div>
           </div>
         </div>
 
         {/* Featured Games Grid */}
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4 text-left">🎯 Featured Games</h2>
           <GameGrid games={featureGames} />
-        </div>
+        </div> */}
 
         {/* Popular Games Grid */}
         <div className="mt-6">

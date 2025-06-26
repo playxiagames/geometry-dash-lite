@@ -24,7 +24,7 @@
         "Watch for visual cues and patterns",
         "Don't give up - persistence is key!"
       ],
-      "relatedGameIds": ["geometry-dash", "geometry-dash-unblocked", "geometry-dash-subzero", "geometry-dash-meltdown", "geometry-dash-wave", "geometry-dash-spam", "geometry-dash-breeze", "pac-man"]
+      "relatedGameIds": ["geometry-dash", "geometry-dash-subzero", "geometry-dash-meltdown", "geometry-dash-wave", "geometry-dash-spam", "geometry-dash-breeze"]
     },
     {
       "id": "retro-bowl",

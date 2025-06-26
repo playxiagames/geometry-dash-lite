@@ -1,10 +1,12 @@
 import Layout from '../../components/Layout';
 import { Breadcrumb } from '../../components/Navigation';
+import { generatePageMetadata } from '../../utils/seoUtils';
 
-export const metadata = {
-  title: 'Privacy Policy - Geometry Dash Lite Online',
-  description: 'Read our privacy policy to understand how we collect, use, and protect your personal information on Geometry Dash Lite Online.',
-};
+export const metadata = generatePageMetadata({
+  title: 'Privacy Policy',
+  description: 'Our Privacy Policy explains how Geometry Dash Lite Online collects, uses, and protects your personal information when you use our gaming platform.',
+  path: '/privacy',
+});
 
 export default function PrivacyPage() {
   const breadcrumbItems = [

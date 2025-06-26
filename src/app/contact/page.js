@@ -1,10 +1,12 @@
 import Layout from '../../components/Layout';
 import { Breadcrumb } from '../../components/Navigation';
+import { generatePageMetadata } from '../../utils/seoUtils';
 
-export const metadata = {
-  title: 'Contact Us - Geometry Dash Lite Online',
-  description: 'Get in touch with the Geometry Dash Lite Online team. We are here to help with any questions, feedback, or support requests.',
-};
+export const metadata = generatePageMetadata({
+  title: 'Contact Us',
+  description: 'Get in touch with Geometry Dash Lite Online team. We\'d love to hear your feedback, suggestions, and help with any questions you may have.',
+  path: '/contact',
+});
 
 export default function ContactPage() {
   const breadcrumbItems = [

@@ -1,11 +1,13 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import { getFeaturedGames } from '../utils/gameData';
+import { generatePageMetadata } from '../utils/seoUtils';
 
-export const metadata = {
-  title: '404 - Page Not Found | Geometry Dash Lite Online',
-  description: 'The page you are looking for could not be found. Explore our collection of free online games.',
-};
+export const metadata = generatePageMetadata({
+  title: 'Page Not Found - 404 Error',
+  description: 'The page you are looking for could not be found. Browse our collection of free online games and discover new favorites to play.',
+  path: '/404',
+});
 
 export default function NotFound() {
   const featuredGames = getFeaturedGames().slice(0, 6);

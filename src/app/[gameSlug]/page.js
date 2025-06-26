@@ -9,6 +9,7 @@ import {
   getRandomGames,
   generateGameMetadata 
 } from '../../utils/gameData';
+import { generateGamePageMetadata } from '../../utils/seoUtils';
 
 // 验证游戏 slug 是否有效
 function isValidGameSlug(slug) {
@@ -31,7 +32,10 @@ export async function generateMetadata({ params }) {
   if (!isValidGameSlug(params.gameSlug)) {
     return {
       title: 'Invalid Game URL',
-      description: 'The requested game URL format is invalid.'
+      description: 'The requested game URL format is invalid.',
+      alternates: {
+        canonical: 'https://geometry-dash-lite.org/404/',
+      },
     };
   }
   
@@ -44,7 +48,8 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  return generateGameMetadata(game);
+  // 使用新的 SEO 工具函数生成 metadata
+  return generateGamePageMetadata(game);
 }
 
 // 生成静态参数
