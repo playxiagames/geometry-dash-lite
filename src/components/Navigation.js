@@ -470,9 +470,12 @@ export const CategoryBadge = ({ category, isActive = false, className = '' }) =>
     : "bg-gray-100 text-gray-700 hover:bg-gray-200";
 
   return (
-    <span className={`${baseClasses} ${activeClasses} ${className}`}>
+    <Link 
+      href={`/category/${category.slug}`}
+      className={`${baseClasses} ${activeClasses} ${className}`}
+    >
       {category.name}
-    </span>
+    </Link>
   );
 };
 
