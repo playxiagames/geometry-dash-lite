@@ -4,8 +4,8 @@
       "id": "geometry-dash-lite",
       "title": "Geometry Dash Lite",
       "slug": "geometry-dash-lite",
-      "description": "Geometry Dash Lite - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash Lite is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "A rhythm-based action platformer that tests your reflexes with challenging obstacles and electronic music.",
+      "longDescription": "Geometry Dash Lite is the free version of the popular rhythm-based platformer. Navigate your geometric character through increasingly difficult levels filled with spikes, platforms, and moving obstacles. Each level is perfectly synchronized with energetic electronic music, creating an immersive experience that challenges your timing and reflexes. The game features simple one-touch controls but requires precise timing to master.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -16,18 +16,18 @@
       "iframeUrl": "https://1games.io/game/geometry-lite/",
       "thumbnail": "/images/games/thumbnails/geometry-dash-lite-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-lite-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 850000,
+      "rating": 4.7,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Click or Space to jump",
+        "Hold to fly in ship mode",
+        "R to restart level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "Listen to the music rhythm for perfect timing",
+        "Practice mode helps you learn difficult sections",
+        "Watch for visual cues that sync with the beat",
+        "Start with easier levels to build muscle memory"
       ],
       "relatedGameIds": [
         "geometry-dash",
@@ -43,8 +43,8 @@
       "id": "geometry-dash",
       "title": "Geometry Dash",
       "slug": "geometry-dash",
-      "description": "Geometry Dash - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "The original rhythm-based platformer with custom levels and challenging gameplay.",
+      "longDescription": "Geometry Dash is the full version of the beloved rhythm-based platformer that started it all. Jump, fly, and flip your way through dangerous passages and spiky obstacles. The game features multiple game modes including cube, ship, ball, UFO, wave, robot, and spider. Each level is a unique audio-visual experience with custom soundtracks and hand-crafted obstacles that sync perfectly with the music.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -55,18 +55,18 @@
       "iframeUrl": "https://scratch.mit.edu/projects/105500895/embed",
       "thumbnail": "/images/games/thumbnails/geometry-dash-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 1200000,
+      "rating": 4.8,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Click or Space to jump/interact",
+        "Hold for continuous actions in ship/wave modes",
+        "R to restart current level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "Each game mode has different mechanics to master",
+        "Use practice mode to learn level layouts",
+        "Focus on the rhythm rather than just visual cues",
+        "Patience is key - some levels require many attempts"
       ],
       "relatedGameIds": [
         "geometry-dash-lite",
@@ -82,8 +82,8 @@
       "id": "geometry-dash-world",
       "title": "Geometry Dash World",
       "slug": "geometry-dash-world",
-      "description": "Geometry Dash World - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash World is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "Explore new worlds with fresh levels and music in this Geometry Dash expansion.",
+      "longDescription": "Geometry Dash World expands the original game with new levels, music, and visual themes. Travel through different worlds, each with its own unique aesthetic and soundtrack. This version introduces new gameplay mechanics and visual effects while maintaining the core rhythm-based platforming that fans love. Perfect for players who want more content after mastering the original levels.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -94,18 +94,18 @@
       "iframeUrl": "https://scratch.mit.edu/projects/224236914/embed",
       "thumbnail": "/images/games/thumbnails/geometry-dash-world-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-world-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 680000,
+      "rating": 4.6,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Click or Space to jump",
+        "Hold for flying/wave segments",
+        "R to restart level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "Each world has a unique theme and music style",
+        "New mechanics are introduced gradually",
+        "Collect stars to unlock bonus content",
+        "Use the map to track your progress"
       ],
       "relatedGameIds": [
         "geometry-dash-lite",
@@ -121,8 +121,8 @@
       "id": "geometry-dash-subzero",
       "title": "Geometry Dash Subzero",
       "slug": "geometry-dash-subzero",
-      "description": "Geometry Dash Subzero - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash Subzero is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "Ice-cold levels with freezing beats in this chilling Geometry Dash adventure.",
+      "longDescription": "Geometry Dash SubZero brings a frosty twist to the series with ice-themed levels and cool electronic beats. Navigate through frozen landscapes filled with icy obstacles and slippery surfaces. The game features three main levels with winter-themed music and visual effects that create a unique atmosphere. Each level offers its own challenges with new obstacle patterns and timing requirements.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -133,18 +133,18 @@
       "iframeUrl": "https://scratch.mit.edu/projects/216343253/embed",
       "thumbnail": "/images/games/thumbnails/geometry-dash-subzero-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-subzero-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 520000,
+      "rating": 4.5,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Click or Space to jump",
+        "Hold for extended actions",
+        "R to restart level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "Ice theme adds visual variety to obstacles",
+        "Pay attention to the cold, electronic soundtrack",
+        "Some obstacles may have different timing",
+        "Practice the wave sections carefully"
       ],
       "relatedGameIds": [
         "geometry-dash-lite",
@@ -160,8 +160,8 @@
       "id": "geometry-dash-meltdown",
       "title": "Geometry Dash Meltdown",
       "slug": "geometry-dash-meltdown",
-      "description": "Geometry Dash Meltdown - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash Meltdown is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "Explosive levels with intense music in this high-energy Geometry Dash edition.",
+      "longDescription": "Geometry Dash Meltdown cranks up the intensity with explosive-themed levels and high-energy soundtracks. Face fiery obstacles and molten challenges that test your reflexes to the limit. This edition features three intense levels with industrial and electronic music that perfectly matches the heated gameplay. The visual effects and obstacle designs create an atmosphere of controlled chaos.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -172,18 +172,18 @@
       "iframeUrl": "https://scratch.mit.edu/projects/143663274/embed",
       "thumbnail": "/images/games/thumbnails/geometry-dash-meltdown-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-meltdown-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 610000,
+      "rating": 4.6,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Click or Space to jump",
+        "Hold for continuous movement",
+        "R to restart level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "High-energy music requires quick reactions",
+        "Explosive theme creates intense visual effects",
+        "Focus on rhythm over visual distractions",
+        "Take breaks if you feel overwhelmed"
       ],
       "relatedGameIds": [
         "geometry-dash-lite",
@@ -199,8 +199,8 @@
       "id": "geometry-dash-wave",
       "title": "Geometry Dash Wave",
       "slug": "geometry-dash-wave",
-      "description": "Geometry Dash Wave - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash Wave is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "Master the wave gamemode with flowing movements and smooth controls.",
+      "longDescription": "Geometry Dash Wave focuses on the challenging wave game mode, where smooth, flowing movements are key to success. Control your character as it moves in wave-like patterns through narrow passages and tight spaces. This version emphasizes the wave mechanics with levels specifically designed to test your ability to maintain smooth, controlled movement while following the rhythm of the music.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -211,18 +211,18 @@
       "iframeUrl": "https://scratch.mit.edu/projects/202395548/embed",
       "thumbnail": "/images/games/thumbnails/geometry-dash-wave-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-wave-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 380000,
+      "rating": 4.3,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Hold to move up, release to move down",
+        "Smooth movements are key",
+        "R to restart level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "Wave mode requires smooth, controlled movements",
+        "Don't make jerky motions - flow with the music",
+        "Practice maintaining steady rhythm",
+        "Focus on the path ahead, not just current position"
       ],
       "relatedGameIds": [
         "geometry-dash-lite",
@@ -238,8 +238,8 @@
       "id": "geometry-dash-spam",
       "title": "Geometry Dash Spam",
       "slug": "geometry-dash-spam",
-      "description": "Geometry Dash Spam - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash Spam is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "Fast-paced levels requiring rapid inputs and quick reflexes.",
+      "longDescription": "Geometry Dash Spam challenges players with levels that require rapid, repeated inputs and lightning-fast reflexes. These levels feature sequences that demand quick tapping and precise timing at high speeds. Perfect for players who have mastered the basics and want to test their limits with intense, fast-paced gameplay that pushes reaction times to the extreme.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -250,18 +250,18 @@
       "iframeUrl": "https://scratch.mit.edu/projects/910122240/embed",
       "thumbnail": "/images/games/thumbnails/geometry-dash-spam-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-spam-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 290000,
+      "rating": 4.2,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Rapid clicking/tapping required",
+        "Quick, precise inputs",
+        "R to restart level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "Practice rapid tapping techniques",
+        "Build up finger endurance gradually",
+        "Focus on rhythm even at high speeds",
+        "Take breaks to avoid hand fatigue"
       ],
       "relatedGameIds": [
         "geometry-dash-lite",
@@ -277,8 +277,8 @@
       "id": "geometry-dash-breeze",
       "title": "Geometry Dash Breeze",
       "slug": "geometry-dash-breeze",
-      "description": "Geometry Dash Breeze - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Geometry Dash Breeze is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "description": "Relaxing levels with smooth gameplay and calming music.",
+      "longDescription": "Geometry Dash Breeze offers a more relaxed take on the series with smoother gameplay and calming soundtracks. While still challenging, these levels focus on flow and rhythm rather than intense difficulty spikes. Perfect for players who want to enjoy the core Geometry Dash experience without the extreme pressure, featuring beautiful visual designs and melodic music that creates a zen-like gaming experience.",
       "category": "geometry-dash",
       "tags": [
         "geometry dash",
@@ -289,18 +289,18 @@
       "iframeUrl": "https://1games.io/game/geometry-dash-breeze/",
       "thumbnail": "/images/games/thumbnails/geometry-dash-breeze-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/geometry-dash-breeze-thumbnail.webp",
-      "playCount": 1000000,
-      "rating": 5.0,
+      "playCount": 420000,
+      "rating": 4.4,
       "controls": [
-        "Space bar or Click to jump",
-        "Hold to keep flying in ship mode",
-        "R key to restart level"
+        "Click or Space to jump",
+        "Smooth, flowing movements",
+        "R to restart level"
       ],
       "tips": [
-        "Listen to the music rhythm for better timing",
-        "Practice mode helps learn difficult sections",
-        "Watch for visual cues and patterns",
-        "Don't give up - persistence is key!"
+        "Focus on smooth, flowing gameplay",
+        "Enjoy the calming music and visuals",
+        "Less pressure allows for better learning",
+        "Great for practicing fundamental skills"
       ],
       "relatedGameIds": [
         "geometry-dash-lite",
@@ -316,8 +316,8 @@
       "id": "retro-bowl",
       "title": "Retro Bowl",
       "slug": "retro-bowl",
-      "description": "Retro Bowl - Build your dream football team and lead them to victory in this classic sports management game!",
-      "longDescription": "Retro Bowl is a classic sports management game that challenges you to build your dream football team and lead them to victory. Manage your team's roster, schedule, and training to maximize your chances of success. This game combines strategic management with addictive gameplay for an engaging experience.",
+      "description": "Manage and play American football with retro-style graphics and addictive gameplay.",
+      "longDescription": "Retro Bowl combines team management with on-field action in a nostalgic 8-bit style football game. Draft players, manage your roster, handle the press, and lead your team to championship glory. The game features simple controls for passing plays while offering deep team management mechanics. Balance your salary cap, keep players happy, and make strategic decisions both on and off the field.",
       "category": "",
       "tags": [
         "retro bowl",
@@ -327,17 +327,18 @@
       "iframeUrl": "https://rb.y2.ee/",
       "thumbnail": "/images/games/thumbnails/retro-bowl-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/retro-bowl-thumbnail.webp",
-      "playCount": 2500000,
+      "playCount": 2100000,
       "rating": 4.8,
       "controls": [
-        "Click to select players",
-        "Drag to move players",
-        "Click to make plays"
+        "Click to select receiver",
+        "Drag to aim pass",
+        "Tap to run with quarterback"
       ],
       "tips": [
-        "Manage your team's roster and schedule",
-        "Train your players to improve their skills",
-        "Use your budget wisely to build a competitive team"
+        "Balance offense and defense in your roster",
+        "Manage player morale and contracts carefully",
+        "Upgrade facilities to improve team performance",
+        "Read the defense before making passes"
       ],
       "relatedGameIds": [
         "retro-bowl-college",
@@ -350,8 +351,8 @@
       "id": "doodle-baseball",
       "title": "Doodle Baseball",
       "slug": "doodle-baseball",
-      "description": "Doodle Baseball - Hit the ball and run the bases in this classic sports game!",
-      "longDescription": "Doodle Baseball is a classic sports game that challenges you to hit the ball and run the bases. Hit the ball and run the bases in this classic sports game!",
+      "description": "Google's charming doodle baseball game with simple controls and fun gameplay.",
+      "longDescription": "Doodle Baseball is Google's delightful take on America's pastime, featuring charming hand-drawn graphics and intuitive gameplay. Step up to the plate and time your swings to hit home runs and score points. The game captures the essence of baseball with simple mechanics that are easy to learn but challenging to master. Perfect for quick gaming sessions with its pick-up-and-play design.",
       "category": "google-games",
       "tags": [
         "doodle baseball",
@@ -362,17 +363,18 @@
       "iframeUrl": "https://1games.io/game/doodle-baseball/",
       "thumbnail": "/images/games/thumbnails/doodle-baseball-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/doodle-baseball-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 1800000,
+      "rating": 4.6,
       "controls": [
-        "Click to select players",
-        "Drag to move players",
-        "Click to make plays"
+        "Click to swing the bat",
+        "Time your swing for best hits",
+        "Aim for different field areas"
       ],
       "tips": [
-        "Manage your team's roster and schedule",
-        "Train your players to improve their skills",
-        "Use your budget wisely to build a competitive team"
+        "Watch the ball's trajectory carefully",
+        "Time your swing for maximum power",
+        "Aim for gaps in the field",
+        "Practice timing with different pitch speeds"
       ],
       "relatedGameIds": [
         "google-doodle-baseball"
@@ -382,8 +384,8 @@
       "id": "wordle",
       "title": "Wordle",
       "slug": "wordle",
-      "description": "Wordle - Guess the word in 6 tries. A new word every day.",
-      "longDescription": "Wordle is a word game where you have to guess the word in 6 tries. A new word every day.",
+      "description": "The viral word puzzle game - guess the 5-letter word in 6 tries.",
+      "longDescription": "Wordle is the viral word puzzle phenomenon that took the world by storm. Guess the hidden 5-letter word in just 6 attempts using the color-coded feedback system. Green letters are in the correct position, yellow letters are in the word but wrong position, and gray letters aren't in the word at all. With only one puzzle per day, each game becomes a special challenge to share with friends.",
       "category": "",
       "tags": [
         "wordle",
@@ -393,17 +395,18 @@
       "iframeUrl": "https://1games.io/game/wordle/",
       "thumbnail": "/images/games/thumbnails/wordle-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/wordle-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 3200000,
+      "rating": 4.7,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Type letters to form words",
+        "Enter to submit guess",
+        "Backspace to delete letters"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Start with words containing common vowels",
+        "Use elimination strategy with consonants",
+        "Pay attention to letter frequency",
+        "Think about word patterns and common endings"
       ],
       "relatedGameIds": [
         ""
@@ -413,8 +416,8 @@
       "id": "solitaire",
       "title": "Solitaire",
       "slug": "solitaire",
-      "description": "Solitaire - Play the classic card game of solitaire!",
-      "longDescription": "Solitaire is a classic card game where you have to build a pyramid of cards. The game is played with a deck of 52 cards, and the goal is to build a pyramid of cards by moving cards from one pile to another. The game is played with a deck of 52 cards, and the goal is to build a pyramid of cards by moving cards from one pile to another.",
+      "description": "The classic card game - build foundations from Ace to King.",
+      "longDescription": "Solitaire is the timeless single-player card game that has entertained millions. Build four foundation piles from Ace to King in each suit by strategically moving cards between tableau columns. The game requires planning, strategy, and a bit of luck to successfully clear all cards. This digital version maintains the classic rules while offering smooth gameplay and helpful features.",
       "category": "",
       "tags": [
         "solitaire",
@@ -423,17 +426,18 @@
       "iframeUrl": "https://www.free-freecell-solitaire.com/",
       "thumbnail": "/images/games/thumbnails/solitaire-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/solitaire-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 2800000,
+      "rating": 4.5,
       "controls": [
         "Click to select cards",
-        "Drag to move cards",
-        "Click to make moves"
+        "Drag cards to move them",
+        "Double-click to auto-move to foundation"
       ],
       "tips": [
-        "Build a pyramid of cards",
-        "Use the keyboard to input cards",
-        "Click to submit your move"
+        "Uncover face-down cards as priority",
+        "Build tableau columns in alternating colors",
+        "Don't rush to move cards to foundations",
+        "Plan several moves ahead when possible"
       ],
       "relatedGameIds": []
     },
@@ -441,8 +445,8 @@
       "id": "sudoku",
       "title": "Sudoku",
       "slug": "sudoku",
-      "description": "Sudoku - Solve the puzzle and complete the grid!",
-      "longDescription": "Sudoku is a puzzle game where you have to solve the puzzle and complete the grid. The game is played with a grid of 9x9 cells, and the goal is to fill the grid with numbers from 1 to 9. The game is played with a grid of 9x9 cells, and the goal is to fill the grid with numbers from 1 to 9.",
+      "description": "The classic number puzzle - fill the 9x9 grid with digits 1-9.",
+      "longDescription": "Sudoku is the beloved number puzzle that challenges your logical thinking. Fill the 9x9 grid so that each row, column, and 3x3 box contains all digits from 1 to 9. No math required - just pure logic and deduction. Start with the numbers already provided and use elimination techniques to solve the puzzle. Perfect for training your brain and improving concentration.",
       "category": "",
       "tags": [
         "sudoku",
@@ -451,17 +455,18 @@
       "iframeUrl": "https://1games.io/game/sudoku/",
       "thumbnail": "/images/games/thumbnails/sudoku-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/sudoku-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 1900000,
+      "rating": 4.4,
       "controls": [
-        "Click to select numbers",
-        "Drag to move numbers",
-        "Click to make moves"
+        "Click cell to select",
+        "Type number 1-9 to fill",
+        "Use notes for possible numbers"
       ],
       "tips": [
-        "Solve the puzzle and complete the grid",
-        "Use the keyboard to input numbers",
-        "Click to submit your move"
+        "Start with cells that have few possibilities",
+        "Use elimination technique systematically",
+        "Look for naked and hidden singles",
+        "Take notes to track possible numbers"
       ],
       "relatedGameIds": []
     },
@@ -469,8 +474,8 @@
       "id": "pac-man",
       "title": "Pac-Man",
       "slug": "pac-man",
-      "description": "Pac-Man - Eat all the dots and avoid the ghosts!",
-      "longDescription": "Pac-Man is a classic arcade game where you have to eat all the dots and avoid the ghosts. The game is played with a grid of 28x36 cells, and the goal is to eat all the dots and avoid the ghosts. The game is played with a grid of 28x36 cells, and the goal is to eat all the dots and avoid the ghosts.",
+      "description": "The iconic arcade classic - eat dots and avoid ghosts in the maze.",
+      "longDescription": "Pac-Man is the legendary arcade game that defined a generation of gaming. Guide the yellow hero through mazes, eating dots while avoiding colorful ghosts. Collect power pellets to turn the tables and chase the ghosts for bonus points. With its simple yet addictive gameplay, iconic characters, and memorable sound effects, Pac-Man remains one of the most recognizable games in history.",
       "category": "google-games",
       "tags": [
         "pac-man",
@@ -479,17 +484,18 @@
       "iframeUrl": "https://1games.io/game/doodle-pacman/pacman.html",
       "thumbnail": "/images/games/thumbnails/pacman-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/pacman-thumbnail.webp",
-      "playCount": 2500000,
+      "playCount": 2600000,
       "rating": 4.8,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Arrow keys to move",
+        "Navigate through maze passages",
+        "Avoid ghosts, collect power pellets"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Learn ghost movement patterns",
+        "Use corners to change direction quickly",
+        "Save power pellets for strategic moments",
+        "Clear one side of the maze at a time"
       ],
       "relatedGameIds": []
     },
@@ -497,8 +503,8 @@
       "id": "atari-breakout",
       "title": "Atari Breakout",
       "slug": "atari-breakout",
-      "description": "Atari Breakout - Break the bricks and save the ball!",
-      "longDescription": "Atari Breakout is a classic arcade game where you have to break the bricks and save the ball. The game is played with a grid of 28x36 cells, and the goal is to break the bricks and save the ball. The game is played with a grid of 28x36 cells, and the goal is to break the bricks and save the ball.",
+      "description": "The classic brick-breaking game - destroy all blocks with your paddle and ball.",
+      "longDescription": "Atari Breakout is the pioneering brick-breaking arcade game that inspired countless clones. Control your paddle to bounce the ball and destroy all the colored blocks above. As you break more blocks, the ball speeds up, increasing the challenge. Different colored blocks may have different point values, and clearing all blocks advances you to the next level with new patterns and increased difficulty.",
       "category": "google-games",
       "tags": [
         "atari breakout",
@@ -507,17 +513,18 @@
       "iframeUrl": "https://html5.gamedistribution.com/8f006852782547a7b8dbf392f7883e9e/",
       "thumbnail": "/images/games/thumbnails/atari-breakout-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/atari-breakout-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 1400000,
+      "rating": 4.3,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Move mouse to control paddle",
+        "Paddle bounces ball toward blocks",
+        "Keep ball in play at all costs"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Aim for the corners to create openings",
+        "Control ball angle with paddle position",
+        "Don't let the ball get past your paddle",
+        "Target blocks strategically for better angles"
       ],
       "relatedGameIds": []
     },
@@ -525,8 +532,8 @@
       "id": "basketball",
       "title": "Basketball",
       "slug": "basketball",
-      "description": "Basketball - Shoot the ball and score points!",
-      "longDescription": "Basketball is a classic arcade game where you have to shoot the ball and score points. The game is played with a grid of 28x36 cells, and the goal is to shoot the ball and score points. The game is played with a grid of 28x36 cells, and the goal is to shoot the ball and score points.",
+      "description": "Shoot hoops and score points in this arcade-style basketball game.",
+      "longDescription": "Basketball brings the excitement of shooting hoops to your browser with arcade-style gameplay. Time your shots perfectly to score baskets and rack up points. The game features realistic ball physics and satisfying shooting mechanics that reward good timing and aim. Whether you're practicing free throws or going for trick shots, this basketball game captures the fun of the sport.",
       "category": "google-games",
       "tags": [
         "basketball",
@@ -535,17 +542,18 @@
       "iframeUrl": "https://1games.io/game/basketball-2012/",
       "thumbnail": "/images/games/thumbnails/basketball-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/basketball-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 1100000,
+      "rating": 4.2,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Click and drag to aim",
+        "Release to shoot the ball",
+        "Adjust power and angle for accuracy"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Practice your timing for consistent shots",
+        "Aim for the back of the rim for better bounces",
+        "Adjust your power based on distance",
+        "Follow through with your mouse movement"
       ],
       "relatedGameIds": []
     },
@@ -553,8 +561,8 @@
       "id": "2048",
       "title": "2048",
       "slug": "2048",
-      "description": "2048 - Slide the tiles and combine them to reach 2048!",
-      "longDescription": "2048 is a puzzle game where you have to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048.",
+      "description": "Slide and combine numbered tiles to reach the 2048 tile in this addictive puzzle.",
+      "longDescription": "2048 is the addictive sliding puzzle game that challenges you to combine numbered tiles. Slide tiles in four directions to merge identical numbers, doubling their value each time. Start with 2s and 4s, and work your way up to the coveted 2048 tile. The game requires strategic thinking and planning ahead, as the grid fills up quickly and wrong moves can end your game.",
       "category": "",
       "tags": [
         "2048",
@@ -563,17 +571,18 @@
       "iframeUrl": "https://1games.io/game/2048/",
       "thumbnail": "/images/games/thumbnails/2048-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/2048-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 2200000,
+      "rating": 4.6,
       "controls": [
-        "Click to select numbers",
-        "Drag to move numbers",
-        "Click to make moves"
+        "Arrow keys or WASD to slide",
+        "Swipe on mobile devices",
+        "R to restart game"
       ],
       "tips": [
-        "Slide the tiles and combine them to reach 2048",
-        "Use the keyboard to input numbers",
-        "Click to submit your move"
+        "Keep your highest tile in one corner",
+        "Build up numbers in rows or columns",
+        "Don't randomly slide - plan your moves",
+        "Focus on merging smaller numbers first"
       ],
       "relatedGameIds": [
         "2048-drop"
@@ -583,8 +592,8 @@
       "id": "2048-drop",
       "title": "2048 Drop",
       "slug": "2048-drop",
-      "description": "2048 Drop - Slide the tiles and combine them to reach 2048!",
-      "longDescription": "2048 Drop is a puzzle game where you have to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048. The game is played with a grid of 4x4 cells, and the goal is to slide the tiles and combine them to reach 2048.",
+      "description": "A gravity-based twist on 2048 where tiles drop down and merge when they match.",
+      "longDescription": "2048 Drop puts a fresh spin on the classic 2048 formula by adding gravity mechanics. Numbered tiles fall from the top and merge when identical numbers touch. This creates a more dynamic and fast-paced experience compared to the original sliding puzzle. Plan your drops carefully to create chain reactions and reach higher numbers while managing the rising stack of tiles.",
       "category": "",
       "tags": [
         "2048 drop",
@@ -593,17 +602,18 @@
       "iframeUrl": "https://1games.io/game/2048-drop/",
       "thumbnail": "/images/games/thumbnails/2048-drop-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/2048-drop-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 890000,
+      "rating": 4.1,
       "controls": [
-        "Click to select numbers",
-        "Drag to move numbers",
-        "Click to make moves"
+        "Click to drop tiles",
+        "Choose drop position carefully",
+        "Watch for merge opportunities"
       ],
       "tips": [
-        "Slide the tiles and combine them to reach 2048",
-        "Use the keyboard to input numbers",
-        "Click to submit your move"
+        "Plan drops to create merge chains",
+        "Keep similar numbers close together",
+        "Don't let the stack get too high",
+        "Look for opportunities to clear multiple merges"
       ],
       "relatedGameIds": [
         "2048"
@@ -613,8 +623,8 @@
       "id": "sprunki",
       "title": "Sprunki",
       "slug": "sprunki",
-      "description": "Sprunki - Jump and fly your way through danger in this rhythm-based action platformer!",
-      "longDescription": "Sprunki is a rhythm-based action platformer where you have to jump and fly your way through danger. The game is played with a grid of 28x36 cells, and the goal is to jump and fly your way through danger. The game is played with a grid of 28x36 cells, and the goal is to jump and fly your way through danger.",
+      "description": "Create music and beats with quirky characters in this interactive music game.",
+      "longDescription": "Sprunki is an innovative music creation game where you mix and match different characters to create unique beats and melodies. Each character contributes their own sound, rhythm, or vocal element to your musical composition. Experiment with different combinations to discover new sounds and create catchy tunes. The game encourages creativity and musical exploration in a fun, accessible way.",
       "category": "",
       "tags": [
         "sprunki",
@@ -623,17 +633,18 @@
       "iframeUrl": "https://sprunkihorror.io/game/sprunki-original/",
       "thumbnail": "/images/games/thumbnails/sprunki-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/sprunki-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 650000,
+      "rating": 4.3,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Drag characters to create music",
+        "Mix different sounds and beats",
+        "Experiment with combinations"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Try different character combinations",
+        "Layer sounds to create complex beats",
+        "Listen for rhythm patterns",
+        "Don't be afraid to experiment with weird combos"
       ],
       "relatedGameIds": []
     },
@@ -641,8 +652,8 @@
       "id": "subway-surfers",
       "title": "Subway Surfers",
       "slug": "subway-surfers",
-      "description": "Subway Surfers - Run and jump your way through the subway!",
-      "longDescription": "Subway Surfers is a classic arcade game where you have to run and jump your way through the subway. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the subway. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the subway.",
+      "description": "Endless running adventure through subway tracks, dodging trains and collecting coins.",
+      "longDescription": "Subway Surfers is the endless running game that has captivated millions worldwide. Sprint through subway tracks, dodge oncoming trains, and grind across colorful environments. Collect coins and power-ups while avoiding the grumpy inspector and his dog. With smooth controls, vibrant graphics, and constantly changing scenery, every run offers a new challenge as the speed increases.",
       "category": "",
       "tags": [
         "subway surfers",
@@ -651,17 +662,18 @@
       "iframeUrl": "https://1games.io/game/subway-surfers/",
       "thumbnail": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 3500000,
+      "rating": 4.7,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Swipe up to jump",
+        "Swipe down to slide",
+        "Swipe left/right to change lanes"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Collect power-ups for special abilities",
+        "Use hoverboards to avoid crashes",
+        "Complete daily challenges for rewards",
+        "Save up coins for character upgrades"
       ],
       "relatedGameIds": []
     },
@@ -669,8 +681,8 @@
       "id": "minesweeper",
       "title": "Minesweeper",
       "slug": "minesweeper",
-      "description": "Minesweeper - Click on the cells to reveal the numbers!",
-      "longDescription": "Minesweeper is a puzzle game where you have to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers.",
+      "description": "The classic logic puzzle - clear the minefield using number clues.",
+      "longDescription": "Minesweeper is the iconic logic puzzle that has challenged players for decades. Click on squares to reveal numbers that indicate how many mines are adjacent to that square. Use logical deduction to identify safe squares and flag potential mines. The goal is to clear the entire grid without detonating any mines. This timeless game sharpens logical thinking and pattern recognition skills.",
       "category": "",
       "tags": [
         "minesweeper",
@@ -679,17 +691,18 @@
       "iframeUrl": "https://gamesonline86.github.io/minesweeper/",
       "thumbnail": "/images/games/thumbnails/minesweeper-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/minesweeper-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 1600000,
+      "rating": 4.4,
       "controls": [
-        "Click to select cells",
-        "Drag to move cells",
-        "Click to make moves"
+        "Left click to reveal squares",
+        "Right click to flag mines",
+        "Numbers show adjacent mine count"
       ],
       "tips": [
-        "Click on the cells to reveal the numbers",
-        "Use the keyboard to input numbers",
-        "Click to submit your move"
+        "Start with corners and edges",
+        "Use number clues to deduce mine locations",
+        "Flag suspected mines to avoid mistakes",
+        "Look for patterns in number arrangements"
       ],
       "relatedGameIds": []
     },
@@ -697,8 +710,8 @@
       "id": "google-minesweeper",
       "title": "Google Minesweeper",
       "slug": "google-minesweeper",
-      "description": "Google Minesweeper - Click on the cells to reveal the numbers!",
-      "longDescription": "Google Minesweeper is a puzzle game where you have to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers.",
+      "description": "Google's polished version of the classic minesweeper with modern design.",
+      "longDescription": "Google Minesweeper brings the classic logic puzzle into the modern era with sleek design and smooth gameplay. This version maintains all the strategic depth of the original while adding quality-of-life improvements and a clean, intuitive interface. Perfect for both newcomers learning the rules and veterans who want a polished minesweeper experience with reliable mechanics.",
       "category": "google-games",
       "tags": [
         "google minesweeper",
@@ -707,17 +720,18 @@
       "iframeUrl": "https://googlminesweeper.com/game/index.html",
       "thumbnail": "/images/games/thumbnails/google-minesweeper-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/google-minesweeper-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 1300000,
+      "rating": 4.5,
       "controls": [
-        "Click to select cells",
-        "Drag to move cells",
-        "Click to make moves"
+        "Click to reveal squares",
+        "Right-click to flag mines",
+        "Use number clues for deduction"
       ],
       "tips": [
-        "Click on the cells to reveal the numbers",
-        "Use the keyboard to input numbers",
-        "Click to submit your move"
+        "Google's version has helpful visual cues",
+        "Clean interface reduces distractions",
+        "Same strategic principles apply",
+        "Good for learning minesweeper basics"
       ],
       "relatedGameIds": []
     },
@@ -725,8 +739,8 @@
       "id": "minecraft",
       "title": "Minecraft",
       "slug": "minecraft",
-      "description": "Minecraft - Build and explore in this sandbox game!",
-      "longDescription": "Minecraft is a sandbox game where you have to build and explore. The game is played with a grid of 28x36 cells, and the goal is to build and explore. The game is played with a grid of 28x36 cells, and the goal is to build and explore.",
+      "description": "Build, explore, and survive in this iconic sandbox world of infinite possibilities.",
+      "longDescription": "Minecraft is the groundbreaking sandbox game that lets you build anything you can imagine. Mine resources, craft tools, and construct elaborate structures in a procedurally generated world. Whether you prefer creative building, survival challenges, or exploring vast landscapes, Minecraft offers unlimited possibilities. This browser version brings the core Minecraft experience to your web browser.",
       "category": "",
       "tags": [
         "minecraft",
@@ -735,17 +749,19 @@
       "iframeUrl": "https://eaglercraftx.pages.dev/",
       "thumbnail": "/images/games/thumbnails/minecraft-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/minecraft-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 4200000,
+      "rating": 4.9,
       "controls": [
-        "Click to select blocks",
-        "Drag to move blocks",
-        "Click to make blocks"
+        "WASD to move",
+        "Mouse to look around",
+        "Left click to break blocks",
+        "Right click to place blocks"
       ],
       "tips": [
-        "Build and explore in this sandbox game",
-        "Use the keyboard to input blocks",
-        "Click to submit your block"
+        "Start by gathering basic resources",
+        "Build shelter before night falls",
+        "Experiment with different block combinations",
+        "Explore to find rare materials and biomes"
       ],
       "relatedGameIds": []
     },
@@ -753,8 +769,8 @@
       "id": "dinosaur-game",
       "title": "Dinosaur Game",
       "slug": "dinosaur-game",
-      "description": "Dinosaur - Run and jump your way through the dinosaur!",
-      "longDescription": "Dinosaur is a classic arcade game where you have to run and jump your way through the dinosaur. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the dinosaur. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the dinosaur.",
+      "description": "Chrome's famous offline dinosaur game - jump over cacti and dodge pterodactyls.",
+      "longDescription": "The Dinosaur Game, also known as Chrome Dino, is the beloved endless runner that appears when your internet connection fails. Control a pixelated T-Rex as it runs through a desert landscape, jumping over cacti and ducking under flying pterodactyls. The simple yet addictive gameplay has made this one of the most played games in the world, even though it was originally designed as an Easter egg.",
       "category": "google-games",
       "tags": [
         "dinosaur game",
@@ -763,17 +779,18 @@
       "iframeUrl": "https://dinosaur-game.io/game/t-rex/",
       "thumbnail": "/images/games/thumbnails/dinosaur-game-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/dinosaur-game-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 5800000,
+      "rating": 4.6,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Space or Up arrow to jump",
+        "Down arrow to duck",
+        "Avoid cacti and pterodactyls"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Time your jumps carefully",
+        "Duck under flying obstacles",
+        "Game speed increases over time",
+        "Focus on rhythm and timing"
       ],
       "relatedGameIds": []
     },
@@ -781,8 +798,8 @@
       "id": "snake-game",
       "title": "Snake Game",
       "slug": "snake-game",
-      "description": "Snake Game - Move the snake and eat the food!",
-      "longDescription": "Snake Game is a classic arcade game where you have to move the snake and eat the food. The game is played with a grid of 28x36 cells, and the goal is to move the snake and eat the food. The game is played with a grid of 28x36 cells, and the goal is to move the snake and eat the food.",
+      "description": "The classic Snake game - grow your snake by eating food while avoiding walls and yourself.",
+      "longDescription": "Snake Game is the timeless arcade classic that defined mobile gaming. Control a growing snake as it moves around the screen, eating food to grow longer while avoiding walls and its own tail. The simple concept creates increasingly challenging gameplay as your snake grows and the available space shrinks. This version captures all the addictive gameplay of the original with smooth controls and classic graphics.",
       "category": "google-games",
       "tags": [
         "snake game",
@@ -791,17 +808,18 @@
       "iframeUrl": "https://emulatoros.github.io/gfile/snake/",
       "thumbnail": "/images/games/thumbnails/google-snake-game-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/google-snake-game-thumbnail.webp",
-      "playCount": 2500000,
-      "rating": 4.8,
+      "playCount": 2400000,
+      "rating": 4.5,
       "controls": [
-        "Click to select letters",
-        "Drag to move letters",
-        "Click to make words"
+        "Arrow keys to change direction",
+        "Eat food to grow longer",
+        "Avoid walls and your own tail"
       ],
       "tips": [
-        "Guess the word in 6 tries",
-        "Use the keyboard to input letters",
-        "Click to submit your guess"
+        "Plan your path to avoid getting trapped",
+        "Use the edges strategically",
+        "Don't grow too fast in tight spaces",
+        "Think several moves ahead"
       ],
       "relatedGameIds": []
     }
