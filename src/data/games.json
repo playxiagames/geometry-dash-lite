@@ -1,6 +1,7 @@
 {
   "games": [
     {
+      "number": 1,
       "id": "geometry-dash-lite",
       "title": "Geometry Dash Lite",
       "slug": "geometry-dash-lite",
@@ -40,6 +41,7 @@
       ]
     },
     {
+      "number": 2,
       "id": "geometry-dash",
       "title": "Geometry Dash",
       "slug": "geometry-dash",
@@ -79,6 +81,7 @@
       ]
     },
     {
+      "number": 3,
       "id": "geometry-dash-world",
       "title": "Geometry Dash World",
       "slug": "geometry-dash-world",
@@ -118,6 +121,7 @@
       ]
     },
     {
+      "number": 4,
       "id": "geometry-dash-subzero",
       "title": "Geometry Dash Subzero",
       "slug": "geometry-dash-subzero",
@@ -157,6 +161,7 @@
       ]
     },
     {
+      "number": 5,
       "id": "geometry-dash-meltdown",
       "title": "Geometry Dash Meltdown",
       "slug": "geometry-dash-meltdown",
@@ -196,6 +201,7 @@
       ]
     },
     {
+      "number": 6,
       "id": "geometry-dash-wave",
       "title": "Geometry Dash Wave",
       "slug": "geometry-dash-wave",
@@ -235,6 +241,7 @@
       ]
     },
     {
+      "number": 7,
       "id": "geometry-dash-spam",
       "title": "Geometry Dash Spam",
       "slug": "geometry-dash-spam",
@@ -274,6 +281,7 @@
       ]
     },
     {
+      "number": 8,
       "id": "geometry-dash-breeze",
       "title": "Geometry Dash Breeze",
       "slug": "geometry-dash-breeze",
@@ -313,6 +321,7 @@
       ]
     },
     {
+      "number": 9,
       "id": "retro-bowl",
       "title": "Retro Bowl",
       "slug": "retro-bowl",
@@ -348,6 +357,7 @@
       ]
     },
     {
+      "number": 10,
       "id": "doodle-baseball",
       "title": "Doodle Baseball",
       "slug": "doodle-baseball",
@@ -381,6 +391,7 @@
       ]
     },
     {
+      "number": 11,
       "id": "wordle",
       "title": "Wordle",
       "slug": "wordle",
@@ -413,6 +424,7 @@
       ]
     },
     {
+      "number": 12,
       "id": "solitaire",
       "title": "Solitaire",
       "slug": "solitaire",
@@ -442,6 +454,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 13,
       "id": "sudoku",
       "title": "Sudoku",
       "slug": "sudoku",
@@ -471,6 +484,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 14,
       "id": "pac-man",
       "title": "Pac-Man",
       "slug": "pac-man",
@@ -500,6 +514,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 15,
       "id": "atari-breakout",
       "title": "Atari Breakout",
       "slug": "atari-breakout",
@@ -529,6 +544,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 16,
       "id": "basketball",
       "title": "Basketball",
       "slug": "basketball",
@@ -558,6 +574,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 17,
       "id": "2048",
       "title": "2048",
       "slug": "2048",
@@ -589,6 +606,7 @@
       ]
     },
     {
+      "number": 18,
       "id": "2048-drop",
       "title": "2048 Drop",
       "slug": "2048-drop",
@@ -620,6 +638,7 @@
       ]
     },
     {
+      "number": 19,
       "id": "sprunki",
       "title": "Sprunki",
       "slug": "sprunki",
@@ -649,6 +668,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 20,
       "id": "subway-surfers",
       "title": "Subway Surfers",
       "slug": "subway-surfers",
@@ -659,7 +679,7 @@
         "subway surfers",
         "arcade game"
       ],
-      "iframeUrl": "https://1games.io/game/subway-surfers/",
+      "iframeUrl": "https://1games.io/game/subway-surfs/",
       "thumbnail": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
       "playCount": 3500000,
@@ -678,6 +698,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 21,
       "id": "minesweeper",
       "title": "Minesweeper",
       "slug": "minesweeper",
@@ -707,6 +728,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 22,
       "id": "google-minesweeper",
       "title": "Google Minesweeper",
       "slug": "google-minesweeper",
@@ -736,6 +758,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 23,
       "id": "minecraft",
       "title": "Minecraft",
       "slug": "minecraft",
@@ -766,6 +789,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 24,
       "id": "dinosaur-game",
       "title": "Dinosaur Game",
       "slug": "dinosaur-game",
@@ -795,6 +819,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 25,
       "id": "snake-game",
       "title": "Snake Game",
       "slug": "snake-game",
