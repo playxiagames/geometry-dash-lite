@@ -6,7 +6,7 @@
     "url": "https://geometry-dash-lite.org/",
     "logo": "/images/logo.png",
     "favicon": "/favicon.ico",
-    "ogImage": "/images/og-geometry-dash-lite.jpg"
+    "ogImage": "https://images.geometry-dash-lite.org/og-geometry-dash-lite.webp"
   },
   "homepage": {
     "mainGame": "geometry-dash-lite",
@@ -22,9 +22,9 @@
       "subway-surfers",
       "dinosaur-game",
       "solitaire",
-      "wordle",
-      "doodle-baseball",
-      "sudoku"
+      "sprunki",
+      "minecraft",
+      "2048"
     ],
     "newGames": ["basketball", "minesweeper", "google-minesweeper"],
     "hotGames": ["geometry-dash-lite", "dinosaur-game", "subway-surfers", "sprunki"]
@@ -54,6 +54,12 @@
         "id": "solitaire",
         "title": "Solitaire",
         "url": "/games/solitaire"
+      },
+      {
+        "type": "game",
+        "id": "wacky-flip",
+        "title": "Wacky Flip",
+        "url": "/games/wacky-flip"
       }
     ]
   },

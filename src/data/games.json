@@ -15,8 +15,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://1games.io/game/geometry-lite/",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-lite-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-lite-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-lite-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-lite-thumbnail.webp",
       "playCount": 850000,
       "rating": 4.7,
       "controls": [
@@ -55,8 +55,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://scratch.mit.edu/projects/105500895/embed",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-thumbnail.webp",
       "playCount": 1200000,
       "rating": 4.8,
       "controls": [
@@ -95,8 +95,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://scratch.mit.edu/projects/224236914/embed",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-world-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-world-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-world-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-world-thumbnail.webp",
       "playCount": 680000,
       "rating": 4.6,
       "controls": [
@@ -135,8 +135,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://scratch.mit.edu/projects/216343253/embed",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-subzero-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-subzero-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-subzero-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-subzero-thumbnail.webp",
       "playCount": 520000,
       "rating": 4.5,
       "controls": [
@@ -175,8 +175,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://scratch.mit.edu/projects/143663274/embed",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-meltdown-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-meltdown-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-meltdown-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-meltdown-thumbnail.webp",
       "playCount": 610000,
       "rating": 4.6,
       "controls": [
@@ -215,8 +215,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://scratch.mit.edu/projects/202395548/embed",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-wave-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-wave-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-wave-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-wave-thumbnail.webp",
       "playCount": 380000,
       "rating": 4.3,
       "controls": [
@@ -255,8 +255,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://scratch.mit.edu/projects/910122240/embed",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-spam-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-spam-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-spam-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-spam-thumbnail.webp",
       "playCount": 290000,
       "rating": 4.2,
       "controls": [
@@ -295,8 +295,8 @@
         "obstacles"
       ],
       "iframeUrl": "https://1games.io/game/geometry-dash-breeze/",
-      "thumbnail": "/images/games/thumbnails/geometry-dash-breeze-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/geometry-dash-breeze-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-breeze-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-breeze-thumbnail.webp",
       "playCount": 420000,
       "rating": 4.4,
       "controls": [
@@ -334,8 +334,8 @@
         "football"
       ],
       "iframeUrl": "https://rb.y2.ee/",
-      "thumbnail": "/images/games/thumbnails/retro-bowl-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/retro-bowl-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/retro-bowl-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/retro-bowl-thumbnail.webp",
       "playCount": 2100000,
       "rating": 4.8,
       "controls": [
@@ -371,8 +371,8 @@
         "classic"
       ],
       "iframeUrl": "https://1games.io/game/doodle-baseball/",
-      "thumbnail": "/images/games/thumbnails/doodle-baseball-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/doodle-baseball-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/doodle-baseball-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/doodle-baseball-thumbnail.webp",
       "playCount": 1800000,
       "rating": 4.6,
       "controls": [
@@ -404,8 +404,8 @@
         "word game"
       ],
       "iframeUrl": "https://1games.io/game/wordle/",
-      "thumbnail": "/images/games/thumbnails/wordle-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/wordle-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/wordle-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/wordle-thumbnail.webp",
       "playCount": 3200000,
       "rating": 4.7,
       "controls": [
@@ -436,8 +436,8 @@
         "card game"
       ],
       "iframeUrl": "https://www.free-freecell-solitaire.com/",
-      "thumbnail": "/images/games/thumbnails/solitaire-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/solitaire-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/solitaire-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/solitaire-thumbnail.webp",
       "playCount": 2800000,
       "rating": 4.5,
       "controls": [
@@ -466,8 +466,8 @@
         "puzzle game"
       ],
       "iframeUrl": "https://1games.io/game/sudoku/",
-      "thumbnail": "/images/games/thumbnails/sudoku-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/sudoku-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/sudoku-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/sudoku-thumbnail.webp",
       "playCount": 1900000,
       "rating": 4.4,
       "controls": [
@@ -496,8 +496,8 @@
         "arcade game"
       ],
       "iframeUrl": "https://1games.io/game/doodle-pacman/pacman.html",
-      "thumbnail": "/images/games/thumbnails/pacman-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/pacman-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/pacman-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/pacman-thumbnail.webp",
       "playCount": 2600000,
       "rating": 4.8,
       "controls": [
@@ -526,8 +526,8 @@
         "arcade game"
       ],
       "iframeUrl": "https://html5.gamedistribution.com/8f006852782547a7b8dbf392f7883e9e/",
-      "thumbnail": "/images/games/thumbnails/atari-breakout-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/atari-breakout-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/atari-breakout-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/atari-breakout-thumbnail.webp",
       "playCount": 1400000,
       "rating": 4.3,
       "controls": [
@@ -556,8 +556,8 @@
         "arcade game"
       ],
       "iframeUrl": "https://1games.io/game/basketball-2012/",
-      "thumbnail": "/images/games/thumbnails/basketball-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/basketball-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/basketball-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/basketball-thumbnail.webp",
       "playCount": 1100000,
       "rating": 4.2,
       "controls": [
@@ -586,8 +586,8 @@
         "puzzle game"
       ],
       "iframeUrl": "https://1games.io/game/2048/",
-      "thumbnail": "/images/games/thumbnails/2048-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/2048-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/2048-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/2048-thumbnail.webp",
       "playCount": 2200000,
       "rating": 4.6,
       "controls": [
@@ -618,8 +618,8 @@
         "puzzle game"
       ],
       "iframeUrl": "https://1games.io/game/2048-drop/",
-      "thumbnail": "/images/games/thumbnails/2048-drop-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/2048-drop-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/2048-drop-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/2048-drop-thumbnail.webp",
       "playCount": 890000,
       "rating": 4.1,
       "controls": [
@@ -650,8 +650,8 @@
         "rhythm"
       ],
       "iframeUrl": "https://sprunkihorror.io/game/sprunki-original/",
-      "thumbnail": "/images/games/thumbnails/sprunki-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/sprunki-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/sprunki-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/sprunki-thumbnail.webp",
       "playCount": 650000,
       "rating": 4.3,
       "controls": [
@@ -680,8 +680,8 @@
         "arcade game"
       ],
       "iframeUrl": "https://1games.io/game/subway-surfs/",
-      "thumbnail": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/subway-surfers-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/subway-surfers-thumbnail.webp",
       "playCount": 3500000,
       "rating": 4.7,
       "controls": [
@@ -710,8 +710,8 @@
         "puzzle game"
       ],
       "iframeUrl": "https://gamesonline86.github.io/minesweeper/",
-      "thumbnail": "/images/games/thumbnails/minesweeper-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/minesweeper-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/minesweeper-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/minesweeper-thumbnail.webp",
       "playCount": 1600000,
       "rating": 4.4,
       "controls": [
@@ -740,8 +740,8 @@
         "puzzle game"
       ],
       "iframeUrl": "https://googlminesweeper.com/game/index.html",
-      "thumbnail": "/images/games/thumbnails/google-minesweeper-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/google-minesweeper-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/google-minesweeper-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/google-minesweeper-thumbnail.webp",
       "playCount": 1300000,
       "rating": 4.5,
       "controls": [
@@ -770,8 +770,8 @@
         "sandbox game"
       ],
       "iframeUrl": "https://eaglercraftx.pages.dev/",
-      "thumbnail": "/images/games/thumbnails/minecraft-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/minecraft-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/minecraft-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/minecraft-thumbnail.webp",
       "playCount": 4200000,
       "rating": 4.9,
       "controls": [
@@ -801,8 +801,8 @@
         "arcade game"
       ],
       "iframeUrl": "https://dinosaur-game.io/game/t-rex/",
-      "thumbnail": "/images/games/thumbnails/dinosaur-game-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/dinosaur-game-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/dinosaur-game-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/dinosaur-game-thumbnail.webp",
       "playCount": 5800000,
       "rating": 4.6,
       "controls": [
@@ -831,8 +831,8 @@
         "arcade game"
       ],
       "iframeUrl": "https://emulatoros.github.io/gfile/snake/",
-      "thumbnail": "/images/games/thumbnails/google-snake-game-thumbnail.webp",
-      "screenshot": "/images/games/thumbnails/google-snake-game-thumbnail.webp",
+      "thumbnail": "https://images.geometry-dash-lite.org/google-snake-game-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/google-snake-game-thumbnail.webp",
       "playCount": 2400000,
       "rating": 4.5,
       "controls": [
@@ -842,6 +842,34 @@
       ],
       "tips": [
         "Plan your path to avoid getting trapped",
+        "Use the edges strategically",
+        "Don't grow too fast in tight spaces",
+        "Think several moves ahead"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "id": "wacky-flip",
+      "title": "Wacky Flip",
+      "slug": "wacky-flip",
+      "description": "A fun and challenging flip game where you need to flip the board to clear all the blocks.",
+      "longDescription": "Wacky Flip is a fun and challenging flip game where you need to flip the board to clear all the blocks. The game is a simple and addictive puzzle game that will keep you entertained for hours.",
+      "category": "google-games",
+      "tags": [
+        "wacky flip",
+        "puzzle game"
+      ],
+      "iframeUrl": "https://1games.io/embed/wacky-flip",
+      "thumbnail": "https://images.geometry-dash-lite.org/wacky-flip-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/wacky-flip-thumbnail.webp",
+      "playCount": 1200000,
+      "rating": 4.5,
+      "controls": [
+        "Click to flip the board",
+        "Clear all the blocks to win"
+      ],
+      "tips": [
+        "Plan your moves carefully",
         "Use the edges strategically",
         "Don't grow too fast in tight spaces",
         "Think several moves ahead"
