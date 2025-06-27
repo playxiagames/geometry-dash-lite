@@ -11,24 +11,23 @@
   "homepage": {
     "mainGame": "geometry-dash-lite",
     "featuredGames": [
+      "minesweeper",
+      "google-minesweeper",
       "retro-bowl", 
       "doodle-baseball",
       "wordle",
-      "solitaire",
-      "sudoku",
-      "pac-man"
+      "sudoku"
     ],
     "popularGames": [
-      "pac-man",
-      "retro-bowl",
-      "doodle-baseball",
-      "wordle",
+      "subway-surfers",
+      "dinosaur-game",
       "solitaire",
-      "sudoku",
-      "basketball"
+      "wordle",
+      "doodle-baseball",
+      "sudoku"
     ],
-    "newGames": ["wordle", "sudoku", "basketball"],
-    "hotGames": ["geometry-dash-lite", "retro-bowl", "pac-man"]
+    "newGames": ["basketball", "minesweeper", "google-minesweeper"],
+    "hotGames": ["geometry-dash-lite", "dinosaur-game", "subway-surfers", "sprunki"]
   },
   "navigation": {
     "topItems": [
@@ -45,16 +44,10 @@
         "url": "/category/google-games"
       },
       {
-        "type": "category",
-        "id": "js13k-games",
-        "title": "js13kGames",
-        "url": "/category/js13k-games"
-      },
-      {
         "type": "game",
-        "id": "retro-bowl",
-        "title": "Retro Bowl",
-        "url": "/games/retro-bowl"
+        "id": "dinosaur-game",
+        "title": "Dinosaur Game",
+        "url": "/games/dinosaur-game"
       },
       {
         "type": "game",

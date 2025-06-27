@@ -4,7 +4,7 @@ import siteConfig from '../data/siteConfig.json';
 
 // 获取所有游戏
 export const getAllGames = () => {
-  return gamesData.games;
+  return sortGamesByPriority([...gamesData.games]);
 };
 
 // 根据ID获取游戏
@@ -19,20 +19,22 @@ export const getGameBySlug = (slug) => {
 
 // 根据分类获取游戏
 export const getGamesByCategory = (category) => {
-  return gamesData.games.filter(game => game.category === category);
+  const categoryGames = gamesData.games.filter(game => game.category === category);
+  return sortGamesByPriority(categoryGames);
 };
 
 // 获取精选游戏 - 从 siteConfig.json 的 featuredGames 字段获取
 export const getFeaturedGames = () => {
   const featuredGameIds = siteConfig.homepage.featuredGames || [];
-  return gamesData.games.filter(game => featuredGameIds.includes(game.id));
+  const featuredGames = gamesData.games.filter(game => featuredGameIds.includes(game.id));
+  return sortGamesByPriority(featuredGames);
 };
 
 // 获取流行游戏 - 从 siteConfig.json 的 popularGames 字段获取
 export const getPopularGames = () => {
   const popularGameIds = siteConfig.homepage.popularGames || [];
-  return gamesData.games.filter(game => popularGameIds.includes(game.id))
-    .sort((a, b) => b.playCount - a.playCount);
+  const popularGames = gamesData.games.filter(game => popularGameIds.includes(game.id));
+  return sortGamesByPriority(popularGames);
 };
 
 // 获取相关游戏 - 从 games.json 中每个游戏的 relatedGameIds 字段获取
@@ -42,19 +44,21 @@ export const getRelatedGames = (gameId, excludeId = null) => {
     return [];
   }
   
-  return gamesData.games.filter(g => 
+  const relatedGames = gamesData.games.filter(g => 
     game.relatedGameIds.includes(g.id) && g.id !== excludeId
   );
+  return sortGamesByPriority(relatedGames);
 };
 
 // 搜索游戏
 export const searchGames = (query) => {
   const searchTerm = query.toLowerCase();
-  return gamesData.games.filter(game =>
+  const searchResults = gamesData.games.filter(game =>
     game.title.toLowerCase().includes(searchTerm) ||
     game.description.toLowerCase().includes(searchTerm) ||
     game.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   );
+  return sortGamesByPriority(searchResults);
 };
 
 // 获取随机游戏
@@ -169,4 +173,34 @@ export const generateStarRating = (rating) => {
     half: hasHalfStar ? 1 : 0,
     empty: emptyStars
   };
+};
+
+// 游戏排序函数 - 根据 hot、new 标签和 playCount、rating 排序
+export const sortGamesByPriority = (games) => {
+  const hotGames = siteConfig.homepage.hotGames || [];
+  const newGames = siteConfig.homepage.newGames || [];
+  
+  return games.sort((a, b) => {
+    const aIsHot = hotGames.includes(a.id);
+    const aIsNew = newGames.includes(a.id);
+    const bIsHot = hotGames.includes(b.id);
+    const bIsNew = newGames.includes(b.id);
+    
+    // 计算优先级：hot+new=3, hot=2, new=1, 无=0
+    const aPriority = (aIsHot ? 2 : 0) + (aIsNew ? 1 : 0);
+    const bPriority = (bIsHot ? 2 : 0) + (bIsNew ? 1 : 0);
+    
+    // 如果优先级不同，按优先级排序
+    if (aPriority !== bPriority) {
+      return bPriority - aPriority;
+    }
+    
+    // 同优先级内，先按 playCount 排序
+    if (a.playCount !== b.playCount) {
+      return b.playCount - a.playCount;
+    }
+    
+    // playCount 相同时，按 rating 排序
+    return b.rating - a.rating;
+  });
 }; 

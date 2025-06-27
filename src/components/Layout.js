@@ -57,23 +57,28 @@ const Footer = () => {
             <h4 className="text-base font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-1">
               <li>
-                <a href="/games/geometry-dash-lite" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  🎮 Geometry Dash Lite
-                </a>
-              </li>
-              <li>
                 <a href="/category/geometry-dash" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  🎮 Geometry Dash Games
+                  Geometry Dash Games
                 </a>
               </li>
               <li>
                 <a href="/category/google-games" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  🎮 Google Games
+                  Google Games
                 </a>
               </li>
               <li>
-                <a href="/games/retro-bowl" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  🏈 Retro Bowl
+                <a href="/category/js13k-games" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  JS13K Games
+                </a>
+              </li>
+              <li>
+                <a href="https://geometry-dash-unblocked.com" target="_blank" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Geometry Dash Unblocked
+                </a>
+              </li>
+              <li>
+                <a href="https://www.playxia.com" target="_blank" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Playxia Games
                 </a>
               </li>
             </ul>
@@ -100,7 +105,7 @@ const Footer = () => {
                   href="/sitemap"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  🗺️ Sitemap
+                  Sitemap
                 </a>
               </li>
             </ul>
