@@ -35,7 +35,281 @@
         "geometry-dash-meltdown",
         "geometry-dash-wave",
         "geometry-dash-spam",
-        "geometry-dash-breeze"
+        "geometry-dash-breeze",
+        "geometry-dash-world"
+      ]
+    },
+    {
+      "id": "geometry-dash",
+      "title": "Geometry Dash",
+      "slug": "geometry-dash",
+      "description": "Geometry Dash - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "longDescription": "Geometry Dash is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash",
+        "rhythm",
+        "jumping",
+        "obstacles"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/105500895/embed",
+      "thumbnail": "/images/games/thumbnails/geometry-dash-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/geometry-dash-thumbnail.webp",
+      "playCount": 1000000,
+      "rating": 5.0,
+      "controls": [
+        "Space bar or Click to jump",
+        "Hold to keep flying in ship mode",
+        "R key to restart level"
+      ],
+      "tips": [
+        "Listen to the music rhythm for better timing",
+        "Practice mode helps learn difficult sections",
+        "Watch for visual cues and patterns",
+        "Don't give up - persistence is key!"
+      ],
+      "relatedGameIds": [
+        "geometry-dash-lite",
+        "geometry-dash-subzero",
+        "geometry-dash-meltdown",
+        "geometry-dash-wave",
+        "geometry-dash-spam",
+        "geometry-dash-breeze",
+        "geometry-dash-world"
+      ]
+    },
+    {
+      "id": "geometry-dash-world",
+      "title": "Geometry Dash World",
+      "slug": "geometry-dash-world",
+      "description": "Geometry Dash World - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "longDescription": "Geometry Dash World is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash",
+        "rhythm",
+        "jumping",
+        "obstacles"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/224236914/embed",
+      "thumbnail": "/images/games/thumbnails/geometry-dash-world-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/geometry-dash-world-thumbnail.webp",
+      "playCount": 1000000,
+      "rating": 5.0,
+      "controls": [
+        "Space bar or Click to jump",
+        "Hold to keep flying in ship mode",
+        "R key to restart level"
+      ],
+      "tips": [
+        "Listen to the music rhythm for better timing",
+        "Practice mode helps learn difficult sections",
+        "Watch for visual cues and patterns",
+        "Don't give up - persistence is key!"
+      ],
+      "relatedGameIds": [
+        "geometry-dash-lite",
+        "geometry-dash-subzero",
+        "geometry-dash-meltdown",
+        "geometry-dash-wave",
+        "geometry-dash-spam",
+        "geometry-dash-breeze",
+        "geometry-dash"
+      ]
+    },
+    {
+      "id": "geometry-dash-subzero",
+      "title": "Geometry Dash Subzero",
+      "slug": "geometry-dash-subzero",
+      "description": "Geometry Dash Subzero - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "longDescription": "Geometry Dash Subzero is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash",
+        "rhythm",
+        "jumping",
+        "obstacles"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/216343253/embed",
+      "thumbnail": "/images/games/thumbnails/geometry-dash-subzero-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/geometry-dash-subzero-thumbnail.webp",
+      "playCount": 1000000,
+      "rating": 5.0,
+      "controls": [
+        "Space bar or Click to jump",
+        "Hold to keep flying in ship mode",
+        "R key to restart level"
+      ],
+      "tips": [
+        "Listen to the music rhythm for better timing",
+        "Practice mode helps learn difficult sections",
+        "Watch for visual cues and patterns",
+        "Don't give up - persistence is key!"
+      ],
+      "relatedGameIds": [
+        "geometry-dash-lite",
+        "geometry-dash-meltdown",
+        "geometry-dash-wave",
+        "geometry-dash-spam",
+        "geometry-dash-breeze",
+        "geometry-dash-world",
+        "geometry-dash"
+      ]
+    },
+    {
+      "id": "geometry-dash-meltdown",
+      "title": "Geometry Dash Meltdown",
+      "slug": "geometry-dash-meltdown",
+      "description": "Geometry Dash Meltdown - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "longDescription": "Geometry Dash Meltdown is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash",
+        "rhythm",
+        "jumping",
+        "obstacles"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/143663274/embed",
+      "thumbnail": "/images/games/thumbnails/geometry-dash-meltdown-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/geometry-dash-meltdown-thumbnail.webp",
+      "playCount": 1000000,
+      "rating": 5.0,
+      "controls": [
+        "Space bar or Click to jump",
+        "Hold to keep flying in ship mode",
+        "R key to restart level"
+      ],
+      "tips": [
+        "Listen to the music rhythm for better timing",
+        "Practice mode helps learn difficult sections",
+        "Watch for visual cues and patterns",
+        "Don't give up - persistence is key!"
+      ],
+      "relatedGameIds": [
+        "geometry-dash-lite",
+        "geometry-dash-subzero",
+        "geometry-dash-wave",
+        "geometry-dash-spam",
+        "geometry-dash-breeze",
+        "geometry-dash-world",
+        "geometry-dash"
+      ]
+    },
+    {
+      "id": "geometry-dash-wave",
+      "title": "Geometry Dash Wave",
+      "slug": "geometry-dash-wave",
+      "description": "Geometry Dash Wave - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "longDescription": "Geometry Dash Wave is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash",
+        "rhythm",
+        "jumping",
+        "obstacles"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/202395548/embed",
+      "thumbnail": "/images/games/thumbnails/geometry-dash-wave-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/geometry-dash-wave-thumbnail.webp",
+      "playCount": 1000000,
+      "rating": 5.0,
+      "controls": [
+        "Space bar or Click to jump",
+        "Hold to keep flying in ship mode",
+        "R key to restart level"
+      ],
+      "tips": [
+        "Listen to the music rhythm for better timing",
+        "Practice mode helps learn difficult sections",
+        "Watch for visual cues and patterns",
+        "Don't give up - persistence is key!"
+      ],
+      "relatedGameIds": [
+        "geometry-dash-lite",
+        "geometry-dash-subzero",
+        "geometry-dash-meltdown",
+        "geometry-dash-spam",
+        "geometry-dash-breeze",
+        "geometry-dash-world",
+        "geometry-dash"
+      ]
+    },
+    {
+      "id": "geometry-dash-spam",
+      "title": "Geometry Dash Spam",
+      "slug": "geometry-dash-spam",
+      "description": "Geometry Dash Spam - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "longDescription": "Geometry Dash Spam is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash",
+        "rhythm",
+        "jumping",
+        "obstacles"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/910122240/embed",
+      "thumbnail": "/images/games/thumbnails/geometry-dash-spam-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/geometry-dash-spam-thumbnail.webp",
+      "playCount": 1000000,
+      "rating": 5.0,
+      "controls": [
+        "Space bar or Click to jump",
+        "Hold to keep flying in ship mode",
+        "R key to restart level"
+      ],
+      "tips": [
+        "Listen to the music rhythm for better timing",
+        "Practice mode helps learn difficult sections",
+        "Watch for visual cues and patterns",
+        "Don't give up - persistence is key!"
+      ],
+      "relatedGameIds": [
+        "geometry-dash-lite",
+        "geometry-dash-subzero",
+        "geometry-dash-meltdown",
+        "geometry-dash-wave",
+        "geometry-dash-breeze",
+        "geometry-dash-world",
+        "geometry-dash"
+      ]
+    },
+    {
+      "id": "geometry-dash-breeze",
+      "title": "Geometry Dash Breeze",
+      "slug": "geometry-dash-breeze",
+      "description": "Geometry Dash Breeze - Jump and fly your way through danger in this rhythm-based action platformer!",
+      "longDescription": "Geometry Dash Breeze is an exciting rhythm-based action platformer that challenges your reflexes and timing. Navigate through a series of challenging obstacles, spikes, and platforms while listening to an energetic soundtrack. Jump, fly, and flip your way through dangerous passages and spiky obstacles. This game combines precise platforming with rhythm-based gameplay for an addictive experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash",
+        "rhythm",
+        "jumping",
+        "obstacles"
+      ],
+      "iframeUrl": "https://1games.io/game/geometry-dash-breeze/",
+      "thumbnail": "/images/games/thumbnails/geometry-dash-breeze-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/geometry-dash-breeze-thumbnail.webp",
+      "playCount": 1000000,
+      "rating": 5.0,
+      "controls": [
+        "Space bar or Click to jump",
+        "Hold to keep flying in ship mode",
+        "R key to restart level"
+      ],
+      "tips": [
+        "Listen to the music rhythm for better timing",
+        "Practice mode helps learn difficult sections",
+        "Watch for visual cues and patterns",
+        "Don't give up - persistence is key!"
+      ],
+      "relatedGameIds": [
+        "geometry-dash-lite",
+        "geometry-dash-subzero",
+        "geometry-dash-meltdown",
+        "geometry-dash-wave",
+        "geometry-dash-spam",
+        "geometry-dash-world",
+        "geometry-dash"
       ]
     },
     {
@@ -78,7 +352,7 @@
       "slug": "doodle-baseball",
       "description": "Doodle Baseball - Hit the ball and run the bases in this classic sports game!",
       "longDescription": "Doodle Baseball is a classic sports game that challenges you to hit the ball and run the bases. Hit the ball and run the bases in this classic sports game!",
-      "category": "",
+      "category": "google-games",
       "tags": [
         "doodle baseball",
         "sports",
@@ -192,14 +466,14 @@
       "relatedGameIds": []
     },
     {
-      "id": "pacman",
+      "id": "pac-man",
       "title": "Pac-Man",
       "slug": "pac-man",
       "description": "Pac-Man - Eat all the dots and avoid the ghosts!",
       "longDescription": "Pac-Man is a classic arcade game where you have to eat all the dots and avoid the ghosts. The game is played with a grid of 28x36 cells, and the goal is to eat all the dots and avoid the ghosts. The game is played with a grid of 28x36 cells, and the goal is to eat all the dots and avoid the ghosts.",
       "category": "google-games",
       "tags": [
-        "pacman",
+        "pac-man",
         "arcade game"
       ],
       "iframeUrl": "https://1games.io/game/doodle-pacman/pacman.html",
@@ -253,7 +527,7 @@
       "slug": "basketball",
       "description": "Basketball - Shoot the ball and score points!",
       "longDescription": "Basketball is a classic arcade game where you have to shoot the ball and score points. The game is played with a grid of 28x36 cells, and the goal is to shoot the ball and score points. The game is played with a grid of 28x36 cells, and the goal is to shoot the ball and score points.",
-      "category": "",
+      "category": "google-games",
       "tags": [
         "basketball",
         "arcade game"
@@ -349,6 +623,174 @@
       "iframeUrl": "https://sprunkihorror.io/game/sprunki-original/",
       "thumbnail": "/images/games/thumbnails/sprunki-thumbnail.webp",
       "screenshot": "/images/games/thumbnails/sprunki-thumbnail.webp",
+      "playCount": 2500000,
+      "rating": 4.8,
+      "controls": [
+        "Click to select letters",
+        "Drag to move letters",
+        "Click to make words"
+      ],
+      "tips": [
+        "Guess the word in 6 tries",
+        "Use the keyboard to input letters",
+        "Click to submit your guess"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "id": "subway-surfers",
+      "title": "Subway Surfers",
+      "slug": "subway-surfers",
+      "description": "Subway Surfers - Run and jump your way through the subway!",
+      "longDescription": "Subway Surfers is a classic arcade game where you have to run and jump your way through the subway. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the subway. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the subway.",
+      "category": "",
+      "tags": [
+        "subway surfers",
+        "arcade game"
+      ],
+      "iframeUrl": "https://1games.io/game/subway-surfers/",
+      "thumbnail": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/subway-surfers-thumbnail.webp",
+      "playCount": 2500000,
+      "rating": 4.8,
+      "controls": [
+        "Click to select letters",
+        "Drag to move letters",
+        "Click to make words"
+      ],
+      "tips": [
+        "Guess the word in 6 tries",
+        "Use the keyboard to input letters",
+        "Click to submit your guess"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "id": "minesweeper",
+      "title": "Minesweeper",
+      "slug": "minesweeper",
+      "description": "Minesweeper - Click on the cells to reveal the numbers!",
+      "longDescription": "Minesweeper is a puzzle game where you have to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers.",
+      "category": "",
+      "tags": [
+        "minesweeper",
+        "puzzle game"
+      ],
+      "iframeUrl": "https://gamesonline86.github.io/minesweeper/",
+      "thumbnail": "/images/games/thumbnails/minesweeper-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/minesweeper-thumbnail.webp",
+      "playCount": 2500000,
+      "rating": 4.8,
+      "controls": [
+        "Click to select cells",
+        "Drag to move cells",
+        "Click to make moves"
+      ],
+      "tips": [
+        "Click on the cells to reveal the numbers",
+        "Use the keyboard to input numbers",
+        "Click to submit your move"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "id": "google-minesweeper",
+      "title": "Google Minesweeper",
+      "slug": "google-minesweeper",
+      "description": "Google Minesweeper - Click on the cells to reveal the numbers!",
+      "longDescription": "Google Minesweeper is a puzzle game where you have to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers. The game is played with a grid of 9x9 cells, and the goal is to click on the cells to reveal the numbers.",
+      "category": "google-games",
+      "tags": [
+        "google minesweeper",
+        "puzzle game"
+      ],
+      "iframeUrl": "https://googlminesweeper.com/game/index.html",
+      "thumbnail": "/images/games/thumbnails/google-minesweeper-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/google-minesweeper-thumbnail.webp",
+      "playCount": 2500000,
+      "rating": 4.8,
+      "controls": [
+        "Click to select cells",
+        "Drag to move cells",
+        "Click to make moves"
+      ],
+      "tips": [
+        "Click on the cells to reveal the numbers",
+        "Use the keyboard to input numbers",
+        "Click to submit your move"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "id": "minecraft",
+      "title": "Minecraft",
+      "slug": "minecraft",
+      "description": "Minecraft - Build and explore in this sandbox game!",
+      "longDescription": "Minecraft is a sandbox game where you have to build and explore. The game is played with a grid of 28x36 cells, and the goal is to build and explore. The game is played with a grid of 28x36 cells, and the goal is to build and explore.",
+      "category": "",
+      "tags": [
+        "minecraft",
+        "sandbox game"
+      ],
+      "iframeUrl": "https://eaglercraftx.pages.dev/",
+      "thumbnail": "/images/games/thumbnails/minecraft-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/minecraft-thumbnail.webp",
+      "playCount": 2500000,
+      "rating": 4.8,
+      "controls": [
+        "Click to select blocks",
+        "Drag to move blocks",
+        "Click to make blocks"
+      ],
+      "tips": [
+        "Build and explore in this sandbox game",
+        "Use the keyboard to input blocks",
+        "Click to submit your block"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "id": "dinosaur-game",
+      "title": "Dinosaur Game",
+      "slug": "dinosaur-game",
+      "description": "Dinosaur - Run and jump your way through the dinosaur!",
+      "longDescription": "Dinosaur is a classic arcade game where you have to run and jump your way through the dinosaur. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the dinosaur. The game is played with a grid of 28x36 cells, and the goal is to run and jump your way through the dinosaur.",
+      "category": "google-games",
+      "tags": [
+        "dinosaur game",
+        "arcade game"
+      ],
+      "iframeUrl": "https://dinosaur-game.io/game/t-rex/",
+      "thumbnail": "/images/games/thumbnails/dinosaur-game-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/dinosaur-game-thumbnail.webp",
+      "playCount": 2500000,
+      "rating": 4.8,
+      "controls": [
+        "Click to select letters",
+        "Drag to move letters",
+        "Click to make words"
+      ],
+      "tips": [
+        "Guess the word in 6 tries",
+        "Use the keyboard to input letters",
+        "Click to submit your guess"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "id": "snake-game",
+      "title": "Snake Game",
+      "slug": "snake-game",
+      "description": "Snake Game - Move the snake and eat the food!",
+      "longDescription": "Snake Game is a classic arcade game where you have to move the snake and eat the food. The game is played with a grid of 28x36 cells, and the goal is to move the snake and eat the food. The game is played with a grid of 28x36 cells, and the goal is to move the snake and eat the food.",
+      "category": "google-games",
+      "tags": [
+        "snake game",
+        "arcade game"
+      ],
+      "iframeUrl": "https://emulatoros.github.io/gfile/snake/",
+      "thumbnail": "/images/games/thumbnails/google-snake-game-thumbnail.webp",
+      "screenshot": "/images/games/thumbnails/google-snake-game-thumbnail.webp",
       "playCount": 2500000,
       "rating": 4.8,
       "controls": [

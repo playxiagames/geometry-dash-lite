@@ -11,36 +11,44 @@
   "homepage": {
     "mainGame": "geometry-dash-lite",
     "featuredGames": [
-      "geometry-dash-lite",
       "retro-bowl", 
       "doodle-baseball",
       "wordle",
       "solitaire",
       "sudoku",
-      "pacman",
-      "atari-breakout"
+      "pac-man"
     ],
     "popularGames": [
       "pac-man",
-      "geometry-dash-lite",
       "retro-bowl",
       "doodle-baseball",
       "wordle",
       "solitaire",
       "sudoku",
-      "atari-breakout",
       "basketball"
     ],
     "newGames": ["wordle", "sudoku", "basketball"],
-    "hotGames": ["geometry-dash-lite", "retro-bowl", "pacman"]
+    "hotGames": ["geometry-dash-lite", "retro-bowl", "pac-man"]
   },
   "navigation": {
     "topItems": [
       {
-        "type": "game",
-        "id": "geometry-dash-lite",
-        "title": "Geometry Dash Lite",
-        "url": "/games/geometry-dash-lite"
+        "type": "category",
+        "id": "geometry-dash",
+        "title": "Geometry Dash",
+        "url": "/category/geometry-dash"
+      },
+      {
+        "type": "category",
+        "id": "google-games",
+        "title": "Google Games",
+        "url": "/category/google-games"
+      },
+      {
+        "type": "category",
+        "id": "js13k-games",
+        "title": "js13kGames",
+        "url": "/category/js13k-games"
       },
       {
         "type": "game",
@@ -53,18 +61,6 @@
         "id": "solitaire",
         "title": "Solitaire",
         "url": "/games/solitaire"
-      },
-      {
-        "type": "game",
-        "id": "sprunki",
-        "title": "Sprunki",
-        "url": "/games/sprunki"
-      },
-      {
-        "type": "category",
-        "id": "google-games",
-        "title": "Google Games",
-        "url": "/category/google-games"
       }
     ]
   },

@@ -421,22 +421,6 @@ const Navigation = () => {
                       : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
                   }`}
                 >
-                  {item.type === 'category' && (
-                    <span className="mr-2">
-                      {item.id === 'arcade' && '🕹️'}
-                      {item.id === 'puzzle' && '🧩'}
-                      {item.id === 'shooter' && '🚀'}
-                      {item.id === 'racing' && '🏎️'}
-                      {item.id === 'action' && '⚡'}
-                    </span>
-                  )}
-                  {item.type === 'game' && (
-                    <span className="mr-2">
-                      {item.id === 'geometry-dash-lite' && '🎮'}
-                      {item.id === 'tetris' && '🔷'}
-                      {item.id === 'pac-man' && '👻'}
-                    </span>
-                  )}
                   {item.title}
                 </Link>
               ))}

@@ -8,7 +8,7 @@
       "icon": "🎮",
       "color": "#A29BFE",
       "isTopLevel": true,
-      "gameCount": 1
+      "gameCount": 7
     },
     {
       "id": "google-games",
@@ -18,7 +18,7 @@
       "icon": "🎮",
       "color": "#4285F4",
       "isTopLevel": true,
-      "gameCount": 2
+      "gameCount": 7
     }
   ]
 } 
