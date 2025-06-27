@@ -189,14 +189,14 @@ const GamePlayer = ({ game, className = '' }) => {
           </div>
           
           <div className="flex items-center space-x-2">
-            <button
+            {/* <button
               onClick={shareGame}
               className="px-3 py-1.5 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors flex items-center space-x-1"
               title="Share game"
             >
               <span>📤</span>
               <span>Share</span>
-            </button>
+            </button> */}
             <button
               onClick={toggleFullscreen}
               className="px-3 py-1.5 text-sm bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors flex items-center space-x-1"

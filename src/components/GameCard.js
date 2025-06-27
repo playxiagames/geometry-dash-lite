@@ -203,7 +203,8 @@ export const SidebarGameList = ({
         <h3 className="text-base font-semibold text-gray-900 mb-3 text-left">{title}</h3>
       )}
       
-      <div className="space-y-2">
+      {/* 响应式布局：小屏幕时网格排列，大屏幕时垂直列表 */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-0 lg:space-y-2">
         {games.map((game, index) => (
           <SidebarGameItem 
             key={game.id} 
@@ -226,10 +227,10 @@ const SidebarGameItem = ({ game }) => {
     return (
     <Link href={`/games/${game.slug}`} className="block">
       <div 
-        className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+        className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors lg:mb-0"
       >
-        {/* Game Image */}
-        <div className="flex-shrink-0 w-32 h-20 rounded-md overflow-hidden bg-gray-200">
+        {/* Game Image - 响应式尺寸 */}
+        <div className="flex-shrink-0 w-20 h-12 sm:w-24 sm:h-16 lg:w-32 lg:h-20 rounded-md overflow-hidden bg-gray-200">
           {!imageError ? (
             <img
               src={game.screenshot}
@@ -245,15 +246,15 @@ const SidebarGameItem = ({ game }) => {
           )}
         </div>
         
-        {/* Game Info */}
+        {/* Game Info - 响应式文字大小 */}
         <div className="flex-1 min-w-0">
-          <div className="text-sm font-medium text-gray-900 truncate text-left">
+          <div className="text-xs sm:text-sm lg:text-sm font-medium text-gray-900 truncate text-left">
             {game.title}
           </div>
-          <div className="flex items-center space-x-1 text-xs text-gray-500">
+          <div className="flex items-center space-x-1 text-[10px] sm:text-xs lg:text-xs text-gray-500">
             <span>⭐ {formatRating(game.rating)}</span>
-            <span>•</span>
-            <span>🎮 {formatPlayCount(game.playCount)}</span>
+            <span className="hidden sm:inline lg:inline">•</span>
+            <span className="hidden sm:inline lg:inline">🎮 {formatPlayCount(game.playCount)}</span>
           </div>
         </div>
       </div>
