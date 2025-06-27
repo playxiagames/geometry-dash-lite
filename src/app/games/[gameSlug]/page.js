@@ -79,7 +79,7 @@ export default function GamePage({ params }) {
   }
 
   // 获取相关游戏
-  const relatedGames = getRandomGames(8, game.id);
+  const relatedGames = getRandomGames(6, game.id);
   const moreGames = getRandomGames(12, game.id);
 
   // 面包屑导航
@@ -91,9 +91,6 @@ export default function GamePage({ params }) {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        
-        {/* Breadcrumb */}
-        {/* <Breadcrumb items={breadcrumbItems} className="mb-6" /> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           
@@ -111,19 +108,21 @@ export default function GamePage({ params }) {
           </div>
         </div>
 
-        {/* Game Description */}
-        <div className="mt-8">
-          <GameDescription game={game} />
-        </div>
+        {/* Breadcrumb */}
+        <Breadcrumb items={breadcrumbItems} className="mt-6" />
 
         {/* More Games Grid */}
-        <div className="mt-12">
+        <div className="mt-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">🕹️ You May Also Like</h2>
           </div>
           <GameGrid games={moreGames} />
         </div>
 
+        {/* Game Description */}
+        <div className="mt-8">
+          <GameDescription game={game} />
+        </div>
       </div>
     </Layout>
   );

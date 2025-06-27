@@ -60,16 +60,16 @@ export default function HomePage() {
           {/* Sidebar - Related Games */}
           <div className="lg:col-span-1">
             <div className="sticky top-20">
-              <SidebarGameList games={featureGames} title="Featured Games" />
+              <SidebarGameList games={relatedGames} title="Related Games" />
             </div>
           </div>
         </div>
 
         {/* Featured Games Grid */}
-        {/* <div className="mt-6">
+        <div className="mt-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4 text-left">🎯 Featured Games</h2>
           <GameGrid games={featureGames} />
-        </div> */}
+        </div>
 
         {/* Popular Games Grid */}
         <div className="mt-6">

@@ -44,29 +44,22 @@ export default function CategoryPage({ params }) {
   // 面包屑导航
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
-    { label: 'Categories', href: '/category' },
     { label: category.name }
   ];
 
   return (
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        
-        {/* Breadcrumb */}
-        {/* <Breadcrumb items={breadcrumbItems} className="mb-6" /> */}
 
         {/* Category Header */}
         <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
-            <span className="text-6xl">{category.icon}</span>
-          </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">{category.description}</p>
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
               {categoryGames.length} games available
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Category Filters */}
@@ -87,7 +80,7 @@ export default function CategoryPage({ params }) {
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">
-              {category.icon} {category.name}
+              All {category.name}
             </h2>
             <div className="text-sm text-gray-500">
               Showing {categoryGames.length} games
@@ -105,49 +98,92 @@ export default function CategoryPage({ params }) {
           )}
         </div>
 
+        {/* Breadcrumb */}
+        <Breadcrumb items={breadcrumbItems} className="my-6" />
+
         {/* Category Description */}
         <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">About {category.name}</h2>
           <div className="prose prose-lg max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 leading-relaxed mb-6">
               {category.longDescription || category.description}
             </p>
             
-            {category.id === 'arcade' && (
-              <div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Arcade games are the heart of classic gaming. These games are designed to be easy to learn but challenging to master, 
-                  offering quick gameplay sessions that keep you coming back for more. From the exciting rhythm-based Geometry Dash Lite to 
-                  complex puzzle challenges, arcade games provide instant fun and entertainment.
-                </p>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Popular Arcade Game Features:</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Simple, intuitive controls</li>
-                  <li>Progressive difficulty levels</li>
-                  <li>High score challenges</li>
-                  <li>Quick game sessions</li>
-                  <li>Immediate feedback and rewards</li>
-                </ul>
+            {/* Games List */}
+            {categoryGames.length > 0 && (
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Featured Games in This Category:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {categoryGames.map((game) => (
+                    <div key={game.id} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                      <div className="flex-shrink-0">
+                        <img 
+                          src={game.thumbnail} 
+                          alt={game.title}
+                          className="w-12 h-12 rounded-lg object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-medium text-gray-900 truncate">
+                          {game.title}
+                        </h4>
+                        <p className="text-xs text-gray-600 mt-1 line-clamp-2">
+                          {game.description}
+                        </p>
+                        <div className="flex items-center mt-2 space-x-2">
+                          <span className="text-xs text-yellow-600">⭐ {game.rating}</span>
+                          <span className="text-xs text-gray-500">•</span>
+                          <span className="text-xs text-gray-500">
+                            {game.playCount >= 1000000 
+                              ? `${(game.playCount / 1000000).toFixed(1)}M plays`
+                              : `${Math.round(game.playCount / 1000)}K plays`
+                            }
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
-            {category.id === 'puzzle' && (
-              <div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Puzzle games challenge your mind and test your problem-solving skills. These games range from simple pattern matching 
-                  to complex logical challenges that require strategic thinking and planning. Perfect for players who enjoy mental stimulation 
-                  and want to exercise their brain while having fun.
-                </p>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Benefits of Puzzle Games:</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Improve cognitive function</li>
-                  <li>Enhance problem-solving skills</li>
-                  <li>Boost memory and concentration</li>
-                  <li>Reduce stress and anxiety</li>
-                  <li>Provide sense of achievement</li>
-                </ul>
-              </div>
-            )}
+            {/* Additional SEO Content */}
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why Play {category.name} Games?</h3>
+              {category.id === 'geometry-dash' && (
+                <div className="space-y-4 text-gray-700">
+                  <p>
+                    Geometry Dash games offer a unique blend of platforming action and musical rhythm that creates an unparalleled gaming experience. 
+                    These games are perfect for players who enjoy challenging themselves with precise timing and coordination skills.
+                  </p>
+                  <p>
+                    The series has become a phenomenon in the gaming world due to its simple yet addictive gameplay mechanics. 
+                    Each level is carefully crafted to sync with electronic music, making every jump, flip, and dash feel like part of a musical performance.
+                  </p>
+                  <p>
+                    From the accessible Geometry Dash Lite to the intense challenges of advanced versions, 
+                    these games provide endless entertainment and the satisfaction of mastering increasingly difficult obstacles.
+                  </p>
+                </div>
+              )}
+              {category.id === 'google-games' && (
+                <div className="space-y-4 text-gray-700">
+                  <p>
+                    Google Games represent the pinnacle of classic arcade gaming, bringing timeless entertainment to modern browsers. 
+                    These games have stood the test of time because they focus on pure, engaging gameplay without unnecessary complexity.
+                  </p>
+                  <p>
+                    Each game in this collection has been carefully optimized for web browsers, ensuring smooth performance and instant accessibility. 
+                    Whether you're looking for a quick gaming break or want to experience gaming history, these classics deliver immediate fun.
+                  </p>
+                  <p>
+                    The beauty of Google Games lies in their simplicity and universal appeal. 
+                    From the strategic thinking required in Minesweeper to the quick reflexes needed in Pac-Man, 
+                    these games offer something for every type of player.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

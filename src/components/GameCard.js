@@ -224,12 +224,12 @@ const SidebarGameItem = ({ game }) => {
   };
 
     return (
-                      <Link href={`/games/${game.slug}`} className="block">
+    <Link href={`/games/${game.slug}`} className="block">
       <div 
         className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
       >
         {/* Game Image */}
-        <div className="flex-shrink-0 w-32 h-18 rounded-md overflow-hidden bg-gray-200">
+        <div className="flex-shrink-0 w-32 h-20 rounded-md overflow-hidden bg-gray-200">
           {!imageError ? (
             <img
               src={game.screenshot}
