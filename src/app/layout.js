@@ -175,6 +175,8 @@ export default function RootLayout({ children }) {
             })
           }}
         />
+
+        <script defer data-domain="geometry-dash-lite.org" src="https://click.pageview.click/js/script.js"></script>
       </head>
       <body>
         <div id="root">
