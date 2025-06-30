@@ -138,7 +138,7 @@ export default function SitemapPage() {
                 {games.map((game, index) => (
                   <Link
                     key={index}
-                    href={`/games/${game.slug}`}
+                    href={`/games/${game.slug}/`}
                     className="block p-3 border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-md transition-all duration-200 group"
                   >
                     <div className="flex items-center">
