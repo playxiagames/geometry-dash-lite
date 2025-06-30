@@ -5,7 +5,7 @@ import { generatePageMetadata } from '../../utils/seoUtils';
 export const metadata = generatePageMetadata({
   title: 'About Us',
   description: 'Learn about Geometry Dash Lite Online, our mission to provide free online games, and our commitment to delivering the best gaming experience.',
-  path: '/about/',
+  path: '/about',
 });
 
 export default function AboutPage() {
