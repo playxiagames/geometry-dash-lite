@@ -102,7 +102,7 @@ const Footer = () => {
               ))}
               <li>
                 <a
-                  href="/sitemap"
+                  href="/sitemap/"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   Sitemap

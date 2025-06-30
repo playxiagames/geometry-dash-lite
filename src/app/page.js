@@ -87,9 +87,9 @@ export default function HomePage() {
 
         {/* SEO Content Section - 主要H1标签 */}
         <div className="mt-6 bg-white rounded-lg shadow-sm p-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4 text-left">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-left">
             Play Geometry Dash Lite Online - Free Browser Game
-          </h1>
+          </h2>
           
           <div className="prose prose-lg max-w-none text-left">
             <p className="text-gray-700 leading-relaxed mb-4">

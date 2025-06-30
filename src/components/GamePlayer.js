@@ -110,7 +110,7 @@ const GamePlayer = ({ game, className = '' }) => {
       <div className="game-title-header mb-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <h2 className="text-xl font-bold text-gray-900 text-left">{game.title}</h2>
+            <h1 className="text-xl font-bold text-gray-900 text-left">{game.title}</h1>
             <div className="flex items-center space-x-2 text-sm text-gray-500">
               <span>⭐ {game.rating}</span>
               <span>•</span>
