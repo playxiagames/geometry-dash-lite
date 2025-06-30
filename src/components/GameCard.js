@@ -200,7 +200,7 @@ export const SidebarGameList = ({
   return (
     <div className={`sidebar-game-list ${className}`}>
       {title && (
-        <h3 className="text-base font-semibold text-gray-900 mb-3 text-left">{title}</h3>
+        <h2 className="text-base font-semibold text-gray-900 mb-3 text-left">{title}</h2>
       )}
       
       {/* 响应式布局：小屏幕时网格排列，大屏幕时垂直列表 */}

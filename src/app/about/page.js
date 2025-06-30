@@ -140,7 +140,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
               <a
-                href="/contact"
+                href="/contact/"
                 className="bg-white text-blue-600 px-4 py-2 rounded-lg font-medium text-sm hover:bg-blue-50 transition-colors text-center"
               >
                 Contact Us

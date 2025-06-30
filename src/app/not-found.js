@@ -78,7 +78,7 @@ export default function NotFound() {
           <h3 className="font-semibold text-blue-900 mb-2">💡 Need Help?</h3>
           <p className="text-blue-700 text-sm">
             If you believe this is an error, please{' '}
-            <Link href="/contact" className="underline hover:text-blue-900">
+            <Link href="/contact/" className="underline hover:text-blue-900">
               contact us
             </Link>
             {' '}and let us know what you were looking for.
