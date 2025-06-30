@@ -105,7 +105,7 @@ export default function SitemapPage() {
                 {categories.map((category, index) => (
                   <Link
                     key={index}
-                    href={`/category/${category.slug}`}
+                    href={`/category/${category.slug}/`}
                     className="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all duration-200 group"
                   >
                     <div className="flex items-start">

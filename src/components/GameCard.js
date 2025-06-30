@@ -52,7 +52,7 @@ const GameCard = ({
   const starRating = generateStarRating(game.rating);
 
   return (
-    <Link href={`/games/${game.slug}`} className="block">
+    <Link href={`/games/${game.slug}/`} className="block">
       <div 
         className={`game-card bg-white ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
       >
@@ -225,7 +225,7 @@ const SidebarGameItem = ({ game }) => {
   };
 
     return (
-    <Link href={`/games/${game.slug}`} className="block">
+    <Link href={`/games/${game.slug}/`} className="block">
       <div 
         className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors lg:mb-0"
       >

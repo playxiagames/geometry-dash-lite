@@ -56,7 +56,7 @@ export default function NotFound() {
               {featuredGames.map((game) => (
                 <Link
                   key={game.id}
-                  href={`/games/${game.slug}`}
+                  href={`/games/${game.slug}/`}
                   className="group block"
                 >
                   <div className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">

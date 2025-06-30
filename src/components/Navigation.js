@@ -95,10 +95,10 @@ const Navigation = () => {
     
     if (index < totalGames) {
       const game = searchResults.games[index];
-      router.push(`/games/${game.slug}`);
+      router.push(`/games/${game.slug}/`);
     } else {
       const category = searchResults.categories[index - totalGames];
-      router.push(`/category/${category.slug}`);
+      router.push(`/category/${category.slug}/`);
     }
     
     setIsSearchOpen(false);
@@ -471,7 +471,7 @@ export const CategoryBadge = ({ category, isActive = false, className = '' }) =>
 
   return (
     <Link 
-      href={`/category/${category.slug}`}
+      href={`/category/${category.slug}/`}
       className={`${baseClasses} ${activeClasses} ${className}`}
     >
       {category.name}
