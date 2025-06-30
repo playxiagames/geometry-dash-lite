@@ -18,10 +18,10 @@ export default function SitemapPage() {
   // Static pages
   const staticPages = [
     { title: 'Home', url: '/', description: 'Explore the best online games', icon: '🏠' },
-    { title: 'About Us', url: '/about', description: 'Learn about our mission and team', icon: 'ℹ️' },
-    { title: 'Contact Us', url: '/contact', description: 'Get in touch with us', icon: '📧' },
-    { title: 'Privacy Policy', url: '/privacy', description: 'Learn how we protect your privacy', icon: '🔒' },
-    { title: 'Terms of Service', url: '/terms', description: 'View our terms of service', icon: '📋' },
+    { title: 'About Us', url: '/about/', description: 'Learn about our mission and team', icon: 'ℹ️' },
+    { title: 'Contact Us', url: '/contact/', description: 'Get in touch with us', icon: '📧' },
+    { title: 'Privacy Policy', url: '/privacy/', description: 'Learn how we protect your privacy', icon: '🔒' },
+    { title: 'Terms of Service', url: '/terms/', description: 'View our terms of service', icon: '📋' },
   ];
 
   return (

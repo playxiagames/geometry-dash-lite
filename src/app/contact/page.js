@@ -5,7 +5,7 @@ import { generatePageMetadata } from '../../utils/seoUtils';
 export const metadata = generatePageMetadata({
   title: 'Contact Us',
   description: 'Get in touch with Geometry Dash Lite Online team. We\'d love to hear your feedback, suggestions, and help with any questions you may have.',
-  path: '/contact',
+  path: '/contact/',
 });
 
 export default function ContactPage() {

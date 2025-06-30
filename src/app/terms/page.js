@@ -5,7 +5,7 @@ import { generatePageMetadata } from '../../utils/seoUtils';
 export const metadata = generatePageMetadata({
   title: 'Terms of Service',
   description: 'Read our Terms of Service to understand the rules and regulations for using Geometry Dash Lite Online platform and our free online games.',
-  path: '/terms',
+  path: '/terms/',
 });
 
 export default function TermsPage() {

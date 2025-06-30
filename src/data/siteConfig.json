@@ -35,31 +35,31 @@
         "type": "category",
         "id": "geometry-dash",
         "title": "Geometry Dash",
-        "url": "/category/geometry-dash"
+        "url": "/category/geometry-dash/"
       },
       {
         "type": "category",
         "id": "google-games",
         "title": "Google Games",
-        "url": "/category/google-games"
+        "url": "/category/google-games/"
       },
       {
         "type": "game",
         "id": "dinosaur-game",
         "title": "Dinosaur Game",
-        "url": "/games/dinosaur-game"
+        "url": "/games/dinosaur-game/"
       },
       {
         "type": "game",
         "id": "solitaire",
         "title": "Solitaire",
-        "url": "/games/solitaire"
+        "url": "/games/solitaire/"
       },
       {
         "type": "game",
         "id": "wacky-flip",
         "title": "Wacky Flip",
-        "url": "/games/wacky-flip"
+        "url": "/games/wacky-flip/"
       }
     ]
   },
@@ -86,22 +86,22 @@
     "links": [
       {
         "title": "About Us",
-        "url": "/about",
+        "url": "/about/",
         "external": false
       },
       {
         "title": "Contact Us",
-        "url": "/contact",
+        "url": "/contact/",
         "external": false
       },
       {
         "title": "Privacy Policy",
-        "url": "/privacy",
+        "url": "/privacy/",
         "external": false
       },
       {
         "title": "Terms of Service",
-        "url": "/terms",
+        "url": "/terms/",
         "external": false
       }
     ],
