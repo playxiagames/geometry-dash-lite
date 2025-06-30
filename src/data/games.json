@@ -849,6 +849,7 @@
       "relatedGameIds": []
     },
     {
+      "number": 26,
       "id": "wacky-flip",
       "title": "Wacky Flip",
       "slug": "wacky-flip",
@@ -873,6 +874,326 @@
         "Use the edges strategically",
         "Don't grow too fast in tight spaces",
         "Think several moves ahead"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 27,
+      "id": "geometry-dash-3d",
+      "title": "Geometry Dash 3D",
+      "slug": "geometry-dash-3d",
+      "description": "Experience the classic Geometry Dash in stunning 3D with enhanced depth effects and challenging obstacles.",
+      "longDescription": "Geometry Dash 3D takes the rhythm-based platformer to a new dimension with immersive 3D graphics and enhanced visual effects. Navigate through challenging geometric landscapes with both 2.5D and 3D elements that create realistic depth and perspective. The game maintains the core Geometry Dash mechanics while adding a fresh visual experience that makes every jump, flip, and dash more engaging than ever.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash 3d",
+        "3d platform",
+        "rhythm game",
+        "3d effects"
+      ],
+      "iframeUrl": "https://1games.io/game/geometry-dash-3d/",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-3d-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-3d-thumbnail.webp",
+      "playCount": 920000,
+      "rating": 4.6,
+      "controls": [
+        "Click or Space to jump",
+        "Navigate through 3D obstacles",
+        "R to restart level"
+      ],
+      "tips": [
+        "Focus on timing despite 3D perspective",
+        "Watch for depth changes in obstacles",
+        "Use visual cues to judge distances",
+        "Practice with familiar levels first"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 28,
+      "id": "geometry-vibes-monster",
+      "title": "Geometry Vibes Monster",
+      "slug": "geometry-vibes-monster",
+      "description": "Fast-paced geometric battlefield where you pilot a spaceship against 8 unique monsters with distinct attack patterns.",
+      "longDescription": "Geometry Vibes Monster transforms the classic geometry experience into an intense monster battle arena. Control your spaceship through waves of attacks from 8 different monsters, each with unique behaviors and assault patterns. The game features both endless survival mode and competitive multiplayer races, combining quick reflexes with strategic monster pattern recognition. With vibrant retro graphics and dynamic gameplay that increases in difficulty, every encounter becomes a test of your piloting skills.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry vibes monster",
+        "spaceship battle",
+        "monster defense",
+        "multiplayer racing"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-vibes-monster",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-vibes-monster-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-vibes-monster-thumbnail.webp",
+      "playCount": 750000,
+      "rating": 4.4,
+      "controls": [
+        "Click and hold to ascend spaceship",
+        "Release to descend and dodge attacks",
+        "Up Arrow for multiplayer mode"
+      ],
+      "tips": [
+        "Learn each monster's attack pattern",
+        "Time your movements with monster behaviors",
+        "Use smooth, flowing motions to avoid attacks",
+        "Practice in endless mode before racing friends"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 29,
+      "id": "geometry-dash-deadlocked",
+      "title": "Geometry Dash Deadlocked",
+      "slug": "geometry-dash-deadlocked",
+      "description": "The ultimate demon difficulty level featuring laser-shooting monsters, teleportation portals, and epic boss battles.",
+      "longDescription": "Geometry Dash Deadlocked is the infamous 20th official level and one of the most challenging demon difficulties in the series. This level introduces revolutionary mechanics including green jump rings, teleportation portals, key-and-lock systems, and epic boss fights with laser-shooting monsters. With 15 stars as the highest reward in any official level, Deadlocked tests every skill you've mastered across multiple game modes including cube, ship, ball, UFO, wave, and robot forms through a 99-second gauntlet of precision platforming.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash deadlocked",
+        "demon difficulty",
+        "boss battle",
+        "teleportation"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/203217411/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-deadlocked-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-deadlocked-thumbnail.webp",
+      "playCount": 1850000,
+      "rating": 4.9,
+      "controls": [
+        "Click or Space to jump/interact",
+        "Different controls for each game mode",
+        "Collect keys to unlock secret areas"
+      ],
+      "tips": [
+        "Master the wave sections first - they're the hardest",
+        "Memorize boss monster attack patterns",
+        "Use practice mode extensively",
+        "Collect all 3 secret coins for extra rewards"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 30,
+      "id": "geometry-stars",
+      "title": "Geometry Stars",
+      "slug": "geometry-stars",
+      "description": "Jump, fly, and flip through dark caves collecting stars to upgrade characters and unlock hidden secrets.",
+      "longDescription": "Geometry Stars offers a captivating rhythm-based adventure through mysterious dark caverns filled with spiky obstacles and glowing collectibles. Navigate 8 challenging levels while collecting stars to upgrade your character's abilities and unlock new skins. The game features stunning HD visuals, a dynamic soundtrack, and introduces new monsters and obstacles that keep the gameplay fresh and exciting. Perfect your timing and rhythm to conquer increasingly difficult challenges and discover all the secrets hidden within.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry stars",
+        "star collection",
+        "character upgrades",
+        "cave exploration"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-stars",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-stars-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-stars-thumbnail.webp",
+      "playCount": 680000,
+      "rating": 4.5,
+      "controls": [
+        "Click on screen to make cube jump",
+        "Sync movements with music rhythm",
+        "Collect stars for upgrades"
+      ],
+      "tips": [
+        "Synchronize jumps with the background music",
+        "Collect as many stars as possible for upgrades",
+        "Watch out for new monster attack patterns",
+        "Use upgrades to tackle tougher challenges"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 31,
+      "id": "geometry-dash-back-on-track",
+      "title": "Geometry Dash Back on Track",
+      "slug": "geometry-dash-back-on-track",
+      "description": "The classic 2nd level of Geometry Dash featuring the iconic upbeat soundtrack and balanced difficulty progression.",
+      "longDescription": "Geometry Dash Back on Track is the beloved second official level that perfectly introduces players to the core mechanics of rhythm-based platforming. Known for its catchy electronic soundtrack and well-designed difficulty curve, this level teaches essential skills like timing, jump sequences, and obstacle recognition. As one of the most iconic early levels, Back on Track combines accessible gameplay with memorable music that has made it a fan favorite for years.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash back on track",
+        "classic level",
+        "beginner friendly",
+        "iconic soundtrack"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/206109449/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-back-on-track-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-back-on-track-thumbnail.webp",
+      "playCount": 2150000,
+      "rating": 4.7,
+      "controls": [
+        "Click or Space to jump",
+        "Time jumps with the music beat",
+        "R to restart level"
+      ],
+      "tips": [
+        "Listen to the upbeat soundtrack for timing cues",
+        "Master the basic jump patterns",
+        "Perfect for learning fundamental skills",
+        "Collect the 3 secret coins for extra challenge"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 32,
+      "id": "geometry-dash-clutterfunk",
+      "title": "Geometry Dash Clutterfunk",
+      "slug": "geometry-dash-clutterfunk",
+      "description": "Navigate through complex maze-like structures with chaotic obstacles and mind-bending visual effects.",
+      "longDescription": "Geometry Dash Clutterfunk is the notorious 11th official level that lives up to its name with absolutely chaotic and cluttered gameplay. This level introduces some of the most complex obstacle patterns in the series, featuring maze-like structures, rapid-fire spikes, and disorienting visual effects that challenge even experienced players. The intense electronic soundtrack perfectly matches the frantic gameplay, creating an overwhelming but exhilarating experience that tests your ability to process multiple threats simultaneously.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash clutterfunk",
+        "chaotic gameplay",
+        "complex obstacles",
+        "maze-like"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/230342236/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-clutterfunk-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-clutterfunk-thumbnail.webp",
+      "playCount": 1420000,
+      "rating": 4.3,
+      "controls": [
+        "Click or Space to jump",
+        "Navigate through complex mazes",
+        "R to restart when overwhelmed"
+      ],
+      "tips": [
+        "Focus on one obstacle at a time",
+        "Memorize the maze sections through practice",
+        "Don't get distracted by visual clutter",
+        "Use the music to maintain rhythm despite chaos"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 33,
+      "id": "geometry-dash-base-after-base",
+      "title": "Geometry Dash Base After Base",
+      "slug": "geometry-dash-base-after-base",
+      "description": "Experience the iconic dubstep-infused level with multiple game modes including ship, wave, and UFO challenges.",
+      "longDescription": "Geometry Dash Base After Base is the 12th official level renowned for its incredible dubstep soundtrack and revolutionary multi-mode gameplay. This level showcases the full spectrum of Geometry Dash mechanics, seamlessly transitioning between cube, ship, wave, and UFO modes. The intense bass drops perfectly synchronize with the most challenging sections, creating an unforgettable audio-visual experience. With its signature purple and blue color scheme and perfectly balanced difficulty, Base After Base represents the pinnacle of level design in the series.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash base after base",
+        "dubstep soundtrack",
+        "multi-mode",
+        "ship and wave"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/206285866/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-base-after-base-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-base-after-base-thumbnail.webp",
+      "playCount": 1950000,
+      "rating": 4.8,
+      "controls": [
+        "Click for cube jump and ship ascent",
+        "Hold for wave and UFO movement",
+        "Switch controls based on current mode"
+      ],
+      "tips": [
+        "Master the ship sections - they're the most challenging",
+        "Time movements with the dubstep beat drops",
+        "Practice mode transitions between game modes",
+        "The wave sections require smooth control"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 34,
+      "id": "geometry-dash-theory-of-everything",
+      "title": "Geometry Dash Theory of Everything",
+      "slug": "geometry-dash-theory-of-everything",
+      "description": "Conquer the hardest insane difficulty level with rapid dual-mode sections and gravity portals.",
+      "longDescription": "Geometry Dash Theory of Everything is the 13th official level and widely considered one of the most challenging in the main series. This insane difficulty level pushes players to their limits with incredibly fast-paced gameplay, complex dual-mode sections where you control two characters simultaneously, and innovative gravity portals that flip your perspective. The electronic soundtrack builds to intense climaxes that perfectly match the most demanding platforming sequences, making this level the ultimate test of skill and endurance.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash theory of everything",
+        "insane difficulty",
+        "dual mode",
+        "gravity portals"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/236347844/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-theory-of-everything-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-theory-of-everything-thumbnail.webp",
+      "playCount": 1650000,
+      "rating": 4.6,
+      "controls": [
+        "Click/Space for normal jump",
+        "Control both characters in dual sections",
+        "Adapt to gravity portal flips"
+      ],
+      "tips": [
+        "Practice dual-mode sections extensively",
+        "Master gravity portal transitions",
+        "Expect extremely fast-paced gameplay",
+        "This level requires significant dedication to complete"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 35,
+      "id": "geometry-dash-zodiac",
+      "title": "Geometry Dash Zodiac",
+      "slug": "geometry-dash-zodiac",
+      "description": "Experience the legendary Extreme Demon mega-collaboration that once topped the Demonlist as the world's hardest level.",
+      "longDescription": "Geometry Dash Zodiac is an infamous Extreme Demon mega-collaboration featuring 20 sections created by renowned builders. This 3-minute 14-second masterpiece held the #1 spot on the Demonlist for 338 days, pushing players to their absolute limits with brutal timing challenges, memory-based sections, and innovative mechanics. From RicoLP's technical opening to Enlex's mind-bending finale, every segment tests different skills through cube, ship, ball, UFO, wave, spider, and robot modes. With 196,957 objects and Creo's 'Sphere' soundtrack, Zodiac represents the pinnacle of collaborative level design.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash zodiac",
+        "extreme demon",
+        "mega collaboration",
+        "former top 1"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/297508555/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-zodiac-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-zodiac-thumbnail.webp",
+      "playCount": 890000,
+      "rating": 4.7,
+      "controls": [
+        "Click/Space for cube jumping and ship ascent",
+        "Hold for wave, UFO, and robot movement",
+        "Master all game modes for different sections"
+      ],
+      "tips": [
+        "Use practice mode extensively - this is brutally difficult",
+        "Memorize every timing and sequence perfectly",
+        "Focus on one section at a time",
+        "Expect 50,000+ attempts for completion"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 36,
+      "id": "geometry-dash-nine-circles",
+      "title": "Geometry Dash Nine Circles",
+      "slug": "geometry-dash-nine-circles",
+      "description": "The legendary level that spawned an entire genre featuring the iconic strobing wave section and intense visual effects.",
+      "longDescription": "Geometry Dash Nine Circles by Zobros is the most influential level in Geometry Dash history, launching the entire Nine Circles trend that continues today. This Hard Demon features the signature strobing wave section with intense flashing effects that obscure visibility during the song's epic drop. With its iconic red color scheme, perfectly synchronized dubstep soundtrack by NIGHTkilla (Rukkus), and revolutionary visual design, Nine Circles redefined what was possible in level creation. Containing three challenging user coins and 14,894 objects across 92 seconds, this masterpiece ranks #3 on GDToday's 100 Greatest Levels of All Time.",
+      "category": "geometry-dash",
+      "tags": [
+        "geometry dash nine circles",
+        "hard demon",
+        "strobing wave",
+        "trend starter"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/264415879/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-nine-circles-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-nine-circles-thumbnail.webp",
+      "playCount": 2890000,
+      "rating": 4.9,
+      "controls": [
+        "Click or Space to jump in cube sections",
+        "Hold for ship flight and wave movement",
+        "Navigate through ball sections with orb timing"
+      ],
+      "tips": [
+        "Master the wave sections - they're the main challenge",
+        "Memorize the invisible paths in the wave",
+        "Practice the ball section for orb timings",
+        "Collect all 3 user coins for extra challenge"
       ],
       "relatedGameIds": []
     }
