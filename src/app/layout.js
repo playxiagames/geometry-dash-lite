@@ -5,9 +5,9 @@ import GoogleAnalytics from '../components/GoogleAnalytics'
 export const metadata = {
   title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
   description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!',
-  authors: [{ name: 'Geometry Dash Lite Online' }],
-  creator: 'Geometry Dash Lite Online',
-  publisher: 'Geometry Dash Lite Online',
+  authors: [{ name: 'Geometry Dash Lite' }],
+  creator: 'Geometry Dash Lite',
+  publisher: 'Geometry Dash Lite',
   formatDetection: {
     email: false,
     address: false,
@@ -23,7 +23,7 @@ export const metadata = {
     url: 'https://geometry-dash-lite.org/',
     title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
     description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!',
-    siteName: 'Geometry Dash Lite Online',
+    siteName: 'Geometry Dash Lite',
     images: [
       {
         url: '/images/og-geometry-dash-lite.jpg',
@@ -123,11 +123,11 @@ export default function RootLayout({ children }) {
               "@type": "WebSite",
               "@id": "https://geometry-dash-lite.org/#website",
               "url": "https://geometry-dash-lite.org/",
-              "name": "Geometry Dash Lite Online",
+              "name": "Geometry Dash Lite",
               "description": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer.",
               "publisher": {
                 "@type": "Organization",
-                "name": "Geometry Dash Lite Online"
+                "name": "Geometry Dash Lite"
               },
               "potentialAction": {
                 "@type": "SearchAction",
@@ -154,7 +154,7 @@ export default function RootLayout({ children }) {
               "image": "https://geometry-dash-lite.org/images/geometry-dash-lite-screenshot.jpg",
               "author": {
                 "@type": "Organization",
-                "name": "Geometry Dash Lite Online"
+                "name": "Geometry Dash Lite"
               },
               "gameItem": {
                 "@type": "Thing",

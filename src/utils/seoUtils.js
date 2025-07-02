@@ -83,7 +83,7 @@ export const generatePageMetadata = ({
   const canonicalUrl = generateCanonicalUrl(path);
   const fullTitle = title.includes('Geometry Dash Lite') 
     ? optimizeTitle(title)
-    : optimizeTitle(`${title} | Geometry Dash Lite Online`);
+    : optimizeTitle(`${title} | Geometry Dash Lite`);
   
   const optimizedDescription = optimizeDescription(description);
   
@@ -100,7 +100,7 @@ export const generatePageMetadata = ({
       url: canonicalUrl,
       title: fullTitle,
       description: optimizedDescription,
-      siteName: 'Geometry Dash Lite Online',
+      siteName: 'Geometry Dash Lite',
       images: [
         {
           url: ogImage,
