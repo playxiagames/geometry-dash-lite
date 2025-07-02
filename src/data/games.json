@@ -1185,6 +1185,358 @@
         "Collect all 3 user coins for extra challenge"
       ],
       "relatedGameIds": []
+    },
+    {
+      "number": 37,
+      "id": "geometry-dash-cataclysm",
+      "title": "Geometry Dash Cataclysm",
+      "slug": "geometry-dash-cataclysm",
+      "description": "Face the infamous Extreme Demon level that once pushed the boundaries of what was possible in Geometry Dash.",
+      "longDescription": "Geometry Dash Cataclysm by Ggb0y is a legendary Extreme Demon level that represents a milestone in the evolution of challenging gameplay. Created during the golden age of 1.9 demons, this level features intricate ship sequences, tight wave sections, and precise cube timing that demand absolute perfection. Known for its balanced difficulty progression and memorable soundtrack, Cataclysm has inspired countless creators and remains a benchmark for modern extreme demons. With its iconic red and black color scheme and meticulously crafted obstacles, this level offers an unforgiving but fair challenge that tests every aspect of your Geometry Dash skills.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "classic level",
+        "ship sequences"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/267887319/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-cataclysm-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-cataclysm-thumbnail.webp",
+      "playCount": 1650000,
+      "rating": 4.6,
+      "controls": [
+        "Click or Space to jump and navigate ship",
+        "Hold for precise ship movements",
+        "Master wave control for tight sections",
+        "R to restart from practice checkpoints"
+      ],
+      "tips": [
+        "Practice ship sections extensively - they're the main challenge",
+        "Learn the wave timings through repetition",
+        "Use practice mode for difficult transitions",
+        "Focus on smooth, consistent movements rather than panic clicking"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 38,
+      "id": "geometry-dash-bloodbath",
+      "title": "Geometry Dash Bloodbath",
+      "slug": "geometry-dash-bloodbath",
+      "description": "Experience the legendary mega-collaboration that dominated the Demonlist and redefined extreme difficulty.",
+      "longDescription": "Geometry Dash Bloodbath is the most downloaded Extreme Demon in Geometry Dash history, created by a team of legendary builders including Riot, Michigun, and others. This 1.9 mega-collaboration held the #1 spot on the Demonlist for over a year, featuring brutally precise ship flying, chaotic dual sequences, and frame-perfect timing throughout its 100-second duration. With over 7 million downloads and Dimrain47's 'At the Speed of Light' as its soundtrack, Bloodbath represents the pinnacle of collaborative level design. Each section by different creators showcases unique challenges, from Michigun's technical precision to Crack's monster-filled ship mazes.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "mega collaboration",
+        "legendary level"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/266369064/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-bloodbath-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-bloodbath-thumbnail.webp",
+      "playCount": 7250000,
+      "rating": 4.8,
+      "controls": [
+        "Click or Space for cube jumps and ship ascent",
+        "Master precise ship flying through tight spaces",
+        "Navigate dual sequences with perfect synchronization",
+        "Use practice mode extensively for each section"
+      ],
+      "tips": [
+        "Each section requires different skills - practice individually",
+        "Memorize ship routes through monster sections",
+        "Perfect your dual-mode coordination",
+        "Expect 30,000+ attempts for completion"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 39,
+      "id": "geometry-vibes-x-ball",
+      "title": "Geometry Vibes X Ball",
+      "slug": "geometry-vibes-x-ball",
+      "description": "Master ball mechanics in this rhythm-based geometric adventure with rolling physics and gravity switches.",
+      "longDescription": "Geometry Vibes X Ball combines the classic ball gameplay of Geometry Dash with enhanced physics and vibrant visual effects. This game emphasizes the unique rolling mechanics where timing gravity switches becomes crucial for success. With its colorful neon aesthetic and electronic soundtrack, players must navigate through obstacle courses that require precise control of the ball's momentum and gravity changes. The game features multiple difficulty levels, each designed to test different aspects of ball control, from simple gravity flips to complex momentum-based challenges that require perfect timing and spatial awareness.",
+      "category": "geometry-dash",
+      "tags": [
+        "ball mechanics",
+        "gravity physics",
+        "rhythm based"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-vibes-x-ball",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-vibes-x-ball-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-vibes-x-ball-thumbnail.webp",
+      "playCount": 890000,
+      "rating": 4.3,
+      "controls": [
+        "Click or Space to flip gravity",
+        "Time clicks with the music rhythm",
+        "Use momentum to navigate platforms",
+        "Hold for extended gravity changes"
+      ],
+      "tips": [
+        "Master gravity timing - it's the core mechanic",
+        "Use ball momentum to reach higher platforms",
+        "Listen to music cues for optimal timing",
+        "Practice smooth gravity transitions"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 40,
+      "id": "geometry-open-world",
+      "title": "Geometry Open World",
+      "slug": "geometry-open-world",
+      "description": "Explore a dynamic open-world geometry universe with ship combat, upgrades, and epic boss battles.",
+      "longDescription": "Geometry Open World revolutionizes the traditional Geometry Dash formula by introducing open-world exploration, combat mechanics, and strategic upgrades. Players control a geometric ship navigating through a vibrant 2D world filled with enemies, obstacles, and formidable bosses. Unlike linear levels, this game offers freedom to explore different areas, collect power-ups, and upgrade your ship's abilities including shields and cannons. The dynamic gameplay combines classic geometric platforming with action-RPG elements, creating an engaging experience where players chart their own course through treacherous territories while battling various geometric enemies.",
+      "category": "geometry-dash",
+      "tags": [
+        "open world",
+        "ship combat",
+        "boss battles"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-open-world",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-open-world-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-open-world-thumbnail.webp",
+      "playCount": 1240000,
+      "rating": 4.4,
+      "controls": [
+        "A/D or Arrow keys to move ship left/right",
+        "Q to activate protective shield",
+        "E to fire cannons at enemies",
+        "Mouse to interact with upgrade menus"
+      ],
+      "tips": [
+        "Upgrade your ship's abilities early",
+        "Use shields strategically against tough enemies",
+        "Explore all areas to find hidden power-ups",
+        "Master cannon timing for boss battles"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 41,
+      "id": "geometry-vibes",
+      "title": "Geometry Vibes",
+      "slug": "geometry-vibes",
+      "description": "Feel the rhythm in this music-synchronized geometric platformer with vibrant visuals and electronic beats.",
+      "longDescription": "Geometry Vibes captures the essence of rhythm-based platforming with its perfectly synchronized electronic soundtrack and pulsating visual effects. This game emphasizes the musical connection between player actions and audio cues, creating an immersive experience where every jump, flip, and movement aligns with the beat. Featuring multiple game modes with distinct visual themes and musical styles, Geometry Vibes challenges players to maintain perfect timing while navigating through increasingly complex geometric obstacles. The game's vibrant color palette and smooth animations create a mesmerizing visual experience that complements its outstanding audio design.",
+      "category": "geometry-dash",
+      "tags": [
+        "rhythm based",
+        "electronic music",
+        "visual effects"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-vibes",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-vibes-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-vibes-thumbnail.webp",
+      "playCount": 1480000,
+      "rating": 4.5,
+      "controls": [
+        "Click or Space to jump with the beat",
+        "Time movements to musical cues",
+        "Hold for extended actions in certain modes",
+        "Use rhythm to predict obstacle patterns"
+      ],
+      "tips": [
+        "Turn up volume to feel the rhythm properly",
+        "Watch for visual cues that sync with music",
+        "Practice timing jumps to the beat",
+        "Each mode has unique rhythm patterns to learn"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 42,
+      "id": "geometry-arrow",
+      "title": "Geometry Arrow",
+      "slug": "geometry-arrow",
+      "description": "Pilot an arrow-shaped spacecraft through geometric mazes using unique diagonal flight mechanics.",
+      "longDescription": "Geometry Arrow offers a fresh take on geometric platforming by introducing arrow-shaped spacecraft navigation with unique diagonal flight patterns. Inspired by Geometry Dash's wave mode, this game features six challenging levels ranging from Easy to Demon difficulty. Players must master the arrow's distinctive flight mechanics: pressing and holding to propel diagonally upward, then releasing to descend. The game emphasizes precision and spatial awareness as players navigate through intricate geometric mazes filled with chaotic blocks, twisting corners, and trap-filled passages that require absolute accuracy to survive.",
+      "category": "geometry-dash",
+      "tags": [
+        "arrow spacecraft",
+        "diagonal flight",
+        "precision control"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-arrow",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-arrow-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-arrow-thumbnail.webp",
+      "playCount": 920000,
+      "rating": 4.2,
+      "controls": [
+        "Hold key to propel arrow diagonally upward",
+        "Release to descend in zigzag pattern",
+        "Master diagonal flight for tight spaces",
+        "Practice smooth transitions between up and down"
+      ],
+      "tips": [
+        "Focus on smooth, controlled movements",
+        "Practice diagonal navigation patterns",
+        "Anticipate obstacles with forward planning",
+        "Master the unique arrow flight rhythm"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 43,
+      "id": "geometry-jump",
+      "title": "Geometry Jump",
+      "slug": "geometry-jump",
+      "description": "Master the art of geometric jumping with precision timing, platform navigation, and momentum control.",
+      "longDescription": "Geometry Jump focuses on the fundamental art of platforming with an emphasis on perfect jump timing and momentum control. This game strips away complex mechanics to highlight the pure skill of navigation through geometric obstacles. Players must demonstrate mastery of jump physics, including variable jump heights, momentum conservation, and precise landing techniques. With its clean geometric aesthetic and progressively challenging levels, Geometry Jump serves as both an accessible entry point for newcomers and a skill-testing challenge for experienced players seeking to perfect their fundamental platforming abilities.",
+      "category": "geometry-dash",
+      "tags": [
+        "jump mechanics",
+        "platform navigation",
+        "timing precision"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-jump",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-jump-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-jump-thumbnail.webp",
+      "playCount": 1120000,
+      "rating": 4.1,
+      "controls": [
+        "Click or Space for standard jumps",
+        "Hold for variable jump heights",
+        "Time jumps for maximum distance",
+        "Use momentum for longer leaps"
+      ],
+      "tips": [
+        "Master different jump heights through hold duration",
+        "Learn to judge distances accurately",
+        "Practice momentum-based jumping techniques",
+        "Perfect your timing for precise landings"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 44,
+      "id": "geometry-subzero",
+      "title": "Geometry Subzero",
+      "slug": "geometry-subzero",
+      "description": "Brave the frozen geometric landscapes in this official spin-off with ice-themed levels and subzero challenges.",
+      "longDescription": "Geometry Dash SubZero is the official subzero-themed expansion that brings players into a frozen geometric world filled with crystalline obstacles and ice-cold challenges. Featuring three meticulously crafted levels with winter-themed soundtracks, this game introduces unique visual elements like snowflakes, ice crystals, and arctic lighting effects. Each level presents a different aspect of subzero gameplay, from slippery ice mechanics to snow-covered platforms that require adapted strategies. With its distinctive blue and white color palette and specially composed electronic music, SubZero offers a refreshing take on the classic Geometry Dash formula while maintaining the series' signature challenging gameplay.",
+      "category": "geometry-dash",
+      "tags": [
+        "official spin-off",
+        "winter theme",
+        "ice mechanics"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-subzero",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-subzero-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-subzero-thumbnail.webp",
+      "playCount": 3250000,
+      "rating": 4.7,
+      "controls": [
+        "Click or Space to jump and navigate",
+        "Adapt timing for ice-themed mechanics",
+        "Master cold-weather obstacle patterns",
+        "Use subzero-specific portal mechanics"
+      ],
+      "tips": [
+        "Embrace the subzero theme for immersion",
+        "Each level has unique winter challenges",
+        "Practice ice-specific movement patterns",
+        "Collect all three secret coins for mastery"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 45,
+      "id": "geometry-freezenova",
+      "title": "Geometry Freezenova",
+      "slug": "geometry-freezenova",
+      "description": "Experience 10 distinct game modes with unique challenges, from Spike Frenzy to Final Lap in this FreezeNova creation.",
+      "longDescription": "Geometry FreezeNova offers a comprehensive geometric platforming experience with 10 distinct game modes, each presenting unique challenges and visual themes. From the basic 'Spikes Frenzy' to the chaotic 'Gravity Chaos' where platforms flip upside down, each mode tests different skills and reflexes. Players progress through increasingly complex scenarios including orbital bounces, directional arrows, and the ultimate 'Final Lap' that combines elements from all previous modes. With customizable cube skins available through coin collection and a focus on rhythm-based gameplay synchronized to electronic music, FreezeNova provides endless variety and replayability for geometric gaming enthusiasts.",
+      "category": "geometry-dash",
+      "tags": [
+        "multiple modes",
+        "customization",
+        "progressive challenge"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-freezenova",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-freezenova-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-freezenova-thumbnail.webp",
+      "playCount": 1350000,
+      "rating": 4.3,
+      "controls": [
+        "W, Space, or Up Arrow to jump",
+        "Adapt controls based on current game mode",
+        "Master mode-specific mechanics",
+        "Use shop coins to unlock new cube designs"
+      ],
+      "tips": [
+        "Each mode introduces unique mechanics to master",
+        "Gravity Chaos mode requires mental adaptation",
+        "Collect coins to unlock personalization options",
+        "Final Lap combines all learned skills"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 46,
+      "id": "geometry-game-3d",
+      "title": "Geometry Game 3D",
+      "slug": "geometry-game-3d",
+      "description": "Step into the third dimension with geometric platforming that adds depth and perspective to classic gameplay.",
+      "longDescription": "Geometry Game 3D revolutionizes the traditional geometric platforming formula by introducing three-dimensional gameplay mechanics and spatial challenges. This innovative take on the genre requires players to navigate not just left and right, but also into and out of the screen, creating a truly immersive geometric experience. With enhanced graphics, depth perception challenges, and 3D obstacle navigation, players must master new spatial awareness skills while maintaining the precise timing that defines geometric platformers. The game features dynamic camera angles, multi-layered platforms, and obstacles that utilize the full 3D space to create unique and engaging challenges.",
+      "category": "geometry-dash",
+      "tags": [
+        "three dimensional",
+        "spatial awareness",
+        "enhanced graphics"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-game-3d",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-game-3d-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-game-3d-thumbnail.webp",
+      "playCount": 780000,
+      "rating": 4.0,
+      "controls": [
+        "WASD or Arrow keys for 3D movement",
+        "Space to jump with depth awareness",
+        "Mouse to adjust camera perspective",
+        "Navigate obstacles in three dimensions"
+      ],
+      "tips": [
+        "Master depth perception for accurate jumping",
+        "Use camera controls to view obstacles clearly",
+        "Practice 3D spatial navigation techniques",
+        "Think in three dimensions when planning routes"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 47,
+      "id": "geometry-world",
+      "title": "Geometry World",
+      "slug": "geometry-world",
+      "description": "Explore an expansive geometric universe with diverse worlds, each offering unique themes and challenges.",
+      "longDescription": "Geometry World presents an ambitious geometric platforming adventure that spans multiple themed worlds, each with its own visual style, soundtrack, and unique gameplay mechanics. Players journey through diverse environments ranging from futuristic neon cities to ancient geometric temples, each world introducing new challenges and mechanical innovations. This comprehensive experience combines the best elements of classic geometric platforming with RPG-style world progression, allowing players to unlock new areas, discover hidden secrets, and experience a cohesive narrative through geometric gameplay. With its vast scope and varied content, Geometry World offers hundreds of hours of geometric challenges across beautifully crafted themed environments.",
+      "category": "geometry-dash",
+      "tags": [
+        "world exploration",
+        "themed environments",
+        "progression system"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-world",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-world-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-world-thumbnail.webp",
+      "playCount": 2150000,
+      "rating": 4.5,
+      "controls": [
+        "Click or Space for world-appropriate actions",
+        "Adapt to each world's unique mechanics",
+        "Navigate world map for area selection",
+        "Master world-specific challenges"
+      ],
+      "tips": [
+        "Each world has unique mechanics to learn",
+        "Explore thoroughly to find hidden secrets",
+        "Progress systematically through world challenges",
+        "Master one world before moving to the next"
+      ],
+      "relatedGameIds": []
     }
   ]
 } 

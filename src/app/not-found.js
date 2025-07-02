@@ -39,7 +39,7 @@ export default function NotFound() {
             🏠 Back to Home
           </Link>
           <Link
-            href="/category/geometry-dash"
+            href="/category/geometry-dash/"
             className="bg-gray-100 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
           >
             🎯 Browse All Games
