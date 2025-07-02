@@ -27,7 +27,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              🎮 Geometry Dash Lite Online
+              🎮 Geometry Dash Lite
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer.
@@ -88,7 +88,7 @@ export default function HomePage() {
         {/* SEO Content Section - 主要H1标签 */}
         <div className="mt-6 bg-white rounded-lg shadow-sm p-6">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 text-left">
-            Play Geometry Dash Lite Online - Free Browser Game
+            Play Geometry Dash Lite - Free Online Game
           </h2>
           
           <div className="prose prose-lg max-w-none text-left">
@@ -111,7 +111,7 @@ export default function HomePage() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-6">
-              How to Play Geometry Dash Lite Online
+              How to Play Geometry Dash Lite
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Playing <strong>Geometry Dash Lite</strong> on our platform is incredibly simple. Just click the play button above 
@@ -121,7 +121,7 @@ export default function HomePage() {
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-6">
-              Features of Our Geometry Dash Lite Online Version
+              Features of Our Geometry Dash Lite Version
             </h2>
             <div className="bg-blue-50 rounded-lg p-4 mb-4">
               <ul className="list-disc list-inside space-y-2 text-gray-700">

@@ -4,7 +4,7 @@ import { generatePageMetadata } from '../../utils/seoUtils';
 
 export const metadata = generatePageMetadata({
   title: 'Privacy Policy',
-  description: 'Our Privacy Policy explains how Geometry Dash Lite Online collects, uses, and protects your personal information when you use our gaming platform.',
+  description: 'Our Privacy Policy explains how Geometry Dash Lite collects, uses, and protects your personal information when you use our gaming platform.',
   path: '/privacy',
 });
 
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">📋 Policy Overview</h2>
             <div className="prose prose-sm max-w-none text-left">
               <p className="text-gray-700 leading-relaxed mb-3">
-                Geometry Dash Lite Online ("we", "our", "the website") respects and protects the privacy rights of all visitors.
+                Geometry Dash Lite ("we", "our", "the website") respects and protects the privacy rights of all visitors.
                 This privacy policy explains how we collect, use, store, and protect your personal information.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">

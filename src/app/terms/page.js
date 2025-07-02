@@ -4,7 +4,7 @@ import { generatePageMetadata } from '../../utils/seoUtils';
 
 export const metadata = generatePageMetadata({
   title: 'Terms of Service',
-  description: 'Read our Terms of Service to understand the rules and regulations for using Geometry Dash Lite Online platform and our free online games.',
+  description: 'Read our Terms of Service to understand the rules and regulations for using Geometry Dash Lite platform and our free online games.',
   path: '/terms',
 });
 
@@ -35,7 +35,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">📋 Terms Overview</h2>
             <div className="prose prose-sm max-w-none text-left">
               <p className="text-gray-700 leading-relaxed mb-3">
-                Welcome to Geometry Dash Lite Online ("our service", "website").
+                Welcome to Geometry Dash Lite ("our service", "website").
                 This service is provided by <strong>geometry-dash-lite.org</strong>.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">
@@ -50,7 +50,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">🎮 Service Description</h2>
             <div className="space-y-3 text-left">
               <p className="text-sm text-gray-700">
-                Geometry Dash Lite Online is a free online gaming platform that provides:
+                Geometry Dash Lite is a free online gaming platform that provides:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="flex items-start">

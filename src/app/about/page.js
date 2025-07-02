@@ -4,7 +4,7 @@ import { generatePageMetadata } from '../../utils/seoUtils';
 
 export const metadata = generatePageMetadata({
   title: 'About Us',
-  description: 'Learn about Geometry Dash Lite Online, our mission to provide free online games, and our commitment to delivering the best gaming experience.',
+  description: 'Learn about Geometry Dash Lite, our mission to provide free online games, and our commitment to delivering the best gaming experience.',
   path: '/about',
 });
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
         {/* Page Header */}
         <div className="text-left mb-6">
           <h1 className="text-2xl font-bold text-gray-900 mb-2">About Us</h1>
-          <p className="text-base text-gray-600">Learn about Geometry Dash Lite Online's story and mission</p>
+          <p className="text-base text-gray-600">Learn about Geometry Dash Lite's story and mission</p>
         </div>
 
         <div className="space-y-6">
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">🎮 Who We Are</h2>
             <div className="prose prose-sm max-w-none text-left">
               <p className="text-gray-700 leading-relaxed mb-3">
-                Geometry Dash Lite Online is a platform dedicated to providing free online games. We are committed to bringing 
+                Geometry Dash Lite is a platform dedicated to providing free online games. We are committed to bringing 
                 the best browser gaming experience to players worldwide, allowing you to enjoy exciting game content without any downloads.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">

@@ -213,7 +213,7 @@ export const generateStructuredData = ({
     url,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Geometry Dash Lite Online',
+      name: 'Geometry Dash Lite',
       url: BASE_URL,
     },
     ...additionalProperties,
