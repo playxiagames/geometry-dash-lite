@@ -1537,6 +1537,358 @@
         "Master one world before moving to the next"
       ],
       "relatedGameIds": []
+    },
+    {
+      "number": 48,
+      "id": "geometry-meltdown",
+      "title": "Geometry Meltdown",
+      "slug": "geometry-meltdown",
+      "description": "Official RobTop spin-off featuring three epic levels with collapse-themed mechanics and meltdown challenges.",
+      "longDescription": "Geometry Meltdown is the official RobTop spin-off that brings players into a world of collapse and chaos. Featuring three meticulously crafted levels - Seven Seas, Viking Arena, and Airborne Robots - each with escalating difficulty and unique themes. The Seven Seas offers oceanic challenges with wave-like platforming, Viking Arena presents Nordic-inspired battles with warrior aesthetics, and Airborne Robots delivers high-tech aerial combat. The game introduces collapse mechanics where platforms can crumble beneath you, creating intense moments of suspense. With its signature electronic soundtrack and progressive difficulty curve, Meltdown offers both newcomers and veterans a thrilling geometric experience.",
+      "category": "geometry-dash",
+      "tags": [
+        "official spin-off",
+        "collapse mechanics",
+        "three levels"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-meltdown",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-meltdown-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-meltdown-thumbnail.webp",
+      "playCount": 3450000,
+      "rating": 4.6,
+      "controls": [
+        "Click or Space to jump and fly",
+        "Master timing for collapsing platforms",
+        "Adapt to each level's unique mechanics",
+        "React quickly to meltdown sequences"
+      ],
+      "tips": [
+        "Seven Seas is ideal for beginners to learn basics",
+        "Viking Arena requires faster reactions and precision",
+        "Airborne Robots demands advanced timing skills",
+        "Practice mode helps master collapsing platform timing"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 49,
+      "id": "geometry-dash-sonic-wave-rebirth",
+      "title": "Geometry Dash Sonic Wave Rebirth",
+      "slug": "geometry-dash-sonic-wave-rebirth",
+      "description": "Enhanced remake of the legendary Sonic Wave with improved visuals and refined Nine Circles gameplay mechanics.",
+      "longDescription": "Geometry Dash Sonic Wave Rebirth is the definitive remake of the iconic Sonic Wave, crafted to address the original's controversy while maintaining its legendary difficulty. This version features enhanced visual design, improved decoration, and refined gameplay mechanics that stay true to the Nine Circles formula. Players face the same challenging wave sequences and tight corridors that made the original famous, but with better visual clarity and more polished effects. The level maintains the signature dark blue color scheme while introducing modern 2.0+ decoration elements. Known for its demanding wave sections that require pixel-perfect timing and unwavering concentration, Sonic Wave Rebirth represents the evolution of one of Geometry Dash's most influential extreme demons.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "nine circles",
+        "wave gameplay"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/442181914/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-sonic-wave-rebirth-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-sonic-wave-rebirth-thumbnail.webp",
+      "playCount": 890000,
+      "rating": 4.2,
+      "controls": [
+        "Click or Space to control wave movement",
+        "Hold for upward movement, release to descend",
+        "Master micro-corrections for tight spaces",
+        "Maintain steady rhythm for wave sequences"
+      ],
+      "tips": [
+        "Start with practice mode to learn wave patterns",
+        "Focus on smooth, controlled movements",
+        "Memorize the tightest corridor sections",
+        "Stay calm during the intense wave spam parts"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 50,
+      "id": "geometry-dash-sonic-wave",
+      "title": "Geometry Dash Sonic Wave",
+      "slug": "geometry-dash-sonic-wave",
+      "description": "The original legendary extreme demon by Cyclic featuring intense Nine Circles wave gameplay and community controversy.",
+      "longDescription": "Geometry Dash Sonic Wave is the original extreme demon that sparked one of the biggest controversies in Geometry Dash history. Created by Cyclic and verified by Sunix, this level introduced unprecedented difficulty through its relentless wave sequences and tight corridors. Built in the Nine Circles style with a distinctive dark blue color scheme, Sonic Wave features multiple challenging segments including cube sections with precise timings, ship sequences with gravity changes, and the infamous wave portions that require frame-perfect precision. The level's journey from being accused of being impossible to legitimate verification captivated the entire community. With its demanding gameplay that pushes players to their absolute limits, Sonic Wave remains one of the most influential and respected extreme demons in the game's history.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "nine circles",
+        "legendary level"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/264644026/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-sonic-wave-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-sonic-wave-thumbnail.webp",
+      "playCount": 1650000,
+      "rating": 4.7,
+      "controls": [
+        "Click or Space for precise wave control",
+        "Master frame-perfect timing for tight gaps",
+        "Adapt to rapid gravity and size changes",
+        "Maintain concentration through long sequences"
+      ],
+      "tips": [
+        "Practice the wave sections extensively before attempting",
+        "Learn the memory-based cube parts thoroughly",
+        "Focus on consistency rather than rushing",
+        "Use the community's established strategies and routes"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 51,
+      "id": "geometry-dash-yatagarasu",
+      "title": "Geometry Dash Yatagarasu",
+      "slug": "geometry-dash-yatagarasu",
+      "description": "Epic mega-collaboration extreme demon inspired by Japanese mythology, known as 'the final Demon of 2.0'.",
+      "longDescription": "Geometry Dash Yatagarasu is a legendary extreme demon mega-collaboration hosted by Viprin and Riot, verified and published by TrusTa. Inspired by the three-legged crow from Japanese folklore, this level earned the title 'the final Demon of 2.0' and served as a spiritual successor to Bloodbath. The level features diverse sections created by multiple talented builders, each bringing their unique style while maintaining cohesive gameplay flow. From challenging cube sequences to intense ship flying and precise wave navigation, Yatagarasu tests every aspect of player skill. The level's mythology-inspired decoration creates an atmospheric journey through mystical landscapes, while its demanding gameplay mechanics require thousands of attempts to master. With three secret coins hidden throughout its challenging course, Yatagarasu remains one of the most respected and influential extreme demons in Geometry Dash history.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "mega collaboration",
+        "mythology themed"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/714779109/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-yatagarasu-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-yatagarasu-thumbnail.webp",
+      "playCount": 1420000,
+      "rating": 4.6,
+      "controls": [
+        "Click or Space for mode-specific actions",
+        "Master precise timing for each game mode",
+        "Adapt to varied creator styles and mechanics",
+        "Navigate through diverse challenging sections"
+      ],
+      "tips": [
+        "Study each section's unique patterns and timing",
+        "Practice individual parts before full attempts",
+        "Learn the three secret coin locations for completion",
+        "Focus on consistency across all game modes"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 52,
+      "id": "geometry-dash-maze-maps",
+      "title": "Geometry Dash Maze Maps",
+      "slug": "geometry-dash-maze-maps",
+      "description": "Navigate complex labyrinthine structures with intricate pathways and challenging maze-solving mechanics.",
+      "longDescription": "Geometry Dash Maze Maps presents a unique twist on traditional geometric platforming by incorporating complex maze-like structures and navigation challenges. Players must carefully traverse through intricate pathways, dead ends, and hidden routes while maintaining the rhythm-based timing that defines the series. The level features multiple branching paths, secret passages, and puzzle elements that require both platforming skill and spatial reasoning. With its labyrinthine design, players must memorize routes, discover shortcuts, and master the art of quick decision-making when faced with multiple path choices. The maze theme is enhanced by mysterious atmospheric decoration and ambient sound design that creates an immersive exploration experience unlike traditional linear levels.",
+      "category": "geometry-dash",
+      "tags": [
+        "maze navigation",
+        "puzzle elements",
+        "exploration based"
+      ],
+      "iframeUrl": "https://1games.io/embed/geometry-dash-maze-maps",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-maze-maps-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-maze-maps-thumbnail.webp",
+      "playCount": 680000,
+      "rating": 4.1,
+      "controls": [
+        "Click or Space to jump through maze paths",
+        "Study the layout before making quick decisions",
+        "Navigate through branching pathways carefully",
+        "Memorize correct routes to avoid dead ends"
+      ],
+      "tips": [
+        "Take time to study the maze layout in practice mode",
+        "Mark mental waypoints at key decision points",
+        "Learn to distinguish between true paths and traps",
+        "Practice route memorization for consistent completion"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 53,
+      "id": "geometry-dash-blast-processing",
+      "title": "Geometry Dash Blast Processing",
+      "slug": "geometry-dash-blast-processing",
+      "description": "Official level 17 introducing the revolutionary wave mode with 3D effects and challenging long sequences.",
+      "longDescription": "Geometry Dash Blast Processing is the iconic 17th official level that introduced the game-changing wave mode to the Geometry Dash universe. Created by Neptune with Waterflame's signature soundtrack, this level revolutionized gameplay by featuring the first major wave sequences that would become a series staple. The level combines traditional cube, ship, ball, and UFO segments with the newly introduced wave mode, creating diverse and challenging gameplay experiences. Notable for its 3D visual embellishments and innovative design, Blast Processing requires players to master precise wave navigation through tight corridors while adapting to various game mode transitions. With three hidden coins scattered throughout its course and a perfect blend of challenging but fair gameplay, this level represents a pivotal moment in Geometry Dash evolution.",
+      "category": "geometry-dash",
+      "tags": [
+        "official level",
+        "wave introduction",
+        "3D effects"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/691889060/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-blast-processing-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-blast-processing-thumbnail.webp",
+      "playCount": 2850000,
+      "rating": 4.5,
+      "controls": [
+        "Click or Space for mode-specific actions",
+        "Hold to fly up in wave mode, release to descend",
+        "Master transitions between different game modes",
+        "Time jumps precisely for platform sequences"
+      ],
+      "tips": [
+        "Practice the new wave mode in easier sections first",
+        "Learn the timing for dual wave sequences",
+        "Collect all three hidden coins for full completion",
+        "Focus on smooth, controlled wave movements"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 54,
+      "id": "geometry-dash-ultra-violence",
+      "title": "Geometry Dash Ultra Violence",
+      "slug": "geometry-dash-ultra-violence",
+      "description": "Epic medium demon featuring stunning decoration, animated boss battles, and apocalyptic trilogy storytelling.",
+      "longDescription": "Geometry Dash Ultra Violence is an impressive medium demon level created by Xender Game, featuring some of the most spectacular decoration and animated boss battles in the community. As the opening chapter of Xender Game's Apocalypse Trilogy, this level combines engaging storytelling with challenging gameplay mechanics. The level showcases incredible visual effects, dynamic lighting, and cinematic boss encounters that create an immersive apocalyptic atmosphere. Players navigate through diverse sections including intense cube sequences, precise ship flying, and challenging wave segments, all while experiencing the unfolding narrative of a world in chaos. Despite being originally intended as an insane demon, the level's current medium demon rating makes it accessible to a broader range of players while still providing substantial challenge and visual spectacle.",
+      "category": "geometry-dash",
+      "tags": [
+        "medium demon",
+        "boss battles",
+        "apocalypse trilogy"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/976932399/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-ultra-violence-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-ultra-violence-thumbnail.webp",
+      "playCount": 975000,
+      "rating": 4.3,
+      "controls": [
+        "Click or Space for various game mode actions",
+        "Master timing for animated boss encounters",
+        "Navigate through cinematic story sequences",
+        "Adapt to varying difficulty spikes throughout"
+      ],
+      "tips": [
+        "Pay attention to visual cues during boss battles",
+        "Study the decoration patterns for gameplay hints",
+        "Practice the more challenging sections in isolation",
+        "Enjoy the storytelling elements between gameplay segments"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 55,
+      "id": "geometry-dash-clubstep",
+      "title": "Geometry Dash Clubstep",
+      "slug": "geometry-dash-clubstep",
+      "description": "Historic level 14 - the first official demon difficulty featuring deceptive obstacles and requiring 10 secret coins to unlock.",
+      "longDescription": "Geometry Dash Clubstep holds the distinguished honor of being the 14th official level and the very first demon difficulty level in Geometry Dash history. Created by Neptune with DJ-Nate's iconic soundtrack, this groundbreaking level introduced players to the concept of demon-level difficulty with its complex mechanics and deceptive design elements. The level features 38 distinctive 'devil face' constructions throughout its course, along with challenging fake spikes, fading blocks, and gravity manipulation sequences that require exceptional skill to navigate. Players must collect 10 secret coins before attempting this level, and three additional secret coins are hidden within the level itself. With its innovative use of confusing fake obstacles and precise timing requirements, Clubstep set the standard for all future demon levels and remains a beloved challenge that tests every aspect of Geometry Dash mastery.",
+      "category": "geometry-dash",
+      "tags": [
+        "official demon",
+        "first demon level",
+        "deceptive obstacles"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/238577773/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-clubstep-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-clubstep-thumbnail.webp",
+      "playCount": 4250000,
+      "rating": 4.8,
+      "controls": [
+        "Click or Space for mode-specific actions",
+        "Distinguish between real and fake obstacles",
+        "Master gravity changes and portal transitions",
+        "Navigate through deceptive visual elements"
+      ],
+      "tips": [
+        "Learn to identify fake spikes from real ones",
+        "Practice the ship sequences with gravity portals",
+        "Memorize the three secret coin locations",
+        "Use practice mode to master the trickiest sections"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 56,
+      "id": "geometry-dash-silent-circles",
+      "title": "Geometry Dash Silent Circles",
+      "slug": "geometry-dash-silent-circles",
+      "description": "Silent Nine Circles-style extreme demon with massive controversy and impossible-looking verification achievement.",
+      "longDescription": "Geometry Dash Silent Circles is an extreme demon level that became the center of one of the most heated controversies in Geometry Dash history. Created by multiple builders in the Nine Circles style, this level was considered humanly impossible for years due to its extremely tight wave sections, requiring inputs faster than 15 clicks per second through micro-gaps. The level's verification journey was fraught with accusations, skepticism, and heated debates within the community. With its distinctive silent theme and minimal audio cues, players must rely purely on visual timing through some of the most demanding wave gameplay ever created. The level's impossibly precise requirements pushed the boundaries of what was considered achievable in Geometry Dash, making its eventual verification a landmark moment that redefined the limits of human capability in the game.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "nine circles style",
+        "controversial level"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/266720586/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-silent-circles-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-silent-circles-thumbnail.webp",
+      "playCount": 485000,
+      "rating": 4.2,
+      "controls": [
+        "Click or Space for ultra-precise wave control",
+        "Master frame-perfect timing for micro-gaps",
+        "Maintain extreme focus through silent sections",
+        "Develop superhuman clicking speed and precision"
+      ],
+      "tips": [
+        "Practice micro-movements and finger speed extensively",
+        "Use visual cues since audio guidance is minimal",
+        "Study frame-by-frame analysis of successful runs",
+        "Accept that this level requires exceptional dedication"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 57,
+      "id": "geometry-dash-bloodlust",
+      "title": "Geometry Dash Bloodlust",
+      "slug": "geometry-dash-bloodlust",
+      "description": "Legendary extreme demon by Knobbelboy ranking #1 on the Demon List with revolutionary decoration and gameplay.",
+      "longDescription": "Geometry Dash Bloodlust is a legendary extreme demon created by Knobbelboy that achieved the prestigious #1 position on the official Demon List. This masterpiece showcases some of the most innovative decoration and visual effects ever seen in Geometry Dash, featuring dynamic backgrounds, particle effects, and atmospheric lighting that create an immersive hellish landscape. The level combines extremely challenging gameplay with artistic excellence, requiring precise timing through intense cube sequences, demanding ship sections, and brutal wave segments. Its groundbreaking use of visual effects, including custom animations and seamless transitions between gameplay modes, set new standards for level design in the community. With its epic scale, demanding difficulty, and stunning presentation, Bloodlust represents the pinnacle of extreme demon level creation and remains one of the most respected achievements in Geometry Dash history.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "demon list #1",
+        "revolutionary decoration"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/832160354/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-bloodlust-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-bloodlust-thumbnail.webp",
+      "playCount": 1890000,
+      "rating": 4.9,
+      "controls": [
+        "Click or Space for precise mode-specific actions",
+        "Master frame-perfect timing for extreme sections",
+        "Navigate through visually intense environments",
+        "Maintain focus despite overwhelming visual effects"
+      ],
+      "tips": [
+        "Study the visual patterns to anticipate obstacles",
+        "Practice individual sections extensively before full runs",
+        "Use the decoration as timing guides for difficult parts",
+        "Prepare for one of the most demanding challenges in GD"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 58,
+      "id": "geometry-dash-kenos",
+      "title": "Geometry Dash Kenos",
+      "slug": "geometry-dash-kenos",
+      "description": "Extreme demon masterpiece featuring unprecedented decoration quality and artistic innovation by Zobros.",
+      "longDescription": "Geometry Dash Kenos is an extraordinary extreme demon created by Zobros that represents the absolute pinnacle of artistic achievement in level design. This masterpiece features breathtaking decoration that pushes the boundaries of what's possible within the Geometry Dash editor, incorporating stunning visual effects, seamless transitions, and atmospheric elements that create a truly cinematic experience. The level combines its incredible artistic vision with challenging gameplay that tests players across all skill areas, featuring complex sequences that require precise timing and exceptional focus. From its haunting soundtrack to its meticulously crafted visual storytelling, Kenos demonstrates how technical gameplay and artistic expression can merge to create something truly extraordinary. The level's impact on the community extends far beyond its difficulty rating, inspiring countless creators to pursue higher artistic standards in their own work.",
+      "category": "geometry-dash",
+      "tags": [
+        "extreme demon",
+        "artistic masterpiece",
+        "decoration showcase"
+      ],
+      "iframeUrl": "https://scratch.mit.edu/projects/456334406/embed",
+      "thumbnail": "https://images.geometry-dash-lite.org/geometry-dash-kenos-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/geometry-dash-kenos-thumbnail.webp",
+      "playCount": 1320000,
+      "rating": 4.8,
+      "controls": [
+        "Click or Space for precise mode-specific control",
+        "Navigate through visually complex environments",
+        "Master timing while appreciating artistic elements",
+        "Maintain focus through cinematic sequences"
+      ],
+      "tips": [
+        "Take time to appreciate the incredible decoration work",
+        "Use the visual rhythms as timing guides",
+        "Practice maintaining focus despite visual distractions",
+        "Study how decoration enhances rather than hinders gameplay"
+      ],
+      "relatedGameIds": []
     }
   ]
 } 
