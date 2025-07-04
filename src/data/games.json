@@ -1889,6 +1889,303 @@
         "Study how decoration enhances rather than hinders gameplay"
       ],
       "relatedGameIds": []
+    },
+    {
+      "number": 59,
+      "id": "speed-stars",
+      "title": "Speed Stars",
+      "slug": "speed-stars",
+      "description": "A rhythm-based sprinting game where you alternate taps to simulate running and compete in track events.",
+      "longDescription": "Speed Stars is a physics-based sprinting game that tests your rhythm and precision. Control your athlete by alternating taps to simulate running strides, competing in various track events from explosive 60m dashes to grueling 800m runs. The game features realistic physics where mistimed taps cause stumbles, while perfect rhythm propels you to record-breaking speeds. Choose from different race modes including hurdles that require precise timing to clear obstacles.",
+      "category": "",
+      "tags": ["sprinting", "rhythm", "track", "athletics", "sports", "timing"],
+      "iframeUrl": "https://epicfreegames78.github.io/speed-stars/",
+      "thumbnail": "https://images.geometry-dash-lite.org/speed-stars-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/speed-stars-thumbnail.webp",
+      "playCount": 485000,
+      "rating": 4.6,
+      "controls": [
+        "Left/Right arrow keys or A/D to alternate steps",
+        "Up/Down arrow keys to control athlete position",
+        "Hold down arrow key to jump over hurdles",
+        "Perfect timing is key - don't tap too fast"
+      ],
+      "tips": [
+        "Focus on consistent rhythm rather than rapid tapping",
+        "Listen to audio cues like footsteps to maintain tempo",
+        "Nail the starting pistol timing for explosive launches",
+        "Conserve stamina in longer races for a strong finish",
+        "Practice hurdle timing - hold down key at the right moment"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 60,
+      "id": "fortnite-unblocked",
+      "title": "Fortnite Unblocked",
+      "slug": "fortnite-unblocked",
+      "description": "A browser version of the popular battle royale where 100 players fight to be the last one standing.",
+      "longDescription": "Fortnite Unblocked brings the iconic battle royale experience to your browser. Drop onto a massive island with up to 100 players and fight to be the last one standing. Collect weapons, gather resources, and build structures to gain tactical advantages. The game features the classic Fortnite building mechanics, allowing you to construct walls, ramps, and towers for defense or gaining high ground. As the storm closes in, you'll need to stay within the safe zone while eliminating opponents.",
+      "category": "",
+      "tags": ["battle royale", "building", "survival", "multiplayer", "shooting", "strategy"],
+      "iframeUrl": "https://gamesfreez.github.io/Fortnite/",
+      "thumbnail": "https://images.geometry-dash-lite.org/fortnite-unblocked-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/fortnite-unblocked-thumbnail.webp",
+      "playCount": 1850000,
+      "rating": 4.4,
+      "controls": [
+        "WASD or arrow keys to move",
+        "Mouse to look around and aim",
+        "Left click to shoot/build",
+        "Right click for precise aim",
+        "F to build/interact",
+        "Number keys 1-6 to switch weapons/building structures"
+      ],
+      "tips": [
+        "Land in less crowded areas to gather loot safely",
+        "Always stay within the storm circle",
+        "Build walls and ramps for protection and mobility",
+        "Collect materials by harvesting objects in the environment",
+        "Listen for enemy footsteps and gunfire to locate opponents"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 61,
+      "id": "slope-2",
+      "title": "Slope 2",
+      "slug": "slope-2",
+      "description": "The sequel to the popular endless runner where you control a ball rolling down slopes at increasing speeds.",
+      "longDescription": "Slope 2 is the highly anticipated sequel to the beloved endless runner that captivated millions of players. Control a ball as it rolls down an infinite slope filled with deadly obstacles and treacherous drops. The game features improved physics, enhanced graphics, and even more challenging obstacle patterns than its predecessor. As you progress, the speed increases dramatically, testing your reflexes and concentration to the limit. Navigate through narrow passages, avoid red barriers, and collect diamonds while maintaining perfect control of your ever-accelerating ball.",
+      "category": "",
+      "tags": ["endless runner", "ball", "slope", "speed", "reflex", "arcade"],
+      "iframeUrl": "https://1games.io/embed/slope-2",
+      "thumbnail": "https://images.geometry-dash-lite.org/slope-2-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/slope-2-thumbnail.webp",
+      "playCount": 2150000,
+      "rating": 4.7,
+      "controls": [
+        "A/D or Left/Right arrow keys to steer the ball",
+        "Mouse movement for precise control",
+        "No jump button - momentum and gravity control movement",
+        "Smooth steering prevents sudden direction changes"
+      ],
+      "tips": [
+        "Start with gentle steering movements to maintain control",
+        "Look ahead to anticipate upcoming obstacles",
+        "Use the slope edges for sharp turns when necessary",
+        "Don't panic when speed increases - stay focused",
+        "Practice makes perfect - each run teaches you new patterns"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 62,
+      "id": "flying-kong",
+      "title": "Flying Kong",
+      "slug": "flying-kong",
+      "description": "A classic arcade-style platformer featuring a flying gorilla character navigating through challenging aerial levels.",
+      "longDescription": "Flying Kong is an exciting arcade platformer that puts you in control of a heroic flying gorilla on an epic adventure. Inspired by classic arcade games, this title combines smooth flight mechanics with challenging platform elements as you soar through diverse environments filled with obstacles, enemies, and collectibles. Master the art of controlled flight while avoiding hazards, collecting power-ups, and defeating enemies across multiple themed worlds. The game features responsive controls that make flying feel natural and intuitive, while progressively challenging levels keep you engaged throughout your aerial journey.",
+      "category": "",
+      "tags": ["flying", "gorilla", "arcade", "adventure", "platformer", "retro"],
+      "iframeUrl": "https://1games.io/embed/flying-kong",
+      "thumbnail": "https://images.geometry-dash-lite.org/flying-kong-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/flying-kong-thumbnail.webp",
+      "playCount": 680000,
+      "rating": 4.3,
+      "controls": [
+        "Arrow keys or WASD to control flight direction",
+        "Spacebar to boost/dash through the air",
+        "Mouse for menu navigation",
+        "Maintain momentum while navigating obstacles"
+      ],
+      "tips": [
+        "Use momentum to glide efficiently through levels",
+        "Time your boosts carefully to avoid running out of energy",
+        "Collect bananas and power-ups for extra points and abilities",
+        "Study enemy patterns before attempting to pass them",
+        "Practice controlled landings on platforms for better positioning"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 63,
+      "id": "italian-brainrot-clicker",
+      "title": "Italian Brainrot Clicker",
+      "slug": "italian-brainrot-clicker",
+      "description": "A viral meme-based clicker game featuring AI-generated Italian characters with absurd names and sounds.",
+      "longDescription": "Italian Brainrot Clicker is a hilariously chaotic clicker game that became a viral sensation thanks to its AI-generated Italian characters with wonderfully absurd names like 'Tralalero Tralala' and 'Bombardino Crocodilo'. Click to spawn these bizarre characters who produce increasingly ridiculous Italian-sounding gibberish and meme-worthy sound effects. The game combines the addictive nature of clicker mechanics with internet meme culture, creating an unexpectedly entertaining experience that's equal parts amusing and bewildering. Watch as your screen fills with these comical characters while earning points to unlock even more outrageous personalities.",
+      "category": "",
+      "tags": ["clicker", "meme", "viral", "comedy", "Italian", "absurd"],
+      "iframeUrl": "https://1games.io/embed/italian-brainrot-clicker",
+      "thumbnail": "https://images.geometry-dash-lite.org/italian-brainrot-clicker-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/italian-brainrot-clicker-thumbnail.webp",
+      "playCount": 1250000,
+      "rating": 4.2,
+      "controls": [
+        "Left click to spawn Italian characters",
+        "Right click for special character spawns",
+        "Mouse scroll to zoom in/out for better viewing",
+        "Spacebar to clear screen when it gets too chaotic"
+      ],
+      "tips": [
+        "Click rapidly to create a chorus of Italian gibberish",
+        "Let the characters accumulate for maximum comedic effect",
+        "Share screenshots of the chaos with friends",
+        "Turn up your volume to fully experience the absurdity",
+        "Don't take it too seriously - it's pure meme entertainment"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 64,
+      "id": "stickman-clash",
+      "title": "Stickman Clash",
+      "slug": "stickman-clash",
+      "description": "A physics-based fighting game where stickman warriors battle with various weapons in intense combat.",
+      "longDescription": "Stickman Clash is an action-packed physics-based fighting game that pits stickman warriors against each other in brutal combat scenarios. Choose from a variety of weapons including swords, clubs, spears, and ranged weapons as you engage in epic battles across different arenas. The game features realistic physics that make every hit, throw, and impact feel satisfying and dynamic. Master different fighting techniques, learn to time your attacks perfectly, and develop strategies to overcome opponents with superior gear or numbers. Whether in single combat or chaotic multiplayer battles, victory requires skill, timing, and tactical thinking.",
+      "category": "",
+      "tags": ["stickman", "fighting", "physics", "weapons", "combat", "multiplayer"],
+      "iframeUrl": "https://g2.igroutka.ru/lib/crazy/games/stickman-clash/",
+      "thumbnail": "https://images.geometry-dash-lite.org/stickman-clash-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/stickman-clash-thumbnail.webp",
+      "playCount": 920000,
+      "rating": 4.4,
+      "controls": [
+        "WASD or Arrow keys to move your stickman",
+        "Mouse to aim and control weapon direction",
+        "Left click to attack or throw weapons",
+        "Right click for blocking or secondary attacks",
+        "Spacebar to jump or dodge"
+      ],
+      "tips": [
+        "Time your attacks to land when enemies are vulnerable",
+        "Use the physics to your advantage - throw objects strategically",
+        "Learn the reach and timing of different weapons",
+        "Block incoming attacks to reduce damage",
+        "Positioning is key - avoid getting surrounded"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 65,
+      "id": "golf-hit",
+      "title": "Golf Hit",
+      "slug": "golf-hit",
+      "description": "A precision mini golf game with aim-and-shoot mechanics across challenging courses and obstacles.",
+      "longDescription": "Golf Hit is an engaging mini golf game that tests your precision and strategic thinking across a variety of creatively designed courses. Use intuitive aim-and-shoot mechanics to navigate your ball through increasingly complex layouts filled with ramps, barriers, moving platforms, and tricky obstacles. Each hole presents unique challenges that require you to carefully calculate angles, power, and timing to achieve the perfect shot. The game features multiple themed environments, from classic mini golf courses to more fantastical settings, each with their own physics-based puzzles to solve.",
+      "category": "",
+      "tags": ["mini golf", "precision", "aim", "physics", "puzzle", "sports"],
+      "iframeUrl": "https://1games.io/embed/golf-hit",
+      "thumbnail": "https://images.geometry-dash-lite.org/golf-hit-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/golf-hit-thumbnail.webp",
+      "playCount": 750000,
+      "rating": 4.3,
+      "controls": [
+        "Mouse to aim your shot direction",
+        "Hold and drag to set power level",
+        "Release to hit the ball",
+        "Use trajectory line to predict ball path",
+        "Click and hold for power adjustment"
+      ],
+      "tips": [
+        "Study the course layout before taking your shot",
+        "Use gentle power for precision shots near the hole",
+        "Utilize walls and ramps to redirect the ball's path",
+        "Practice power control - sometimes less is more",
+        "Look for hidden shortcuts in complex courses"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 66,
+      "id": "chicken-jockey-clicker",
+      "title": "Chicken Jockey Clicker",
+      "slug": "chicken-jockey-clicker",
+      "description": "A Minecraft-inspired clicker game featuring the rare and amusing chicken jockey mob combination.",
+      "longDescription": "Chicken Jockey Clicker is a delightfully absurd clicker game inspired by one of Minecraft's rarest and most amusing mob combinations - the chicken jockey. This occurs when a baby zombie spawns riding a chicken, creating a hilariously chaotic scene. In this game, you click to spawn and collect these rare creatures, watching as baby zombies ride chickens around your screen in typical Minecraft fashion. Build up your collection, upgrade your spawning abilities, and experience the joy of one of gaming's most unexpectedly entertaining mob interactions. Perfect for Minecraft fans who appreciate the game's quirky and unexpected moments.",
+      "category": "",
+      "tags": ["Minecraft", "clicker", "chicken jockey", "mob", "rare", "collection"],
+      "iframeUrl": "https://1games.io/embed/chicken-jockey-clicker",
+      "thumbnail": "https://images.geometry-dash-lite.org/chicken-jockey-clicker-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/chicken-jockey-clicker-thumbnail.webp",
+      "playCount": 580000,
+      "rating": 4.1,
+      "controls": [
+        "Left click to spawn chicken jockeys",
+        "Right click for special zombie variants",
+        "Scroll wheel to zoom in/out",
+        "Spacebar to clear screen when overcrowded",
+        "Number keys for quick upgrades"
+      ],
+      "tips": [
+        "Click rapidly to create a hilarious chicken army",
+        "Collect different zombie variants for variety",
+        "Upgrade spawn rates to create more chaos",
+        "Watch the amusing animations of zombies riding chickens",
+        "Share screenshots of your chicken jockey collection"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 67,
+      "id": "crazy-animal-city",
+      "title": "Crazy Animal City",
+      "slug": "crazy-animal-city",
+      "description": "A vibrant animal simulation game where you manage and interact with various animals in a bustling urban environment.",
+      "longDescription": "Crazy Animal City is a charming simulation game that brings together the wild and the urban in a delightfully chaotic way. Manage a bustling city populated by various animals, each with their own personalities, needs, and behaviors. Watch as elephants navigate traffic, penguins run ice cream stands, and lions work as taxi drivers in this whimsical world. Build and customize different districts, ensure your animal citizens are happy, and deal with the hilarious situations that arise when the animal kingdom meets city life. The game combines city-building elements with animal care mechanics, creating a unique and entertaining experience.",
+      "category": "",
+      "tags": ["animals", "city", "simulation", "management", "funny", "casual"],
+      "iframeUrl": "https://1games.io/embed/crazy-animal-city",
+      "thumbnail": "https://images.geometry-dash-lite.org/crazy-animal-city-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/crazy-animal-city-thumbnail.webp",
+      "playCount": 640000,
+      "rating": 4.2,
+      "controls": [
+        "Mouse to click and interact with animals and buildings",
+        "WASD or arrow keys to navigate around the city",
+        "Click and drag to build and place structures",
+        "Right click for quick menus and options",
+        "Scroll wheel to zoom in and out of the city"
+      ],
+      "tips": [
+        "Keep different animal species happy with appropriate amenities",
+        "Build varied entertainment options to prevent boredom",
+        "Pay attention to animal behavior patterns and preferences",
+        "Balance the budget while expanding your crazy city",
+        "Experiment with different animal combinations for funny interactions"
+      ],
+      "relatedGameIds": []
+    },
+    {
+      "number": 68,
+      "id": "ragdoll-playground",
+      "title": "Ragdoll Playground",
+      "slug": "ragdoll-playground",
+      "description": "A physics sandbox game where you experiment with ragdoll characters and various objects in realistic environments.",
+      "longDescription": "Ragdoll Playground is an engaging physics sandbox game that gives you complete freedom to experiment with ragdoll characters and a vast array of interactive objects. Create elaborate scenarios using realistic physics simulation, where every impact, explosion, and interaction behaves authentically. The game features various tools, weapons, and environmental hazards that you can use to create everything from simple experiments to complex chain reactions. While the game includes realistic damage and physics effects, it's all about creativity and experimentation rather than gratuitous violence. Build contraptions, test physics theories, or simply enjoy watching the realistic ragdoll physics in action.",
+      "category": "",
+      "tags": ["physics", "sandbox", "ragdoll", "simulation", "creative", "experiment"],
+      "iframeUrl": "https://1games.io/embed/ragdoll-playground",
+      "thumbnail": "https://images.geometry-dash-lite.org/ragdoll-playground-thumbnail.webp",
+      "screenshot": "https://images.geometry-dash-lite.org/ragdoll-playground-thumbnail.webp",
+      "playCount": 1180000,
+      "rating": 4.3,
+      "controls": [
+        "Mouse to drag and manipulate objects and ragdolls",
+        "Left click to grab and move items",
+        "Right click to access context menus and options",
+        "Mouse wheel to zoom in and out",
+        "Various tool buttons for different objects and effects"
+      ],
+      "tips": [
+        "Experiment with different combinations of objects and physics",
+        "Try creating chain reactions using multiple elements",
+        "Use the environment to your advantage in experiments",
+        "Save interesting scenarios to replay later",
+        "Focus on the physics simulation rather than violence"
+      ],
+      "relatedGameIds": []
     }
   ]
 } 
