@@ -2,39 +2,26 @@
 
 import { createContext, useContext, useEffect, useState } from 'react'
 
-// 主题类型
+// 主题类型 - 只保留明暗两种主题
 export const THEMES = {
   LIGHT: 'light',
-  DARK: 'dark',
-  SYSTEM: 'system'
+  DARK: 'dark'
 }
 
 // 创建主题上下文
 const ThemeContext = createContext({
-  theme: THEMES.LIGHT,
+  theme: THEMES.DARK,
   setTheme: () => {},
-  resolvedTheme: THEMES.LIGHT, // 实际应用的主题（解析后的）
-  systemTheme: THEMES.LIGHT    // 系统主题
+  resolvedTheme: THEMES.DARK
 })
 
 // 主题提供者组件
-export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
+export function ThemeProvider({ children, defaultTheme = THEMES.DARK }) {
   const [theme, setTheme] = useState(defaultTheme)
-  const [systemTheme, setSystemTheme] = useState(THEMES.LIGHT)
   const [mounted, setMounted] = useState(false)
 
-  // 获取实际应用的主题
-  const resolvedTheme = theme === THEMES.SYSTEM ? systemTheme : theme
-
-  // 检测系统主题
-  const getSystemTheme = () => {
-    if (typeof window !== 'undefined') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches 
-        ? THEMES.DARK 
-        : THEMES.LIGHT
-    }
-    return THEMES.LIGHT
-  }
+  // 直接使用theme作为resolvedTheme，无需处理系统主题
+  const resolvedTheme = theme
 
   // 获取当前DOM上的主题类（从初始化脚本设置的类中读取）
   const getCurrentDOMTheme = () => {
@@ -91,6 +78,7 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
     if (typeof window !== 'undefined') {
       try {
         const savedTheme = localStorage.getItem('theme')
+        // 如果存储的是system主题，则使用默认主题
         if (savedTheme && Object.values(THEMES).includes(savedTheme)) {
           return savedTheme
         }
@@ -109,56 +97,22 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
     }
   }
 
-  // 初始化主题 - 确保与初始化脚本同步
+  // 初始化主题
   useEffect(() => {
-    // 设置系统主题
-    const currentSystemTheme = getSystemTheme()
-    setSystemTheme(currentSystemTheme)
-    
     // 加载保存的主题
     const savedTheme = loadTheme()
     
     // 检查当前DOM状态，确保与初始化脚本设置的状态一致
     const currentDOMTheme = getCurrentDOMTheme()
     
-    // 如果保存的主题是system，需要确保状态与实际DOM一致
-    if (savedTheme === THEMES.SYSTEM) {
-      // 检查DOM状态是否与当前系统主题匹配
-      const expectedDOMTheme = currentSystemTheme
-      if (currentDOMTheme !== expectedDOMTheme) {
-        // 如果不匹配，应用正确的主题
-        applyTheme(expectedDOMTheme)
-      }
+    // 如果存储的主题与当前DOM主题不匹配，应用存储的主题
+    if (currentDOMTheme !== savedTheme) {
+      applyTheme(savedTheme)
     }
     
     setTheme(savedTheme)
     setMounted(true)
   }, [])
-
-  // 监听系统主题变化
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-      
-      const handleSystemThemeChange = (e) => {
-        const newSystemTheme = e.matches ? THEMES.DARK : THEMES.LIGHT
-        setSystemTheme(newSystemTheme)
-        
-        // 如果当前使用系统主题，立即应用新的系统主题
-        if (theme === THEMES.SYSTEM) {
-          applyTheme(newSystemTheme)
-        }
-      }
-
-      // 添加监听器
-      mediaQuery.addEventListener('change', handleSystemThemeChange)
-      
-      // 清理函数
-      return () => {
-        mediaQuery.removeEventListener('change', handleSystemThemeChange)
-      }
-    }
-  }, [theme])
 
   // 应用主题到DOM - 只在主题真正变化时执行
   useEffect(() => {
@@ -173,20 +127,14 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
     }
   }, [resolvedTheme, mounted])
 
-  // 防止服务端渲染不匹配 - 初始渲染时使用当前DOM状态
+  // 防止服务端渲染不匹配 - 在mounted之前总是返回默认状态
   if (!mounted) {
-    // 在客户端，尝试从DOM读取当前主题状态
-    const initialResolvedTheme = typeof window !== 'undefined' 
-      ? getCurrentDOMTheme() 
-      : THEMES.LIGHT
-
     return (
       <ThemeContext.Provider 
         value={{
           theme: defaultTheme,
           setTheme: () => {},
-          resolvedTheme: initialResolvedTheme,
-          systemTheme: typeof window !== 'undefined' ? getSystemTheme() : THEMES.LIGHT
+          resolvedTheme: defaultTheme
         }}
       >
         {children}
@@ -199,8 +147,7 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
       value={{
         theme,
         setTheme: changeTheme,
-        resolvedTheme,
-        systemTheme
+        resolvedTheme
       }}
     >
       {children}

@@ -72,7 +72,7 @@ const Navigation = () => {
               {/* Theme Toggle */}
               <div className="flex items-center ml-5 space-x-3">
                 {/* Desktop Theme Toggle */}
-                <SimpleThemeToggle />
+                <SimpleThemeToggle size="medium" />
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ const Navigation = () => {
           {/* Mobile menu button & theme toggle */}
           <div className="md:hidden flex items-center space-x-2">
             {/* Mobile Theme Toggle */}
-            <SimpleThemeToggle />
+            <SimpleThemeToggle size="medium" />
             
             <button
               onClick={toggleMenu}

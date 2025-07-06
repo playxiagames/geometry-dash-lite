@@ -5,7 +5,7 @@ import ThemeContext, { THEMES } from '../contexts/ThemeContext'
 
 /**
  * 主题操作Hook
- * 提供便利的主题操作方法
+ * 提供便利的主题操作方法（只支持明暗两种主题）
  */
 export function useTheme() {
   const context = useContext(ThemeContext)
@@ -14,26 +14,17 @@ export function useTheme() {
     throw new Error('useTheme must be used within a ThemeProvider')
   }
 
-  const { theme, setTheme, resolvedTheme, systemTheme } = context
+  const { theme, setTheme, resolvedTheme } = context
 
-  // 切换到下一个主题（循环切换）
+  // 在明暗主题间切换
   const toggleTheme = useCallback(() => {
-    const themeOrder = [THEMES.LIGHT, THEMES.DARK, THEMES.SYSTEM]
-    const currentIndex = themeOrder.indexOf(theme)
-    const nextIndex = (currentIndex + 1) % themeOrder.length
-    setTheme(themeOrder[nextIndex])
+    setTheme(theme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK)
   }, [theme, setTheme])
 
-  // 简单的明暗切换（不包含系统主题）
+  // 简单的明暗切换（保持兼容性）
   const toggleLightDark = useCallback(() => {
-    if (theme === THEMES.SYSTEM) {
-      // 如果当前是系统主题，根据当前系统主题切换到相反主题
-      setTheme(systemTheme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK)
-    } else {
-      // 在明暗主题间直接切换
-      setTheme(theme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK)
-    }
-  }, [theme, systemTheme, setTheme])
+    setTheme(theme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK)
+  }, [theme, setTheme])
 
   // 设置为亮色主题
   const setLightTheme = useCallback(() => {
@@ -43,11 +34,6 @@ export function useTheme() {
   // 设置为暗色主题
   const setDarkTheme = useCallback(() => {
     setTheme(THEMES.DARK)
-  }, [setTheme])
-
-  // 设置为系统主题
-  const setSystemTheme = useCallback(() => {
-    setTheme(THEMES.SYSTEM)
   }, [setTheme])
 
   // 检查是否为指定主题
@@ -66,27 +52,11 @@ export function useTheme() {
   // 判断是否为亮色主题
   const isLight = resolvedTheme === THEMES.LIGHT
 
-  // 判断是否为系统主题设置
-  const isSystemMode = theme === THEMES.SYSTEM
-
-  // 获取主题图标 - 显示切换目标逻辑
-  const getThemeIcon = useCallback((targetTheme = theme) => {
-    // 对于完整切换器，显示下一个主题的图标
-    if (targetTheme === THEMES.SYSTEM) {
-      // 系统模式时，根据当前实际主题显示切换目标
-      return resolvedTheme === THEMES.DARK ? '☀️' : '🌙'
-    }
-    
-    // 对于设定的主题，显示切换目标
-    switch (targetTheme) {
-      case THEMES.LIGHT:
-        return '🌙' // 亮色模式时显示月亮（表示点击后切换到暗色）
-      case THEMES.DARK:
-        return '☀️' // 暗色模式时显示太阳（表示点击后切换到亮色）
-      default:
-        return '🌙'
-    }
-  }, [theme, resolvedTheme])
+  // 获取主题图标 - 显示切换目标
+  const getThemeIcon = useCallback(() => {
+    // 根据当前主题显示切换目标图标
+    return theme === THEMES.DARK ? '☀️' : '🌙'
+  }, [theme])
 
   // 获取简化切换器的图标 - 专门用于SimpleThemeToggle
   const getToggleIcon = useCallback(() => {
@@ -101,10 +71,8 @@ export function useTheme() {
         return 'Light'
       case THEMES.DARK:
         return 'Dark'
-      case THEMES.SYSTEM:
-        return 'System'
       default:
-        return 'Light'
+        return 'Dark'
     }
   }, [theme])
 
@@ -117,10 +85,8 @@ export function useTheme() {
     // 基础状态
     theme,
     resolvedTheme,
-    systemTheme,
     isDark,
     isLight,
-    isSystemMode,
     
     // 基础操作
     setTheme,
@@ -130,7 +96,6 @@ export function useTheme() {
     toggleLightDark,
     setLightTheme,
     setDarkTheme,
-    setSystemTheme,
     
     // 检查方法
     isTheme,

@@ -53,7 +53,7 @@ export function ThemeToggle({
     ${className}
   `
 
-  // 主题选项 - 现在图标表示状态而非切换目标
+  // 主题选项配置 - 只保留明暗两种主题
   const themeOptions = [
     { 
       value: THEMES.LIGHT, 
@@ -66,12 +66,6 @@ export function ThemeToggle({
       icon: '🌙', 
       label: 'Dark',
       description: 'Dark theme'
-    },
-    { 
-      value: THEMES.SYSTEM, 
-      icon: '🖥️', 
-      label: 'System',
-      description: 'Follow system'
     }
   ]
 
@@ -206,10 +200,10 @@ export function ThemeToggle({
 }
 
 /**
- * 简化的主题切换按钮（仅在明暗主题间切换）
+ * 简化的主题切换按钮（只支持明暗两种主题切换）
  */
 export function SimpleThemeToggle({ size = 'medium', className = '' }) {
-  const { isDark, toggleLightDark, getToggleIcon } = useTheme()
+  const { theme, toggleTheme, getThemeIcon, getThemeName } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -236,19 +230,32 @@ export function SimpleThemeToggle({ size = 'medium', className = '' }) {
     ${className}
   `
 
+  // 获取下一个主题名称用于提示
+  const getNextThemeName = () => {
+    return theme === 'dark' ? 'Light' : 'Dark'
+  }
+
   if (!mounted) {
-    return <div className={`${buttonClasses} animate-pulse`} />
+    return (
+      <button
+        className={buttonClasses}
+        disabled
+        aria-label="Loading theme toggle"
+      >
+        <span className="animate-pulse">⚪</span>
+      </button>
+    )
   }
 
   return (
     <button
-      onClick={toggleLightDark}
+      onClick={toggleTheme}
       className={buttonClasses}
-      aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
-      title={`Switch to ${isDark ? 'light' : 'dark'} theme`}
+      aria-label={`Switch to ${getNextThemeName().toLowerCase()} theme`}
+      title={`Current: ${getThemeName()} theme. Click to switch to ${getNextThemeName()}.`}
     >
       <span className="animate-theme-transition">
-        {getToggleIcon()}
+        {getThemeIcon()}
       </span>
     </button>
   )
