@@ -1,6 +1,7 @@
 import './globals.css'
 import { getSiteConfig, getSEOConfig } from '../utils/gameData'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+import { ThemeProvider } from '../contexts/ThemeContext'
 
 export const metadata = {
   title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
@@ -65,7 +66,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#3b82f6" />
+        <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Geometry Dash Lite" />
@@ -180,7 +181,9 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <div id="root">
-          {children}
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
         </div>
         
         {/* Client-side Google Analytics component */}

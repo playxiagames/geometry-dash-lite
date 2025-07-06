@@ -4,18 +4,92 @@
 
 /* Custom CSS for game website */
 @layer base {
+  /* CSS变量定义 - 明暗主题兼容 */
+  :root {
+    /* 背景颜色 */
+    --bg-primary: 249 250 251; /* gray-50 */
+    --bg-secondary: 243 244 246; /* gray-100 */
+    --bg-tertiary: 255 255 255; /* white */
+    
+    /* 表面颜色 */
+    --surface-primary: 255 255 255; /* white */
+    --surface-secondary: 249 250 251; /* gray-50 */
+    --surface-elevated: 255 255 255; /* white */
+    
+    /* 文本颜色 */
+    --text-primary: 17 24 39; /* gray-900 */
+    --text-secondary: 75 85 99; /* gray-600 */
+    --text-tertiary: 107 114 128; /* gray-500 */
+    --text-inverse: 249 250 251; /* gray-50 */
+    
+    /* 边框颜色 */
+    --border-primary: 209 213 219; /* gray-300 */
+    --border-secondary: 229 231 235; /* gray-200 */
+    --border-focus: 59 130 246; /* blue-500 */
+    
+    /* 阴影颜色 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    /* 游戏主题色 */
+    --game-accent: 34 197 94; /* green-500 */
+    --game-bg: 26 26 26; /* 保持原始游戏背景 */
+    --game-card: 45 45 45; /* 保持原始游戏卡片背景 */
+  }
+
+  .dark {
+    /* 背景颜色 */
+    --bg-primary: 15 23 42; /* slate-900 */
+    --bg-secondary: 30 41 59; /* slate-800 */
+    --bg-tertiary: 51 65 85; /* slate-700 */
+    
+    /* 表面颜色 */
+    --surface-primary: 30 41 59; /* slate-800 */
+    --surface-secondary: 51 65 85; /* slate-700 */
+    --surface-elevated: 71 85 105; /* slate-600 */
+    
+    /* 文本颜色 */
+    --text-primary: 248 250 252; /* slate-50 */
+    --text-secondary: 148 163 184; /* slate-400 */
+    --text-tertiary: 100 116 139; /* slate-500 */
+    --text-inverse: 15 23 42; /* slate-900 */
+    
+    /* 边框颜色 */
+    --border-primary: 71 85 105; /* slate-600 */
+    --border-secondary: 100 116 139; /* slate-500 */
+    --border-focus: 59 130 246; /* blue-500 */
+    
+    /* 阴影颜色 - 暗色模式下使用更深的阴影 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.25), 0 4px 6px -4px rgb(0 0 0 / 0.25);
+    
+    /* 游戏主题色 */
+    --game-accent: 34 197 94; /* green-500 - 保持一致 */
+    --game-bg: 26 26 26; /* 保持原始游戏背景 */
+    --game-card: 45 45 45; /* 保持原始游戏卡片背景 */
+  }
+
   html {
     scroll-behavior: smooth;
+    /* 主题切换过渡 */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   }
   
   body {
-    @apply bg-gray-50 text-gray-900;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    /* 使用CSS变量设置背景和文字颜色 */
+    background-color: rgb(var(--bg-primary));
+    color: rgb(var(--text-primary));
+    /* 主题切换过渡 */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   }
 
   /* Improve focus visibility */
   *:focus {
-    outline: 2px solid theme('colors.blue.500');
+    outline: 2px solid rgb(var(--border-focus));
     outline-offset: 2px;
   }
 }
@@ -45,8 +119,7 @@
 
   /* 搜索高亮样式 */
   mark {
-    background-color: #fef3c7;
-    color: #92400e;
+    @apply bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-200;
     padding: 0 2px;
     border-radius: 2px;
   }
@@ -102,18 +175,21 @@
 
   /* Game Card Hover Effects */
   .game-card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1;
+    background-color: rgb(var(--surface-primary));
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    @apply rounded-lg cursor-pointer transform hover:-translate-y-1;
   }
 
   .game-card:hover {
-    @apply shadow-lg;
+    box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
   }
 
   /* Custom Scrollbar */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #cbd5e0 #f7fafc;
+    scrollbar-color: rgb(var(--border-primary)) rgb(var(--bg-secondary));
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -121,17 +197,17 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: #f7fafc;
+    background: rgb(var(--bg-secondary));
     border-radius: 3px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #cbd5e0;
+    background: rgb(var(--border-primary));
     border-radius: 3px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #a0aec0;
+    background: rgb(var(--text-tertiary));
   }
 
   /* Loading Animation */
@@ -168,27 +244,50 @@
 
   /* Button Styles */
   .btn-primary {
-    @apply bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+    @apply bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
   }
 
   .btn-secondary {
-    @apply bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+    background-color: rgb(var(--surface-secondary));
+    color: rgb(var(--text-primary));
+    border: 1px solid rgb(var(--border-primary));
+    @apply font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgb(var(--surface-elevated));
+    border-color: rgb(var(--border-focus));
   }
 
   .btn-ghost {
-    @apply text-gray-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all duration-200;
+    color: rgb(var(--text-secondary));
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-ghost:hover {
+    background-color: rgb(var(--surface-secondary));
+  }
+  
+  .btn-ghost:focus {
+    @apply ring-2 ring-offset-2;
+    ring-color: rgb(var(--border-focus));
   }
 
   /* Sidebar Game List */
   .sidebar-game-item {
-    @apply flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors;
+    @apply flex items-center space-x-3 p-2 rounded-lg cursor-pointer transition-colors;
+  }
+  
+  .sidebar-game-item:hover {
+    background-color: rgb(var(--surface-secondary));
   }
 
   /* Top Navigation */
   .top-navigation {
-    @apply bg-white shadow-md sticky top-0 z-50;
+    background-color: rgba(var(--surface-primary) / 0.95);
+    border-bottom: 1px solid rgb(var(--border-secondary));
+    @apply shadow-md sticky top-0 z-50;
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.95);
   }
 
   /* Responsive Design */
@@ -276,11 +375,15 @@
   }
 }
 
-/* Dark mode support (optional) */
+/* 系统暗色主题检测 - 仅用于初始化，实际主题由class控制 */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --tw-prose-body: theme('colors.gray.300');
-    --tw-prose-headings: theme('colors.gray.100');
+  :root:not(.light):not(.dark) {
+    --bg-primary: 15 23 42; /* slate-900 */
+    --bg-secondary: 30 41 59; /* slate-800 */
+    --text-primary: 248 250 252; /* slate-50 */
+    --text-secondary: 148 163 184; /* slate-400 */
+    --surface-primary: 30 41 59; /* slate-800 */
+    --border-primary: 71 85 105; /* slate-600 */
   }
 }
 
@@ -326,9 +429,11 @@
 
 /* Custom selection colors */
 ::selection {
-  @apply bg-blue-500 text-white;
+  background-color: rgb(59 130 246); /* blue-500 */
+  color: rgb(var(--text-inverse));
 }
 
 ::-moz-selection {
-  @apply bg-blue-500 text-white;
+  background-color: rgb(59 130 246); /* blue-500 */
+  color: rgb(var(--text-inverse));
 } 

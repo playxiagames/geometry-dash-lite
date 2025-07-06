@@ -95,8 +95,8 @@ const GamePlayer = ({ game, className = '' }) => {
 
   if (!game) {
     return (
-      <div className="game-player-container bg-gray-100 rounded-lg p-8 text-center">
-        <div className="text-gray-500">
+      <div className="game-player-container bg-gray-100 dark:bg-slate-800 rounded-lg p-8 text-center">
+        <div className="text-gray-500 dark:text-gray-400">
           <div className="text-2xl mb-2">🎮</div>
           <p>No game selected</p>
         </div>
@@ -110,8 +110,8 @@ const GamePlayer = ({ game, className = '' }) => {
       <div className="game-title-header mb-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <h1 className="text-xl font-bold text-gray-900 text-left">{game.title}</h1>
-            <div className="flex items-center space-x-2 text-sm text-gray-500">
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white text-left">{game.title}</h1>
+            <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
               <span>⭐ {game.rating}</span>
               <span>•</span>
               <span>🎮 {game.playCount > 1000000 ? `${(game.playCount/1000000).toFixed(1)}M` : `${Math.floor(game.playCount/1000)}K`} plays</span>
@@ -175,12 +175,12 @@ const GamePlayer = ({ game, className = '' }) => {
       </div>
 
       {/* Game Controls - Bottom Bar */}
-      <div className="game-controls-bar bg-white border border-gray-200 rounded-b-lg px-4 py-3 mt-0">
+      <div className="game-controls-bar bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 rounded-b-lg px-4 py-3 mt-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <span className="text-sm text-gray-600">Game Controls:</span>
+            <span className="text-sm text-gray-600 dark:text-gray-300">Game Controls:</span>
             {game.controls && game.controls.length > 0 && (
-              <div className="flex items-center space-x-2 text-xs text-gray-500">
+              <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
                 <span>Use keyboard arrows</span>
                 <span>•</span>
                 <span>Space to pause</span>
@@ -211,9 +211,9 @@ const GamePlayer = ({ game, className = '' }) => {
 
       {/* Game Controls Info */}
       {/* {game.controls && game.controls.length > 0 && (
-        <div className="game-controls-info mt-4 p-4 bg-gray-50 rounded-lg">
-          <h3 className="font-semibold text-gray-900 mb-2">🎮 How to Play</h3>
-          <ul className="text-sm text-gray-600 space-y-1">
+        <div className="game-controls-info mt-4 p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-2">🎮 How to Play</h3>
+          <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
             {game.controls.map((control, index) => (
               <li key={index} className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>

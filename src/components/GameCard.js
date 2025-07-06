@@ -54,7 +54,7 @@ const GameCard = ({
   return (
     <Link href={`/games/${game.slug}/`} className="block">
       <div 
-        className={`game-card bg-white ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
+        className={`game-card bg-white dark:bg-slate-800 ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
       >
         {/* Game Image */}
         <div className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 relative`}>
@@ -101,12 +101,12 @@ const GameCard = ({
 
         {/* Game Info */}
         <div className="p-2">
-          <div className={`${config.title} text-gray-900 mb-1 line-clamp-2 text-left font-semibold`}>
+          <div className={`${config.title} text-gray-900 dark:text-white mb-1 line-clamp-2 text-left font-semibold`}>
             {game.title}
           </div>
           
           {showDescription && (
-            <p className={`${config.description} text-gray-600 mb-1 line-clamp-2 text-left`}>
+            <p className={`${config.description} text-gray-600 dark:text-gray-300 mb-1 line-clamp-2 text-left`}>
               {game.description}
             </p>
           )}
@@ -117,7 +117,7 @@ const GameCard = ({
               {game.tags.slice(0, 2).map((tag, index) => (
                 <span
                   key={index}
-                  className="inline-block bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded-full"
+                  className="inline-block bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 text-xs px-1 py-0.5 rounded-full"
                 >
                   {tag}
                 </span>
@@ -144,13 +144,13 @@ export const GameGrid = ({
       <div className={`games-grid ${className}`}>
         {title && (
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h2>
           </div>
         )}
         <div className="text-center py-12">
-          <div className="text-gray-400 text-6xl mb-4">🎮</div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">No games available</h3>
-          <p className="text-gray-600">Check back later for new games!</p>
+          <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🎮</div>
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">No games available</h3>
+          <p className="text-gray-600 dark:text-gray-400">Check back later for new games!</p>
         </div>
       </div>
     );
@@ -160,11 +160,11 @@ export const GameGrid = ({
     <div className={`games-grid ${className}`}>
       {title && (
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h2>
           {showMore && (
             <button
               onClick={onShowMore}
-              className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium text-sm transition-colors"
             >
               View All →
             </button>
@@ -200,7 +200,7 @@ export const SidebarGameList = ({
   return (
     <div className={`sidebar-game-list ${className}`}>
       {title && (
-        <h2 className="text-base font-semibold text-gray-900 mb-3 text-left">{title}</h2>
+        <h2 className="text-base font-semibold text-gray-900 dark:text-white mb-3 text-left">{title}</h2>
       )}
       
       {/* 响应式布局：小屏幕时网格排列，大屏幕时垂直列表 */}
@@ -227,7 +227,7 @@ const SidebarGameItem = ({ game }) => {
     return (
     <Link href={`/games/${game.slug}/`} className="block">
       <div 
-        className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors lg:mb-0"
+        className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 cursor-pointer transition-colors lg:mb-0"
       >
         {/* Game Image - 响应式尺寸 */}
         <div className="flex-shrink-0 w-20 h-12 sm:w-24 sm:h-16 lg:w-32 lg:h-20 rounded-md overflow-hidden bg-gray-200">
@@ -248,7 +248,7 @@ const SidebarGameItem = ({ game }) => {
         
         {/* Game Info - 响应式文字大小 */}
         <div className="flex-1 min-w-0">
-          <div className="text-xs sm:text-sm lg:text-sm font-medium text-gray-900 truncate text-left">
+          <div className="text-xs sm:text-sm lg:text-sm font-medium text-gray-900 dark:text-white truncate text-left">
             {game.title}
           </div>
           <div className="flex items-center space-x-1 text-[10px] sm:text-xs lg:text-xs text-gray-500">
