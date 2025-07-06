@@ -1,19 +1,13 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { getSiteConfig, getNavigationConfig, searchGames, getAllCategories } from '../utils/gameData';
+import { getSiteConfig, getNavigationConfig } from '../utils/gameData';
 import { SimpleThemeToggle } from './ThemeToggle';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState({ games: [], categories: [] });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const searchRef = useRef(null);
-  const router = useRouter();
   const pathname = usePathname();
   const siteConfig = getSiteConfig();
   const navigationConfig = getNavigationConfig();
@@ -28,99 +22,6 @@ const Navigation = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  // 搜索功能
-  useEffect(() => {
-    if (!searchQuery.trim()) {
-      setSearchResults({ games: [], categories: [] });
-      setSelectedIndex(0);
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      const games = searchGames(searchQuery).slice(0, 5);
-      const categories = getAllCategories().filter(category =>
-        category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        category.description.toLowerCase().includes(searchQuery.toLowerCase())
-      ).slice(0, 3);
-
-      setSearchResults({ games, categories });
-      setSelectedIndex(0);
-    }, 200);
-
-    return () => clearTimeout(timer);
-  }, [searchQuery]);
-
-  // 键盘导航
-  useEffect(() => {
-    if (!isSearchOpen) return;
-
-    const handleKeyDown = (e) => {
-      const totalResults = searchResults.games.length + searchResults.categories.length;
-      
-      if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        setSelectedIndex(prev => (prev + 1) % Math.max(totalResults, 1));
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        setSelectedIndex(prev => (prev - 1 + Math.max(totalResults, 1)) % Math.max(totalResults, 1));
-      } else if (e.key === 'Enter') {
-        e.preventDefault();
-        handleSelectResult(selectedIndex);
-      } else if (e.key === 'Escape') {
-        e.preventDefault();
-        setIsSearchOpen(false);
-        setSearchQuery('');
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isSearchOpen, searchResults, selectedIndex]);
-
-  // 点击外部关闭搜索
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
-        setIsSearchOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const handleSelectResult = (index) => {
-    const totalGames = searchResults.games.length;
-    
-    if (index < totalGames) {
-      const game = searchResults.games[index];
-      router.push(`/games/${game.slug}/`);
-    } else {
-      const category = searchResults.categories[index - totalGames];
-      router.push(`/category/${category.slug}/`);
-    }
-    
-    setIsSearchOpen(false);
-    setSearchQuery('');
-  };
-
-  const highlightText = (text, query) => {
-    if (!query.trim()) return text;
-    
-    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    const parts = text.split(regex);
-    
-    return parts.map((part, index) =>
-      regex.test(part) ? (
-        <mark key={index} className="bg-yellow-200 text-yellow-900 px-1 rounded">
-          {part}
-        </mark>
-      ) : (
-        part
-      )
-    );
   };
 
   const isActiveItem = (item) => {
@@ -168,122 +69,8 @@ const Navigation = () => {
                 </Link>
               ))}
 
-              {/* Search Box & Theme Toggle */}
+              {/* Theme Toggle */}
               <div className="flex items-center ml-5 space-x-3">
-                <div className="relative" ref={searchRef}>
-                <div className="relative">
-                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Search games..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    onFocus={() => setIsSearchOpen(true)}
-                    className="w-56 pl-8 pr-4 py-2 border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  />
-                </div>
-
-                {/* Search Results Dropdown */}
-                {isSearchOpen && (searchQuery.trim() || searchResults.games.length > 0 || searchResults.categories.length > 0) && (
-                  <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 rounded-lg shadow-lg max-h-96 overflow-y-auto z-50">
-                    
-                    {/* 搜索结果 */}
-                    {searchQuery.trim() && (searchResults.games.length > 0 || searchResults.categories.length > 0) ? (
-                      <>
-                        {/* 游戏结果 */}
-                        {searchResults.games.length > 0 && (
-                          <div className="p-2">
-                            <h3 className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 px-2">🎮 Games</h3>
-                            <div className="space-y-1">
-                              {searchResults.games.map((game, index) => (
-                                <button
-                                  key={game.id}
-                                  onClick={() => handleSelectResult(index)}
-                                  className={`w-full text-left p-2 rounded-lg transition-colors ${
-                                    selectedIndex === index
-                                      ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
-                                      : 'hover:bg-gray-50 dark:hover:bg-slate-700'
-                                  }`}
-                                >
-                                  <div className="flex items-center">
-                                    <div className="flex-shrink-0 w-10 h-10 bg-gray-200 dark:bg-slate-600 rounded-lg flex items-center justify-center mr-3">
-                                      <span className="text-sm">🎮</span>
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
-                                        {highlightText(game.title, searchQuery)}
-                                      </p>
-                                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                                        {highlightText(game.description, searchQuery)}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        {/* 分类结果 */}
-                        {searchResults.categories.length > 0 && (
-                          <div className="p-2 border-t border-gray-100 dark:border-slate-700">
-                            <h3 className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 px-2">📂 Categories</h3>
-                            <div className="space-y-1">
-                              {searchResults.categories.map((category, index) => (
-                                <button
-                                  key={category.id}
-                                  onClick={() => handleSelectResult(searchResults.games.length + index)}
-                                  className={`w-full text-left p-2 rounded-lg transition-colors ${
-                                    selectedIndex === searchResults.games.length + index
-                                      ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
-                                      : 'hover:bg-gray-50 dark:hover:bg-slate-700'
-                                  }`}
-                                >
-                                  <div className="flex items-center">
-                                    <div className="flex-shrink-0 w-10 h-10 bg-gray-200 dark:bg-slate-600 rounded-lg flex items-center justify-center mr-3">
-                                      <span className="text-sm">📂</span>
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
-                                        {highlightText(category.name, searchQuery)}
-                                      </p>
-                                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                                        {highlightText(category.description, searchQuery)}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </>
-                    ) : searchQuery.trim() ? (
-                      <div className="p-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-                        No results found for "{searchQuery}"
-                      </div>
-                    ) : (
-                      <div className="p-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-                        Type to search games and categories...
-                      </div>
-                    )}
-
-                    {/* 快捷键提示 */}
-                    <div className="px-3 py-2 bg-gray-50 dark:bg-slate-700 border-t border-gray-200 dark:border-slate-600 text-xs text-gray-500 dark:text-gray-400">
-                      <div className="flex items-center justify-center space-x-3">
-                        <span>↑↓ Select</span>
-                        <span>Enter Confirm</span>
-                        <span>Esc Close</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                </div>
-                
                 {/* Desktop Theme Toggle */}
                 <SimpleThemeToggle />
               </div>
@@ -318,105 +105,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
               
-              {/* Mobile Search */}
-              <div className="mb-3 relative" ref={searchRef}>
-                <div className="relative">
-                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Search games..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    onFocus={() => setIsSearchOpen(true)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                
-                {/* Mobile Search Results Dropdown */}
-                {isSearchOpen && (searchQuery.trim() || searchResults.games.length > 0 || searchResults.categories.length > 0) && (
-                  <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 rounded-lg shadow-lg max-h-64 overflow-y-auto z-50">
-                    
-                    {/* 搜索结果 */}
-                    {searchQuery.trim() && (searchResults.games.length > 0 || searchResults.categories.length > 0) ? (
-                      <>
-                        {/* 游戏结果 */}
-                        {searchResults.games.length > 0 && (
-                          <div className="p-2">
-                            <h3 className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 px-2">🎮 Games</h3>
-                            <div className="space-y-1">
-                              {searchResults.games.map((game, index) => (
-                                <button
-                                  key={game.id}
-                                  onClick={() => handleSelectResult(index)}
-                                  className={`w-full text-left p-2 rounded-lg transition-colors ${
-                                    selectedIndex === index
-                                      ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
-                                      : 'hover:bg-gray-50 dark:hover:bg-slate-700'
-                                  }`}
-                                >
-                                  <div className="flex items-center">
-                                    <div className="flex-shrink-0 w-8 h-8 bg-gray-200 dark:bg-slate-600 rounded-lg flex items-center justify-center mr-3">
-                                      <span className="text-xs">🎮</span>
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
-                                        {highlightText(game.title, searchQuery)}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        )}
 
-                        {/* 分类结果 */}
-                        {searchResults.categories.length > 0 && (
-                          <div className="p-2 border-t border-gray-100 dark:border-slate-700">
-                            <h3 className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 px-2">📂 Categories</h3>
-                            <div className="space-y-1">
-                              {searchResults.categories.map((category, index) => (
-                                <button
-                                  key={category.id}
-                                  onClick={() => handleSelectResult(searchResults.games.length + index)}
-                                  className={`w-full text-left p-2 rounded-lg transition-colors ${
-                                    selectedIndex === searchResults.games.length + index
-                                      ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
-                                      : 'hover:bg-gray-50 dark:hover:bg-slate-700'
-                                  }`}
-                                >
-                                  <div className="flex items-center">
-                                    <div className="flex-shrink-0 w-8 h-8 bg-gray-200 dark:bg-slate-600 rounded-lg flex items-center justify-center mr-3">
-                                      <span className="text-xs">📂</span>
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
-                                        {highlightText(category.name, searchQuery)}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </>
-                    ) : searchQuery.trim() ? (
-                      <div className="p-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-                        No results found for "{searchQuery}"
-                      </div>
-                    ) : (
-                      <div className="p-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-                        Type to search games and categories...
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
 
               {/* Navigation Items */}
               {navigationConfig.topItems.map((item) => (

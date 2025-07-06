@@ -203,4 +203,49 @@ export const sortGamesByPriority = (games) => {
     // playCount 相同时，按 rating 排序
     return b.rating - a.rating;
   });
+};
+
+// 获取 Geometry Dash 系列游戏
+export const getGeometryDashGames = () => {
+  const geometryDashGames = gamesData.games.filter(game => game.category === 'geometry-dash');
+  return sortGamesByPriority(geometryDashGames);
+};
+
+// 获取侧边栏推荐游戏 - 同系列游戏 + 热门游戏的组合
+export const getSidebarRecommendedGames = (mainGameId, count = 8) => {
+  const mainGame = getGameById(mainGameId);
+  if (!mainGame) return getRandomGames(count);
+
+  // 先获取同系列游戏（相关游戏）
+  const relatedGames = getRelatedGames(mainGameId, mainGameId);
+  
+  // 如果同系列游戏不够，补充热门游戏
+  if (relatedGames.length >= count) {
+    return relatedGames.slice(0, count);
+  }
+  
+  // 获取热门游戏来补充，排除已有的游戏
+  const hotGameIds = siteConfig.homepage.hotGames || [];
+  const existingIds = [mainGameId, ...relatedGames.map(g => g.id)];
+  const additionalHotGames = gamesData.games
+    .filter(game => hotGameIds.includes(game.id) && !existingIds.includes(game.id))
+    .slice(0, count - relatedGames.length);
+  
+  return [...relatedGames, ...additionalHotGames];
+};
+
+// 获取分类游戏预览 - 每个顶级分类显示几个代表游戏
+export const getCategoryPreviewGames = (categoryId, count = 4) => {
+  const categoryGames = getGamesByCategory(categoryId);
+  return categoryGames.slice(0, count);
+};
+
+// 获取首页"更多游戏"区域的游戏 - 排除已在其他区域展示的游戏
+export const getMoreGamesForHomepage = (excludeGameIds = [], count = 12) => {
+  // 排除指定的游戏ID
+  const availableGames = gamesData.games.filter(game => !excludeGameIds.includes(game.id));
+  
+  // 随机打乱并返回指定数量
+  const shuffled = [...availableGames].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
 }; 

@@ -44,16 +44,16 @@
         "url": "/category/google-games/"
       },
       {
+        "type": "page",
+        "id": "all-games",
+        "title": "All Games",
+        "url": "/all-games/"
+      },
+      {
         "type": "game",
         "id": "dinosaur-game",
         "title": "Dinosaur Game",
         "url": "/games/dinosaur-game/"
-      },
-      {
-        "type": "game",
-        "id": "solitaire",
-        "title": "Solitaire",
-        "url": "/games/solitaire/"
       },
       {
         "type": "game",

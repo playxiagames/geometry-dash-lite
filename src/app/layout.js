@@ -165,14 +165,14 @@ export default function RootLayout({ children }) {
                 "@type": "Organization",
                 "name": "Geometry Dash Lite"
               },
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://geometry-dash-lite.org/search?q={search_term_string}"
-                },
-                "query-input": "required name=search_term_string"
-              }
+                          "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://geometry-dash-lite.org/all-games/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
             })
           }}
         />

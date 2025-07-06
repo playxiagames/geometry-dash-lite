@@ -101,7 +101,7 @@
     transition: color 0.15s ease-out, background-color 0.15s ease-out;
   }
 
-  /* 为所有可能受主题影响的元素添加过渡 */
+  /* 为主题相关元素添加过渡，确保不影响用户交互 */
   *,
   *::before,
   *::after {
@@ -116,6 +116,26 @@
     transition-property: revert;
     transition-timing-function: revert;
     transition-duration: revert;
+  }
+
+  /* 确保文字可以正常选择 */
+  * {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  /* 对于特定的交互元素，禁用文字选择 */
+  button,
+  [role="button"],
+  .cursor-pointer,
+  img,
+  svg {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   /* 全屏模式时禁用过渡效果 - 关键修复 */
@@ -156,34 +176,11 @@
     overflow: hidden;
   }
 
-  /* 搜索高亮样式 */
+  /* 高亮样式 */
   mark {
     @apply bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-200;
     padding: 0 2px;
     border-radius: 2px;
-  }
-
-  /* 搜索模态框动画 */
-  .search-modal-enter {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-
-  .search-modal-enter-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 200ms, transform 200ms;
-  }
-
-  .search-modal-exit {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .search-modal-exit-active {
-    opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 200ms, transform 200ms;
   }
 
   /* Game Player Styles */
