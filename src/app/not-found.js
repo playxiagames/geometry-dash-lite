@@ -19,10 +19,10 @@ export default function NotFound() {
         {/* Error Message */}
         <div className="mb-8">
           <div className="text-8xl mb-4">🎮</div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Game Not Found
           </h1>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             Oops! The game or page you're looking for doesn't exist.
           </p>
           <p className="text-gray-500">
@@ -40,7 +40,7 @@ export default function NotFound() {
           </Link>
           <Link
             href="/category/geometry-dash/"
-            className="bg-gray-100 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+            className="bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
           >
             🎯 Browse All Games
           </Link>
@@ -48,8 +48,8 @@ export default function NotFound() {
 
         {/* Suggested Games */}
         {featuredGames && featuredGames.length > 0 && (
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               🌟 Try These Popular Games Instead
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -59,11 +59,11 @@ export default function NotFound() {
                   href={`/games/${game.slug}/`}
                   className="group block"
                 >
-                  <div className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+                  <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-4 hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                       <span className="text-2xl">🎮</span>
                     </div>
-                    <h3 className="font-semibold text-gray-900 text-sm group-hover:text-blue-600 transition-colors">
+                    <h3 className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {game.title}
                     </h3>
                   </div>

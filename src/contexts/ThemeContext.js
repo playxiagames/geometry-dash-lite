@@ -36,6 +36,19 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
     return THEMES.LIGHT
   }
 
+  // 获取当前DOM上的主题类（从初始化脚本设置的类中读取）
+  const getCurrentDOMTheme = () => {
+    if (typeof window !== 'undefined') {
+      const root = window.document.documentElement
+      if (root.classList.contains('dark')) {
+        return THEMES.DARK
+      } else if (root.classList.contains('light')) {
+        return THEMES.LIGHT
+      }
+    }
+    return THEMES.LIGHT
+  }
+
   // 应用主题到DOM
   const applyTheme = (newTheme) => {
     if (typeof window !== 'undefined') {
@@ -96,15 +109,29 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
     }
   }
 
-  // 初始化主题
+  // 初始化主题 - 确保与初始化脚本同步
   useEffect(() => {
     // 设置系统主题
-    setSystemTheme(getSystemTheme())
+    const currentSystemTheme = getSystemTheme()
+    setSystemTheme(currentSystemTheme)
     
     // 加载保存的主题
     const savedTheme = loadTheme()
-    setTheme(savedTheme)
     
+    // 检查当前DOM状态，确保与初始化脚本设置的状态一致
+    const currentDOMTheme = getCurrentDOMTheme()
+    
+    // 如果保存的主题是system，需要确保状态与实际DOM一致
+    if (savedTheme === THEMES.SYSTEM) {
+      // 检查DOM状态是否与当前系统主题匹配
+      const expectedDOMTheme = currentSystemTheme
+      if (currentDOMTheme !== expectedDOMTheme) {
+        // 如果不匹配，应用正确的主题
+        applyTheme(expectedDOMTheme)
+      }
+    }
+    
+    setTheme(savedTheme)
     setMounted(true)
   }, [])
 
@@ -114,7 +141,13 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
       
       const handleSystemThemeChange = (e) => {
-        setSystemTheme(e.matches ? THEMES.DARK : THEMES.LIGHT)
+        const newSystemTheme = e.matches ? THEMES.DARK : THEMES.LIGHT
+        setSystemTheme(newSystemTheme)
+        
+        // 如果当前使用系统主题，立即应用新的系统主题
+        if (theme === THEMES.SYSTEM) {
+          applyTheme(newSystemTheme)
+        }
       }
 
       // 添加监听器
@@ -125,24 +158,35 @@ export function ThemeProvider({ children, defaultTheme = THEMES.SYSTEM }) {
         mediaQuery.removeEventListener('change', handleSystemThemeChange)
       }
     }
-  }, [])
+  }, [theme])
 
-  // 应用主题到DOM
+  // 应用主题到DOM - 只在主题真正变化时执行
   useEffect(() => {
     if (mounted) {
-      applyTheme(resolvedTheme)
+      // 检查当前DOM状态
+      const currentDOMTheme = getCurrentDOMTheme()
+      
+      // 只有当需要应用的主题与当前DOM主题不同时才更新
+      if (currentDOMTheme !== resolvedTheme) {
+        applyTheme(resolvedTheme)
+      }
     }
   }, [resolvedTheme, mounted])
 
-  // 防止服务端渲染不匹配
+  // 防止服务端渲染不匹配 - 初始渲染时使用当前DOM状态
   if (!mounted) {
+    // 在客户端，尝试从DOM读取当前主题状态
+    const initialResolvedTheme = typeof window !== 'undefined' 
+      ? getCurrentDOMTheme() 
+      : THEMES.LIGHT
+
     return (
       <ThemeContext.Provider 
         value={{
           theme: defaultTheme,
           setTheme: () => {},
-          resolvedTheme: THEMES.LIGHT,
-          systemTheme: THEMES.LIGHT
+          resolvedTheme: initialResolvedTheme,
+          systemTheme: typeof window !== 'undefined' ? getSystemTheme() : THEMES.LIGHT
         }}
       >
         {children}

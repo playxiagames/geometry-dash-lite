@@ -53,8 +53,8 @@ export default function CategoryPage({ params }) {
 
         {/* Category Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{category.description}</p>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{category.name}</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">{category.description}</p>
           {/* <div className="mt-4">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
               {categoryGames.length} games available
@@ -64,7 +64,7 @@ export default function CategoryPage({ params }) {
 
         {/* Category Filters */}
         <div className="mb-8">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Browse Categories</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Browse Categories</h2>
           <div className="flex flex-wrap gap-3">
             {allCategories.map((cat) => (
               <CategoryBadge
@@ -79,10 +79,10 @@ export default function CategoryPage({ params }) {
         {/* Games Grid */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               All {category.name}
             </h2>
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-gray-500 dark:text-gray-400">
               Showing {categoryGames.length} games
             </div>
           </div>
@@ -91,9 +91,9 @@ export default function CategoryPage({ params }) {
             <GameGrid games={categoryGames} />
           ) : (
             <div className="text-center py-12">
-              <div className="text-gray-400 text-6xl mb-4">🎮</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No games found</h3>
-              <p className="text-gray-600">There are no games in this category yet. Check back later!</p>
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🎮</div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">No games found</h3>
+              <p className="text-gray-600 dark:text-gray-300">There are no games in this category yet. Check back later!</p>
             </div>
           )}
         </div>
@@ -102,20 +102,20 @@ export default function CategoryPage({ params }) {
         <Breadcrumb items={breadcrumbItems} className="my-6" />
 
         {/* Category Description */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">About {category.name}</h2>
+        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">About {category.name}</h2>
           <div className="prose prose-lg max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               {category.longDescription || category.description}
             </p>
             
             {/* Games List */}
             {categoryGames.length > 0 && (
               <div className="mt-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Featured Games in This Category:</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Featured Games in This Category:</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {categoryGames.map((game) => (
-                    <div key={game.id} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div key={game.id} className="flex items-start space-x-3 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
                       <div className="flex-shrink-0">
                         <img 
                           src={game.thumbnail} 
@@ -124,16 +124,16 @@ export default function CategoryPage({ params }) {
                         />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-medium text-gray-900 truncate">
+                        <h4 className="text-sm font-medium text-gray-900 dark:text-white truncate">
                           {game.title}
                         </h4>
-                        <p className="text-xs text-gray-600 mt-1 line-clamp-2">
+                        <p className="text-xs text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">
                           {game.description}
                         </p>
                         <div className="flex items-center mt-2 space-x-2">
                           <span className="text-xs text-yellow-600">⭐ {game.rating}</span>
-                          <span className="text-xs text-gray-500">•</span>
-                          <span className="text-xs text-gray-500">
+                          <span className="text-xs text-gray-500 dark:text-gray-400">•</span>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">
                             {game.playCount >= 1000000 
                               ? `${(game.playCount / 1000000).toFixed(1)}M plays`
                               : `${Math.round(game.playCount / 1000)}K plays`
@@ -148,10 +148,10 @@ export default function CategoryPage({ params }) {
             )}
 
             {/* Additional SEO Content */}
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Why Play {category.name} Games?</h3>
+            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-slate-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Why Play {category.name} Games?</h3>
               {category.id === 'geometry-dash' && (
-                <div className="space-y-4 text-gray-700">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300">
                   <p>
                     Geometry Dash games offer a unique blend of platforming action and musical rhythm that creates an unparalleled gaming experience. 
                     These games are perfect for players who enjoy challenging themselves with precise timing and coordination skills.
@@ -167,7 +167,7 @@ export default function CategoryPage({ params }) {
                 </div>
               )}
               {category.id === 'google-games' && (
-                <div className="space-y-4 text-gray-700">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300">
                   <p>
                     Google Games represent the pinnacle of classic arcade gaming, bringing timeless entertainment to modern browsers. 
                     These games have stood the test of time because they focus on pure, engaging gameplay without unnecessary complexity.
@@ -184,7 +184,7 @@ export default function CategoryPage({ params }) {
                 </div>
               )}
               {category.id === 'js13k-games' && (
-                <div className="space-y-4 text-gray-700">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300">
                   <p>
                     JS13K Games showcase the incredible creativity and technical skill of developers who create amazing gaming experiences 
                     within just 13 kilobytes of code. This unique constraint forces developers to be innovative, resulting in games that are 

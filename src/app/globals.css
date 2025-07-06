@@ -71,10 +71,24 @@
     --game-card: 45 45 45; /* 保持原始游戏卡片背景 */
   }
 
+  /* 防止主题切换闪烁的关键样式 */
   html {
     scroll-behavior: smooth;
-    /* 主题切换过渡 */
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    /* 初始状态即设置过渡，避免闪烁 */
+    transition: color 0.15s ease-out, background-color 0.15s ease-out;
+  }
+  
+  /* 确保在主题未加载时也有基本的颜色 */
+  html:not(.dark):not(.light) {
+    color-scheme: light;
+    background-color: #f9fafb; /* fallback for gray-50 */
+    color: #111827; /* fallback for gray-900 */
+  }
+  
+  /* 为已确定主题的元素设置过渡 */
+  html.light,
+  html.dark {
+    transition: color 0.15s ease-out, background-color 0.15s ease-out;
   }
   
   body {
@@ -83,8 +97,25 @@
     /* 使用CSS变量设置背景和文字颜色 */
     background-color: rgb(var(--bg-primary));
     color: rgb(var(--text-primary));
-    /* 主题切换过渡 */
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    /* 平滑的主题切换过渡 */
+    transition: color 0.15s ease-out, background-color 0.15s ease-out;
+  }
+
+  /* 为所有可能受主题影响的元素添加过渡 */
+  *,
+  *::before,
+  *::after {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: ease-out;
+    transition-duration: 0.15s;
+  }
+
+  /* 特殊情况：对于动画元素，保持原有的过渡设置 */
+  [class*="animate-"],
+  [class*="transition-"] {
+    transition-property: revert;
+    transition-timing-function: revert;
+    transition-duration: revert;
   }
 
   /* Improve focus visibility */

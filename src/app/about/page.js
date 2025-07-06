@@ -23,21 +23,21 @@ export default function AboutPage() {
 
         {/* Page Header */}
         <div className="text-left mb-6">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">About Us</h1>
-          <p className="text-base text-gray-600">Learn about Geometry Dash Lite's story and mission</p>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">About Us</h1>
+          <p className="text-base text-gray-600 dark:text-gray-300">Learn about Geometry Dash Lite's story and mission</p>
         </div>
 
         <div className="space-y-6">
           
           {/* Introduction */}
-          <div className="bg-white rounded-lg shadow-sm p-4">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">🎮 Who We Are</h2>
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-4">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-left">🎮 Who We Are</h2>
             <div className="prose prose-sm max-w-none text-left">
-              <p className="text-gray-700 leading-relaxed mb-3">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
                 Geometry Dash Lite is a platform dedicated to providing free online games. We are committed to bringing 
                 the best browser gaming experience to players worldwide, allowing you to enjoy exciting game content without any downloads.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
                 Our platform features the classic Geometry Dash Lite game, an exciting rhythm-based action platformer that challenges 
                 your reflexes and timing skills. In addition to this, we also offer various types of games including arcade games, 
                 puzzle games, action games, and more.
@@ -46,30 +46,30 @@ export default function AboutPage() {
           </div>
 
           {/* Mission */}
-          <div className="bg-white rounded-lg shadow-sm p-4">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">🎯 Our Mission</h2>
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-4">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-left">🎯 Our Mission</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="text-left">
-                <h3 className="text-base font-semibold text-gray-900 mb-2">🌟 Free Gaming Experience</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">🌟 Free Gaming Experience</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   Provide completely free online games, allowing everyone to enjoy high-quality gaming content without any fees or downloads.
                 </p>
               </div>
               <div className="text-left">
-                <h3 className="text-base font-semibold text-gray-900 mb-2">🚀 Technical Innovation</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">🚀 Technical Innovation</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   Utilize the latest web technologies to ensure games run smoothly across various devices and browsers.
                 </p>
               </div>
               <div className="text-left">
-                <h3 className="text-base font-semibold text-gray-900 mb-2">🌍 Global Community</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">🌍 Global Community</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   Build an inclusive global gaming community that connects players from around the world.
                 </p>
               </div>
               <div className="text-left">
-                <h3 className="text-base font-semibold text-gray-900 mb-2">📱 Cross-Platform Compatibility</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">📱 Cross-Platform Compatibility</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   Ensure all games run perfectly on desktop, tablet, and mobile devices, playable anytime, anywhere.
                 </p>
               </div>
@@ -77,55 +77,55 @@ export default function AboutPage() {
           </div>
 
           {/* Features */}
-          <div className="bg-white rounded-lg shadow-sm p-4">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">✨ Platform Features</h2>
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-4">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-left">✨ Platform Features</h2>
             <div className="space-y-3">
               <div className="flex items-start text-left">
                 <span className="flex-shrink-0 text-blue-500 mr-2 mt-0.5">🎯</span>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900">Curated Game Content</h3>
-                  <p className="text-sm text-gray-700">Carefully selected high-quality games, ensuring every game is worth your time.</p>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Curated Game Content</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">Carefully selected high-quality games, ensuring every game is worth your time.</p>
                 </div>
               </div>
               <div className="flex items-start text-left">
                 <span className="flex-shrink-0 text-green-500 mr-2 mt-0.5">⚡</span>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900">Fast Loading</h3>
-                  <p className="text-sm text-gray-700">Optimized loading speeds that let you start gaming quickly.</p>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Fast Loading</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">Optimized loading speeds that let you start gaming quickly.</p>
                 </div>
               </div>
               <div className="flex items-start text-left">
                 <span className="flex-shrink-0 text-purple-500 mr-2 mt-0.5">🔒</span>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900">Safe and Secure</h3>
-                  <p className="text-sm text-gray-700">All games are security-tested to protect your device and privacy.</p>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Safe and Secure</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">All games are security-tested to protect your device and privacy.</p>
                 </div>
               </div>
               <div className="flex items-start text-left">
                 <span className="flex-shrink-0 text-orange-500 mr-2 mt-0.5">🎨</span>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900">Modern Design</h3>
-                  <p className="text-sm text-gray-700">Clean, modern interface design providing an excellent user experience.</p>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Modern Design</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">Clean, modern interface design providing an excellent user experience.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Team Values */}
-          <div className="bg-white rounded-lg shadow-sm p-4">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 text-left">💝 Our Values</h2>
-            <div className="bg-blue-50 rounded-lg p-3 text-left">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-4">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-left">💝 Our Values</h2>
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 text-left">
               <div className="space-y-2">
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   <strong>User-First:</strong> Always prioritize user experience and continuously improve our services.
                 </p>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   <strong>Open & Inclusive:</strong> Welcome players of all ages and create a friendly gaming environment.
                 </p>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   <strong>Innovation:</strong> Continuously explore new technologies and gameplay to bring better experiences to players.
                 </p>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   <strong>Community Building:</strong> Work closely with the player community to build a better gaming platform together.
                 </p>
               </div>

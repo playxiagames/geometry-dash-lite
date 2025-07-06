@@ -26,10 +26,10 @@ export default function HomePage() {
       <Layout>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               🎮 Geometry Dash Lite
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer.
             </p>
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
@@ -67,42 +67,42 @@ export default function HomePage() {
 
         {/* Featured Games Grid */}
         <div className="mt-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4 text-left">🎯 Featured Games</h2>
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-left">🎯 Featured Games</h2>
           <GameGrid games={featureGames} />
         </div>
 
         {/* Popular Games Grid */}
         <div className="mt-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4 text-left">🎯 Popular Games</h2>
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-left">🎯 Popular Games</h2>
           <GameGrid games={popularGames} />
         </div>
 
         {/* More Games Grid */}
         <div className="mt-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-bold text-gray-900 text-left">🕹️ Explore More Free Online Games</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white text-left">🕹️ Explore More Free Online Games</h2>
           </div>
           <GameGrid games={allGames} />
         </div>
 
         {/* SEO Content Section - 主要H1标签 */}
-        <div className="mt-6 bg-white rounded-lg shadow-sm p-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-left">
+        <div className="mt-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-left">
             Play Geometry Dash Lite - Free Online Game
           </h2>
           
           <div className="prose prose-lg max-w-none text-left">
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Welcome to the ultimate <strong>Geometry Dash Lite</strong> online experience! Our platform offers you the chance to play 
               <strong> Geometry Dash Lite</strong> directly in your web browser without any downloads or installations required. 
               This exciting rhythm-based platformer has captivated millions of players worldwide, and now you can enjoy 
               <strong> Geometry Dash Lite</strong> anytime, anywhere, completely free.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-6">
               What Makes Geometry Dash Lite Special?
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               <strong>Geometry Dash Lite</strong> is more than just a simple jumping game – it's a mesmerizing fusion of precise 
               platforming action and pulse-pounding electronic music. In <strong>Geometry Dash Lite</strong>, you control a geometric 
               character that must navigate through increasingly challenging obstacle courses. The game's unique appeal lies in how 
@@ -110,21 +110,21 @@ export default function HomePage() {
               <strong> Geometry Dash Lite</strong> stand out from other online games.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-6">
               How to Play Geometry Dash Lite
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Playing <strong>Geometry Dash Lite</strong> on our platform is incredibly simple. Just click the play button above 
               and start your adventure immediately. The controls in <strong>Geometry Dash Lite</strong> are straightforward – 
               tap or click to make your character jump over obstacles and avoid deadly spikes. Timing is everything in 
               <strong> Geometry Dash Lite</strong>, as you'll need to sync your movements with the rhythm of the music to succeed.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-6">
               Features of Our Geometry Dash Lite Version
             </h2>
-            <div className="bg-blue-50 rounded-lg p-4 mb-4">
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mb-4">
+              <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
                 <li><strong>Instant Play:</strong> No downloads needed to enjoy Geometry Dash Lite</li>
                 <li><strong>Cross-Platform:</strong> Play Geometry Dash Lite on desktop, tablet, or mobile</li>
                 <li><strong>Free Forever:</strong> Enjoy Geometry Dash Lite without any costs or subscriptions</li>
@@ -133,20 +133,20 @@ export default function HomePage() {
               </ul>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-6">
               Tips for Mastering Geometry Dash Lite
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Success in <strong>Geometry Dash Lite</strong> requires practice and patience. Start with the easier levels to get 
               familiar with the controls and rhythm patterns. As you progress in <strong>Geometry Dash Lite</strong>, you'll encounter 
               more complex obstacles and faster-paced sections. Remember, each attempt in <strong>Geometry Dash Lite</strong> is 
               a learning opportunity – analyze where you failed and adjust your timing accordingly.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-6">
               Why Choose Our Geometry Dash Lite Platform?
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Our website provides the most reliable and enjoyable way to play <strong>Geometry Dash Lite</strong> online. 
               We've optimized <strong>Geometry Dash Lite</strong> for smooth performance across all devices and browsers. 
               Whether you're a newcomer discovering <strong>Geometry Dash Lite</strong> for the first time or a veteran player 

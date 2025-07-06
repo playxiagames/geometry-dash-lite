@@ -114,7 +114,7 @@ export default function GamePage({ params }) {
         {/* More Games Grid */}
         <div className="mt-6">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">🕹️ You May Also Like</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">🕹️ You May Also Like</h2>
           </div>
           <GameGrid games={moreGames} />
         </div>
