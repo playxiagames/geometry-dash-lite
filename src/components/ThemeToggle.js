@@ -19,6 +19,7 @@ export function ThemeToggle({
     setTheme,
     getThemeIcon, 
     getThemeName,
+    resolvedTheme,
     THEMES 
   } = useTheme()
   
@@ -52,7 +53,7 @@ export function ThemeToggle({
     ${className}
   `
 
-  // 主题选项
+  // 主题选项 - 现在图标表示状态而非切换目标
   const themeOptions = [
     { 
       value: THEMES.LIGHT, 
@@ -183,13 +184,13 @@ export function ThemeToggle({
     )
   }
 
-  // 简单按钮模式
+  // 简单按钮模式 - 显示切换目标
   return (
     <button
       onClick={toggleTheme}
       onKeyDown={handleKeyDown}
       className={buttonBaseClasses}
-      aria-label={`Switch to ${getThemeName()} theme`}
+      aria-label={`Switch to next theme`}
       title={`Current: ${getThemeName()} theme. Click to cycle through themes.`}
     >
       <span className="animate-theme-transition">
@@ -208,7 +209,7 @@ export function ThemeToggle({
  * 简化的主题切换按钮（仅在明暗主题间切换）
  */
 export function SimpleThemeToggle({ size = 'medium', className = '' }) {
-  const { isDark, toggleLightDark } = useTheme()
+  const { isDark, toggleLightDark, getToggleIcon } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -247,7 +248,7 @@ export function SimpleThemeToggle({ size = 'medium', className = '' }) {
       title={`Switch to ${isDark ? 'light' : 'dark'} theme`}
     >
       <span className="animate-theme-transition">
-        {isDark ? '☀️' : '🌙'}
+        {getToggleIcon()}
       </span>
     </button>
   )

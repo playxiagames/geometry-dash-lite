@@ -118,6 +118,14 @@
     transition-duration: revert;
   }
 
+  /* 全屏模式时禁用过渡效果 - 关键修复 */
+  body.fullscreen-mode *,
+  body.fullscreen-mode *::before,
+  body.fullscreen-mode *::after {
+    transition: none !important;
+    animation-duration: 0s !important;
+  }
+
   /* Improve focus visibility */
   *:focus {
     outline: 2px solid rgb(var(--border-focus));
@@ -188,6 +196,12 @@
     contain: layout style size;
   }
 
+  /* 全屏状态下的特殊样式 */
+  .game-iframe-container.fullscreen-active {
+    border-radius: 0 !important;
+    contain: none;
+  }
+
   .game-iframe-container iframe {
     @apply w-full h-full border-0;
     display: block;
@@ -220,7 +234,7 @@
   /* Custom Scrollbar */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: rgb(var(--border-primary)) rgb(var(--bg-secondary));
+    scrollbar-color: rgb(var(--border-primary)) transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -228,47 +242,48 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: rgb(var(--bg-secondary));
-    border-radius: 3px;
+    background: transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgb(var(--border-primary));
+    background-color: rgb(var(--border-primary));
     border-radius: 3px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgb(var(--text-tertiary));
+    background-color: rgb(var(--border-focus));
   }
 
-  /* Loading Animation */
+  /* Loading animation */
   .loading-spinner {
-    @apply animate-spin rounded-full border-b-2 border-current;
+    @apply animate-spin rounded-full border-b-2 border-white;
   }
 
-  /* Responsive Game Grid */
+  /* Game grid responsive layout */
   .game-grid-responsive {
-    @apply grid gap-4;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
   }
 
-  @screen sm {
+  @media (max-width: 768px) {
     .game-grid-responsive {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
   }
 
-  @screen lg {
+  @media (max-width: 640px) {
     .game-grid-responsive {
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
     }
   }
 
-  /* Category Badge Styles */
+  /* Category Badge */
   .category-badge {
-    @apply inline-flex items-center px-3 py-2 rounded-full text-sm font-medium transition-all duration-200;
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium transition-all transform hover:-translate-y-0.5;
   }
-
+  
   .category-badge:hover {
     @apply shadow-sm transform translate-y-0;
   }
@@ -317,8 +332,13 @@
   .top-navigation {
     background-color: rgba(var(--surface-primary) / 0.95);
     border-bottom: 1px solid rgb(var(--border-secondary));
-    @apply shadow-md sticky top-0 z-50;
+    @apply shadow-md sticky top-0 z-40;
     backdrop-filter: blur(8px);
+  }
+
+  /* 确保导航栏的z-index低于全屏元素 */
+  body.fullscreen-mode .top-navigation {
+    z-index: 0;
   }
 
   /* Responsive Design */
@@ -368,7 +388,8 @@
 
   /* Fullscreen utilities */
   .fullscreen-container {
-    @apply fixed inset-0 z-50 bg-black;
+    @apply fixed inset-0 bg-black;
+    z-index: 999999 !important; /* 确保最高优先级 */
   }
 
   .fullscreen-iframe {
@@ -439,6 +460,12 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* 在全屏模式下，强制禁用所有过渡效果 */
+  body.fullscreen-mode * {
+    animation: none !important;
+    transition: none !important;
   }
 }
 

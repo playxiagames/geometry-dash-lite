@@ -69,19 +69,30 @@ export function useTheme() {
   // 判断是否为系统主题设置
   const isSystemMode = theme === THEMES.SYSTEM
 
-  // 获取主题图标
+  // 获取主题图标 - 显示切换目标逻辑
   const getThemeIcon = useCallback((targetTheme = theme) => {
+    // 对于完整切换器，显示下一个主题的图标
+    if (targetTheme === THEMES.SYSTEM) {
+      // 系统模式时，根据当前实际主题显示切换目标
+      return resolvedTheme === THEMES.DARK ? '☀️' : '🌙'
+    }
+    
+    // 对于设定的主题，显示切换目标
     switch (targetTheme) {
       case THEMES.LIGHT:
-        return '☀️'
+        return '🌙' // 亮色模式时显示月亮（表示点击后切换到暗色）
       case THEMES.DARK:
-        return '🌙'
-      case THEMES.SYSTEM:
-        return '🖥️'
+        return '☀️' // 暗色模式时显示太阳（表示点击后切换到亮色）
       default:
-        return '☀️'
+        return '🌙'
     }
-  }, [theme])
+  }, [theme, resolvedTheme])
+
+  // 获取简化切换器的图标 - 专门用于SimpleThemeToggle
+  const getToggleIcon = useCallback(() => {
+    // 根据当前实际应用的主题显示切换目标
+    return resolvedTheme === THEMES.DARK ? '☀️' : '🌙'
+  }, [resolvedTheme])
 
   // 获取主题名称
   const getThemeName = useCallback((targetTheme = theme) => {
@@ -127,6 +138,7 @@ export function useTheme() {
     
     // 工具方法
     getThemeIcon,
+    getToggleIcon,
     getThemeName,
     getThemeClass,
     

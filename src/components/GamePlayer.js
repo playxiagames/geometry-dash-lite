@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const GamePlayer = ({ game, className = '' }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [error, setError] = useState(null);
+  const gameContainerRef = useRef(null);
+  const iframeRef = useRef(null);
 
   const handleIframeLoad = () => {
     setIsLoading(false);
@@ -22,28 +24,97 @@ const GamePlayer = ({ game, className = '' }) => {
     setError('Failed to load game. Please try again.');
   };
 
+  // 恢复iframe焦点的函数
+  const restoreIframeFocus = () => {
+    if (iframeRef.current) {
+      try {
+        // 方法1: 直接设置焦点
+        iframeRef.current.focus();
+        
+        // 方法2: 通过点击事件激活iframe
+        setTimeout(() => {
+          if (iframeRef.current) {
+            const clickEvent = new MouseEvent('click', {
+              view: window,
+              bubbles: true,
+              cancelable: true
+            });
+            iframeRef.current.dispatchEvent(clickEvent);
+          }
+        }, 100);
+        
+        // 方法3: 发送消息给iframe（如果支持）
+        setTimeout(() => {
+          if (iframeRef.current && iframeRef.current.contentWindow) {
+            try {
+              iframeRef.current.contentWindow.postMessage({ action: 'resume' }, '*');
+            } catch (e) {
+              // 忽略跨域错误
+            }
+          }
+        }, 200);
+      } catch (e) {
+        console.warn('Failed to restore iframe focus:', e);
+      }
+    }
+  };
+
   const toggleFullscreen = () => {
-    const gameContainer = document.getElementById('game-container');
+    const gameContainer = gameContainerRef.current;
+    if (!gameContainer) {
+      console.error('Game container not found');
+      return;
+    }
+
     if (!document.fullscreenElement) {
+      // 在进入全屏前，添加特殊样式类来禁用过渡效果
+      document.body.classList.add('fullscreen-mode');
+      
       gameContainer.requestFullscreen()
         .then(() => {
           setIsFullscreen(true);
+          
+          // 关键修复：延迟恢复iframe焦点
+          setTimeout(() => {
+            restoreIframeFocus();
+          }, 150);
+          
           // 追踪全屏事件
           if (typeof window.trackGameEvent === 'function') {
             window.trackGameEvent('fullscreen_enter', game.title, 'User Interaction');
           }
         })
-        .catch(err => console.error('Fullscreen error:', err));
+        .catch(err => {
+          console.error('Fullscreen error:', err);
+          // 如果出错，移除fullscreen-mode类并确保状态正确
+          document.body.classList.remove('fullscreen-mode');
+          setIsFullscreen(false);
+        });
     } else {
       document.exitFullscreen()
         .then(() => {
           setIsFullscreen(false);
+          // 退出全屏后移除特殊样式类
+          document.body.classList.remove('fullscreen-mode');
+          
+          // 退出全屏后也恢复焦点
+          setTimeout(() => {
+            restoreIframeFocus();
+          }, 150);
+          
           // 追踪退出全屏事件
           if (typeof window.trackGameEvent === 'function') {
             window.trackGameEvent('fullscreen_exit', game.title, 'User Interaction');
           }
         })
-        .catch(err => console.error('Exit fullscreen error:', err));
+        .catch(err => {
+          console.error('Exit fullscreen error:', err);
+          // 如果出错，确保状态正确并移除样式类
+          setIsFullscreen(!!document.fullscreenElement);
+          if (!document.fullscreenElement) {
+            document.body.classList.remove('fullscreen-mode');
+          }
+        });
     }
   };
 
@@ -80,18 +151,53 @@ const GamePlayer = ({ game, className = '' }) => {
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
+      const isCurrentlyFullscreen = !!document.fullscreenElement;
+      setIsFullscreen(isCurrentlyFullscreen);
+      
+      // 确保在退出全屏时移除fullscreen-mode类
+      if (!isCurrentlyFullscreen) {
+        document.body.classList.remove('fullscreen-mode');
+        // 退出全屏时也恢复焦点
+        setTimeout(() => {
+          restoreIframeFocus();
+        }, 100);
+      }
+    };
+
+    // 处理Escape键退出全屏
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && document.fullscreenElement) {
+        document.exitFullscreen();
+      }
+    };
+
+    // 监听iframe加载完成后设置初始焦点
+    const handleIframeLoadComplete = () => {
+      setTimeout(() => {
+        restoreIframeFocus();
+      }, 500);
     };
 
     document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('keydown', handleKeyDown);
+    
+    // 如果iframe已经加载，设置焦点
+    if (iframeRef.current && !isLoading) {
+      handleIframeLoadComplete();
+    }
     
     // 追踪游戏页面访问事件
     if (typeof window.trackGameEvent === 'function') {
       window.trackGameEvent('game_page_view', game.title, 'Navigation');
     }
     
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, [game.title]);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('keydown', handleKeyDown);
+      // 清理时确保移除fullscreen-mode类
+      document.body.classList.remove('fullscreen-mode');
+    };
+  }, [game.title, isLoading]);
 
   if (!game) {
     return (
@@ -122,16 +228,24 @@ const GamePlayer = ({ game, className = '' }) => {
 
       {/* Game Container */}
       <div 
-        id="game-container"
-        className="game-iframe-container relative bg-black rounded-lg overflow-hidden w-full"
+        ref={gameContainerRef}
+        className={`game-iframe-container relative bg-black rounded-lg overflow-hidden w-full ${
+          isFullscreen ? 'fullscreen-active' : ''
+        }`}
         style={{ 
           aspectRatio: '16/9',
           maxHeight: '100vh',
           minHeight: '580px'
         }}
+        onClick={() => {
+          // 点击容器时也尝试恢复iframe焦点
+          if (!isLoading && !error) {
+            restoreIframeFocus();
+          }
+        }}
       >
         {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-900 text-white">
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-900 text-white z-10">
             <div className="text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
               <p>Loading {game.title}...</p>
@@ -140,7 +254,7 @@ const GamePlayer = ({ game, className = '' }) => {
         )}
 
         {error && (
-          <div className="absolute inset-0 flex items-center justify-center bg-red-50 text-red-600">
+          <div className="absolute inset-0 flex items-center justify-center bg-red-50 text-red-600 z-10">
             <div className="text-center">
               <div className="text-4xl mb-4">❌</div>
               <p className="text-lg mb-2">Game failed to load</p>
@@ -159,13 +273,15 @@ const GamePlayer = ({ game, className = '' }) => {
         )}
 
         <iframe
+          ref={iframeRef}
           src={game.iframeUrl}
           title={game.title}
           className="w-full h-full border-0 block"
           allowFullScreen
           onLoad={handleIframeLoad}
           onError={handleIframeError}
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-pointer-lock"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           style={{ 
             display: 'block',
             width: '100%',
