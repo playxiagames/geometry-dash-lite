@@ -61,11 +61,19 @@ export const searchGames = (query) => {
   return sortGamesByPriority(searchResults);
 };
 
-// 获取随机游戏
+// 获取随机游戏 - 修复水合错误，使用确定性排序
 export const getRandomGames = (count = 6, excludeId = null) => {
   const games = gamesData.games.filter(game => game.id !== excludeId);
-  const shuffled = games.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
+  
+  // 使用确定性排序而不是随机排序，避免水合错误
+  // 基于游戏ID的字符排序来模拟随机效果
+  const pseudoRandomSorted = games.sort((a, b) => {
+    const aHash = a.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    const bHash = b.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    return aHash - bHash;
+  });
+  
+  return pseudoRandomSorted.slice(0, count);
 };
 
 // 分类相关函数
@@ -240,12 +248,18 @@ export const getCategoryPreviewGames = (categoryId, count = 4) => {
   return categoryGames.slice(0, count);
 };
 
-// 获取首页"更多游戏"区域的游戏 - 排除已在其他区域展示的游戏
+// 获取首页"更多游戏"区域的游戏 - 修复水合错误，使用确定性排序
 export const getMoreGamesForHomepage = (excludeGameIds = [], count = 12) => {
   // 排除指定的游戏ID
   const availableGames = gamesData.games.filter(game => !excludeGameIds.includes(game.id));
   
-  // 随机打乱并返回指定数量
-  const shuffled = [...availableGames].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
+  // 使用确定性排序而不是随机排序，避免水合错误
+  // 基于游戏标题长度和ID的组合来创建伪随机效果
+  const pseudoRandomSorted = availableGames.sort((a, b) => {
+    const aValue = a.title.length + a.id.charCodeAt(0);
+    const bValue = b.title.length + b.id.charCodeAt(0);
+    return aValue - bValue;
+  });
+  
+  return pseudoRandomSorted.slice(0, count);
 }; 
