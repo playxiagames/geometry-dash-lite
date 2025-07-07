@@ -20,4 +20,14 @@ const Layout = ({ children }) => {
 // 导出GameDescription组件供向后兼容
 export { default as GameDescription } from './GameDescription';
 
+// 导出骨架屏组件
+export { 
+  Skeleton,
+  GameCardSkeleton, 
+  GamePlayerSkeleton,
+  SidebarGameItemSkeleton,
+  GameGridSkeleton,
+  GameDescriptionSkeleton
+} from './Skeleton';
+
 export default Layout; 

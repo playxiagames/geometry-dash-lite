@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { useFavorites } from '../contexts/FavoritesContext';
 import { GameGrid } from './GameCard';
 import FavoriteButton from './FavoriteButton';
+import { GameGridSkeleton } from './Skeleton';
 
 const FavoritesPage = () => {
   const { 
@@ -70,14 +71,31 @@ const FavoritesPage = () => {
   if (!isLoaded) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="animate-pulse">
-          <div className="h-8 bg-gray-200 dark:bg-slate-700 rounded w-48 mb-6"></div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="h-48 bg-gray-200 dark:bg-slate-700 rounded"></div>
-            ))}
+        {/* 页面标题骨架屏 */}
+        <div className="flex items-center justify-between mb-6">
+          <div className="space-y-2">
+            <div className="h-8 bg-gray-200 dark:bg-slate-700 rounded w-48 animate-pulse"></div>
+            <div className="h-4 bg-gray-200 dark:bg-slate-700 rounded w-32 animate-pulse"></div>
+          </div>
+          <div className="h-10 bg-gray-200 dark:bg-slate-700 rounded w-24 animate-pulse"></div>
+        </div>
+        
+        {/* 搜索和筛选工具栏骨架屏 */}
+        <div className="bg-white dark:bg-slate-800 rounded-lg p-4 mb-6 shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="h-10 bg-gray-200 dark:bg-slate-700 rounded animate-pulse"></div>
+            <div className="h-10 bg-gray-200 dark:bg-slate-700 rounded animate-pulse"></div>
+            <div className="h-10 bg-gray-200 dark:bg-slate-700 rounded animate-pulse"></div>
+            <div className="h-10 bg-gray-200 dark:bg-slate-700 rounded animate-pulse"></div>
           </div>
         </div>
+        
+        {/* 游戏网格骨架屏 */}
+        <GameGridSkeleton 
+          count={6}
+          title={false}
+          gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+        />
       </div>
     );
   }

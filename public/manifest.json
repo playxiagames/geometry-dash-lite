@@ -11,13 +11,13 @@
   "lang": "en-US",
   "icons": [
     {
-      "src": "/images/icon-192.png",
+      "src": "/images/logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/icon-512.png",
+      "src": "/images/logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -26,13 +26,13 @@
   "categories": ["games", "entertainment"],
   "screenshots": [
     {
-      "src": "/images/screenshot-desktop.jpg",
+      "src": "https://images.geometry-dash-lite.org/og-geometry-dash-lite.webp",
       "sizes": "1280x720",
       "type": "image/jpeg",
       "form_factor": "wide"
     },
     {
-      "src": "/images/screenshot-mobile.jpg",
+      "src": "https://images.geometry-dash-lite.org/og-geometry-dash-lite.webp",
       "sizes": "375x667",
       "type": "image/jpeg",
       "form_factor": "narrow"

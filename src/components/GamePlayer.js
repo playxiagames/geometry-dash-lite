@@ -3,13 +3,19 @@
 import { useState, useEffect, useRef } from 'react';
 import { FavoriteIcon } from './FavoriteButton';
 import { trackGameStart, trackGameNavigation } from '../utils/analytics';
+import { GamePlayerSkeleton } from './Skeleton';
 
-const GamePlayer = ({ game, className = '' }) => {
+const GamePlayer = ({ game, className = '', showSkeleton = false }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [error, setError] = useState(null);
   const gameContainerRef = useRef(null);
   const iframeRef = useRef(null);
+
+  // 如果需要显示骨架屏（例如游戏数据还在加载中）
+  if (showSkeleton || !game) {
+    return <GamePlayerSkeleton className={className} />;
+  }
 
   const handleIframeLoad = () => {
     setIsLoading(false);
@@ -77,29 +83,6 @@ const GamePlayer = ({ game, className = '' }) => {
             document.body.classList.remove('fullscreen-mode');
           }
         });
-    }
-  };
-
-  const shareGame = async () => {
-    const shareData = {
-      title: game.title,
-      text: `Play ${game.title} online for free!`,
-      url: window.location.href
-    };
-
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData);
-      } catch (err) {
-        console.log('Share cancelled or failed');
-      }
-    } else {
-      // Fallback to clipboard
-      navigator.clipboard.writeText(window.location.href)
-        .then(() => {
-          alert('Game link copied to clipboard!');
-        })
-        .catch(() => alert('Failed to copy link'));
     }
   };
 
@@ -192,8 +175,18 @@ const GamePlayer = ({ game, className = '' }) => {
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900 text-white z-10">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-              <p>Loading {game.title}...</p>
+              <div className="relative w-16 h-16 mx-auto mb-4">
+                {/* 外圈动画 */}
+                <div className="absolute inset-0 rounded-full border-4 border-gray-600"></div>
+                {/* 加载动画 */}
+                <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-500 border-r-blue-500 animate-spin"></div>
+                {/* 中心图标 */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-lg">🎮</span>
+                </div>
+              </div>
+              <p className="text-lg font-medium">Loading {game.title}...</p>
+              <p className="text-sm text-gray-300 mt-1">Please wait while the game loads</p>
             </div>
           </div>
         )}
@@ -277,21 +270,6 @@ const GamePlayer = ({ game, className = '' }) => {
           </div>
         </div>
       </div>
-
-      {/* Game Controls Info */}
-      {/* {game.controls && game.controls.length > 0 && (
-        <div className="game-controls-info mt-4 p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-2">🎮 How to Play</h3>
-          <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-            {game.controls.map((control, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-blue-500 mr-2">•</span>
-                {control}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )} */}
     </div>
   );
 };

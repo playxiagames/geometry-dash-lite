@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
 import { GAME_CARD_SIZES, TRANSITIONS } from '../constants/styles';
 import { getTemplateConfig } from '../utils/templateConfig';
+import { GameCardSkeleton, SidebarGameItemSkeleton, GameGridSkeleton } from './Skeleton';
 
 // Single Game Card Component
 const GameCard = ({ 
@@ -12,14 +13,26 @@ const GameCard = ({
   size = 'medium', 
   showStats = true, 
   showDescription = false,
-  className = '' 
+  className = '',
+  isLoading = false
 }) => {
   const [imageError, setImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
   const homepageConfig = getHomepageConfig();
 
   const handleImageError = () => {
     setImageError(true);
+    setImageLoading(false);
   };
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
+  // 如果组件处于加载状态，返回骨架屏
+  if (isLoading) {
+    return <GameCardSkeleton size={size} className={className} />;
+  }
 
   // 检查游戏标签类型
   const isNewGame = homepageConfig?.newGames?.includes(game.id);
@@ -36,13 +49,22 @@ const GameCard = ({
         {/* Game Image */}
         <div className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 dark:bg-slate-700 relative`}>
           {!imageError ? (
-            <img
-              src={game.thumbnail}
-              alt={game.title}
-              className="w-full h-full object-cover"
-              onError={handleImageError}
-              loading="lazy"
-            />
+            <>
+              <img
+                src={game.thumbnail}
+                alt={game.title}
+                className={`w-full h-full object-cover transition-opacity duration-300 ${
+                  imageLoading ? 'opacity-0' : 'opacity-100'
+                }`}
+                onError={handleImageError}
+                onLoad={handleImageLoad}
+                loading="lazy"
+              />
+              {/* 图片加载中的骨架屏效果 */}
+              {imageLoading && (
+                <div className="absolute inset-0 skeleton animate-pulse" />
+              )}
+            </>
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white">
               <div className="text-center">
@@ -114,8 +136,22 @@ export const GameGrid = ({
   showMore = false,
   onShowMore,
   className = '',
-  gridCols = 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'
+  gridCols = 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6',
+  isLoading = false,
+  skeletonCount = 6
 }) => {
+  // 显示加载状态
+  if (isLoading) {
+    return (
+      <GameGridSkeleton 
+        count={skeletonCount}
+        title={!!title}
+        gridCols={gridCols}
+        className={className}
+      />
+    );
+  }
+
   if (!games || games.length === 0) {
     return (
       <div className={`games-grid ${className}`}>
@@ -168,8 +204,26 @@ export const GameGrid = ({
 export const SidebarGameList = ({ 
   games, 
   title = "Related Games",
-  className = '' 
+  className = '',
+  isLoading = false,
+  skeletonCount = 3 
 }) => {
+  // 显示加载状态
+  if (isLoading) {
+    return (
+      <div className={`sidebar-game-list ${className}`}>
+        {title && (
+          <h2 className="text-base font-semibold text-gray-900 dark:text-white mb-3 text-left">{title}</h2>
+        )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-0 lg:space-y-2">
+          {Array.from({ length: skeletonCount }, (_, index) => (
+            <SidebarGameItemSkeleton key={index} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   if (!games || games.length === 0) {
     return null;
   }
@@ -196,9 +250,15 @@ export const SidebarGameList = ({
 // Sidebar Game Item Component
 const SidebarGameItem = ({ game }) => {
   const [imageError, setImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
 
   const handleImageError = () => {
     setImageError(true);
+    setImageLoading(false);
+  };
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
   };
 
   return (
@@ -207,15 +267,24 @@ const SidebarGameItem = ({ game }) => {
         className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 cursor-pointer transition-colors lg:mb-0"
       >
         {/* Game Image - 响应式尺寸 */}
-        <div className="flex-shrink-0 w-20 h-12 sm:w-24 sm:h-16 lg:w-32 lg:h-20 rounded-md overflow-hidden bg-gray-200 dark:bg-slate-700">
+        <div className="flex-shrink-0 w-20 h-12 sm:w-24 sm:h-16 lg:w-32 lg:h-20 rounded-md overflow-hidden bg-gray-200 dark:bg-slate-700 relative">
           {!imageError ? (
-            <img
-              src={game.thumbnail}
-              alt={game.title}
-              className="w-full h-full object-cover"
-              onError={handleImageError}
-              loading="lazy"
-            />
+            <>
+              <img
+                src={game.thumbnail}
+                alt={game.title}
+                className={`w-full h-full object-cover transition-opacity duration-300 ${
+                  imageLoading ? 'opacity-0' : 'opacity-100'
+                }`}
+                onError={handleImageError}
+                onLoad={handleImageLoad}
+                loading="lazy"
+              />
+              {/* 图片加载中的骨架屏效果 */}
+              {imageLoading && (
+                <div className="absolute inset-0 skeleton animate-pulse" />
+              )}
+            </>
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white text-xs">
               🎮
