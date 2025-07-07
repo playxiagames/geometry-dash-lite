@@ -61,19 +61,14 @@ export const searchGames = (query) => {
   return sortGamesByPriority(searchResults);
 };
 
-// 获取随机游戏 - 修复水合错误，使用确定性排序
+// 获取推荐游戏 - 使用简单的确定性排序
 export const getRandomGames = (count = 6, excludeId = null) => {
   const games = gamesData.games.filter(game => game.id !== excludeId);
   
-  // 使用确定性排序而不是随机排序，避免水合错误
-  // 基于游戏ID的字符排序来模拟随机效果
-  const pseudoRandomSorted = games.sort((a, b) => {
-    const aHash = a.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const bHash = b.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    return aHash - bHash;
-  });
+  // 简单的确定性排序，按ID排序后取前几个，避免复杂的哈希计算
+  const sorted = games.sort((a, b) => a.id.localeCompare(b.id));
   
-  return pseudoRandomSorted.slice(0, count);
+  return sorted.slice(0, count);
 };
 
 // 分类相关函数
@@ -183,33 +178,22 @@ export const generateStarRating = (rating) => {
   };
 };
 
-// 游戏排序函数 - 根据 hot、new 标签和 playCount、rating 排序
+// 简化的游戏排序函数
 export const sortGamesByPriority = (games) => {
   const hotGames = siteConfig.homepage.hotGames || [];
   const newGames = siteConfig.homepage.newGames || [];
   
   return games.sort((a, b) => {
-    const aIsHot = hotGames.includes(a.id);
-    const aIsNew = newGames.includes(a.id);
-    const bIsHot = hotGames.includes(b.id);
-    const bIsNew = newGames.includes(b.id);
+    // 优先级：先Hot游戏，再New游戏，最后按播放次数排序
+    const aIsSpecial = hotGames.includes(a.id) || newGames.includes(a.id);
+    const bIsSpecial = hotGames.includes(b.id) || newGames.includes(b.id);
     
-    // 计算优先级：hot+new=3, hot=2, new=1, 无=0
-    const aPriority = (aIsHot ? 2 : 0) + (aIsNew ? 1 : 0);
-    const bPriority = (bIsHot ? 2 : 0) + (bIsNew ? 1 : 0);
-    
-    // 如果优先级不同，按优先级排序
-    if (aPriority !== bPriority) {
-      return bPriority - aPriority;
+    if (aIsSpecial !== bIsSpecial) {
+      return bIsSpecial - aIsSpecial;
     }
     
-    // 同优先级内，先按 playCount 排序
-    if (a.playCount !== b.playCount) {
-      return b.playCount - a.playCount;
-    }
-    
-    // playCount 相同时，按 rating 排序
-    return b.rating - a.rating;
+    // 按播放次数排序
+    return b.playCount - a.playCount;
   });
 };
 
@@ -248,18 +232,13 @@ export const getCategoryPreviewGames = (categoryId, count = 4) => {
   return categoryGames.slice(0, count);
 };
 
-// 获取首页"更多游戏"区域的游戏 - 修复水合错误，使用确定性排序
+// 获取首页"更多游戏"区域的游戏 - 简化排序逻辑
 export const getMoreGamesForHomepage = (excludeGameIds = [], count = 12) => {
   // 排除指定的游戏ID
   const availableGames = gamesData.games.filter(game => !excludeGameIds.includes(game.id));
   
-  // 使用确定性排序而不是随机排序，避免水合错误
-  // 基于游戏标题长度和ID的组合来创建伪随机效果
-  const pseudoRandomSorted = availableGames.sort((a, b) => {
-    const aValue = a.title.length + a.id.charCodeAt(0);
-    const bValue = b.title.length + b.id.charCodeAt(0);
-    return aValue - bValue;
-  });
+  // 按播放次数降序排序，简单且有意义
+  const sorted = availableGames.sort((a, b) => b.playCount - a.playCount);
   
-  return pseudoRandomSorted.slice(0, count);
+  return sorted.slice(0, count);
 }; 

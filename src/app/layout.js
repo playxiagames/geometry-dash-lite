@@ -11,11 +11,7 @@ export const metadata = {
   authors: [{ name: 'Geometry Dash Lite' }],
   creator: 'Geometry Dash Lite',
   publisher: 'Geometry Dash Lite',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+
   metadataBase: new URL('https://geometry-dash-lite.org/'),
   alternates: {
     canonical: '/',
@@ -45,16 +41,6 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
 }
 
@@ -65,77 +51,38 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* 主题初始化脚本 - 防止闪烁 */}
+        {/* 简化的主题初始化脚本 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
                   var theme = localStorage.getItem('theme') || 'system';
-                  var isDark = false;
-                  
-                  if (theme === 'dark') {
-                    isDark = true;
-                  } else if (theme === 'system') {
-                    isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  }
-                  
-                  if (isDark) {
-                    document.documentElement.classList.add('dark');
-                    document.documentElement.classList.remove('light');
-                  } else {
-                    document.documentElement.classList.add('light');
-                    document.documentElement.classList.remove('dark');
-                  }
+                  var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                  document.documentElement.classList.toggle('dark', isDark);
                 } catch (e) {
-                  // 如果出错，使用系统默认主题
-                  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.add('light');
-                  }
+                  document.documentElement.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
                 }
               })();
             `,
           }}
         />
         
-        {/* 性能优化 - DNS预获取和预连接 */}
-        <link rel="dns-prefetch" href="//images.geometry-dash-lite.org" />
-        <link rel="dns-prefetch" href="//1games.io" />
-        <link rel="dns-prefetch" href="//scratch.mit.edu" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        
+        {/* 精简的性能优化 - 只保留关键域名 */}
         <link rel="preconnect" href="https://images.geometry-dash-lite.org" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* 关键资源预加载 */}
-        <link rel="preload" href="/images/logo.png" as="image" type="image/png" />
-        <link rel="modulepreload" href="/_next/static/chunks/pages/_app.js" />
+        {gaId && process.env.NODE_ENV === 'production' && (
+          <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        )}
         
         {/* 基础favicon和manifest */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         
-        {/* PWA和性能相关meta标签 */}
+        {/* 简化的PWA配置 */}
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Geometry Dash Lite" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        
-        {/* 性能和缓存控制 */}
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="referrer" content="origin-when-cross-origin" />
-        
-        {/* 预获取关键游戏资源 */}
-        <link rel="prefetch" href="/games/geometry-dash-lite/" />
-        <link rel="prefetch" href="/games/dinosaur-game/" />
-        <link rel="prefetch" href="/category/geometry-dash/" />
         
         {/* Google Analytics */}
         {gaId && process.env.NODE_ENV === 'production' && (
@@ -180,57 +127,16 @@ export default function RootLayout({ children }) {
           </>
         )}
         
-        {/* Structured Data */}
+        {/* 简化的结构化数据 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "@id": "https://geometry-dash-lite.org/#website",
-              "url": "https://geometry-dash-lite.org/",
               "name": "Geometry Dash Lite",
-              "description": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer.",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Geometry Dash Lite"
-              },
-                          "potentialAction": {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://geometry-dash-lite.org/all-games/?q={search_term_string}"
-              },
-              "query-input": "required name=search_term_string"
-            }
-            })
-          }}
-        />
-        
-        {/* Game Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Game",
-              "name": "Geometry Dash Lite",
-              "description": "Geometry Dash Lite - Jump and fly your way through danger in this rhythm-based action platformer!",
               "url": "https://geometry-dash-lite.org/",
-              "image": "https://geometry-dash-lite.org/images/geometry-dash-lite-screenshot.jpg",
-              "author": {
-                "@type": "Organization",
-                "name": "Geometry Dash Lite"
-              },
-              "gameItem": {
-                "@type": "Thing",
-                "name": "Geometry Dash Lite"
-              },
-              "genre": "Arcade",
-              "audience": {
-                "@type": "Audience",
-                "audienceType": "Gamers"
-              }
+              "description": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer."
             })
           }}
         />
