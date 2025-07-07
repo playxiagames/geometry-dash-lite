@@ -422,14 +422,14 @@ const GamePlayer = ({ game, className = '', showSkeleton = false, priority = fal
 
         {/* 点击播放覆盖层 - 仅在游戏未开始时显示 */}
         {!gameStarted && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700 text-white z-20 cursor-pointer"
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-600/90 to-purple-700/90 text-white z-20 cursor-pointer"
                onClick={() => {
                  setGameStarted(true);
                  startLoadingSequence();
                }}>
-            <div className="text-center">
-              {/* 游戏预览图片 */}
-              <div className="w-32 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg">
+            <div className="text-center relative">
+              {/* 游戏预览图片 - 更大尺寸，作为背景层 */}
+              <div className="w-64 h-40 sm:w-80 sm:h-48 md:w-96 md:h-60 mx-auto rounded-xl overflow-hidden shadow-2xl relative">
                 <img 
                   src={game.thumbnail} 
                   alt={game.title}
@@ -437,15 +437,33 @@ const GamePlayer = ({ game, className = '', showSkeleton = false, priority = fal
                   loading={priority ? "eager" : "lazy"}
                   fetchPriority={priority ? "high" : "auto"}
                 />
+                
+                {/* 半透明遮罩，让播放按钮更突出 */}
+                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                  {/* 播放按钮 - 叠放在图片上方 */}
+                  <div className="w-20 h-20 sm:w-22 sm:h-22 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-300 transform hover:scale-110 shadow-xl">
+                    <div className="w-0 h-0 border-l-[24px] border-l-gray-800 border-t-[15px] border-t-transparent border-b-[15px] border-b-transparent ml-1"></div>
+                  </div>
+                </div>
               </div>
               
-              {/* 播放按钮 */}
-              <div className="w-20 h-20 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 transform hover:scale-110">
-                <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+              {/* 游戏标题和提示文字 */}
+              <div className="mt-6">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2 text-white drop-shadow-lg">{game.title}</h3>
+                <p className="text-blue-100 text-base sm:text-lg drop-shadow">Click to start playing</p>
+                
+                {/* 额外的游戏信息 */}
+                <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-blue-200">
+                  <span className="flex items-center">
+                    <span className="mr-1">⭐</span>
+                    {game.rating}
+                  </span>
+                  <span className="flex items-center">
+                    <span className="mr-1">🎮</span>
+                    {game.playCount > 1000000 ? `${(game.playCount/1000000).toFixed(1)}M` : `${Math.floor(game.playCount/1000)}K`} plays
+                  </span>
+                </div>
               </div>
-              
-              <h3 className="text-xl font-bold mb-2">{game.title}</h3>
-              <p className="text-blue-100 text-sm">Click to start playing</p>
             </div>
           </div>
         )}
