@@ -6,7 +6,7 @@ import { useTheme } from '../contexts/ThemeContext'
 /**
  * 简化的主题切换按钮（只支持明暗两种主题切换）
  */
-export function SimpleThemeToggle({ className = '' }) {
+export function SimpleThemeToggle({ size = 'medium', className = '' }) {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -34,10 +34,15 @@ export function SimpleThemeToggle({ className = '' }) {
     return theme === 'dark' ? 'Light' : 'Dark'
   }
 
-  // 固定的按钮样式
+  const sizeClasses = {
+    small: 'w-8 h-8 text-sm',
+    medium: 'w-10 h-10 text-base',
+    large: 'w-12 h-12 text-lg'
+  }
+
   const buttonClasses = `
     relative inline-flex items-center justify-center
-    w-10 h-10 rounded-lg border transition-all duration-200
+    rounded-lg border transition-all duration-200
     bg-white dark:bg-slate-800
     border-gray-200 dark:border-slate-600
     text-gray-700 dark:text-gray-300
@@ -45,6 +50,7 @@ export function SimpleThemeToggle({ className = '' }) {
     hover:border-gray-300 dark:hover:border-slate-500
     focus:outline-none focus:ring-2 focus:ring-blue-500/20
     active:scale-95
+    ${sizeClasses[size]}
     ${className}
   `
 

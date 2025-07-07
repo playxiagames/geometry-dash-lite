@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { formatPlayCount, formatRating, getHomepageConfig } from '../utils/gameData';
+import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
 
 // Single Game Card Component
 const GameCard = ({ 
@@ -23,23 +23,33 @@ const GameCard = ({
   const isNewGame = homepageConfig?.newGames?.includes(game.id);
   const isHotGame = homepageConfig?.hotGames?.includes(game.id);
 
-  // 简化的尺寸配置 - 只保留small和medium
+  // Size configurations
   const sizeConfig = {
     small: {
       container: 'rounded-lg shadow-sm hover:shadow-md',
       image: 'h-24',
       title: 'text-sm font-medium',
+      description: 'text-xs',
       stats: 'text-xs'
     },
     medium: {
       container: 'rounded-lg shadow-md hover:shadow-lg',
       image: 'h-32',
       title: 'text-base font-semibold',
+      description: 'text-sm',
       stats: 'text-sm'
+    },
+    large: {
+      container: 'rounded-lg shadow-lg hover:shadow-xl',
+      image: 'h-40',
+      title: 'text-lg font-bold',
+      description: 'text-base',
+      stats: 'text-base'
     }
   };
 
-  const config = sizeConfig[size] || sizeConfig.medium;
+  const config = sizeConfig[size];
+  const starRating = generateStarRating(game.rating);
 
   return (
     <Link href={`/games/${game.slug}/`} className="block" data-game-slug={game.slug}>
@@ -96,13 +106,13 @@ const GameCard = ({
           </div>
           
           {showDescription && (
-            <p className={`${config.stats} text-gray-600 dark:text-gray-300 mb-1 line-clamp-2 text-left`}>
+            <p className={`${config.description} text-gray-600 dark:text-gray-300 mb-1 line-clamp-2 text-left`}>
               {game.description}
             </p>
           )}
 
-          {/* Game Tags - 只在medium尺寸显示 */}
-          {game.tags && game.tags.length > 0 && size === 'medium' && (
+          {/* Game Tags */}
+          {game.tags && game.tags.length > 0 && size !== 'small' && (
             <div className="mt-1 flex flex-wrap gap-1">
               {game.tags.slice(0, 1).map((tag, index) => (
                 <span
