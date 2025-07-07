@@ -28,7 +28,11 @@ const nextConfig = {
   poweredByHeader: false,
   experimental: {
     optimizePackageImports: ['@/components', '@/utils'],
+    // optimizeCss 暂时禁用，因为需要额外的 critters 依赖
+    // optimizeCss: true,
   },
+  // 注意：静态导出模式不支持 headers 配置
+  // 资源预加载和缓存优化已移至 layout.js 中通过 <link> 标签实现
 };
 
 module.exports = nextConfig 

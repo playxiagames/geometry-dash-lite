@@ -81,9 +81,21 @@ export default function RootLayout({ children }) {
         />
         
         {/* Performance optimization - preconnect to external domains */}
+        <link rel="preconnect" href="https://1games.io" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://scratch.mit.edu" crossOrigin="anonymous" />
         {gaId && process.env.NODE_ENV === 'production' && (
-          <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+          <>
+            <link rel="preconnect" href="https://www.googletagmanager.com" />
+            <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+          </>
         )}
+        
+        {/* 预加载关键CSS */}
+        <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
+        
+        {/* 优化字体加载 */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Favicon and manifest */}
         <link rel="icon" href="/favicon.ico" sizes="any" />

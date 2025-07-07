@@ -14,7 +14,8 @@ const GameCard = ({
   showStats = true, 
   showDescription = false,
   className = '',
-  isLoading = false
+  isLoading = false,
+  priority = false // 新增：是否为高优先级图片（首屏LCP图片）
 }) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
@@ -74,7 +75,8 @@ const GameCard = ({
                 }`}
                 onError={handleImageError}
                 onLoad={handleImageLoad}
-                loading="lazy"
+                loading={priority ? "eager" : "lazy"} // 首屏图片优先加载
+                fetchPriority={priority ? "high" : "auto"} // 设置获取优先级
               />
               {/* 图片加载中的骨架屏效果 */}
               {imageLoading && (

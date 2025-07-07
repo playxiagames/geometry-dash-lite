@@ -76,7 +76,7 @@ export default function HomePage() {
           
           {/* Main Game Player */}
           <div className="lg:col-span-3">
-            <GamePlayer game={mainGame} />
+            <GamePlayer game={mainGame} priority={true} />
           </div>
 
           {/* Sidebar - Optimized Recommendations */}

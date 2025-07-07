@@ -5,13 +5,14 @@ import { FavoriteIcon } from './FavoriteButton';
 import { trackGameStart, trackGameNavigation } from '../utils/analytics';
 import { GamePlayerSkeleton } from './Skeleton';
 
-const GamePlayer = ({ game, className = '', showSkeleton = false }) => {
+const GamePlayer = ({ game, className = '', showSkeleton = false, priority = false }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadingStage, setLoadingStage] = useState('connecting');
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [error, setError] = useState(null);
   const [timeoutReached, setTimeoutReached] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false); // 新增：游戏是否已开始加载
   const gameContainerRef = useRef(null);
   const iframeRef = useRef(null);
   const loadingTimeoutRef = useRef(null);
@@ -419,22 +420,55 @@ const GamePlayer = ({ game, className = '', showSkeleton = false }) => {
           </div>
         )}
 
-        <iframe
-          ref={iframeRef}
-          src={game.iframeUrl}
-          title={game.title}
-          className="w-full h-full border-0 block"
-          allowFullScreen
-          onLoad={handleIframeLoad}
-          onError={handleIframeError}
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-pointer-lock"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          style={{ 
-            display: 'block',
-            width: '100%',
-            height: '100%'
-          }}
-        />
+        {/* 点击播放覆盖层 - 仅在游戏未开始时显示 */}
+        {!gameStarted && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700 text-white z-20 cursor-pointer"
+               onClick={() => {
+                 setGameStarted(true);
+                 startLoadingSequence();
+               }}>
+            <div className="text-center">
+              {/* 游戏预览图片 */}
+              <div className="w-32 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src={game.thumbnail} 
+                  alt={game.title}
+                  className="w-full h-full object-cover"
+                  loading={priority ? "eager" : "lazy"}
+                  fetchPriority={priority ? "high" : "auto"}
+                />
+              </div>
+              
+              {/* 播放按钮 */}
+              <div className="w-20 h-20 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 transform hover:scale-110">
+                <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+              </div>
+              
+              <h3 className="text-xl font-bold mb-2">{game.title}</h3>
+              <p className="text-blue-100 text-sm">Click to start playing</p>
+            </div>
+          </div>
+        )}
+
+        {/* iframe - 仅在游戏开始后渲染 */}
+        {gameStarted && (
+          <iframe
+            ref={iframeRef}
+            src={game.iframeUrl}
+            title={game.title}
+            className="w-full h-full border-0 block"
+            allowFullScreen
+            onLoad={handleIframeLoad}
+            onError={handleIframeError}
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-pointer-lock"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            style={{ 
+              display: 'block',
+              width: '100%',
+              height: '100%'
+            }}
+          />
+        )}
       </div>
 
       {/* Game Controls - Bottom Bar */}
