@@ -1,6 +1,7 @@
 import gamesData from '../data/games.json';
 import categoriesData from '../data/categories.json';
 import siteConfig from '../data/siteConfig.json';
+import { getTemplateConfig } from './templateConfig';
 
 // 获取所有游戏
 export const getAllGames = () => {
@@ -88,13 +89,26 @@ export const getTopLevelCategories = () => {
   return categoriesData.categories.filter(category => category.isTopLevel);
 };
 
-// 站点配置
+// 站点配置 - 使用模板配置系统
 export const getSiteConfig = () => {
-  return siteConfig.site;
+  const templateConfig = getTemplateConfig();
+  return {
+    ...siteConfig.site,
+    name: templateConfig.site.name,
+    shortName: templateConfig.site.shortName,
+    description: templateConfig.site.description,
+    url: templateConfig.site.url,
+    ogImage: templateConfig.branding.ogImage,
+    contactEmail: templateConfig.site.contactEmail
+  };
 };
 
 export const getHomepageConfig = () => {
-  return siteConfig.homepage;
+  const templateConfig = getTemplateConfig();
+  return {
+    ...siteConfig.homepage,
+    mainGame: templateConfig.site.mainGameId
+  };
 };
 
 export const getNavigationConfig = () => {
@@ -102,7 +116,10 @@ export const getNavigationConfig = () => {
 };
 
 export const getSEOConfig = () => {
-  return siteConfig.seo;
+  const templateConfig = getTemplateConfig();
+  return {
+    googleAnalyticsId: templateConfig.seo.googleAnalyticsId
+  };
 };
 
 export const getFooterConfig = () => {

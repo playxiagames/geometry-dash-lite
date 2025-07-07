@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { trackUserInteraction } from '../utils/analytics';
+import { trackFavorite } from '../utils/analytics';
 
 const FavoritesContext = createContext();
 
@@ -68,7 +68,7 @@ export const FavoritesProvider = ({ children }) => {
     saveFavorites(newFavorites);
 
     // 发送分析事件
-    trackUserInteraction('add_to_favorites', game.title, { game_id: game.id });
+    trackFavorite('add', game.title);
 
     return true;
   };
@@ -83,7 +83,7 @@ export const FavoritesProvider = ({ children }) => {
 
     // 发送分析事件
     if (gameToRemove) {
-      trackUserInteraction('remove_from_favorites', gameToRemove.title, { game_id: gameId });
+      trackFavorite('remove', gameToRemove.title);
     }
 
     return true;
@@ -115,8 +115,6 @@ export const FavoritesProvider = ({ children }) => {
   // 清除所有收藏
   const clearAllFavorites = () => {
     saveFavorites([]);
-    
-    trackUserInteraction('clear_all_favorites', 'all_favorites', { favorites_count: favorites.length });
   };
 
   // 导出收藏数据

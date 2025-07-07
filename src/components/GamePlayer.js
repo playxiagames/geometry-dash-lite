@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { FavoriteIcon } from './FavoriteButton';
-import { trackGameEvent, trackUserInteraction } from '../utils/analytics';
+import { trackGameStart, trackGameNavigation } from '../utils/analytics';
 
 const GamePlayer = ({ game, className = '' }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,8 +15,8 @@ const GamePlayer = ({ game, className = '' }) => {
     setIsLoading(false);
     setError(null);
     
-    // 追踪游戏加载成功事件
-    trackGameEvent('game_loaded', game.title, 'Gameplay');
+    // 追踪游戏开始事件
+    trackGameStart(game.title);
   };
 
   const handleIframeError = () => {
@@ -52,9 +52,6 @@ const GamePlayer = ({ game, className = '' }) => {
           
           // 恢复iframe焦点
           setTimeout(restoreIframeFocus, 100);
-          
-          // 追踪全屏事件
-          trackUserInteraction('fullscreen_enter', game.title);
         })
         .catch(err => {
           console.error('Fullscreen error:', err);
@@ -71,9 +68,6 @@ const GamePlayer = ({ game, className = '' }) => {
           
           // 退出全屏后也恢复焦点
           setTimeout(restoreIframeFocus, 100);
-          
-          // 追踪退出全屏事件
-          trackUserInteraction('fullscreen_exit', game.title);
         })
         .catch(err => {
           console.error('Exit fullscreen error:', err);
@@ -96,8 +90,6 @@ const GamePlayer = ({ game, className = '' }) => {
     if (navigator.share) {
       try {
         await navigator.share(shareData);
-        // 追踪分享成功事件
-        trackUserInteraction('game_shared', game.title, { action_type: 'social' });
       } catch (err) {
         console.log('Share cancelled or failed');
       }
@@ -106,8 +98,6 @@ const GamePlayer = ({ game, className = '' }) => {
       navigator.clipboard.writeText(window.location.href)
         .then(() => {
           alert('Game link copied to clipboard!');
-          // 追踪复制链接事件
-          trackUserInteraction('game_link_copied', game.title, { action_type: 'social' });
         })
         .catch(() => alert('Failed to copy link'));
     }
@@ -145,9 +135,6 @@ const GamePlayer = ({ game, className = '' }) => {
     if (iframeRef.current && !isLoading) {
       handleIframeLoadComplete();
     }
-    
-    // 追踪游戏页面访问事件
-    trackGameEvent('game_page_view', game.title, 'Navigation');
     
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);

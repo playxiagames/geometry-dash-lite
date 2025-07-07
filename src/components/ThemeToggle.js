@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
-import { THEME_TOGGLE_SIZES } from '../constants/styles'
+import { isFeatureEnabled } from '../utils/templateConfig'
 
 /**
- * 简化的主题切换按钮（只支持明暗两种主题切换）
+ * Simple theme toggle button - light/dark mode switcher
  */
-export function SimpleThemeToggle({ size = 'medium', className = '' }) {
+export function ThemeToggle({ className = '' }) {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -15,49 +15,29 @@ export function SimpleThemeToggle({ size = 'medium', className = '' }) {
     setMounted(true)
   }, [])
 
-  // 切换主题
+  // Don't render if theme toggle is disabled
+  if (!isFeatureEnabled('enableThemeToggle')) {
+    return null;
+  }
+
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
-  // 获取主题图标
-  const getThemeIcon = () => {
-    return theme === 'dark' ? '☀️' : '🌙'
-  }
-
-  // 获取主题名称
-  const getThemeName = () => {
-    return theme === 'dark' ? 'Dark' : 'Light'
-  }
-
-  // 获取下一个主题名称用于提示
-  const getNextThemeName = () => {
-    return theme === 'dark' ? 'Light' : 'Dark'
-  }
-
-  const sizeClass = THEME_TOGGLE_SIZES[size] || THEME_TOGGLE_SIZES.medium;
-
   const buttonClasses = `
-    relative inline-flex items-center justify-center
-    rounded-lg border transition-all duration-200
+    inline-flex items-center justify-center w-9 h-9
+    rounded-lg border transition-colors duration-200
     bg-white dark:bg-slate-800
     border-gray-200 dark:border-slate-600
     text-gray-700 dark:text-gray-300
     hover:bg-gray-50 dark:hover:bg-slate-700
-    hover:border-gray-300 dark:hover:border-slate-500
     focus:outline-none focus:ring-2 focus:ring-blue-500/20
-    active:scale-95
-    ${sizeClass}
     ${className}
   `
 
   if (!mounted) {
     return (
-      <button
-        className={buttonClasses}
-        disabled
-        aria-label="Loading theme toggle"
-      >
+      <button className={buttonClasses} disabled aria-label="Loading theme toggle">
         <span className="animate-pulse">⚪</span>
       </button>
     )
@@ -67,14 +47,12 @@ export function SimpleThemeToggle({ size = 'medium', className = '' }) {
     <button
       onClick={toggleTheme}
       className={buttonClasses}
-      aria-label={`Switch to ${getNextThemeName().toLowerCase()} theme`}
-      title={`Current: ${getThemeName()} theme. Click to switch to ${getNextThemeName()}.`}
+      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+      title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
-      <span className="transition-all duration-200">
-        {getThemeIcon()}
-      </span>
+      {theme === 'dark' ? '☀️' : '🌙'}
     </button>
   )
 }
 
-export default SimpleThemeToggle 
+export default ThemeToggle 

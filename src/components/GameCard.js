@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
 import { GAME_CARD_SIZES, TRANSITIONS } from '../constants/styles';
+import { getTemplateConfig } from '../utils/templateConfig';
 
 // Single Game Card Component
 const GameCard = ({ 

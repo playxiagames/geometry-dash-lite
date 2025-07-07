@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useFavorites } from '../contexts/FavoritesContext';
 import { BUTTON_SIZES } from '../constants/styles';
+import { isFeatureEnabled } from '../utils/templateConfig';
 
 const FavoriteButton = ({ 
   game, 
@@ -10,6 +11,11 @@ const FavoriteButton = ({
   showText = true, 
   className = '' 
 }) => {
+  // Don't render if favorites feature is disabled
+  if (!isFeatureEnabled('enableFavorites')) {
+    return null;
+  }
+
   const { isFavorite, toggleFavorite, isLoaded } = useFavorites();
   const [isAnimating, setIsAnimating] = useState(false);
 

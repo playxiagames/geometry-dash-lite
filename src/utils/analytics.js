@@ -1,67 +1,59 @@
-// 统一的分析事件追踪工具
-// 避免在各个组件中重复事件追踪代码
+/**
+ * Essential Analytics Utility
+ * Only tracks core business metrics for game sites
+ */
+
+import { isFeatureEnabled } from './templateConfig';
 
 /**
- * 追踪游戏相关事件
- * @param {string} eventName - 事件名称
- * @param {string} gameName - 游戏名称
- * @param {string} category - 事件分类
- * @param {Object} additionalData - 额外数据
+ * Check if analytics is enabled and gtag is available
  */
-export const trackGameEvent = (eventName, gameName, category = 'Game', additionalData = {}) => {
-  if (typeof window !== 'undefined' && window.trackGameEvent) {
-    window.trackGameEvent(eventName, gameName, category);
+const isAnalyticsReady = () => {
+  return isFeatureEnabled('enableAnalytics') && 
+         typeof window !== 'undefined' && 
+         typeof window.gtag === 'function';
+};
+
+/**
+ * Track game starts - Core business metric
+ * @param {string} gameName - Game name/ID
+ */
+export const trackGameStart = (gameName) => {
+  if (isAnalyticsReady()) {
+    window.gtag('event', 'game_start', {
+      event_category: 'Game',
+      event_label: gameName,
+      value: 1
+    });
   }
 };
 
 /**
- * 追踪自定义事件
- * @param {string} eventName - 事件名称
- * @param {Object} eventData - 事件数据
+ * Track favorite actions - User engagement metric
+ * @param {string} action - 'add' or 'remove'
+ * @param {string} gameName - Game name/ID
  */
-export const trackCustomEvent = (eventName, eventData = {}) => {
-  if (typeof window !== 'undefined' && window.trackCustomEvent) {
-    window.trackCustomEvent(eventName, eventData);
+export const trackFavorite = (action, gameName) => {
+  if (isAnalyticsReady()) {
+    window.gtag('event', `favorite_${action}`, {
+      event_category: 'Engagement',
+      event_label: gameName,
+      value: action === 'add' ? 1 : -1
+    });
   }
 };
 
 /**
- * 追踪用户交互事件
- * @param {string} action - 操作类型
- * @param {string} target - 目标对象
- * @param {Object} metadata - 元数据
+ * Track game navigation - Content performance metric
+ * @param {string} fromGame - Previous game (optional)
+ * @param {string} toGame - Target game
  */
-export const trackUserInteraction = (action, target, metadata = {}) => {
-  trackCustomEvent(action, {
-    event_category: 'User Interaction',
-    event_label: target,
-    ...metadata
-  });
-};
-
-/**
- * 追踪导航事件
- * @param {string} page - 页面名称
- * @param {string} source - 来源
- */
-export const trackNavigation = (page, source = 'direct') => {
-  trackCustomEvent('page_navigation', {
-    event_category: 'Navigation',
-    event_label: page,
-    source
-  });
-};
-
-/**
- * 追踪性能事件
- * @param {string} metric - 性能指标
- * @param {number} value - 数值
- * @param {string} context - 上下文
- */
-export const trackPerformance = (metric, value, context = 'General') => {
-  trackCustomEvent(metric, {
-    event_category: 'Performance',
-    event_label: context,
-    value: Math.round(value)
-  });
+export const trackGameNavigation = (fromGame, toGame) => {
+  if (isAnalyticsReady() && toGame) {
+    window.gtag('event', 'game_navigation', {
+      event_category: 'Navigation',
+      event_label: fromGame ? `${fromGame}_to_${toGame}` : `direct_to_${toGame}`,
+      value: 1
+    });
+  }
 }; 

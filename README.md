@@ -1,148 +1,170 @@
-# 🐍 Snake Game Website Template
+# 🎮 Game Site Template
 
-A universal game website template built with Next.js, designed to showcase classic games with Snake Game as the main feature. This template is optimized for Vercel deployment and follows best practices for SEO and performance.
+A modern, customizable game website template built with Next.js 14 and optimized for GitHub Pages deployment. Perfect for creating your own game collection site with minimal configuration.
 
 ## ✨ Features
 
-- **🎮 Game Player**: Embedded iframe games with fullscreen support
+- **⚙️ Template-Based**: Easy customization through environment variables
 - **📱 Responsive Design**: Works perfectly on desktop, tablet, and mobile
-- **⚡ Performance Optimized**: Static generation for fast loading
-- **🔍 SEO Optimized**: Structured data, meta tags, and sitemap ready
+- **⚡ GitHub Pages Ready**: Static export optimized for free hosting
+- **🔍 SEO Optimized**: Dynamic metadata, structured data, and sitemap
 - **🎨 Modern UI**: Beautiful, accessible interface with Tailwind CSS
-- **📊 Game Statistics**: Play counts, ratings, and categories
-- **🔄 Dynamic Content**: Easy to add new games via JSON configuration
-- **🚀 Vercel Ready**: Optimized for free Vercel deployment
+- **🌓 Theme System**: Dark/light mode with automatic switching
+- **📊 Game Management**: Easy game addition through JSON configuration
+- **🔧 Feature Toggles**: Enable/disable features via configuration
+- **📈 Analytics Ready**: Google Analytics integration
+- **⭐ Favorites System**: Optional local storage-based favorites
 
 ## 🏗️ Project Structure
 
 ```
-snake-game-site/
+game-site-template/
 ├── public/
-│   ├── images/           # Game images and assets
-│   │   ├── favicon.ico       # Site favicon
-│   │   └── manifest.json     # PWA manifest
-│   ├── src/
-│   │   ├── app/             # Next.js 13+ App Router
-│   │   │   ├── layout.js    # Root layout with metadata
-│   │   │   ├── page.js      # Homepage
-│   │   │   └── globals.css  # Global styles
-│   │   ├── components/      # React components
-│   │   │   ├── GamePlayer.js    # Game iframe player
-│   │   │   ├── GameCard.js      # Game cards and grids
-│   │   │   ├── Navigation.js    # Top navigation
-│   │   │   └── Layout.js        # Page layout
-│   │   ├── data/           # Static data files
-│   │   │   ├── games.json      # Game information
-│   │   │   ├── categories.json # Game categories
-│   │   │   └── siteConfig.json # Site configuration
-│   │   └── utils/          # Utility functions
-│   │       └── gameData.js # Data management functions
-│   ├── next.config.js      # Next.js configuration
-│   └── tailwind.config.js  # Tailwind CSS config
-└── package.json        # Dependencies
+│   ├── images/              # Game images and assets
+│   ├── CNAME               # Custom domain configuration
+│   └── manifest.json       # PWA manifest
+├── src/
+│   ├── app/                # Next.js 14 App Router
+│   │   ├── layout.js       # Root layout with dynamic metadata
+│   │   ├── page.js         # Homepage
+│   │   └── globals.css     # Global styles
+│   ├── components/         # React components
+│   │   ├── GamePlayer.js   # Game iframe player
+│   │   ├── GameCard.js     # Game cards and grids
+│   │   ├── Navigation.js   # Navigation with theme toggle
+│   │   └── ThemeToggle.js  # Theme switching component
+│   ├── contexts/           # React contexts
+│   │   ├── ThemeContext.js # Theme management
+│   │   └── FavoritesContext.js # Favorites system
+│   ├── data/              # Configuration files
+│   │   ├── games.json     # Game database
+│   │   ├── categories.json # Game categories
+│   │   └── siteConfig.json # Site configuration
+│   ├── utils/             # Utility functions
+│   │   ├── templateConfig.js # Template configuration
+│   │   └── gameData.js    # Data management
+│   └── constants/         # Style constants
+├── .github/workflows/     # GitHub Actions for deployment
+├── env.example           # Environment variables template
+├── next.config.js        # Next.js configuration
+└── TEMPLATE_USAGE.md     # Detailed usage guide
 ```
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
+### 1. Use This Template
+
+Click "Use this template" or fork this repository
+
+### 2. Configure Your Site
 
 ```bash
-npm install
+# Copy environment template
+cp env.example .env.local
+
+# Edit with your site details
+# NEXT_PUBLIC_SITE_NAME="Your Game Site"
+# NEXT_PUBLIC_SITE_URL="https://your-domain.com"
 ```
 
-### 2. Development Server
+### 3. Install and Run
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
 Visit [http://localhost:3000](http://localhost:3000) to see your site.
 
-### 3. Build for Production
+### 4. Deploy to GitHub Pages
 
 ```bash
-npm run build
+# Deploy with one command
+npm run deploy:github
 ```
 
-### 4. Deploy to Vercel
-
-```bash
-npm run deploy
-```
+For detailed configuration instructions, see [TEMPLATE_USAGE.md](./TEMPLATE_USAGE.md)
 
 ## 🎮 Adding New Games
 
-### Step 1: Update games.json
+### 1. Add Game Data
 
-Add your game to `src/data/games.json`:
+Edit `src/data/games.json` and add your game:
 
 ```json
 {
-  "id": "new-game",
-  "title": "New Game",
-  "slug": "new-game",
-  "description": "Description of your new game",
-  "longDescription": "Detailed description for SEO",
+  "id": "your-game",
+  "title": "Your Game Title",
+  "slug": "your-game-slug",
+  "description": "Brief game description",
   "category": "arcade",
-  "tags": ["tag1", "tag2"],
+  "tags": ["fun", "casual"],
   "iframeUrl": "https://your-game-url.com",
-  "thumbnail": "/images/games/thumbnails/new-game.jpg",
-  "screenshot": "/images/games/screenshots/new-game.jpg",
-  "isPopular": true,
-  "isFeatured": false,
-  "playCount": 100000,
-  "rating": 4.5,
-  "controls": ["Control instructions"],
-  "tips": ["Game tips"],
-  "relatedGameIds": ["snake-game", "tetris"]
+  "thumbnail": "/images/games/thumbnails/your-game.jpg",
+  "playCount": 0,
+  "rating": 4.5
 }
 ```
 
-### Step 2: Add Game Images
+### 2. Add Game Thumbnail
 
-Place your game images in:
-- `public/images/games/thumbnails/new-game.jpg` (200x150px)
-- `public/images/games/screenshots/new-game.jpg` (800x600px)
+Upload your game thumbnail to:
+`public/images/games/thumbnails/your-game.jpg` (400x300px recommended)
 
-### Step 3: Update Categories (if needed)
+### 3. Update Homepage (Optional)
 
-Add new categories to `src/data/categories.json`:
+Edit `src/data/siteConfig.json` to feature your game:
 
 ```json
 {
-  "id": "puzzle",
-  "name": "Puzzle Games",
-  "slug": "puzzle",
-  "description": "Brain-teasing puzzle games",
-  "icon": "🧩",
-  "color": "#4ECDC4",
-  "isTopLevel": true,
-  "gameCount": 5
+  "homepage": {
+    "popularGames": ["your-game"],
+    "hotGames": ["your-game"]
+  }
 }
 ```
 
 ## 🎨 Customization
 
-### Site Configuration
+### Environment Configuration
 
-Edit `src/data/siteConfig.json` to customize:
-- Site name and description
-- SEO settings
-- Homepage layout
-- Footer links
+Customize your site through `.env.local`:
 
-### Styling
+```env
+# Site Identity
+NEXT_PUBLIC_SITE_NAME="Your Game Site"
+NEXT_PUBLIC_SITE_DESCRIPTION="Your description"
+NEXT_PUBLIC_SITE_URL="https://your-domain.com"
 
-The template uses Tailwind CSS. Customize colors and styles in:
-- `tailwind.config.js` - Tailwind configuration
-- `src/app/globals.css` - Global styles and custom CSS
+# Branding
+NEXT_PUBLIC_PRIMARY_COLOR="blue"
+NEXT_PUBLIC_ACCENT_COLOR="purple"
 
-### Game Layout
+# Features
+NEXT_PUBLIC_ENABLE_FAVORITES="true"
+NEXT_PUBLIC_ENABLE_THEME_TOGGLE="true"
+NEXT_PUBLIC_ENABLE_ANALYTICS="true"
 
-Modify the homepage layout in `src/app/page.js`:
-- Change the main game
-- Adjust game grid sizes
-- Add/remove sections
+# Analytics
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
+```
+
+### Visual Customization
+
+- **Logo**: Replace `public/images/logo.png`
+- **Favicon**: Replace `public/favicon.ico`
+- **Colors**: Use environment variables or edit Tailwind config
+- **Styling**: All styles use Tailwind CSS classes
+
+### Content Management
+
+- **Games**: Edit `src/data/games.json`
+- **Categories**: Edit `src/data/categories.json`
+- **Navigation**: Edit `src/data/siteConfig.json`
+- **Main Game**: Set `NEXT_PUBLIC_MAIN_GAME_ID`
 
 ## 📊 SEO Features
 
@@ -163,46 +185,41 @@ Modify the homepage layout in `src/app/page.js`:
 - CSS/JS minification
 - Lighthouse optimized
 
-## 🔧 Configuration Options
-
-### Environment Variables
-
-Create a `.env.local` file:
-
-```bash
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
-
-### Next.js Configuration
-
-The `next.config.js` is optimized for static export:
-
-```javascript
-const nextConfig = {
-  output: 'export',        // Static export
-  trailingSlash: true,     # SEO friendly URLs
-  images: {
-    unoptimized: true      # Vercel free tier friendly
-  }
-}
-```
-
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### GitHub Pages (Recommended)
 
-1. Push code to GitHub
-2. Connect to Vercel
-3. Deploy automatically
+1. **Setup Repository**:
+   - Fork or use this template
+   - Enable GitHub Pages in Settings > Pages
+   - Set source to "GitHub Actions"
 
-### Other Platforms
+2. **Configure Domain** (Optional):
+   ```bash
+   # Update public/CNAME with your domain
+   echo "your-domain.com" > public/CNAME
+   ```
 
-The static export in the `out/` directory can be deployed to:
-- Netlify
+3. **Deploy**:
+   ```bash
+   npm run deploy:github
+   ```
+
+### Manual Deployment
+
+```bash
+# Build static files
+npm run build
+
+# Upload 'out' folder to any static host
+```
+
+The static export works with:
 - GitHub Pages
+- Netlify
+- Vercel
 - AWS S3
-- Any static hosting
+- Any static hosting service
 
 ## 🔍 SEO Best Practices
 
@@ -240,84 +257,77 @@ The static export in the `out/` directory can be deployed to:
 - XSS protection
 - HTTPS enforcement
 
-## 🛠️ Development Tools
+## 🛠️ Development
 
 ### Available Scripts
 
 ```bash
-npm run dev          # Development server
-npm run build        # Production build
-npm run start        # Start production server
-npm run lint         # ESLint checking
-npm run export       # Static export
+npm run dev              # Development server
+npm run build            # Production build
+npm run deploy:github    # Deploy to GitHub Pages
+npm run lint             # Code linting
 ```
 
-### Code Quality
+### Adding Features
 
-- ESLint configuration
-- Prettier formatting
-- TypeScript ready
-- Git hooks ready
+- **New Pages**: Create in `src/app/` following App Router conventions
+- **Components**: Add to `src/components/` with template config support
+- **Utilities**: Place in `src/utils/` for shared functionality
 
-## 📈 Analytics Integration
+### Feature Flags
 
-### Google Analytics
+Control features via environment variables:
 
-Add your GA4 tracking ID to environment variables:
-
-```bash
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```env
+NEXT_PUBLIC_ENABLE_FAVORITES="false"    # Disable favorites
+NEXT_PUBLIC_ENABLE_THEME_TOGGLE="false" # Disable theme toggle
+NEXT_PUBLIC_ENABLE_ANALYTICS="false"    # Disable analytics
 ```
 
-### Custom Events
+## 📋 Template Checklist
 
-Track game interactions:
-
-```javascript
-gtag('event', 'game_start', {
-  game_name: 'Snake Game',
-  game_category: 'Arcade'
-});
-```
-
-## 🎯 Performance Metrics
-
-The template is optimized for:
-- **Lighthouse Score**: 95+ across all metrics
-- **Core Web Vitals**: Excellent ratings
-- **Loading Speed**: <2s first contentful paint
-- **Bundle Size**: Optimized for fast loading
+- [ ] Copy `env.example` to `.env.local`
+- [ ] Update site name, description, and URL
+- [ ] Replace logo and favicon
+- [ ] Add your games to `games.json`
+- [ ] Upload game thumbnails
+- [ ] Configure custom domain (optional)
+- [ ] Set up Google Analytics (optional)
+- [ ] Test and deploy
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-1. **Images not loading**: Check file paths in JSON data
-2. **Games not embedding**: Verify iframe URLs and CORS policy
-3. **Build errors**: Check JSON syntax in data files
-4. **Styling issues**: Verify Tailwind class names
+1. **Build Errors**: Check JSON syntax in data files
+2. **Images Not Loading**: Verify file paths and image formats
+3. **Deployment Issues**: Check GitHub Actions logs
+4. **Custom Domain**: Ensure DNS is properly configured
 
 ### Getting Help
 
-- Check the GitHub issues
-- Review the documentation
-- Test with different browsers
+- See [TEMPLATE_USAGE.md](./TEMPLATE_USAGE.md) for detailed instructions
+- Check [GitHub Issues](https://github.com/your-repo/issues) for solutions
+- Review the [GitHub Actions logs](https://github.com/your-repo/actions) for deployment issues
 
 ## 📄 License
 
-MIT License - feel free to use this template for your own game websites!
+MIT License - Feel free to use this template for your game websites!
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a Pull Request
 
 ## 🙏 Acknowledgments
 
 - Next.js team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
-- Vercel for the deployment platform
-- All the classic game developers who inspired this template
+- Tailwind CSS for utility-first CSS
+- GitHub for free hosting via GitHub Pages
+- The gaming community for inspiration
 
 ---
 
-**Made with ❤️ for gamers and developers** 
+**🎮 Happy Gaming & Building!** 

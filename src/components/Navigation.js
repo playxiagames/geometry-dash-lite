@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { getSiteConfig, getNavigationConfig } from '../utils/gameData';
-import { SimpleThemeToggle } from './ThemeToggle';
+import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../contexts/ThemeContext';
 import { useFavorites } from '../contexts/FavoritesContext';
 
@@ -77,8 +77,7 @@ const Navigation = () => {
 
               {/* Theme Toggle */}
               <div className="flex items-center ml-5 space-x-3">
-                {/* Desktop Theme Toggle */}
-                <SimpleThemeToggle size="medium" />
+                <ThemeToggle />
               </div>
 
               {/* 收藏链接 */}
@@ -98,8 +97,7 @@ const Navigation = () => {
 
           {/* Mobile menu button & theme toggle */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Mobile Theme Toggle */}
-            <SimpleThemeToggle size="medium" />
+            <ThemeToggle />
             
             <button
               onClick={toggleMenu}

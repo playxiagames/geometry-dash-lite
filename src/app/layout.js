@@ -1,48 +1,60 @@
 import './globals.css'
 import { getSiteConfig, getSEOConfig } from '../utils/gameData'
-import GoogleAnalytics from '../components/GoogleAnalytics'
+import { getTemplateConfig, getMetadataBaseUrl } from '../utils/templateConfig'
+
 import { ThemeProvider } from '../contexts/ThemeContext'
 import { FavoritesProvider } from '../contexts/FavoritesContext'
-import PerformanceOptimizer from '../components/PerformanceOptimizer'
 
-export const metadata = {
-  title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
-  description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!',
-  authors: [{ name: 'Geometry Dash Lite' }],
-  creator: 'Geometry Dash Lite',
-  publisher: 'Geometry Dash Lite',
 
-  metadataBase: new URL('https://geometry-dash-lite.org/'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://geometry-dash-lite.org/',
-    title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
-    description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!',
-    siteName: 'Geometry Dash Lite',
-    images: [
-      {
-        url: '/images/og-geometry-dash-lite.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Geometry Dash Lite - Play Online Free',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
-    description: 'Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels and amazing music.',
-    images: ['/images/og-geometry-dash-lite.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+// Generate metadata from template configuration
+const generateMetadata = () => {
+  const templateConfig = getTemplateConfig();
+  const siteName = templateConfig.site.name;
+  const description = templateConfig.site.description;
+  const siteUrl = templateConfig.site.url;
+  const ogImage = templateConfig.branding.ogImage;
+  
+  return {
+    title: siteName,
+    description: description,
+    authors: [{ name: templateConfig.site.shortName }],
+    creator: templateConfig.site.shortName,
+    publisher: templateConfig.site.shortName,
+
+    metadataBase: getMetadataBaseUrl(),
+    alternates: {
+      canonical: '/',
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: siteUrl,
+      title: siteName,
+      description: description,
+      siteName: templateConfig.site.shortName,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${templateConfig.site.shortName} - Play Online Free`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: siteName,
+      description: description,
+      images: [ogImage],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+};
+
+export const metadata = generateMetadata();
 
 export default function RootLayout({ children }) {
   const seoConfig = getSEOConfig()
@@ -51,7 +63,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* 简化的主题初始化脚本 */}
+        {/* Theme initialization script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -68,21 +80,20 @@ export default function RootLayout({ children }) {
           }}
         />
         
-        {/* 精简的性能优化 - 只保留关键域名 */}
-        <link rel="preconnect" href="https://images.geometry-dash-lite.org" />
+        {/* Performance optimization - preconnect to external domains */}
         {gaId && process.env.NODE_ENV === 'production' && (
           <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         )}
         
-        {/* 基础favicon和manifest */}
+        {/* Favicon and manifest */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         
-        {/* 简化的PWA配置 */}
+        {/* PWA configuration */}
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
-        <meta name="apple-mobile-web-app-title" content="Geometry Dash Lite" />
+        <meta name="apple-mobile-web-app-title" content={getTemplateConfig().site.shortName} />
         
         {/* Google Analytics */}
         {gaId && process.env.NODE_ENV === 'production' && (
@@ -104,21 +115,24 @@ export default function RootLayout({ children }) {
                     send_page_view: true
                   });
                   
-                  // Game event tracking function
-                  window.trackGameEvent = function(action, gameName, category) {
-                    if (typeof gtag === 'function') {
-                      gtag('event', action, {
-                        event_category: category || 'Game',
+                  // Simplified game tracking functions for backward compatibility
+                  window.trackGameStart = function(gameName) {
+                    if (typeof gtag === 'function' && gameName) {
+                      gtag('event', 'game_start', {
+                        event_category: 'Game',
                         event_label: gameName,
                         value: 1
                       });
                     }
                   };
                   
-                  // Custom event tracking function
-                  window.trackCustomEvent = function(eventName, parameters) {
-                    if (typeof gtag === 'function') {
-                      gtag('event', eventName, parameters || {});
+                  window.trackFavorite = function(action, gameName) {
+                    if (typeof gtag === 'function' && action && gameName) {
+                      gtag('event', 'favorite_' + action, {
+                        event_category: 'Engagement',
+                        event_label: gameName,
+                        value: action === 'add' ? 1 : -1
+                      });
                     }
                   };
                 `,
@@ -127,16 +141,16 @@ export default function RootLayout({ children }) {
           </>
         )}
         
-        {/* 简化的结构化数据 */}
+        {/* Structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Geometry Dash Lite",
-              "url": "https://geometry-dash-lite.org/",
-              "description": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer."
+              "name": getTemplateConfig().site.shortName,
+              "url": getTemplateConfig().site.url,
+              "description": getTemplateConfig().site.description
             })
           }}
         />
@@ -144,13 +158,9 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <FavoritesProvider>
-            <PerformanceOptimizer />
             {children}
           </FavoritesProvider>
         </ThemeProvider>
-        
-        {/* Client-side Google Analytics component */}
-        <GoogleAnalytics />
       </body>
     </html>
   )
