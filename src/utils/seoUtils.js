@@ -86,7 +86,7 @@ export const generateGamePageMetadata = (game) => {
   return generatePageMetadata({
     title: gameTitle,
     description: gameDescription,
-    path: `/games/${game.slug}/`,
+    path: `/games/${game.slug}`,
   });
 };
 
