@@ -45,7 +45,6 @@ game-site-template/
 │   │   └── gameData.js    # Data management
 │   └── constants/         # Style constants
 ├── .github/workflows/     # GitHub Actions for deployment
-├── env.example           # Environment variables template
 ├── next.config.js        # Next.js configuration
 └── TEMPLATE_USAGE.md     # Detailed usage guide
 ```

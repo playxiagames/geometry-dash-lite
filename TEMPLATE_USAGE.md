@@ -5,10 +5,7 @@ This is a modern, customizable game website template built with Next.js and opti
 ## 🚀 Quick Start
 
 1. **Clone or Fork this repository**
-2. **Copy and customize environment variables:**
-   ```bash
-   cp env.example .env.local
-   ```
+2. **Configure your site** by editing `src/data/siteConfig.json`
 3. **Install dependencies:**
    ```bash
    npm install
@@ -24,24 +21,28 @@ This is a modern, customizable game website template built with Next.js and opti
 
 ## ⚙️ Configuration
 
-### Environment Variables
+### Site Configuration
 
-Edit `.env.local` with your site details:
+Edit `src/data/siteConfig.json` with your site details:
 
-```env
-# Required - Basic site information
-NEXT_PUBLIC_SITE_NAME="Your Game Site"
-NEXT_PUBLIC_SITE_DESCRIPTION="Your site description"
-NEXT_PUBLIC_SITE_URL="https://your-domain.com"
-
-# Optional - Customization
-NEXT_PUBLIC_PRIMARY_COLOR="blue"
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
-
-# Feature toggles
-NEXT_PUBLIC_ENABLE_FAVORITES="true"
-NEXT_PUBLIC_ENABLE_ANALYTICS="true"
-NEXT_PUBLIC_ENABLE_THEME_TOGGLE="true"
+```json
+{
+  "site": {
+    "name": "Your Game Site",
+    "shortName": "Your Site",
+    "description": "Your site description",
+    "url": "https://your-domain.com",
+    "contactEmail": "contact@your-domain.com"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-XXXXXXXXXX"
+  },
+  "features": {
+    "enableFavorites": true,
+    "enableAnalytics": true,
+    "enableThemeToggle": true
+  }
+}
 ```
 
 ### Adding Games
@@ -61,7 +62,7 @@ NEXT_PUBLIC_ENABLE_THEME_TOGGLE="true"
 ### Branding
 - Replace logo: `public/images/logo.png`
 - Update favicon: `public/favicon.ico`
-- Modify colors in environment variables
+- Modify site information in `src/data/siteConfig.json`
 
 ### Navigation
 - Edit `src/data/siteConfig.json` navigation section
@@ -124,20 +125,20 @@ Create reusable components in `src/components/` with:
 
 ## 📋 Todo Checklist
 
-- [ ] Update site name and description
-- [ ] Configure custom domain
+- [ ] Update site information in `src/data/siteConfig.json`
+- [ ] Configure custom domain (optional)
 - [ ] Add your games data
 - [ ] Upload game thumbnails
-- [ ] Set up Google Analytics
+- [ ] Set up Google Analytics (optional)
 - [ ] Test deployment
-- [ ] Configure DNS settings
+- [ ] Configure DNS settings (if using custom domain)
 
 ## 🆘 Troubleshooting
 
 ### Build Issues
 - Check all image paths are correct
 - Verify JSON syntax in data files
-- Ensure all required environment variables are set
+- Ensure `src/data/siteConfig.json` is properly formatted
 
 ### Deployment Issues
 - Verify CNAME file matches your domain

@@ -1,21 +1,11 @@
 /** @type {import('next').NextConfig} */
-// Helper function to get external domains from environment
-const getExternalDomains = () => {
-  const defaultDomains = ['1games.io', 'scratch.mit.edu'];
-  const envDomains = process.env.NEXT_PUBLIC_IMAGE_DOMAINS;
-  if (envDomains) {
-    const customDomains = envDomains.split(',').map(d => d.trim()).filter(Boolean);
-    return [...defaultDomains, ...customDomains];
-  }
-  return defaultDomains;
-};
 
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
-    domains: getExternalDomains(),
+    domains: ['1games.io', 'scratch.mit.edu'],
     formats: ['image/webp', 'image/avif'],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
