@@ -80,7 +80,7 @@ export const generateGamePageMetadata = (game) => {
   }
 
   const gameTitle = `Play ${game.title} Online Free`;
-  const gameDescription = game.longDescription || 
+  const gameDescription = game.description || 
     `Play ${game.title} online for free! ${game.description} No download required.`;
 
   return generatePageMetadata({
