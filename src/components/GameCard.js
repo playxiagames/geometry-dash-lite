@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
 import { GAME_CARD_SIZES, TRANSITIONS } from '../constants/styles';
@@ -18,6 +18,7 @@ const GameCard = ({
 }) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+  const imageRef = useRef(null);
   const homepageConfig = getHomepageConfig();
 
   const handleImageError = () => {
@@ -28,6 +29,20 @@ const GameCard = ({
   const handleImageLoad = () => {
     setImageLoading(false);
   };
+
+  // 检查图片是否已经加载完成（处理缓存图片的情况）
+  const checkImageComplete = (img) => {
+    if (img && img.complete && img.naturalWidth > 0) {
+      setImageLoading(false);
+    }
+  };
+
+  // 检查缓存图片的useEffect
+  useEffect(() => {
+    if (imageRef.current && !imageError) {
+      checkImageComplete(imageRef.current);
+    }
+  }, [game.thumbnail, imageError]);
 
   // 如果组件处于加载状态，返回骨架屏
   if (isLoading) {
@@ -51,6 +66,7 @@ const GameCard = ({
           {!imageError ? (
             <>
               <img
+                ref={imageRef}
                 src={game.thumbnail}
                 alt={game.title}
                 className={`w-full h-full object-cover transition-opacity duration-300 ${
@@ -251,6 +267,7 @@ export const SidebarGameList = ({
 const SidebarGameItem = ({ game }) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+  const sidebarImageRef = useRef(null);
 
   const handleImageError = () => {
     setImageError(true);
@@ -260,6 +277,20 @@ const SidebarGameItem = ({ game }) => {
   const handleImageLoad = () => {
     setImageLoading(false);
   };
+
+  // 检查图片是否已经加载完成（处理缓存图片的情况）
+  const checkSidebarImageComplete = (img) => {
+    if (img && img.complete && img.naturalWidth > 0) {
+      setImageLoading(false);
+    }
+  };
+
+  // 检查缓存图片的useEffect
+  useEffect(() => {
+    if (sidebarImageRef.current && !imageError) {
+      checkSidebarImageComplete(sidebarImageRef.current);
+    }
+  }, [game.thumbnail, imageError]);
 
   return (
     <Link href={`/games/${game.slug}/`} className="block">
@@ -271,6 +302,7 @@ const SidebarGameItem = ({ game }) => {
           {!imageError ? (
             <>
               <img
+                ref={sidebarImageRef}
                 src={game.thumbnail}
                 alt={game.title}
                 className={`w-full h-full object-cover transition-opacity duration-300 ${

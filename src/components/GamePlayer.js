@@ -7,27 +7,150 @@ import { GamePlayerSkeleton } from './Skeleton';
 
 const GamePlayer = ({ game, className = '', showSkeleton = false }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [loadingStage, setLoadingStage] = useState('connecting');
+  const [loadingProgress, setLoadingProgress] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [error, setError] = useState(null);
+  const [timeoutReached, setTimeoutReached] = useState(false);
   const gameContainerRef = useRef(null);
   const iframeRef = useRef(null);
+  const loadingTimeoutRef = useRef(null);
+  const progressIntervalRef = useRef(null);
 
   // 如果需要显示骨架屏（例如游戏数据还在加载中）
   if (showSkeleton || !game) {
     return <GamePlayerSkeleton className={className} />;
   }
 
-  const handleIframeLoad = () => {
-    setIsLoading(false);
-    setError(null);
+  // 加载阶段配置
+  const loadingStages = {
+    connecting: { progress: 15, message: 'Connecting to game server...', duration: 1000 },
+    loading: { progress: 45, message: 'Loading game resources...', duration: 5000 },
+    initializing: { progress: 75, message: 'Initializing game engine...', duration: 4000 },
+    ready: { progress: 100, message: 'Game ready!', duration: 500 }
+  };
+
+  // 根据游戏类型估算超时时间
+  const getTimeoutDuration = () => {
+    const gameUrl = game.iframeUrl?.toLowerCase() || '';
     
-    // 追踪游戏开始事件
-    trackGameStart(game.title);
+    // Scratch游戏通常加载较慢
+    if (gameUrl.includes('scratch')) return 150000;
+    
+    // Unity WebGL游戏
+    if (gameUrl.includes('unity') || gameUrl.includes('.unity3d')) return 200000;
+    
+    // 大型HTML5游戏
+    if (gameUrl.includes('github.io') || gameUrl.includes('itch.io')) return 120000;
+    
+    // 默认超时时间
+    return 100000;
+  };
+
+  const startLoadingSequence = () => {
+    setLoadingStage('connecting');
+    setLoadingProgress(0);
+    setTimeoutReached(false);
+
+    // 阶段转换序列
+    const stages = ['connecting', 'loading', 'initializing'];
+    let stageIndex = 0;
+
+    const nextStage = () => {
+      if (stageIndex < stages.length - 1) {
+        stageIndex++;
+        const newStage = stages[stageIndex];
+        setLoadingStage(newStage);
+        setTimeout(nextStage, loadingStages[newStage].duration);
+      }
+    };
+
+    // 模拟进度更新
+    const updateProgress = () => {
+      setLoadingProgress(prevProgress => {
+        setLoadingStage(currentStage => {
+          const targetProgress = loadingStages[currentStage]?.progress || 0;
+          const increment = Math.max((targetProgress - prevProgress) * 0.1, 0.5);
+          const newProgress = Math.min(prevProgress + increment, targetProgress);
+          
+          // 异步更新进度，避免setState嵌套
+          setTimeout(() => setLoadingProgress(newProgress), 0);
+          
+          return currentStage; // 返回当前阶段不变
+        });
+        return prevProgress; // 保持当前进度，实际更新在setTimeout中
+      });
+    };
+
+    progressIntervalRef.current = setInterval(updateProgress, 150);
+
+    // 开始阶段转换
+    setTimeout(nextStage, loadingStages.connecting.duration);
+
+    // 设置智能超时
+    const timeoutDuration = getTimeoutDuration();
+    loadingTimeoutRef.current = setTimeout(() => {
+      setIsLoading(currentLoading => {
+        if (currentLoading) {
+          setTimeoutReached(true);
+          setLoadingStage('timeout');
+          setLoadingProgress(100);
+        }
+        return currentLoading;
+      });
+    }, timeoutDuration);
+  };
+
+  const handleIframeLoad = () => {
+    // iframe基础结构加载完成，但游戏内容可能还在加载
+    setLoadingStage('ready');
+    setLoadingProgress(100);
+
+    // 额外等待游戏内容加载
+    setTimeout(() => {
+      setIsLoading(false);
+      setError(null);
+      
+      // 清理定时器
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current);
+      }
+      if (progressIntervalRef.current) {
+        clearInterval(progressIntervalRef.current);
+      }
+      
+      // 追踪游戏开始事件
+      trackGameStart(game.title);
+    }, 1500); // 给游戏额外1.5秒初始化时间
   };
 
   const handleIframeError = () => {
     setIsLoading(false);
     setError('Failed to load game. Please try again.');
+    
+    // 清理定时器
+    if (loadingTimeoutRef.current) {
+      clearTimeout(loadingTimeoutRef.current);
+    }
+    if (progressIntervalRef.current) {
+      clearInterval(progressIntervalRef.current);
+    }
+  };
+
+  const handleRetryLoad = () => {
+    setIsLoading(true);
+    setError(null);
+    setTimeoutReached(false);
+    setLoadingStage('connecting');
+    setLoadingProgress(0);
+    
+    // 重新开始加载序列
+    startLoadingSequence();
+    
+    // 重新加载iframe
+    if (iframeRef.current) {
+      iframeRef.current.src = game.iframeUrl;
+    }
   };
 
   // 简化的iframe焦点恢复
@@ -87,6 +210,9 @@ const GamePlayer = ({ game, className = '', showSkeleton = false }) => {
   };
 
   useEffect(() => {
+    // 开始加载序列
+    startLoadingSequence();
+
     const handleFullscreenChange = () => {
       const isCurrentlyFullscreen = !!document.fullscreenElement;
       setIsFullscreen(isCurrentlyFullscreen);
@@ -122,10 +248,19 @@ const GamePlayer = ({ game, className = '', showSkeleton = false }) => {
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
       document.removeEventListener('keydown', handleKeyDown);
+      
+      // 清理定时器
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current);
+      }
+      if (progressIntervalRef.current) {
+        clearInterval(progressIntervalRef.current);
+      }
+      
       // 清理时确保移除fullscreen-mode类
       document.body.classList.remove('fullscreen-mode');
     };
-  }, [game.title, isLoading]);
+  }, [game.title]);
 
   if (!game) {
     return (
@@ -174,38 +309,112 @@ const GamePlayer = ({ game, className = '', showSkeleton = false }) => {
       >
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900 text-white z-10">
-            <div className="text-center">
-              <div className="relative w-16 h-16 mx-auto mb-4">
-                {/* 外圈动画 */}
+            <div className="text-center max-w-md px-6">
+              {/* 游戏图标和动画 */}
+              <div className="relative w-20 h-20 mx-auto mb-6">
+                {/* 外圈进度环 */}
                 <div className="absolute inset-0 rounded-full border-4 border-gray-600"></div>
-                {/* 加载动画 */}
-                <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-500 border-r-blue-500 animate-spin"></div>
+                {/* 进度环 */}
+                <div 
+                  className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-500 transition-all duration-300"
+                  style={{
+                    transform: `rotate(${(loadingProgress / 100) * 360}deg)`
+                  }}
+                ></div>
+                {/* 旋转动画环（仅在非超时状态下显示） */}
+                {!timeoutReached && (
+                  <div className="absolute inset-0 rounded-full border-4 border-transparent border-l-blue-400 animate-spin opacity-60"></div>
+                )}
                 {/* 中心图标 */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-lg">🎮</span>
+                  <span className="text-2xl">
+                    {timeoutReached ? '⏰' : '🎮'}
+                  </span>
                 </div>
               </div>
-              <p className="text-lg font-medium">Loading {game.title}...</p>
-              <p className="text-sm text-gray-300 mt-1">Please wait while the game loads</p>
+
+              {/* 游戏标题 */}
+              <h3 className="text-xl font-bold mb-2">{game.title}</h3>
+              
+              {/* 进度条 */}
+              <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
+                <div 
+                  className="bg-blue-500 h-2 rounded-full transition-all duration-300 ease-out"
+                  style={{ width: `${loadingProgress}%` }}
+                ></div>
+              </div>
+
+              {/* 状态消息 */}
+              <div className="space-y-2">
+                {timeoutReached ? (
+                  <>
+                    <p className="text-lg font-medium text-yellow-400">Game is taking longer than expected</p>
+                    <p className="text-sm text-gray-300">
+                      The game might still be loading. You can wait a bit more or try refreshing.
+                    </p>
+                    <div className="flex gap-3 justify-center mt-4">
+                      <button
+                        onClick={handleRetryLoad}
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                      >
+                        Retry
+                      </button>
+                      <button
+                        onClick={() => {
+                          setIsLoading(false);
+                          setTimeoutReached(false);
+                        }}
+                        className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+                      >
+                        Continue Anyway
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-lg font-medium">
+                      {loadingStages[loadingStage]?.message || 'Loading...'}
+                    </p>
+                    <p className="text-sm text-gray-300">
+                      {Math.round(loadingProgress)}% complete
+                    </p>
+                    {loadingStage === 'ready' && (
+                      <p className="text-xs text-blue-400 animate-pulse">
+                        Finalizing game initialization...
+                      </p>
+                    )}
+                  </>
+                )}
+              </div>
             </div>
           </div>
         )}
 
         {error && (
-          <div className="absolute inset-0 flex items-center justify-center bg-red-50 text-red-600 z-10">
-            <div className="text-center">
-              <div className="text-4xl mb-4">❌</div>
-              <p className="text-lg mb-2">Game failed to load</p>
-              <p className="text-sm mb-4">{error}</p>
-              <button
-                onClick={() => {
-                  setError(null);
-                  setIsLoading(true);
-                }}
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
-              >
-                Try Again
-              </button>
+          <div className="absolute inset-0 flex items-center justify-center bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 z-10">
+            <div className="text-center max-w-md px-6">
+              <div className="text-5xl mb-4">⚠️</div>
+              <h3 className="text-xl font-bold mb-2 text-red-700 dark:text-red-300">Loading Failed</h3>
+              <p className="text-lg mb-2">Unable to load the game</p>
+              <p className="text-sm mb-6 text-red-500 dark:text-red-400">{error}</p>
+              
+              <div className="space-y-3">
+                <button
+                  onClick={handleRetryLoad}
+                  className="w-full px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium"
+                >
+                  Try Again
+                </button>
+                
+                <div className="text-xs text-gray-500 dark:text-gray-400">
+                  <p>If the problem persists:</p>
+                  <ul className="mt-1 space-y-1 text-left">
+                    <li>• Check your internet connection</li>
+                    <li>• Refresh the page</li>
+                    <li>• Try a different browser</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         )}
