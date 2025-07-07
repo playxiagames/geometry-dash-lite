@@ -1,16 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { getSiteConfig, getNavigationConfig } from '../utils/gameData';
 import { SimpleThemeToggle } from './ThemeToggle';
+import { useTheme } from '../contexts/ThemeContext';
+import { useFavorites } from '../contexts/FavoritesContext';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const siteConfig = getSiteConfig();
   const navigationConfig = getNavigationConfig();
+  const { theme, setTheme } = useTheme();
+  const { getFavoritesCount, isLoaded } = useFavorites();
+
+  const favoritesCount = getFavoritesCount();
 
   const handleNavigationClick = (item) => {
     setIsMenuOpen(false);
@@ -74,6 +80,19 @@ const Navigation = () => {
                 {/* Desktop Theme Toggle */}
                 <SimpleThemeToggle size="medium" />
               </div>
+
+              {/* 收藏链接 */}
+              <Link
+                href="/favorites/"
+                className="relative text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                <span>Favorites</span>
+                {isLoaded && favoritesCount > 0 && (
+                  <span className="ml-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
+                    {favoritesCount > 99 ? '99+' : favoritesCount}
+                  </span>
+                )}
+              </Link>
             </div>
           </div>
 
@@ -122,6 +141,20 @@ const Navigation = () => {
                   {item.title}
                 </Link>
               ))}
+
+              {/* 移动端收藏链接 */}
+              <Link
+                href="/favorites/"
+                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span>Favorites</span>
+                {isLoaded && favoritesCount > 0 && (
+                  <span className="ml-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
+                    {favoritesCount > 99 ? '99+' : favoritesCount}
+                  </span>
+                )}
+              </Link>
             </div>
           </div>
         )}

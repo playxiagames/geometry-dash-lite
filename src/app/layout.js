@@ -2,6 +2,7 @@ import './globals.css'
 import { getSiteConfig, getSEOConfig } from '../utils/gameData'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import { ThemeProvider } from '../contexts/ThemeContext'
+import { FavoritesProvider } from '../contexts/FavoritesContext'
 import PerformanceOptimizer from '../components/PerformanceOptimizer'
 
 export const metadata = {
@@ -236,8 +237,10 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ThemeProvider>
-          <PerformanceOptimizer />
-          {children}
+          <FavoritesProvider>
+            <PerformanceOptimizer />
+            {children}
+          </FavoritesProvider>
         </ThemeProvider>
         
         {/* Client-side Google Analytics component */}

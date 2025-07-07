@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { FavoriteIcon } from './FavoriteButton';
 
 const GamePlayer = ({ game, className = '' }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -305,21 +306,29 @@ const GamePlayer = ({ game, className = '' }) => {
           </div>
           
           <div className="flex items-center space-x-2">
-            {/* <button
-              onClick={shareGame}
-              className="px-3 py-1.5 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors flex items-center space-x-1"
-              title="Share game"
-            >
-              <span>📤</span>
-              <span>Share</span>
-            </button> */}
+            {/* Favorite Button */}
+            <FavoriteIcon 
+              game={game} 
+              className="px-3 py-1.5 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 rounded transition-colors"
+            />
+            
+            {/* Fullscreen Button with improved icon */}
             <button
               onClick={toggleFullscreen}
-              className="px-3 py-1.5 text-sm bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors flex items-center space-x-1"
-              title="Toggle fullscreen"
+              className="px-3 py-1.5 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 rounded transition-colors flex items-center justify-center"
+              title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
             >
-              <span>{isFullscreen ? '📱' : '🖥️'}</span>
-              <span>{isFullscreen ? 'Exit' : 'Fullscreen'}</span>
+              {isFullscreen ? (
+                // Exit fullscreen icon
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M15 9V4.5M15 9h4.5M15 9l5.25-5.25M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 15v4.5M15 15h4.5m0 0l5.25 5.25" />
+                </svg>
+              ) : (
+                // Enter fullscreen icon  
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M20.25 3.75v4.5m0-4.5h-4.5m4.5 0L15 9m5.25 11.25v-4.5m0 4.5h-4.5m4.5 0L15 15M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
