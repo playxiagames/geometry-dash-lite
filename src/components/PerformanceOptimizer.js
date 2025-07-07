@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPerformance } from '../utils/analytics';
+
 // 简化的性能优化组件 - 移除复杂的客户端预加载逻辑
 // Next.js 内置的预加载机制已经足够高效
 export default function PerformanceOptimizer() {
@@ -17,14 +19,8 @@ export const PerformanceMonitor = {
       const endTime = performance.now();
       const loadTime = endTime - startTime;
       
-      // 只有在配置了GA的情况下才追踪
-      if (typeof window.trackCustomEvent === 'function') {
-        window.trackCustomEvent('game_load_time', {
-          event_category: 'Game Performance',
-          event_label: gameSlug,
-          value: Math.round(loadTime)
-        });
-      }
+      // 使用统一的性能追踪工具
+      trackPerformance('game_load_time', loadTime, gameSlug);
     };
   }
 }; 

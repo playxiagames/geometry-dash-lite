@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { FavoriteIcon } from './FavoriteButton';
+import { trackGameEvent, trackUserInteraction } from '../utils/analytics';
 
 const GamePlayer = ({ game, className = '' }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,9 +16,7 @@ const GamePlayer = ({ game, className = '' }) => {
     setError(null);
     
     // 追踪游戏加载成功事件
-    if (typeof window.trackGameEvent === 'function') {
-      window.trackGameEvent('game_loaded', game.title, 'Gameplay');
-    }
+    trackGameEvent('game_loaded', game.title, 'Gameplay');
   };
 
   const handleIframeError = () => {
@@ -25,35 +24,11 @@ const GamePlayer = ({ game, className = '' }) => {
     setError('Failed to load game. Please try again.');
   };
 
-  // 恢复iframe焦点的函数
+  // 简化的iframe焦点恢复
   const restoreIframeFocus = () => {
     if (iframeRef.current) {
       try {
-        // 方法1: 直接设置焦点
         iframeRef.current.focus();
-        
-        // 方法2: 通过点击事件激活iframe
-        setTimeout(() => {
-          if (iframeRef.current) {
-            const clickEvent = new MouseEvent('click', {
-              view: window,
-              bubbles: true,
-              cancelable: true
-            });
-            iframeRef.current.dispatchEvent(clickEvent);
-          }
-        }, 100);
-        
-        // 方法3: 发送消息给iframe（如果支持）
-        setTimeout(() => {
-          if (iframeRef.current && iframeRef.current.contentWindow) {
-            try {
-              iframeRef.current.contentWindow.postMessage({ action: 'resume' }, '*');
-            } catch (e) {
-              // 忽略跨域错误
-            }
-          }
-        }, 200);
       } catch (e) {
         console.warn('Failed to restore iframe focus:', e);
       }
@@ -75,15 +50,11 @@ const GamePlayer = ({ game, className = '' }) => {
         .then(() => {
           setIsFullscreen(true);
           
-          // 关键修复：延迟恢复iframe焦点
-          setTimeout(() => {
-            restoreIframeFocus();
-          }, 150);
+          // 恢复iframe焦点
+          setTimeout(restoreIframeFocus, 100);
           
           // 追踪全屏事件
-          if (typeof window.trackGameEvent === 'function') {
-            window.trackGameEvent('fullscreen_enter', game.title, 'User Interaction');
-          }
+          trackUserInteraction('fullscreen_enter', game.title);
         })
         .catch(err => {
           console.error('Fullscreen error:', err);
@@ -99,14 +70,10 @@ const GamePlayer = ({ game, className = '' }) => {
           document.body.classList.remove('fullscreen-mode');
           
           // 退出全屏后也恢复焦点
-          setTimeout(() => {
-            restoreIframeFocus();
-          }, 150);
+          setTimeout(restoreIframeFocus, 100);
           
           // 追踪退出全屏事件
-          if (typeof window.trackGameEvent === 'function') {
-            window.trackGameEvent('fullscreen_exit', game.title, 'User Interaction');
-          }
+          trackUserInteraction('fullscreen_exit', game.title);
         })
         .catch(err => {
           console.error('Exit fullscreen error:', err);
@@ -130,9 +97,7 @@ const GamePlayer = ({ game, className = '' }) => {
       try {
         await navigator.share(shareData);
         // 追踪分享成功事件
-        if (typeof window.trackGameEvent === 'function') {
-          window.trackGameEvent('game_shared', game.title, 'Social');
-        }
+        trackUserInteraction('game_shared', game.title, { action_type: 'social' });
       } catch (err) {
         console.log('Share cancelled or failed');
       }
@@ -142,9 +107,7 @@ const GamePlayer = ({ game, className = '' }) => {
         .then(() => {
           alert('Game link copied to clipboard!');
           // 追踪复制链接事件
-          if (typeof window.trackGameEvent === 'function') {
-            window.trackGameEvent('game_link_copied', game.title, 'Social');
-          }
+          trackUserInteraction('game_link_copied', game.title, { action_type: 'social' });
         })
         .catch(() => alert('Failed to copy link'));
     }
@@ -159,9 +122,7 @@ const GamePlayer = ({ game, className = '' }) => {
       if (!isCurrentlyFullscreen) {
         document.body.classList.remove('fullscreen-mode');
         // 退出全屏时也恢复焦点
-        setTimeout(() => {
-          restoreIframeFocus();
-        }, 100);
+        setTimeout(restoreIframeFocus, 100);
       }
     };
 
@@ -174,9 +135,7 @@ const GamePlayer = ({ game, className = '' }) => {
 
     // 监听iframe加载完成后设置初始焦点
     const handleIframeLoadComplete = () => {
-      setTimeout(() => {
-        restoreIframeFocus();
-      }, 500);
+      setTimeout(restoreIframeFocus, 300);
     };
 
     document.addEventListener('fullscreenchange', handleFullscreenChange);
@@ -188,9 +147,7 @@ const GamePlayer = ({ game, className = '' }) => {
     }
     
     // 追踪游戏页面访问事件
-    if (typeof window.trackGameEvent === 'function') {
-      window.trackGameEvent('game_page_view', game.title, 'Navigation');
-    }
+    trackGameEvent('game_page_view', game.title, 'Navigation');
     
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);

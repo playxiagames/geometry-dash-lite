@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { trackUserInteraction } from '../utils/analytics';
 
 const FavoritesContext = createContext();
 
@@ -67,13 +68,7 @@ export const FavoritesProvider = ({ children }) => {
     saveFavorites(newFavorites);
 
     // 发送分析事件
-    if (typeof window !== 'undefined' && window.trackCustomEvent) {
-      window.trackCustomEvent('add_to_favorites', {
-        event_category: 'User Interaction',
-        event_label: game.title,
-        game_id: game.id
-      });
-    }
+    trackUserInteraction('add_to_favorites', game.title, { game_id: game.id });
 
     return true;
   };
@@ -87,12 +82,8 @@ export const FavoritesProvider = ({ children }) => {
     saveFavorites(newFavorites);
 
     // 发送分析事件
-    if (typeof window !== 'undefined' && window.trackCustomEvent && gameToRemove) {
-      window.trackCustomEvent('remove_from_favorites', {
-        event_category: 'User Interaction',
-        event_label: gameToRemove.title,
-        game_id: gameId
-      });
+    if (gameToRemove) {
+      trackUserInteraction('remove_from_favorites', gameToRemove.title, { game_id: gameId });
     }
 
     return true;
@@ -125,12 +116,7 @@ export const FavoritesProvider = ({ children }) => {
   const clearAllFavorites = () => {
     saveFavorites([]);
     
-    if (typeof window !== 'undefined' && window.trackCustomEvent) {
-      window.trackCustomEvent('clear_all_favorites', {
-        event_category: 'User Interaction',
-        favorites_count: favorites.length
-      });
-    }
+    trackUserInteraction('clear_all_favorites', 'all_favorites', { favorites_count: favorites.length });
   };
 
   // 导出收藏数据

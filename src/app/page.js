@@ -47,7 +47,6 @@ export default function HomePage() {
   // 获取各种游戏数据
   const sidebarGames = getSidebarRecommendedGames(mainGame.id, 7);
   const geometryDashGames = getGeometryDashGames();
-  const featuredGames = getFeaturedGames();
   const popularGames = getPopularGames();
   const allGames = getAllGames(); // 用于获取游戏总数
   
@@ -61,7 +60,6 @@ export default function HomePage() {
     mainGame.id,
     ...sidebarGames.map(g => g.id),
     ...geometryDashGames.map(g => g.id),
-    ...featuredGames.map(g => g.id),
     ...popularGames.map(g => g.id),
     ...googleGamesPreview.map(g => g.id),
     ...js13kGamesPreview.map(g => g.id)
@@ -110,16 +108,7 @@ export default function HomePage() {
           <GameGrid games={geometryDashGames} />
         </div>
 
-        {/* Featured Games Grid */}
-        {/* <div className="mt-8">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-left">⭐ Editor's Choice</h2>
-          <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-3 mb-4">
-            <p className="text-gray-700 dark:text-gray-300 text-sm">
-              🏆 Handpicked games that deliver exceptional gaming experiences across different genres.
-            </p>
-          </div>
-          <GameGrid games={featuredGames} />
-        </div> */}
+
 
         {/* Popular Games Grid */}
         <div className="mt-8">

@@ -11,8 +11,6 @@ const FavoritesPage = () => {
     isLoaded, 
     getFavoritesCount, 
     clearAllFavorites,
-    exportFavorites,
-    importFavorites,
     getFavoritesByCategory,
     searchFavorites
   } = useFavorites();
@@ -23,21 +21,7 @@ const FavoritesPage = () => {
   const [sortBy, setSortBy] = useState('addedAt'); // 'addedAt', 'title', 'rating'
   const [sortOrder, setSortOrder] = useState('desc'); // 'asc' 或 'desc'
 
-  // 处理文件导入
-  const handleImportFavorites = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      importFavorites(file)
-        .then(result => {
-          alert(`Successfully imported ${result.addedCount} new favorites! Total: ${result.totalCount}`);
-        })
-        .catch(error => {
-          alert(`Import failed: ${error.message}`);
-        });
-    }
-    // 重置文件输入
-    event.target.value = '';
-  };
+
 
   // 获取分类数据
   const favoritesByCategory = getFavoritesByCategory();
@@ -113,22 +97,6 @@ const FavoritesPage = () => {
         
         {/* 操作按钮 */}
         <div className="flex gap-2">
-          {/* <button
-            onClick={exportFavorites}
-            disabled={favorites.length === 0}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
-            Export
-          </button>
-          <label className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 cursor-pointer transition-colors">
-            Import
-            <input
-              type="file"
-              accept=".json"
-              onChange={handleImportFavorites}
-              className="hidden"
-            />
-          </label> */}
           {favorites.length > 0 && (
             <button
               onClick={() => {

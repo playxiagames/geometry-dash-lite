@@ -10,14 +10,7 @@
   },
   "homepage": {
     "mainGame": "geometry-dash-lite",
-    "featuredGames": [
-      "minesweeper",
-      "google-minesweeper",
-      "retro-bowl", 
-      "doodle-baseball",
-      "wordle",
-      "sudoku"
-    ],
+
     "popularGames": [
       "subway-surfers",
       "dinosaur-game",
@@ -63,24 +56,9 @@
       }
     ]
   },
-  "layout": {
-    "maxGamesPerRow": 6,
-    "gameCardAspectRatio": "4:3",
-    "sidebarGameCount": 8,
-    "relatedGameCount": 5
-  },
+
   "seo": {
-    "titleTemplate": "%s | Geometry Dash Lite",
-    "defaultTitle": "Geometry Dash Lite - Play Geometry Dash Online Free",
-    "defaultDescription": "Play Geometry Dash Lite online for free! Jump and fly your way through danger in this rhythm-based action platformer. No download required, play directly in your browser.",
-    "googleAnalyticsId": "G-F1S6GMESB8",
-    "structuredData": {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Geometry Dash Lite",
-      "description": "Free online Geometry Dash Lite and other classic platform games",
-      "url": "https://geometry-dash-lite.org/"
-    }
+    "googleAnalyticsId": "G-F1S6GMESB8"
   },
   "footer": {
     "links": [
