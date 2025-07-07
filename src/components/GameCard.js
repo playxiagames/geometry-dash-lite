@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
+import { GAME_CARD_SIZES, TRANSITIONS } from '../constants/styles';
 
 // Single Game Card Component
 const GameCard = ({ 
@@ -23,38 +24,13 @@ const GameCard = ({
   const isNewGame = homepageConfig?.newGames?.includes(game.id);
   const isHotGame = homepageConfig?.hotGames?.includes(game.id);
 
-  // Size configurations
-  const sizeConfig = {
-    small: {
-      container: 'rounded-lg shadow-sm hover:shadow-md',
-      image: 'h-24',
-      title: 'text-sm font-medium',
-      description: 'text-xs',
-      stats: 'text-xs'
-    },
-    medium: {
-      container: 'rounded-lg shadow-md hover:shadow-lg',
-      image: 'h-32',
-      title: 'text-base font-semibold',
-      description: 'text-sm',
-      stats: 'text-sm'
-    },
-    large: {
-      container: 'rounded-lg shadow-lg hover:shadow-xl',
-      image: 'h-40',
-      title: 'text-lg font-bold',
-      description: 'text-base',
-      stats: 'text-base'
-    }
-  };
-
-  const config = sizeConfig[size];
+  const config = GAME_CARD_SIZES[size];
   const starRating = generateStarRating(game.rating);
 
   return (
     <Link href={`/games/${game.slug}/`} className="block" data-game-slug={game.slug}>
       <div 
-        className={`game-card bg-white dark:bg-slate-800 ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
+        className={`game-card bg-white dark:bg-slate-800 ${config.container} ${TRANSITIONS.all} cursor-pointer ${TRANSITIONS.transform} ${className}`}
       >
         {/* Game Image */}
         <div className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 dark:bg-slate-700 relative`}>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
+import { THEME_TOGGLE_SIZES } from '../constants/styles'
 
 /**
  * 简化的主题切换按钮（只支持明暗两种主题切换）
@@ -34,11 +35,7 @@ export function SimpleThemeToggle({ size = 'medium', className = '' }) {
     return theme === 'dark' ? 'Light' : 'Dark'
   }
 
-  const sizeClasses = {
-    small: 'w-8 h-8 text-sm',
-    medium: 'w-10 h-10 text-base',
-    large: 'w-12 h-12 text-lg'
-  }
+  const sizeClass = THEME_TOGGLE_SIZES[size] || THEME_TOGGLE_SIZES.medium;
 
   const buttonClasses = `
     relative inline-flex items-center justify-center
@@ -50,7 +47,7 @@ export function SimpleThemeToggle({ size = 'medium', className = '' }) {
     hover:border-gray-300 dark:hover:border-slate-500
     focus:outline-none focus:ring-2 focus:ring-blue-500/20
     active:scale-95
-    ${sizeClasses[size]}
+    ${sizeClass}
     ${className}
   `
 

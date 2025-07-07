@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useFavorites } from '../contexts/FavoritesContext';
+import { BUTTON_SIZES } from '../constants/styles';
 
 const FavoriteButton = ({ 
   game, 
@@ -82,35 +83,7 @@ const FavoriteButton = ({
 
 // 根据尺寸获取CSS类
 const getSizeClasses = (size) => {
-  const sizeConfigs = {
-    small: {
-      container: 'px-2 py-1 text-xs',
-      icon: 'w-3 h-3',
-      text: 'ml-1'
-    },
-    medium: {
-      container: 'px-3 py-2 text-sm',
-      icon: 'w-4 h-4',
-      text: 'ml-1.5'
-    },
-    large: {
-      container: 'px-4 py-2 text-base',
-      icon: 'w-5 h-5',
-      text: 'ml-2'
-    },
-    icon: {
-      container: 'p-2',
-      icon: 'w-5 h-5',
-      text: 'sr-only' // 屏幕阅读器专用文本
-    },
-    custom: {
-      container: 'px-3 py-1.5',
-      icon: 'w-4 h-4',
-      text: 'sr-only' // 屏幕阅读器专用文本
-    }
-  };
-
-  return sizeConfigs[size] || sizeConfigs.medium;
+  return BUTTON_SIZES[size] || BUTTON_SIZES.medium;
 };
 
 // 简化的图标版本

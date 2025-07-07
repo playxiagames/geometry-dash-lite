@@ -53,7 +53,7 @@ export default function HomePage() {
   
   // 获取分类预览游戏
   const categories = getAllCategories();
-  const googleGamesPreview = getCategoryPreviewGames('google-games', 4);
+  const googleGamesPreview = getCategoryPreviewGames('google-games', 6);
   const js13kGamesPreview = getCategoryPreviewGames('js13k-games', 4);
 
   // 收集已展示的游戏ID，用于排除重复
@@ -153,7 +153,7 @@ export default function HomePage() {
                   🕹️ Timeless arcade classics reimagined by Google - Pac-Man, Snake, Minesweeper and more!
                 </p>
               </div>
-              <GameGrid games={googleGamesPreview} gridCols="grid-cols-2 sm:grid-cols-4" />
+              <GameGrid games={googleGamesPreview}  gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" />
             </div>
           )}
 
@@ -174,7 +174,7 @@ export default function HomePage() {
                   💎 Incredible games built in just 13KB of code - showcasing creativity and technical mastery!
                 </p>
               </div>
-              <GameGrid games={js13kGamesPreview} gridCols="grid-cols-2 sm:grid-cols-4" />
+              <GameGrid games={js13kGamesPreview}  gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" />
             </div>
           )}
         </div>
