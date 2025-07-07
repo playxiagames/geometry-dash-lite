@@ -55,7 +55,7 @@ export default function ContactPage() {
                     <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-1">Official Website</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Visit our homepage for more information</p>
                     <a 
-                      href="https://geometry-dash-lite.org"
+                      href="https://geometry-dash-lite.org/"
                       className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"

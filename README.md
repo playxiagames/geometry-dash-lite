@@ -56,16 +56,28 @@ game-site-template/
 
 Click "Use this template" or fork this repository
 
-### 2. Configure Your Site
+### 2. One-File Configuration ⚡
 
-```bash
-# Copy environment template
-cp env.example .env.local
+**极简配置方式 - 只需要修改一个文件！**
 
-# Edit with your site details
-# NEXT_PUBLIC_SITE_NAME="Your Game Site"
-# NEXT_PUBLIC_SITE_URL="https://your-domain.com"
+编辑 `src/data/siteConfig.json`，修改网站基本信息：
+
+```json
+{
+  "site": {
+    "name": "你的游戏网站名称",
+    "shortName": "简称",
+    "description": "网站描述",
+    "url": "https://your-domain.com",
+    "contactEmail": "contact@your-domain.com"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-XXXXXXXXXX"
+  }
+}
 ```
+
+详细配置指南：📖 [一站式配置指南](./SIMPLE_CONFIG_GUIDE.md)
 
 ### 3. Install and Run
 
@@ -129,34 +141,34 @@ Edit `src/data/siteConfig.json` to feature your game:
 
 ## 🎨 Customization
 
-### Environment Configuration
+### Site Configuration
 
-Customize your site through `.env.local`:
+Customize your site through `src/data/siteConfig.json`:
 
-```env
-# Site Identity
-NEXT_PUBLIC_SITE_NAME="Your Game Site"
-NEXT_PUBLIC_SITE_DESCRIPTION="Your description"
-NEXT_PUBLIC_SITE_URL="https://your-domain.com"
-
-# Branding
-NEXT_PUBLIC_PRIMARY_COLOR="blue"
-NEXT_PUBLIC_ACCENT_COLOR="purple"
-
-# Features
-NEXT_PUBLIC_ENABLE_FAVORITES="true"
-NEXT_PUBLIC_ENABLE_THEME_TOGGLE="true"
-NEXT_PUBLIC_ENABLE_ANALYTICS="true"
-
-# Analytics
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
+```json
+{
+  "site": {
+    "name": "Your Game Site",
+    "description": "Your description",
+    "url": "https://your-domain.com",
+    "contactEmail": "contact@your-domain.com"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-XXXXXXXXXX"
+  },
+  "features": {
+    "enableFavorites": true,
+    "enableThemeToggle": true,
+    "enableAnalytics": true
+  }
+}
 ```
 
 ### Visual Customization
 
 - **Logo**: Replace `public/images/logo.png`
 - **Favicon**: Replace `public/favicon.ico`
-- **Colors**: Use environment variables or edit Tailwind config
+- **Colors**: Modify Tailwind config or custom CSS
 - **Styling**: All styles use Tailwind CSS classes
 
 ### Content Management
@@ -164,7 +176,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 - **Games**: Edit `src/data/games.json`
 - **Categories**: Edit `src/data/categories.json`
 - **Navigation**: Edit `src/data/siteConfig.json`
-- **Main Game**: Set `NEXT_PUBLIC_MAIN_GAME_ID`
+- **Main Game**: Set `homepage.mainGame` in `siteConfig.json`
 
 ## 📊 SEO Features
 
@@ -274,21 +286,24 @@ npm run lint             # Code linting
 - **Components**: Add to `src/components/` with template config support
 - **Utilities**: Place in `src/utils/` for shared functionality
 
-### Feature Flags
+### Feature Configuration
 
-Control features via environment variables:
+Control features via `siteConfig.json`:
 
-```env
-NEXT_PUBLIC_ENABLE_FAVORITES="false"    # Disable favorites
-NEXT_PUBLIC_ENABLE_THEME_TOGGLE="false" # Disable theme toggle
-NEXT_PUBLIC_ENABLE_ANALYTICS="false"    # Disable analytics
+```json
+{
+  "features": {
+    "enableFavorites": false,     // Disable favorites
+    "enableThemeToggle": false,   // Disable theme toggle  
+    "enableAnalytics": false      // Disable analytics
+  }
+}
 ```
 
 ## 📋 Template Checklist
 
-- [ ] Copy `env.example` to `.env.local`
-- [ ] Update site name, description, and URL
-- [ ] Replace logo and favicon
+- [ ] Edit `src/data/siteConfig.json` with your site info
+- [ ] Replace logo and favicon  
 - [ ] Add your games to `games.json`
 - [ ] Upload game thumbnails
 - [ ] Configure custom domain (optional)

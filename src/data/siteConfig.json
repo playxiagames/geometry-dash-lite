@@ -1,7 +1,21 @@
 {
   "site": {
+    "name": "Geometry Dash Lite - Play Geometry Dash Online Free",
+    "shortName": "GD Lite", 
+    "description": "Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!",
+    "url": "https://geometry-dash-lite.org/",
+    "contactEmail": "contact@geometry-dash-lite.org",
     "logo": "/images/logo.png",
-    "favicon": "/favicon.ico"
+    "favicon": "/favicon.ico",
+    "ogImage": "/images/og-image.jpg"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-F1S6GMESB8"
+  },
+  "features": {
+    "enableFavorites": true,
+    "enableAnalytics": true,
+    "enableThemeToggle": true
   },
   "homepage": {
     "mainGame": "geometry-dash-lite",
