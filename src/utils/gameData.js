@@ -126,10 +126,10 @@ export const generateGameMetadata = (game) => {
       type: 'website',
       images: [
         {
-          url: game.screenshot,
+          url: game.thumbnail,
           width: 800,
           height: 600,
-          alt: `${game.title} Screenshot`
+          alt: `${game.title} thumbnail`
         }
       ]
     },
@@ -137,7 +137,7 @@ export const generateGameMetadata = (game) => {
       card: 'summary_large_image',
       title: game.title,
       description: game.description,
-      images: [game.screenshot]
+      images: [game.thumbnail]
     }
   };
 };

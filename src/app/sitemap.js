@@ -70,6 +70,12 @@ export default function sitemap() {
       priority: 0.9, // 游戏列表页高优先级
     },
     {
+      url: `${baseUrl}/favorites/`,
+      lastModified: getContentLastModified('static-info'),
+      changeFrequency: 'weekly',
+      priority: 0.7, // 收藏页面较高优先级
+    },
+    {
       url: `${baseUrl}/about/`,
       lastModified: getContentLastModified('static-info'),
       changeFrequency: 'monthly',

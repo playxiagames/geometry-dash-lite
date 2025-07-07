@@ -30,8 +30,8 @@ const GameCard = ({
         });
       },
       {
-        rootMargin: '50px', // 提前50px开始加载
-        threshold: 0.1,
+        rootMargin: '200px', // 提前200px开始加载，确保在可视区域内及时显示
+        threshold: 0.01, // 只需要1%进入视窗就触发，更早加载
       }
     );
 
@@ -108,7 +108,7 @@ const GameCard = ({
           {/* 实际图片 - 只有在可见时才加载 */}
           {isVisible && !imageError && (
             <img
-              src={game.screenshot}
+              src={game.thumbnail}
               alt={game.title}
               className={`w-full h-full object-cover transition-opacity duration-300 ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
@@ -168,7 +168,7 @@ const GameCard = ({
           {/* Game Tags */}
           {game.tags && game.tags.length > 0 && size !== 'small' && (
             <div className="mt-1 flex flex-wrap gap-1">
-              {game.tags.slice(0, 2).map((tag, index) => (
+              {game.tags.slice(0, 1).map((tag, index) => (
                 <span
                   key={index}
                   className="inline-block bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 text-xs px-1 py-0.5 rounded-full"
@@ -289,8 +289,8 @@ const SidebarGameItem = ({ game }) => {
         });
       },
       {
-        rootMargin: '30px',
-        threshold: 0.1,
+        rootMargin: '100px', // 侧边栏图片较小，提前100px开始加载即可
+        threshold: 0.01, // 1%进入视窗就触发
       }
     );
 
@@ -333,7 +333,7 @@ const SidebarGameItem = ({ game }) => {
           {/* 实际图片 */}
           {isVisible && !imageError && (
             <img
-              src={game.screenshot}
+              src={game.thumbnail}
               alt={game.title}
               className={`w-full h-full object-cover transition-opacity duration-300 ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
