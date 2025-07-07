@@ -8,7 +8,7 @@ import {
   getAllCategories,
   generateCategoryMetadata 
 } from '../../../utils/gameData';
-import { generateCategoryPageMetadata } from '../../../utils/seoUtils';
+import { generateCategoryPageMetadata, generateCategoryStructuredData } from '../../../utils/seoUtils';
 
 // 生成元数据
 export async function generateMetadata({ params }) {
@@ -47,8 +47,21 @@ export default function CategoryPage({ params }) {
     { label: category.name }
   ];
 
+  // 生成增强的结构化数据
+  const categoryStructuredData = generateCategoryStructuredData(category, categoryGames);
+
   return (
     <Layout>
+      {/* 增强的分类结构化数据 */}
+      {categoryStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(categoryStructuredData)
+          }}
+        />
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
         {/* Category Header */}
@@ -198,14 +211,13 @@ export default function CategoryPage({ params }) {
                   <p>
                     The JS13K Games collection offers a diverse range of genres and gameplay styles, from puzzle challenges to arcade action. 
                     Perfect for quick gaming sessions, these lightweight games provide immediate entertainment while showcasing the artistry 
-                    of constraint-based game development.
+                    of constraint-based development.
                   </p>
                 </div>
               )}
             </div>
           </div>
         </div>
-
       </div>
     </Layout>
   );

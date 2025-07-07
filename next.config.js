@@ -2,11 +2,12 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  distDir: 'out',
   images: {
     unoptimized: true,
-    domains: ['images.unsplash.com', 'via.placeholder.com']
+    domains: ['images.geometry-dash-lite.org', '1games.io', 'scratch.mit.edu'],
+    formats: ['image/webp', 'image/avif'],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -20,6 +21,13 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   compress: true,
   swcMinify: true,
-}
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ['@/components', '@/utils'],
+  },
+};
 
 module.exports = nextConfig 

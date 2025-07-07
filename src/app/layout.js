@@ -2,6 +2,7 @@ import './globals.css'
 import { getSiteConfig, getSEOConfig } from '../utils/gameData'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import { ThemeProvider } from '../contexts/ThemeContext'
+import PerformanceOptimizer from '../components/PerformanceOptimizer'
 
 export const metadata = {
   title: 'Geometry Dash Lite - Play Geometry Dash Online Free',
@@ -98,14 +99,42 @@ export default function RootLayout({ children }) {
           }}
         />
         
+        {/* 性能优化 - DNS预获取和预连接 */}
+        <link rel="dns-prefetch" href="//images.geometry-dash-lite.org" />
+        <link rel="dns-prefetch" href="//1games.io" />
+        <link rel="dns-prefetch" href="//scratch.mit.edu" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+        <link rel="preconnect" href="https://images.geometry-dash-lite.org" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* 关键资源预加载 */}
+        <link rel="preload" href="/images/logo.png" as="image" type="image/png" />
+        <link rel="modulepreload" href="/_next/static/chunks/pages/_app.js" />
+        
+        {/* 基础favicon和manifest */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ffffff" />
+        
+        {/* PWA和性能相关meta标签 */}
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Geometry Dash Lite" />
         <meta name="mobile-web-app-capable" content="yes" />
+        
+        {/* 性能和缓存控制 */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        
+        {/* 预获取关键游戏资源 */}
+        <link rel="prefetch" href="/games/geometry-dash-lite/" />
+        <link rel="prefetch" href="/games/dinosaur-game/" />
+        <link rel="prefetch" href="/category/geometry-dash/" />
         
         {/* Google Analytics */}
         {gaId && process.env.NODE_ENV === 'production' && (
@@ -199,27 +228,17 @@ export default function RootLayout({ children }) {
               "genre": "Arcade",
               "audience": {
                 "@type": "Audience",
-                "audienceType": "General Audience"
-              },
-              "operatingSystem": "Web Browser",
-              "applicationCategory": "Game",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
+                "audienceType": "Gamers"
               }
             })
           }}
         />
-
-        <script defer data-domain="geometry-dash-lite.org" src="https://click.pageview.click/js/script.js"></script>
       </head>
       <body>
-        <div id="root">
-          <ThemeProvider>
-            {children}
-          </ThemeProvider>
-        </div>
+        <ThemeProvider>
+          <PerformanceOptimizer />
+          {children}
+        </ThemeProvider>
         
         {/* Client-side Google Analytics component */}
         <GoogleAnalytics />

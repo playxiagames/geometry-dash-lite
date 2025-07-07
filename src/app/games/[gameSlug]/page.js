@@ -9,7 +9,7 @@ import {
   getRandomGames,
   generateGameMetadata 
 } from '../../../utils/gameData';
-import { generateGamePageMetadata } from '../../../utils/seoUtils';
+import { generateGamePageMetadata, generateGameStructuredData } from '../../../utils/seoUtils';
 
 // 验证游戏 slug 是否有效
 function isValidGameSlug(slug) {
@@ -88,8 +88,21 @@ export default function GamePage({ params }) {
     { label: game.title }
   ];
 
+  // 生成增强的结构化数据
+  const gameStructuredData = generateGameStructuredData(game);
+
   return (
     <Layout>
+      {/* 增强的游戏结构化数据 */}
+      {gameStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(gameStructuredData)
+          }}
+        />
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">

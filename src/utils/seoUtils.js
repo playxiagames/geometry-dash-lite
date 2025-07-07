@@ -220,4 +220,172 @@ export const generateStructuredData = ({
   };
 
   return baseStructure;
+};
+
+/**
+ * 生成增强的游戏结构化数据
+ * @param {Object} game - 游戏对象
+ * @returns {Object} - 增强的Game schema JSON-LD结构化数据
+ */
+export const generateGameStructuredData = (game) => {
+  if (!game) return null;
+
+  const gameUrl = `${BASE_URL}/games/${game.slug}/`;
+  const imageUrl = game.thumbnail?.startsWith('http') 
+    ? game.thumbnail 
+    : `${BASE_URL}${game.thumbnail}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Game',
+    '@id': `${gameUrl}#game`,
+    name: game.title,
+    description: game.longDescription || game.description,
+    url: gameUrl,
+    image: {
+      '@type': 'ImageObject',
+      url: imageUrl,
+      width: 400,
+      height: 300,
+      caption: `${game.title} - Play Online Free`
+    },
+    applicationCategory: 'Game',
+    operatingSystem: 'Web Browser',
+    genre: game.category || 'Arcade',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: game.rating || 4.5,
+      ratingCount: Math.max(game.playCount / 100, 50), // 估算评分数量
+      bestRating: 5,
+      worstRating: 1
+    },
+    interactionStatistic: {
+      '@type': 'InteractionCounter',
+      interactionType: 'https://schema.org/PlayAction',
+      userInteractionCount: game.playCount || 1000
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      category: 'Free'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Geometry Dash Lite',
+      url: BASE_URL
+    },
+    creator: {
+      '@type': 'Organization', 
+      name: 'Geometry Dash Lite',
+      url: BASE_URL
+    },
+    datePublished: game.createdAt || '2024-01-01',
+    dateModified: game.updatedAt || new Date().toISOString().split('T')[0],
+    keywords: [
+      game.title.toLowerCase(),
+      game.category?.toLowerCase(),
+      'free online game',
+      'browser game',
+      'no download',
+      'play free'
+    ].filter(Boolean).join(', '),
+    playMode: 'https://schema.org/SinglePlayer',
+    gamePlatform: 'Web Browser',
+    accessibilityFeature: [
+      'keyboardNavigable',
+      'fullKeyboardControl'
+    ],
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Geometry Dash Lite',
+      url: BASE_URL,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${BASE_URL}/all-games/?q={search_term_string}`
+        },
+        'query-input': 'required name=search_term_string'
+      }
+    },
+    mainEntity: {
+      '@type': 'VideoGame',
+      name: game.title,
+      gameItem: {
+        '@type': 'Thing',
+        name: game.title
+      }
+    }
+  };
+};
+
+/**
+ * 生成分类页面的结构化数据
+ * @param {Object} category - 分类对象
+ * @param {Array} games - 该分类下的游戏列表
+ * @returns {Object} - CollectionPage schema JSON-LD结构化数据
+ */
+export const generateCategoryStructuredData = (category, games = []) => {
+  if (!category) return null;
+
+  const categoryUrl = `${BASE_URL}/category/${category.slug}/`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${categoryUrl}#collection`,
+    name: `${category.name} Games`,
+    description: category.description,
+    url: categoryUrl,
+    mainEntity: {
+      '@type': 'ItemList',
+      name: `${category.name} Games Collection`,
+      description: `Collection of free online ${category.name.toLowerCase()} games`,
+      numberOfItems: games.length,
+      itemListElement: games.slice(0, 10).map((game, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Game',
+          '@id': `${BASE_URL}/games/${game.slug}/#game`,
+          name: game.title,
+          description: game.description,
+          url: `${BASE_URL}/games/${game.slug}/`,
+          image: game.thumbnail?.startsWith('http') 
+            ? game.thumbnail 
+            : `${BASE_URL}${game.thumbnail}`,
+          genre: game.category || category.name,
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: game.rating || 4.5,
+            bestRating: 5
+          }
+        }
+      }))
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: BASE_URL
+        },
+        {
+          '@type': 'ListItem', 
+          position: 2,
+          name: category.name,
+          item: categoryUrl
+        }
+      ]
+    },
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Geometry Dash Lite',
+      url: BASE_URL
+    }
+  };
 }; 

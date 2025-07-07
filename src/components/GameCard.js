@@ -87,7 +87,7 @@ const GameCard = ({
   const starRating = generateStarRating(game.rating);
 
   return (
-    <Link href={`/games/${game.slug}/`} className="block">
+    <Link href={`/games/${game.slug}/`} className="block" data-game-slug={game.slug}>
       <div 
         className={`game-card bg-white dark:bg-slate-800 ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
       >
