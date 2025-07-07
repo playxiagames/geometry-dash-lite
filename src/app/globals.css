@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS for game website */
+/* 优化后的游戏网站CSS - 仅保留必要样式 */
 @layer base {
   /* 简化的CSS变量定义 */
   :root {
@@ -33,82 +33,27 @@
     --border-focus: 59 130 246; /* blue-500 */
   }
 
-  /* 防止主题切换闪烁的关键样式 */
+  /* 基础HTML和Body样式 */
   html {
     scroll-behavior: smooth;
-    /* 初始状态即设置过渡，避免闪烁 */
-    transition: color 0.15s ease-out, background-color 0.15s ease-out;
-  }
-  
-  /* 确保在主题未加载时也有基本的颜色 */
-  html:not(.dark):not(.light) {
-    color-scheme: light;
-    background-color: #f9fafb; /* fallback for gray-50 */
-    color: #111827; /* fallback for gray-900 */
-  }
-  
-  /* 为已确定主题的元素设置过渡 */
-  html.light,
-  html.dark {
-    transition: color 0.15s ease-out, background-color 0.15s ease-out;
   }
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    /* 使用CSS变量设置背景和文字颜色 */
     background-color: rgb(var(--bg-primary));
     color: rgb(var(--text-primary));
-    /* 平滑的主题切换过渡 */
     transition: color 0.15s ease-out, background-color 0.15s ease-out;
   }
 
-  /* 为主题相关元素添加过渡，确保不影响用户交互 */
-  *,
-  *::before,
-  *::after {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-timing-function: ease-out;
-    transition-duration: 0.15s;
-  }
-
-  /* 特殊情况：对于动画元素，保持原有的过渡设置 */
-  [class*="animate-"],
-  [class*="transition-"] {
-    transition-property: revert;
-    transition-timing-function: revert;
-    transition-duration: revert;
-  }
-
-  /* 确保文字可以正常选择 */
+  /* 全局过渡效果 */
   * {
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
   }
 
-  /* 对于特定的交互元素，禁用文字选择 */
-  button,
-  [role="button"],
-  .cursor-pointer,
-  img,
-  svg {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  /* 全屏模式时禁用过渡效果 - 关键修复 */
-  body.fullscreen-mode *,
-  body.fullscreen-mode *::before,
-  body.fullscreen-mode *::after {
-    transition: none !important;
-    animation-duration: 0s !important;
-  }
-
-  /* Improve focus visibility */
+  /* 提升焦点可见性 */
   *:focus {
     outline: 2px solid rgb(var(--border-focus));
     outline-offset: 2px;
@@ -116,7 +61,7 @@
 }
 
 @layer components {
-  /* Line clamp utility for text truncation */
+  /* 文本截断工具 */
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -131,129 +76,33 @@
     overflow: hidden;
   }
 
-  /* 高亮样式 */
-  mark {
-    @apply bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-200;
-    padding: 0 2px;
-    border-radius: 2px;
-  }
-
-  /* Game Player Styles */
+  /* 游戏播放器样式 */
   .game-player-container {
     @apply w-full;
   }
 
   .game-iframe-container {
     @apply relative w-full bg-black rounded-lg overflow-hidden;
-    contain: layout style size;
-  }
-
-  /* 全屏状态下的特殊样式 */
-  .game-iframe-container.fullscreen-active {
-    border-radius: 0 !important;
-    contain: none;
   }
 
   .game-iframe-container iframe {
     @apply w-full h-full border-0;
     display: block;
-    overflow: hidden;
   }
 
-  /* Prevent iframe from producing scrollbars */
-  .game-iframe-container iframe::-webkit-scrollbar {
-    display: none;
-  }
-
-  .game-iframe-container iframe {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  /* Game Card Hover Effects */
+  /* 游戏卡片悬停效果 */
   .game-card {
     background-color: rgb(var(--surface-primary));
-    box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     @apply rounded-lg cursor-pointer transform hover:-translate-y-1;
   }
 
   .game-card:hover {
-    box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
+    @apply shadow-lg;
   }
 
-  /* Custom Scrollbar */
-  .custom-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: rgb(var(--border-primary)) transparent;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--border-primary));
-    border-radius: 3px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(var(--border-focus));
-  }
-
-  /* Loading animation */
-  .loading-spinner {
-    @apply animate-spin rounded-full border-b-2 border-white;
-  }
-
-  /* Game grid responsive layout */
-  .game-grid-responsive {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
-  }
-
-  @media (max-width: 768px) {
-    .game-grid-responsive {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-  }
-
-  @media (max-width: 640px) {
-    .game-grid-responsive {
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-  }
-
-  /* Category Badge */
-  .category-badge {
-    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium transition-all transform hover:-translate-y-0.5;
-  }
-  
-  .category-badge:hover {
-    @apply shadow-sm transform translate-y-0;
-  }
-
-  /* Button Styles */
-  .btn-primary {
-    @apply bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
-  }
-
-  .btn-secondary {
-    @apply bg-white dark:bg-slate-800 text-gray-900 dark:text-white border border-gray-300 dark:border-slate-600 font-medium py-2 px-4 rounded-lg transition-colors;
-  }
-  
-  .btn-secondary:hover {
-    @apply bg-gray-50 dark:bg-slate-700 border-blue-500;
-  }
-
-  /* Sidebar Game List */
+  /* 侧边栏游戏项目样式 */
   .sidebar-game-item {
     @apply flex items-center space-x-3 p-2 rounded-lg cursor-pointer transition-colors;
   }
@@ -262,18 +111,13 @@
     @apply bg-gray-50 dark:bg-slate-700;
   }
 
-  /* Top Navigation */
+  /* 顶部导航样式 */
   .top-navigation {
     @apply bg-white/95 dark:bg-slate-900/95 border-b border-gray-200 dark:border-slate-700 shadow-md sticky top-0 z-40;
     backdrop-filter: blur(8px);
   }
 
-  /* 确保导航栏的z-index低于全屏元素 */
-  body.fullscreen-mode .top-navigation {
-    z-index: 0;
-  }
-
-  /* Responsive Design */
+  /* 响应式设计优化 */
   @media (max-width: 768px) {
     .game-iframe-container {
       max-height: 60vh;
@@ -290,62 +134,7 @@
 }
 
 @layer utilities {
-  /* Text shadow utilities */
-  .text-shadow {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .text-shadow-md {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .text-shadow-lg {
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Gradient text */
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(45deg, theme('colors.blue.500'), theme('colors.purple.500'));
-  }
-
-  /* Game-specific utilities */
-  .aspect-game {
-    aspect-ratio: 16 / 9;
-  }
-
-  .aspect-card {
-    aspect-ratio: 4 / 3;
-  }
-
-  /* Fullscreen utilities */
-  .fullscreen-container {
-    @apply fixed inset-0 bg-black;
-    z-index: 999999 !important; /* 确保最高优先级 */
-  }
-
-  .fullscreen-iframe {
-    @apply w-full h-full;
-  }
-
-  /* Safe area for mobile devices */
-  .safe-top {
-    padding-top: env(safe-area-inset-top);
-  }
-
-  .safe-bottom {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  .safe-left {
-    padding-left: env(safe-area-inset-left);
-  }
-
-  .safe-right {
-    padding-right: env(safe-area-inset-right);
-  }
-
-  /* Accessibility styles */
+  /* 无障碍样式 */
   .sr-only {
     position: absolute;
     width: 1px;
@@ -359,7 +148,7 @@
   }
 }
 
-/* 系统暗色主题检测 - 仅用于初始化，实际主题由class控制 */
+/* 系统暗色主题检测 */
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
     --bg-primary: 15 23 42; /* slate-900 */
@@ -370,59 +159,29 @@
   }
 }
 
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  body {
-    @apply text-black bg-white;
-  }
-
-  .game-iframe-container {
-    display: none;
-  }
-}
-
-/* Reduced motion preferences */
+/* 减少动画偏好支持 */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
-  /* 在全屏模式下，强制禁用所有过渡效果 */
-  body.fullscreen-mode * {
-    animation: none !important;
-    transition: none !important;
-  }
 }
 
-/* High contrast mode support */
+/* 高对比度模式支持 */
 @media (prefers-contrast: high) {
   .game-card {
     @apply border-2 border-gray-900;
   }
-  
-  .btn-primary {
-    @apply border-2 border-blue-800;
-  }
 }
 
-/* Focus styles for better accessibility */
-.focus-visible {
-  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
-}
-
-/* Custom selection colors */
+/* 自定义选择颜色 */
 ::selection {
   background-color: rgb(59 130 246); /* blue-500 */
-  color: rgb(var(--text-inverse));
+  color: white;
 }
 
 ::-moz-selection {
   background-color: rgb(59 130 246); /* blue-500 */
-  color: rgb(var(--text-inverse));
+  color: white;
 } 
