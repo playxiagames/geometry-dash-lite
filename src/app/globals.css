@@ -4,71 +4,33 @@
 
 /* Custom CSS for game website */
 @layer base {
-  /* CSS变量定义 - 明暗主题兼容 */
+  /* 简化的CSS变量定义 */
   :root {
     /* 背景颜色 */
     --bg-primary: 249 250 251; /* gray-50 */
-    --bg-secondary: 243 244 246; /* gray-100 */
-    --bg-tertiary: 255 255 255; /* white */
-    
-    /* 表面颜色 */
     --surface-primary: 255 255 255; /* white */
-    --surface-secondary: 249 250 251; /* gray-50 */
-    --surface-elevated: 255 255 255; /* white */
     
     /* 文本颜色 */
     --text-primary: 17 24 39; /* gray-900 */
     --text-secondary: 75 85 99; /* gray-600 */
-    --text-tertiary: 107 114 128; /* gray-500 */
-    --text-inverse: 249 250 251; /* gray-50 */
     
     /* 边框颜色 */
     --border-primary: 209 213 219; /* gray-300 */
-    --border-secondary: 229 231 235; /* gray-200 */
     --border-focus: 59 130 246; /* blue-500 */
-    
-    /* 阴影颜色 */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    
-    /* 游戏主题色 */
-    --game-accent: 34 197 94; /* green-500 */
-    --game-bg: 26 26 26; /* 保持原始游戏背景 */
-    --game-card: 45 45 45; /* 保持原始游戏卡片背景 */
   }
 
   .dark {
     /* 背景颜色 */
     --bg-primary: 15 23 42; /* slate-900 */
-    --bg-secondary: 30 41 59; /* slate-800 */
-    --bg-tertiary: 51 65 85; /* slate-700 */
-    
-    /* 表面颜色 */
     --surface-primary: 30 41 59; /* slate-800 */
-    --surface-secondary: 51 65 85; /* slate-700 */
-    --surface-elevated: 71 85 105; /* slate-600 */
     
     /* 文本颜色 */
     --text-primary: 248 250 252; /* slate-50 */
     --text-secondary: 148 163 184; /* slate-400 */
-    --text-tertiary: 100 116 139; /* slate-500 */
-    --text-inverse: 15 23 42; /* slate-900 */
     
     /* 边框颜色 */
     --border-primary: 71 85 105; /* slate-600 */
-    --border-secondary: 100 116 139; /* slate-500 */
     --border-focus: 59 130 246; /* blue-500 */
-    
-    /* 阴影颜色 - 暗色模式下使用更深的阴影 */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.15);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.25), 0 4px 6px -4px rgb(0 0 0 / 0.25);
-    
-    /* 游戏主题色 */
-    --game-accent: 34 197 94; /* green-500 - 保持一致 */
-    --game-bg: 26 26 26; /* 保持原始游戏背景 */
-    --game-card: 45 45 45; /* 保持原始游戏卡片背景 */
   }
 
   /* 防止主题切换闪烁的关键样式 */
@@ -165,13 +127,6 @@
   .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -291,29 +246,11 @@
   }
 
   .btn-secondary {
-    background-color: rgb(var(--surface-secondary));
-    color: rgb(var(--text-primary));
-    border: 1px solid rgb(var(--border-primary));
-    @apply font-medium py-2 px-4 rounded-lg transition-colors;
+    @apply bg-white dark:bg-slate-800 text-gray-900 dark:text-white border border-gray-300 dark:border-slate-600 font-medium py-2 px-4 rounded-lg transition-colors;
   }
   
   .btn-secondary:hover {
-    background-color: rgb(var(--surface-elevated));
-    border-color: rgb(var(--border-focus));
-  }
-
-  .btn-ghost {
-    color: rgb(var(--text-secondary));
-    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
-  }
-  
-  .btn-ghost:hover {
-    background-color: rgb(var(--surface-secondary));
-  }
-  
-  .btn-ghost:focus {
-    @apply ring-2 ring-offset-2;
-    ring-color: rgb(var(--border-focus));
+    @apply bg-gray-50 dark:bg-slate-700 border-blue-500;
   }
 
   /* Sidebar Game List */
@@ -322,14 +259,12 @@
   }
   
   .sidebar-game-item:hover {
-    background-color: rgb(var(--surface-secondary));
+    @apply bg-gray-50 dark:bg-slate-700;
   }
 
   /* Top Navigation */
   .top-navigation {
-    background-color: rgba(var(--surface-primary) / 0.95);
-    border-bottom: 1px solid rgb(var(--border-secondary));
-    @apply shadow-md sticky top-0 z-40;
+    @apply bg-white/95 dark:bg-slate-900/95 border-b border-gray-200 dark:border-slate-700 shadow-md sticky top-0 z-40;
     backdrop-filter: blur(8px);
   }
 
@@ -428,10 +363,9 @@
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
     --bg-primary: 15 23 42; /* slate-900 */
-    --bg-secondary: 30 41 59; /* slate-800 */
+    --surface-primary: 30 41 59; /* slate-800 */
     --text-primary: 248 250 252; /* slate-50 */
     --text-secondary: 148 163 184; /* slate-400 */
-    --surface-primary: 30 41 59; /* slate-800 */
     --border-primary: 71 85 105; /* slate-600 */
   }
 }

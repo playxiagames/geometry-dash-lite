@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react'
 
-// 主题类型 - 只保留明暗两种主题
+// 主题类型
 export const THEMES = {
   LIGHT: 'light',
   DARK: 'dark'
@@ -11,8 +11,7 @@ export const THEMES = {
 // 创建主题上下文
 const ThemeContext = createContext({
   theme: THEMES.DARK,
-  setTheme: () => {},
-  resolvedTheme: THEMES.DARK
+  setTheme: () => {}
 })
 
 // 主题提供者组件
@@ -20,45 +19,12 @@ export function ThemeProvider({ children, defaultTheme = THEMES.DARK }) {
   const [theme, setTheme] = useState(defaultTheme)
   const [mounted, setMounted] = useState(false)
 
-  // 直接使用theme作为resolvedTheme，无需处理系统主题
-  const resolvedTheme = theme
-
-  // 获取当前DOM上的主题类（从初始化脚本设置的类中读取）
-  const getCurrentDOMTheme = () => {
-    if (typeof window !== 'undefined') {
-      const root = window.document.documentElement
-      if (root.classList.contains('dark')) {
-        return THEMES.DARK
-      } else if (root.classList.contains('light')) {
-        return THEMES.LIGHT
-      }
-    }
-    return THEMES.LIGHT
-  }
-
   // 应用主题到DOM
   const applyTheme = (newTheme) => {
     if (typeof window !== 'undefined') {
       const root = window.document.documentElement
-      
-      // 移除之前的主题类
       root.classList.remove('light', 'dark')
-      
-      // 添加新主题类
-      if (newTheme === THEMES.DARK) {
-        root.classList.add('dark')
-      } else {
-        root.classList.add('light')
-      }
-
-      // 设置meta标签（用于状态栏样式）
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      if (metaThemeColor) {
-        metaThemeColor.setAttribute(
-          'content', 
-          newTheme === THEMES.DARK ? '#0f172a' : '#ffffff'
-        )
-      }
+      root.classList.add(newTheme)
     }
   }
 
@@ -78,7 +44,6 @@ export function ThemeProvider({ children, defaultTheme = THEMES.DARK }) {
     if (typeof window !== 'undefined') {
       try {
         const savedTheme = localStorage.getItem('theme')
-        // 如果存储的是system主题，则使用默认主题
         if (savedTheme && Object.values(THEMES).includes(savedTheme)) {
           return savedTheme
         }
@@ -94,47 +59,25 @@ export function ThemeProvider({ children, defaultTheme = THEMES.DARK }) {
     if (Object.values(THEMES).includes(newTheme)) {
       setTheme(newTheme)
       saveTheme(newTheme)
+      applyTheme(newTheme)
     }
   }
 
   // 初始化主题
   useEffect(() => {
-    // 加载保存的主题
     const savedTheme = loadTheme()
-    
-    // 检查当前DOM状态，确保与初始化脚本设置的状态一致
-    const currentDOMTheme = getCurrentDOMTheme()
-    
-    // 如果存储的主题与当前DOM主题不匹配，应用存储的主题
-    if (currentDOMTheme !== savedTheme) {
-      applyTheme(savedTheme)
-    }
-    
     setTheme(savedTheme)
+    applyTheme(savedTheme)
     setMounted(true)
   }, [])
 
-  // 应用主题到DOM - 只在主题真正变化时执行
-  useEffect(() => {
-    if (mounted) {
-      // 检查当前DOM状态
-      const currentDOMTheme = getCurrentDOMTheme()
-      
-      // 只有当需要应用的主题与当前DOM主题不同时才更新
-      if (currentDOMTheme !== resolvedTheme) {
-        applyTheme(resolvedTheme)
-      }
-    }
-  }, [resolvedTheme, mounted])
-
-  // 防止服务端渲染不匹配 - 在mounted之前总是返回默认状态
+  // 防止服务端渲染不匹配
   if (!mounted) {
     return (
       <ThemeContext.Provider 
         value={{
           theme: defaultTheme,
-          setTheme: () => {},
-          resolvedTheme: defaultTheme
+          setTheme: () => {}
         }}
       >
         {children}
@@ -146,8 +89,7 @@ export function ThemeProvider({ children, defaultTheme = THEMES.DARK }) {
     <ThemeContext.Provider 
       value={{
         theme,
-        setTheme: changeTheme,
-        resolvedTheme
+        setTheme: changeTheme
       }}
     >
       {children}

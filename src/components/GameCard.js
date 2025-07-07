@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { formatPlayCount, formatRating, generateStarRating, getHomepageConfig } from '../utils/gameData';
+import { formatPlayCount, formatRating, getHomepageConfig } from '../utils/gameData';
 
 // Single Game Card Component
 const GameCard = ({ 
@@ -13,78 +13,33 @@ const GameCard = ({
   className = '' 
 }) => {
   const [imageError, setImageError] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const imgRef = useRef(null);
   const homepageConfig = getHomepageConfig();
-
-  // 懒加载逻辑
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        rootMargin: '200px', // 提前200px开始加载，确保在可视区域内及时显示
-        threshold: 0.01, // 只需要1%进入视窗就触发，更早加载
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current);
-      }
-    };
-  }, []);
 
   const handleImageError = () => {
     setImageError(true);
-  };
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
   };
 
   // 检查游戏标签类型
   const isNewGame = homepageConfig?.newGames?.includes(game.id);
   const isHotGame = homepageConfig?.hotGames?.includes(game.id);
 
-  // Size configurations
+  // 简化的尺寸配置 - 只保留small和medium
   const sizeConfig = {
     small: {
       container: 'rounded-lg shadow-sm hover:shadow-md',
       image: 'h-24',
       title: 'text-sm font-medium',
-      description: 'text-xs',
       stats: 'text-xs'
     },
     medium: {
       container: 'rounded-lg shadow-md hover:shadow-lg',
       image: 'h-32',
       title: 'text-base font-semibold',
-      description: 'text-sm',
       stats: 'text-sm'
-    },
-    large: {
-      container: 'rounded-lg shadow-lg hover:shadow-xl',
-      image: 'h-40',
-      title: 'text-lg font-bold',
-      description: 'text-base',
-      stats: 'text-base'
     }
   };
 
-  const config = sizeConfig[size];
-  const starRating = generateStarRating(game.rating);
+  const config = sizeConfig[size] || sizeConfig.medium;
 
   return (
     <Link href={`/games/${game.slug}/`} className="block" data-game-slug={game.slug}>
@@ -92,35 +47,16 @@ const GameCard = ({
         className={`game-card bg-white dark:bg-slate-800 ${config.container} transition-all duration-300 cursor-pointer transform hover:-translate-y-1 ${className}`}
       >
         {/* Game Image */}
-        <div 
-          ref={imgRef}
-          className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 dark:bg-slate-700 relative`}
-        >
-          {/* 加载占位符 */}
-          {!isVisible && (
-            <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-slate-700 animate-pulse">
-              <div className="text-center text-gray-400 dark:text-slate-500">
-                <div className="text-lg mb-1">🎮</div>
-              </div>
-            </div>
-          )}
-
-          {/* 实际图片 - 只有在可见时才加载 */}
-          {isVisible && !imageError && (
+        <div className={`${config.image} overflow-hidden rounded-t-lg bg-gray-200 dark:bg-slate-700 relative`}>
+          {!imageError ? (
             <img
               src={game.thumbnail}
               alt={game.title}
-              className={`w-full h-full object-cover transition-opacity duration-300 ${
-                imageLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
+              className="w-full h-full object-cover"
               onError={handleImageError}
-              onLoad={handleImageLoad}
               loading="lazy"
             />
-          )}
-
-          {/* 图片加载失败时的占位符 */}
-          {imageError && (
+          ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white">
               <div className="text-center">
                 <div className="text-2xl mb-1">🎮</div>
@@ -160,13 +96,13 @@ const GameCard = ({
           </div>
           
           {showDescription && (
-            <p className={`${config.description} text-gray-600 dark:text-gray-300 mb-1 line-clamp-2 text-left`}>
+            <p className={`${config.stats} text-gray-600 dark:text-gray-300 mb-1 line-clamp-2 text-left`}>
               {game.description}
             </p>
           )}
 
-          {/* Game Tags */}
-          {game.tags && game.tags.length > 0 && size !== 'small' && (
+          {/* Game Tags - 只在medium尺寸显示 */}
+          {game.tags && game.tags.length > 0 && size === 'medium' && (
             <div className="mt-1 flex flex-wrap gap-1">
               {game.tags.slice(0, 1).map((tag, index) => (
                 <span
@@ -273,44 +209,9 @@ export const SidebarGameList = ({
 // Sidebar Game Item Component
 const SidebarGameItem = ({ game }) => {
   const [imageError, setImageError] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const imgRef = useRef(null);
-
-  // 侧边栏懒加载
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        rootMargin: '100px', // 侧边栏图片较小，提前100px开始加载即可
-        threshold: 0.01, // 1%进入视窗就触发
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current);
-      }
-    };
-  }, []);
 
   const handleImageError = () => {
     setImageError(true);
-  };
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
   };
 
   return (
@@ -319,33 +220,16 @@ const SidebarGameItem = ({ game }) => {
         className="sidebar-game-item flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 cursor-pointer transition-colors lg:mb-0"
       >
         {/* Game Image - 响应式尺寸 */}
-        <div 
-          ref={imgRef}
-          className="flex-shrink-0 w-20 h-12 sm:w-24 sm:h-16 lg:w-32 lg:h-20 rounded-md overflow-hidden bg-gray-200 dark:bg-slate-700"
-        >
-          {/* 加载占位符 */}
-          {!isVisible && (
-            <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-slate-700 animate-pulse">
-              <div className="text-gray-400 dark:text-slate-500 text-xs">🎮</div>
-            </div>
-          )}
-
-          {/* 实际图片 */}
-          {isVisible && !imageError && (
+        <div className="flex-shrink-0 w-20 h-12 sm:w-24 sm:h-16 lg:w-32 lg:h-20 rounded-md overflow-hidden bg-gray-200 dark:bg-slate-700">
+          {!imageError ? (
             <img
               src={game.thumbnail}
               alt={game.title}
-              className={`w-full h-full object-cover transition-opacity duration-300 ${
-                imageLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
+              className="w-full h-full object-cover"
               onError={handleImageError}
-              onLoad={handleImageLoad}
               loading="lazy"
             />
-          )}
-
-          {/* 错误占位符 */}
-          {imageError && (
+          ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 text-white text-xs">
               🎮
             </div>

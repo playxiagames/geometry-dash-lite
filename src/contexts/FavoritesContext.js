@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 const FavoritesContext = createContext();
 
@@ -18,14 +18,12 @@ export const FavoritesProvider = ({ children }) => {
         const storedFavorites = localStorage.getItem(FAVORITES_STORAGE_KEY);
         if (storedFavorites) {
           const parsedFavorites = JSON.parse(storedFavorites);
-          // 验证数据格式
           if (Array.isArray(parsedFavorites)) {
             setFavorites(parsedFavorites);
           }
         }
       } catch (error) {
-        console.error('Error loading favorites from localStorage:', error);
-        // 如果数据损坏，清除localStorage
+        console.error('Error loading favorites:', error);
         localStorage.removeItem(FAVORITES_STORAGE_KEY);
       } finally {
         setIsLoaded(true);
@@ -41,7 +39,7 @@ export const FavoritesProvider = ({ children }) => {
       localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(newFavorites));
       setFavorites(newFavorites);
     } catch (error) {
-      console.error('Error saving favorites to localStorage:', error);
+      console.error('Error saving favorites:', error);
     }
   };
 
@@ -52,7 +50,6 @@ export const FavoritesProvider = ({ children }) => {
     const isAlreadyFavorite = favorites.some(fav => fav.id === game.id);
     if (isAlreadyFavorite) return false;
 
-    // 创建收藏项目，只保存必要信息
     const favoriteItem = {
       id: game.id,
       slug: game.slug,
@@ -65,16 +62,6 @@ export const FavoritesProvider = ({ children }) => {
 
     const newFavorites = [...favorites, favoriteItem];
     saveFavorites(newFavorites);
-
-    // 发送分析事件
-    if (typeof window !== 'undefined' && window.trackCustomEvent) {
-      window.trackCustomEvent('add_to_favorites', {
-        event_category: 'User Interaction',
-        event_label: game.title,
-        game_id: game.id
-      });
-    }
-
     return true;
   };
 
@@ -82,19 +69,8 @@ export const FavoritesProvider = ({ children }) => {
   const removeFromFavorites = (gameId) => {
     if (!gameId) return false;
 
-    const gameToRemove = favorites.find(fav => fav.id === gameId);
     const newFavorites = favorites.filter(fav => fav.id !== gameId);
     saveFavorites(newFavorites);
-
-    // 发送分析事件
-    if (typeof window !== 'undefined' && window.trackCustomEvent && gameToRemove) {
-      window.trackCustomEvent('remove_from_favorites', {
-        event_category: 'User Interaction',
-        event_label: gameToRemove.title,
-        game_id: gameId
-      });
-    }
-
     return true;
   };
 
@@ -124,95 +100,6 @@ export const FavoritesProvider = ({ children }) => {
   // 清除所有收藏
   const clearAllFavorites = () => {
     saveFavorites([]);
-    
-    if (typeof window !== 'undefined' && window.trackCustomEvent) {
-      window.trackCustomEvent('clear_all_favorites', {
-        event_category: 'User Interaction',
-        favorites_count: favorites.length
-      });
-    }
-  };
-
-  // 导出收藏数据
-  const exportFavorites = () => {
-    try {
-      const dataStr = JSON.stringify(favorites, null, 2);
-      const dataBlob = new Blob([dataStr], { type: 'application/json' });
-      const url = URL.createObjectURL(dataBlob);
-      
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `geometry-dash-favorites-${new Date().toISOString().split('T')[0]}.json`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-
-      return true;
-    } catch (error) {
-      console.error('Error exporting favorites:', error);
-      return false;
-    }
-  };
-
-  // 导入收藏数据
-  const importFavorites = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        try {
-          const importedData = JSON.parse(e.target.result);
-          if (Array.isArray(importedData)) {
-            // 合并导入的数据和现有数据，避免重复
-            const mergedFavorites = [...favorites];
-            let addedCount = 0;
-
-            importedData.forEach(item => {
-              if (item.id && !mergedFavorites.some(fav => fav.id === item.id)) {
-                mergedFavorites.push({
-                  ...item,
-                  addedAt: item.addedAt || new Date().toISOString()
-                });
-                addedCount++;
-              }
-            });
-
-            saveFavorites(mergedFavorites);
-            resolve({ success: true, addedCount, totalCount: mergedFavorites.length });
-          } else {
-            reject(new Error('Invalid file format'));
-          }
-        } catch (error) {
-          reject(error);
-        }
-      };
-      reader.onerror = () => reject(new Error('Failed to read file'));
-      reader.readAsText(file);
-    });
-  };
-
-  // 获取按分类分组的收藏
-  const getFavoritesByCategory = () => {
-    const grouped = {};
-    favorites.forEach(game => {
-      const category = game.category || 'other';
-      if (!grouped[category]) {
-        grouped[category] = [];
-      }
-      grouped[category].push(game);
-    });
-    return grouped;
-  };
-
-  // 搜索收藏的游戏
-  const searchFavorites = (query) => {
-    if (!query.trim()) return favorites;
-    
-    const searchTerm = query.toLowerCase().trim();
-    return favorites.filter(game => 
-      game.title.toLowerCase().includes(searchTerm) ||
-      game.category?.toLowerCase().includes(searchTerm)
-    );
   };
 
   const value = {
@@ -220,19 +107,13 @@ export const FavoritesProvider = ({ children }) => {
     favorites,
     isLoaded,
     
-    // 操作方法
+    // 核心操作方法
     addToFavorites,
     removeFromFavorites,
     toggleFavorite,
     isFavorite,
-    
-    // 实用方法
     getFavoritesCount,
-    clearAllFavorites,
-    exportFavorites,
-    importFavorites,
-    getFavoritesByCategory,
-    searchFavorites
+    clearAllFavorites
   };
 
   return (
@@ -251,5 +132,4 @@ export const useFavorites = () => {
   return context;
 };
 
-// 导出Context供高级用法
 export { FavoritesContext }; 
