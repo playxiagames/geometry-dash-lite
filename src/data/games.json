@@ -5,7 +5,7 @@
       "id": "geometry-dash-lite",
       "title": "Geometry Dash Lite",
       "slug": "geometry-dash-lite",
-      "description": "Experience the addictive rhythm-based platformer that challenges your reflexes through perfectly synchronized obstacles and electronic beats. Master one-touch controls across increasingly difficult levels in this free version.",
+      "description": "Experience addictive rhythm-based platforming challenging reflexes through synchronized obstacles and beats. Master one-touch controls across difficult levels.",
       "longDescription": "Geometry Dash Lite is the free version of the popular rhythm-based platformer. Navigate your geometric character through increasingly difficult levels filled with spikes, platforms, and moving obstacles. Each level is perfectly synchronized with energetic electronic music, creating an immersive experience that challenges your timing and reflexes. The game features simple one-touch controls but requires precise timing to master.",
       "category": "geometry-dash",
       "tags": [
@@ -45,7 +45,7 @@
       "id": "geometry-dash",
       "title": "Geometry Dash",
       "slug": "geometry-dash",
-      "description": "The full rhythm-based platforming adventure featuring custom levels, multiple game modes, and hand-crafted challenges. Jump, fly, and flip through dangerous passages synchronized with epic soundtracks and creative obstacles.",
+      "description": "The complete rhythm platformer with custom levels, multiple game modes, and hand-crafted challenges. Jump, fly, and flip through dangerous spiky passages.",
       "longDescription": "Geometry Dash is the full version of the beloved rhythm-based platformer that started it all. Jump, fly, and flip your way through dangerous passages and spiky obstacles. The game features multiple game modes including cube, ship, ball, UFO, wave, robot, and spider. Each level is a unique audio-visual experience with custom soundtracks and hand-crafted obstacles that sync perfectly with the music.",
       "category": "geometry-dash",
       "tags": [
@@ -85,7 +85,7 @@
       "id": "geometry-dash-world",
       "title": "Geometry Dash World",
       "slug": "geometry-dash-world",
-      "description": "Explore mysterious worlds with unique themes and fresh soundtracks in this expansion. Travel through 8 challenging levels collecting stars to upgrade abilities while discovering new gameplay mechanics and visual effects.",
+      "description": "Explore mysterious worlds with unique themes and fresh soundtracks. Travel through challenging levels collecting stars to unlock new mechanics.",
       "longDescription": "Geometry Dash World expands the original game with new levels, music, and visual themes. Travel through different worlds, each with its own unique aesthetic and soundtrack. This version introduces new gameplay mechanics and visual effects while maintaining the core rhythm-based platforming that fans love. Perfect for players who want more content after mastering the original levels.",
       "category": "geometry-dash",
       "tags": [
@@ -125,7 +125,7 @@
       "id": "geometry-dash-subzero",
       "title": "Geometry Dash Subzero",
       "slug": "geometry-dash-subzero",
-      "description": "Navigate frozen landscapes with ice-themed obstacles and cool electronic beats. Features three winter-inspired levels with unique visual effects, slippery surfaces, and challenging timing requirements for cold adventure.",
+      "description": "Navigate frozen landscapes with ice-themed obstacles and cool electronic beats. Features three winter-inspired levels with unique visual effects.",
       "longDescription": "Geometry Dash SubZero brings a frosty twist to the series with ice-themed levels and cool electronic beats. Navigate through frozen landscapes filled with icy obstacles and slippery surfaces. The game features three main levels with winter-themed music and visual effects that create a unique atmosphere. Each level offers its own challenges with new obstacle patterns and timing requirements.",
       "category": "geometry-dash",
       "tags": [
@@ -165,7 +165,7 @@
       "id": "geometry-dash-meltdown",
       "title": "Geometry Dash Meltdown",
       "slug": "geometry-dash-meltdown",
-      "description": "Face explosive challenges with intense electronic music in this high-energy edition. Three fiery levels featuring industrial soundtracks, molten obstacles, and overwhelming visual effects test your reflexes to the limit.",
+      "description": "Face explosive challenges with intense electronic music. Three fiery levels feature industrial soundtracks and molten obstacles testing reflexes.",
       "longDescription": "Geometry Dash Meltdown cranks up the intensity with explosive-themed levels and high-energy soundtracks. Face fiery obstacles and molten challenges that test your reflexes to the limit. This edition features three intense levels with industrial and electronic music that perfectly matches the heated gameplay. The visual effects and obstacle designs create an atmosphere of controlled chaos.",
       "category": "geometry-dash",
       "tags": [
@@ -205,7 +205,7 @@
       "id": "geometry-dash-wave",
       "title": "Geometry Dash Wave",
       "slug": "geometry-dash-wave",
-      "description": "Master the challenging wave game mode with smooth, flowing movements through narrow passages. Focus on precise control and rhythm synchronization while navigating tight spaces requiring steady, controlled gameplay.",
+      "description": "Master the challenging wave game mode with smooth, flowing movements through narrow passages. Focus on precise control and rhythm synchronization.",
       "longDescription": "Geometry Dash Wave focuses on the challenging wave game mode, where smooth, flowing movements are key to success. Control your character as it moves in wave-like patterns through narrow passages and tight spaces. This version emphasizes the wave mechanics with levels specifically designed to test your ability to maintain smooth, controlled movement while following the rhythm of the music.",
       "category": "geometry-dash",
       "tags": [
@@ -245,7 +245,7 @@
       "id": "geometry-dash-spam",
       "title": "Geometry Dash Spam",
       "slug": "geometry-dash-spam",
-      "description": "Test your limits with rapid-fire inputs and lightning-fast reflexes in intense levels. Perfect for experienced players seeking extreme challenges with sequences demanding quick tapping and precise timing at high speeds.",
+      "description": "Test your limits with rapid-fire inputs and lightning-fast reflexes. Perfect for experienced players seeking extreme challenges with quick tapping sequences.",
       "longDescription": "Geometry Dash Spam challenges players with levels that require rapid, repeated inputs and lightning-fast reflexes. These levels feature sequences that demand quick tapping and precise timing at high speeds. Perfect for players who have mastered the basics and want to test their limits with intense, fast-paced gameplay that pushes reaction times to the extreme.",
       "category": "geometry-dash",
       "tags": [
@@ -285,7 +285,7 @@
       "id": "geometry-dash-breeze",
       "title": "Geometry Dash Breeze",
       "slug": "geometry-dash-breeze",
-      "description": "Enjoy a relaxed rhythm experience with smooth gameplay and melodic soundtracks. Beautiful visual designs and flowing challenges create a zen-like atmosphere while maintaining core platforming mechanics without extreme pressure.",
+      "description": "Enjoy a relaxed rhythm experience with smooth gameplay and melodic soundtracks. Beautiful visual designs create a zen-like atmosphere with core mechanics.",
       "longDescription": "Geometry Dash Breeze offers a more relaxed take on the series with smoother gameplay and calming soundtracks. While still challenging, these levels focus on flow and rhythm rather than intense difficulty spikes. Perfect for players who want to enjoy the core Geometry Dash experience without the extreme pressure, featuring beautiful visual designs and melodic music that creates a zen-like gaming experience.",
       "category": "geometry-dash",
       "tags": [
@@ -325,7 +325,7 @@
       "id": "retro-bowl",
       "title": "Retro Bowl",
       "slug": "retro-bowl",
-      "description": "Manage your football team to championship glory in nostalgic 8-bit style. Draft players, handle contracts, make strategic decisions, and control on-field action with simple yet deep gameplay mechanics and team management.",
+      "description": "Manage your football team to championship glory in nostalgic 8-bit style. Draft players, handle contracts, and control exciting on-field action.",
       "longDescription": "Retro Bowl combines team management with on-field action in a nostalgic 8-bit style football game. Draft players, manage your roster, handle the press, and lead your team to championship glory. The game features simple controls for passing plays while offering deep team management mechanics. Balance your salary cap, keep players happy, and make strategic decisions both on and off the field.",
       "category": "",
       "tags": [
@@ -361,7 +361,7 @@
       "id": "doodle-baseball",
       "title": "Doodle Baseball",
       "slug": "doodle-baseball",
-      "description": "Google's charming hand-drawn baseball game with intuitive timing-based batting mechanics. Step up to the plate, time your swings perfectly, and hit home runs in this delightful pick-up-and-play arcade experience.",
+      "description": "Google's charming hand-drawn baseball game with intuitive timing-based batting mechanics. Step up to the plate and hit home runs in this delightful arcade game.",
       "longDescription": "Doodle Baseball is Google's delightful take on America's pastime, featuring charming hand-drawn graphics and intuitive gameplay. Step up to the plate and time your swings to hit home runs and score points. The game captures the essence of baseball with simple mechanics that are easy to learn but challenging to master. Perfect for quick gaming sessions with its pick-up-and-play design.",
       "category": "google-games",
       "tags": [
@@ -395,7 +395,7 @@
       "id": "wordle",
       "title": "Wordle",
       "slug": "wordle",
-      "description": "The viral daily word puzzle challenging players to guess a 5-letter word in 6 attempts. Use color-coded feedback to deduce the answer through strategic letter placement and vocabulary knowledge in this addictive brain teaser.",
+      "description": "The viral daily word puzzle challenging players to guess a 5-letter word in 6 attempts. Use color-coded feedback to deduce the answer strategically.",
       "longDescription": "Wordle is the viral word puzzle phenomenon that took the world by storm. Guess the hidden 5-letter word in just 6 attempts using the color-coded feedback system. Green letters are in the correct position, yellow letters are in the word but wrong position, and gray letters aren't in the word at all. With only one puzzle per day, each game becomes a special challenge to share with friends.",
       "category": "",
       "tags": [
@@ -428,7 +428,7 @@
       "id": "solitaire",
       "title": "Solitaire",
       "slug": "solitaire",
-      "description": "The timeless card game classic requiring strategy and patience to build foundation piles from Ace to King. Move cards between tableau columns, plan ahead, and clear all cards with smooth digital gameplay and helpful features.",
+      "description": "The timeless card game classic requiring strategy and patience to build foundation piles from Ace to King. Move cards between columns and clear all cards.",
       "longDescription": "Solitaire is the timeless single-player card game that has entertained millions. Build four foundation piles from Ace to King in each suit by strategically moving cards between tableau columns. The game requires planning, strategy, and a bit of luck to successfully clear all cards. This digital version maintains the classic rules while offering smooth gameplay and helpful features.",
       "category": "",
       "tags": [
@@ -458,7 +458,7 @@
       "id": "sudoku",
       "title": "Sudoku",
       "slug": "sudoku",
-      "description": "Challenge your logical thinking with the beloved number puzzle filling 9x9 grids. Use pure deduction to place digits 1-9 in rows, columns, and boxes without repetition while training concentration and problem-solving skills.",
+      "description": "Challenge your logical thinking with the beloved number puzzle filling 9x9 grids. Use pure deduction to place digits 1-9 in rows, columns, and boxes.",
       "longDescription": "Sudoku is the beloved number puzzle that challenges your logical thinking. Fill the 9x9 grid so that each row, column, and 3x3 box contains all digits from 1 to 9. No math required - just pure logic and deduction. Start with the numbers already provided and use elimination techniques to solve the puzzle. Perfect for training your brain and improving concentration.",
       "category": "",
       "tags": [
@@ -488,7 +488,7 @@
       "id": "pac-man",
       "title": "Pac-Man",
       "slug": "pac-man",
-      "description": "The legendary arcade icon where you guide the yellow hero through mazes eating dots while avoiding ghosts. Collect power pellets to turn the tables, chase ghosts for bonus points, and experience timeless addictive gameplay.",
+      "description": "The legendary arcade icon where you guide the yellow hero through mazes eating dots while avoiding ghosts. Collect power pellets to turn the tables.",
       "longDescription": "Pac-Man is the legendary arcade game that defined a generation of gaming. Guide the yellow hero through mazes, eating dots while avoiding colorful ghosts. Collect power pellets to turn the tables and chase the ghosts for bonus points. With its simple yet addictive gameplay, iconic characters, and memorable sound effects, Pac-Man remains one of the most recognizable games in history.",
       "category": "google-games",
       "tags": [
@@ -518,7 +518,7 @@
       "id": "atari-breakout",
       "title": "Atari Breakout",
       "slug": "atari-breakout",
-      "description": "The pioneering brick-breaking arcade classic using paddle and ball physics. Destroy colorful blocks, control ball angles with paddle positioning, and advance through increasingly challenging patterns as the speed intensifies.",
+      "description": "The pioneering brick-breaking arcade classic using paddle and ball physics. Destroy colorful blocks and control ball angles with paddle positioning.",
       "longDescription": "Atari Breakout is the pioneering brick-breaking arcade game that inspired countless clones. Control your paddle to bounce the ball and destroy all the colored blocks above. As you break more blocks, the ball speeds up, increasing the challenge. Different colored blocks may have different point values, and clearing all blocks advances you to the next level with new patterns and increased difficulty.",
       "category": "google-games",
       "tags": [
@@ -548,7 +548,7 @@
       "id": "basketball",
       "title": "Basketball",
       "slug": "basketball",
-      "description": "Arcade-style hoops action with realistic ball physics and satisfying shooting mechanics. Time your shots perfectly, adjust power and angles, practice free throws or attempt trick shots in this engaging basketball experience.",
+      "description": "Arcade-style hoops action with realistic ball physics and satisfying shooting mechanics. Time your shots perfectly and adjust power and angles for accuracy.",
       "longDescription": "Basketball brings the excitement of shooting hoops to your browser with arcade-style gameplay. Time your shots perfectly to score baskets and rack up points. The game features realistic ball physics and satisfying shooting mechanics that reward good timing and aim. Whether you're practicing free throws or going for trick shots, this basketball game captures the fun of the sport.",
       "category": "google-games",
       "tags": [
@@ -578,7 +578,7 @@
       "id": "2048",
       "title": "2048",
       "slug": "2048",
-      "description": "The addictive sliding puzzle challenging strategic thinking and planning ahead. Merge numbered tiles by sliding in four directions, combine identical numbers to double values, and work toward the coveted 2048 tile achievement.",
+      "description": "The addictive sliding puzzle challenging strategic thinking. Merge numbered tiles by sliding in four directions to reach the coveted 2048 tile.",
       "longDescription": "2048 is the addictive sliding puzzle game that challenges you to combine numbered tiles. Slide tiles in four directions to merge identical numbers, doubling their value each time. Start with 2s and 4s, and work your way up to the coveted 2048 tile. The game requires strategic thinking and planning ahead, as the grid fills up quickly and wrong moves can end your game.",
       "category": "",
       "tags": [
@@ -610,7 +610,7 @@
       "id": "2048-drop",
       "title": "2048 Drop",
       "slug": "2048-drop",
-      "description": "A gravity-based twist on the classic 2048 where tiles fall and merge automatically. Plan drops carefully to create chain reactions, manage the rising stack, and reach higher numbers in this fast-paced puzzle variation.",
+      "description": "A gravity-based twist on the classic 2048 where tiles fall and merge automatically. Plan drops carefully to create chain reactions and reach higher numbers.",
       "longDescription": "2048 Drop puts a fresh spin on the classic 2048 formula by adding gravity mechanics. Numbered tiles fall from the top and merge when identical numbers touch. This creates a more dynamic and fast-paced experience compared to the original sliding puzzle. Plan your drops carefully to create chain reactions and reach higher numbers while managing the rising stack of tiles.",
       "category": "",
       "tags": [
@@ -642,7 +642,7 @@
       "id": "sprunki",
       "title": "Sprunki",
       "slug": "sprunki",
-      "description": "Create unique beats and melodies by mixing quirky characters in this interactive music game. Each character adds distinct sounds and rhythms, encouraging creative exploration and musical experimentation in an accessible format.",
+      "description": "Create unique beats and melodies by mixing quirky characters in this interactive music game. Each character adds distinct sounds for creative exploration.",
       "longDescription": "Sprunki is an innovative music creation game where you mix and match different characters to create unique beats and melodies. Each character contributes their own sound, rhythm, or vocal element to your musical composition. Experiment with different combinations to discover new sounds and create catchy tunes. The game encourages creativity and musical exploration in a fun, accessible way.",
       "category": "",
       "tags": [
@@ -672,7 +672,7 @@
       "id": "subway-surfers",
       "title": "Subway Surfers",
       "slug": "subway-surfers",
-      "description": "Sprint through subway tracks in this endless runner dodging trains and collecting coins. Grind rails, jump obstacles, use power-ups, and escape the inspector while experiencing vibrant graphics and increasing speed challenges.",
+      "description": "Sprint through subway tracks in this endless runner dodging trains and collecting coins. Grind rails, jump obstacles, use power-ups, and escape the inspector.",
       "longDescription": "Subway Surfers is the endless running game that has captivated millions worldwide. Sprint through subway tracks, dodge oncoming trains, and grind across colorful environments. Collect coins and power-ups while avoiding the grumpy inspector and his dog. With smooth controls, vibrant graphics, and constantly changing scenery, every run offers a new challenge as the speed increases.",
       "category": "",
       "tags": [
@@ -702,7 +702,7 @@
       "id": "minesweeper",
       "title": "Minesweeper",
       "slug": "minesweeper",
-      "description": "The iconic logic puzzle requiring careful deduction to clear minefields using number clues. Click squares to reveal adjacent mine counts, flag suspected mines, and clear the grid without detonation while sharpening analytical thinking.",
+      "description": "The iconic logic puzzle requiring careful deduction to clear minefields using number clues. Click squares to reveal adjacent mine counts and clear the grid.",
       "longDescription": "Minesweeper is the iconic logic puzzle that has challenged players for decades. Click on squares to reveal numbers that indicate how many mines are adjacent to that square. Use logical deduction to identify safe squares and flag potential mines. The goal is to clear the entire grid without detonating any mines. This timeless game sharpens logical thinking and pattern recognition skills.",
       "category": "",
       "tags": [
@@ -732,7 +732,7 @@
       "id": "google-minesweeper",
       "title": "Google Minesweeper",
       "slug": "google-minesweeper",
-      "description": "Google's polished take on the classic mine-finding puzzle with modern design and smooth interface. Maintains strategic depth while adding quality improvements, visual cues, and reliable mechanics for newcomers and veterans alike.",
+      "description": "Google's polished take on the classic mine-finding puzzle with modern design and smooth interface. Maintains strategic depth while adding quality improvements.",
       "longDescription": "Google Minesweeper brings the classic logic puzzle into the modern era with sleek design and smooth gameplay. This version maintains all the strategic depth of the original while adding quality-of-life improvements and a clean, intuitive interface. Perfect for both newcomers learning the rules and veterans who want a polished minesweeper experience with reliable mechanics.",
       "category": "google-games",
       "tags": [
@@ -762,7 +762,7 @@
       "id": "minecraft",
       "title": "Minecraft",
       "slug": "minecraft",
-      "description": "Build, explore, and survive in the groundbreaking sandbox world of infinite possibilities. Mine resources, craft tools, construct elaborate structures, and shape procedurally generated landscapes in this browser version of the iconic game.",
+      "description": "Build, explore, and survive in the groundbreaking sandbox world of infinite possibilities. Mine resources, craft tools, and construct elaborate structures.",
       "longDescription": "Minecraft is the groundbreaking sandbox game that lets you build anything you can imagine. Mine resources, craft tools, and construct elaborate structures in a procedurally generated world. Whether you prefer creative building, survival challenges, or exploring vast landscapes, Minecraft offers unlimited possibilities. This browser version brings the core Minecraft experience to your web browser.",
       "category": "",
       "tags": [
@@ -793,7 +793,7 @@
       "id": "dinosaur-game",
       "title": "Dinosaur Game",
       "slug": "dinosaur-game",
-      "description": "Chrome's beloved offline T-Rex runner featuring simple yet addictive endless gameplay. Jump over cacti, duck under pterodactyls, and survive the desert landscape in this pixelated Easter egg turned global phenomenon.",
+      "description": "Chrome's beloved offline T-Rex runner featuring simple yet addictive endless gameplay. Jump over cacti, duck under pterodactyls, and survive the desert.",
       "longDescription": "The Dinosaur Game, also known as Chrome Dino, is the beloved endless runner that appears when your internet connection fails. Control a pixelated T-Rex as it runs through a desert landscape, jumping over cacti and ducking under flying pterodactyls. The simple yet addictive gameplay has made this one of the most played games in the world, even though it was originally designed as an Easter egg.",
       "category": "google-games",
       "tags": [
@@ -823,7 +823,7 @@
       "id": "snake-game",
       "title": "Snake Game",
       "slug": "snake-game",
-      "description": "The timeless mobile classic where you guide a growing snake to eat food while avoiding walls and yourself. Simple controls create increasingly challenging gameplay as your snake lengthens and maneuvering space shrinks dramatically.",
+      "description": "The timeless mobile classic where you guide a growing snake to eat food while avoiding walls and yourself. Simple controls create challenging gameplay.",
       "longDescription": "Snake Game is the timeless arcade classic that defined mobile gaming. Control a growing snake as it moves around the screen, eating food to grow longer while avoiding walls and its own tail. The simple concept creates increasingly challenging gameplay as your snake grows and the available space shrinks. This version captures all the addictive gameplay of the original with smooth controls and classic graphics.",
       "category": "google-games",
       "tags": [
@@ -853,7 +853,7 @@
       "id": "wacky-flip",
       "title": "Wacky Flip",
       "slug": "wacky-flip",
-      "description": "A challenging puzzle game requiring strategic board flipping to clear all blocks. Plan moves carefully, use edges wisely, and think ahead through increasingly complex levels in this simple yet addictive brain-teasing experience.",
+      "description": "A challenging puzzle game requiring strategic board flipping to clear all blocks. Plan moves carefully and think ahead through increasingly complex levels.",
       "longDescription": "Wacky Flip is a fun and challenging flip game where you need to flip the board to clear all the blocks. The game is a simple and addictive puzzle game that will keep you entertained for hours.",
       "category": "google-games",
       "tags": [
@@ -881,7 +881,7 @@
       "id": "geometry-dash-3d",
       "title": "Geometry Dash 3D",
       "slug": "geometry-dash-3d",
-      "description": "Experience rhythm-based platforming in stunning three dimensions with enhanced depth effects. Navigate challenging geometric landscapes with 2.5D and 3D elements while maintaining core mechanics in an immersive visual experience.",
+      "description": "Experience rhythm-based platforming in stunning three dimensions with enhanced depth effects. Navigate challenging geometric landscapes with 3D elements.",
       "longDescription": "Geometry Dash 3D takes the rhythm-based platformer to a new dimension with immersive 3D graphics and enhanced visual effects. Navigate through challenging geometric landscapes with both 2.5D and 3D elements that create realistic depth and perspective. The game maintains the core Geometry Dash mechanics while adding a fresh visual experience that makes every jump, flip, and dash more engaging than ever.",
       "category": "geometry-dash",
       "tags": [
@@ -912,7 +912,7 @@
       "id": "geometry-vibes-monster",
       "title": "Geometry Vibes Monster",
       "slug": "geometry-vibes-monster",
-      "description": "Pilot your spaceship through intense battles against 8 unique monsters with distinct attack patterns. Features endless survival mode and multiplayer racing, combining quick reflexes with strategic pattern recognition gameplay.",
+      "description": "Pilot your spaceship through intense battles against 8 unique monsters with distinct attack patterns. Features endless survival mode and multiplayer racing.",
       "longDescription": "Geometry Vibes Monster transforms the classic geometry experience into an intense monster battle arena. Control your spaceship through waves of attacks from 8 different monsters, each with unique behaviors and assault patterns. The game features both endless survival mode and competitive multiplayer races, combining quick reflexes with strategic monster pattern recognition. With vibrant retro graphics and dynamic gameplay that increases in difficulty, every encounter becomes a test of your piloting skills.",
       "category": "geometry-dash",
       "tags": [
@@ -943,7 +943,7 @@
       "id": "geometry-dash-deadlocked",
       "title": "Geometry Dash Deadlocked",
       "slug": "geometry-dash-deadlocked",
-      "description": "The ultimate demon difficulty featuring laser-shooting monsters, teleportation portals, and epic boss battles. Master all game modes through this 99-second gauntlet offering the highest official reward of 15 stars.",
+      "description": "The ultimate demon difficulty featuring laser-shooting monsters, teleportation portals, and epic boss battles. Master all game modes through this gauntlet.",
       "longDescription": "Geometry Dash Deadlocked is the infamous 20th official level and one of the most challenging demon difficulties in the series. This level introduces revolutionary mechanics including green jump rings, teleportation portals, key-and-lock systems, and epic boss fights with laser-shooting monsters. With 15 stars as the highest reward in any official level, Deadlocked tests every skill you've mastered across multiple game modes including cube, ship, ball, UFO, wave, and robot forms through a 99-second gauntlet of precision platforming.",
       "category": "geometry-dash",
       "tags": [
@@ -974,7 +974,7 @@
       "id": "geometry-stars",
       "title": "Geometry Stars",
       "slug": "geometry-stars",
-      "description": "Navigate dark caves collecting stars to upgrade characters in this rhythm-based adventure. Features 8 challenging levels with HD visuals, dynamic soundtrack, new monsters, and obstacles requiring perfect timing and synchronization.",
+      "description": "Navigate dark caves collecting stars to upgrade characters in this rhythm-based adventure. Features 8 challenging levels with HD visuals and dynamic soundtrack.",
       "longDescription": "Geometry Stars offers a captivating rhythm-based adventure through mysterious dark caverns filled with spiky obstacles and glowing collectibles. Navigate 8 challenging levels while collecting stars to upgrade your character's abilities and unlock new skins. The game features stunning HD visuals, a dynamic soundtrack, and introduces new monsters and obstacles that keep the gameplay fresh and exciting. Perfect your timing and rhythm to conquer increasingly difficult challenges and discover all the secrets hidden within.",
       "category": "geometry-dash",
       "tags": [
@@ -1005,7 +1005,7 @@
       "id": "geometry-dash-back-on-track",
       "title": "Geometry Dash Back on Track",
       "slug": "geometry-dash-back-on-track",
-      "description": "The iconic second level introducing core rhythm platforming with its catchy electronic soundtrack. Well-designed difficulty curve teaches essential skills through accessible gameplay while offering memorable music and balanced challenges.",
+      "description": "The iconic second level introducing core rhythm platforming with its catchy electronic soundtrack. Well-designed difficulty curve teaches essential skills.",
       "longDescription": "Geometry Dash Back on Track is the beloved second official level that perfectly introduces players to the core mechanics of rhythm-based platforming. Known for its catchy electronic soundtrack and well-designed difficulty curve, this level teaches essential skills like timing, jump sequences, and obstacle recognition. As one of the most iconic early levels, Back on Track combines accessible gameplay with memorable music that has made it a fan favorite for years.",
       "category": "geometry-dash",
       "tags": [
@@ -1036,7 +1036,7 @@
       "id": "geometry-dash-clutterfunk",
       "title": "Geometry Dash Clutterfunk",
       "slug": "geometry-dash-clutterfunk",
-      "description": "Navigate chaotic maze-like structures with overwhelming visual effects and complex obstacle patterns. The intense electronic soundtrack matches frantic gameplay testing your ability to process multiple threats simultaneously.",
+      "description": "Navigate chaotic maze-like structures with overwhelming visual effects and complex obstacle patterns. Intense electronic soundtrack matches frantic gameplay.",
       "longDescription": "Geometry Dash Clutterfunk is the notorious 11th official level that lives up to its name with absolutely chaotic and cluttered gameplay. This level introduces some of the most complex obstacle patterns in the series, featuring maze-like structures, rapid-fire spikes, and disorienting visual effects that challenge even experienced players. The intense electronic soundtrack perfectly matches the frantic gameplay, creating an overwhelming but exhilarating experience that tests your ability to process multiple threats simultaneously.",
       "category": "geometry-dash",
       "tags": [
@@ -1067,7 +1067,7 @@
       "id": "geometry-dash-base-after-base",
       "title": "Geometry Dash Base After Base",
       "slug": "geometry-dash-base-after-base",
-      "description": "Experience revolutionary multi-mode gameplay with iconic dubstep soundtrack perfectly synchronized to challenges. Seamlessly transitions between cube, ship, wave, and UFO modes creating an unforgettable audio-visual platforming experience.",
+      "description": "Experience revolutionary multi-mode gameplay with iconic dubstep soundtrack. Seamlessly transitions between cube, ship, wave modes with synchronized challenges.",
       "longDescription": "Geometry Dash Base After Base is the 12th official level renowned for its incredible dubstep soundtrack and revolutionary multi-mode gameplay. This level showcases the full spectrum of Geometry Dash mechanics, seamlessly transitioning between cube, ship, wave, and UFO modes. The intense bass drops perfectly synchronize with the most challenging sections, creating an unforgettable audio-visual experience. With its signature purple and blue color scheme and perfectly balanced difficulty, Base After Base represents the pinnacle of level design in the series.",
       "category": "geometry-dash",
       "tags": [
@@ -1098,7 +1098,7 @@
       "id": "geometry-dash-theory-of-everything",
       "title": "Geometry Dash Theory of Everything",
       "slug": "geometry-dash-theory-of-everything",
-      "description": "Conquer the hardest insane difficulty with rapid dual-mode sections and gravity portals. Control two characters simultaneously while navigating perspective flips and intense sequences pushing skill and endurance to extremes.",
+      "description": "Conquer the hardest insane difficulty with rapid dual-mode sections and gravity portals. Control two characters simultaneously through perspective flips.",
       "longDescription": "Geometry Dash Theory of Everything is the 13th official level and widely considered one of the most challenging in the main series. This insane difficulty level pushes players to their limits with incredibly fast-paced gameplay, complex dual-mode sections where you control two characters simultaneously, and innovative gravity portals that flip your perspective. The electronic soundtrack builds to intense climaxes that perfectly match the most demanding platforming sequences, making this level the ultimate test of skill and endurance.",
       "category": "geometry-dash",
       "tags": [
@@ -1129,7 +1129,7 @@
       "id": "geometry-dash-zodiac",
       "title": "Geometry Dash Zodiac",
       "slug": "geometry-dash-zodiac",
-      "description": "Former #1 extreme demon mega-collaboration featuring 20 builder sections across 3+ minutes. Tests every skill through all game modes with 196,957 objects creating one of the most challenging collaborative experiences ever created.",
+      "description": "Former #1 extreme demon mega-collaboration featuring 20 builder sections across 3+ minutes. Tests every skill through all game modes with collaborative design.",
       "longDescription": "Geometry Dash Zodiac is an infamous Extreme Demon mega-collaboration featuring 20 sections created by renowned builders. This 3-minute 14-second masterpiece held the #1 spot on the Demonlist for 338 days, pushing players to their absolute limits with brutal timing challenges, memory-based sections, and innovative mechanics. From RicoLP's technical opening to Enlex's mind-bending finale, every segment tests different skills through cube, ship, ball, UFO, wave, spider, and robot modes. With 196,957 objects and Creo's 'Sphere' soundtrack, Zodiac represents the pinnacle of collaborative level design.",
       "category": "geometry-dash",
       "tags": [
@@ -1160,7 +1160,7 @@
       "id": "geometry-dash-nine-circles",
       "title": "Geometry Dash Nine Circles",
       "slug": "geometry-dash-nine-circles",
-      "description": "The legendary trend-starting level featuring iconic strobing wave sections and intense visual effects. This hard demon redefined level creation with its red color scheme, dubstep soundtrack, and revolutionary wave gameplay design.",
+      "description": "The legendary trend-starting level featuring iconic strobing wave sections and intense visual effects. This hard demon redefined level creation with red scheme.",
       "longDescription": "Geometry Dash Nine Circles by Zobros is the most influential level in Geometry Dash history, launching the entire Nine Circles trend that continues today. This Hard Demon features the signature strobing wave section with intense flashing effects that obscure visibility during the song's epic drop. With its iconic red color scheme, perfectly synchronized dubstep soundtrack by NIGHTkilla (Rukkus), and revolutionary visual design, Nine Circles redefined what was possible in level creation. Containing three challenging user coins and 14,894 objects across 92 seconds, this masterpiece ranks #3 on GDToday's 100 Greatest Levels of All Time.",
       "category": "geometry-dash",
       "tags": [
@@ -1191,7 +1191,7 @@
       "id": "geometry-dash-cataclysm",
       "title": "Geometry Dash Cataclysm",
       "slug": "geometry-dash-cataclysm",
-      "description": "Classic extreme demon featuring intricate ship sequences and precise cube timing demanding perfection. Balanced difficulty progression with memorable soundtrack creates an unforgiving but fair challenge testing every gameplay aspect.",
+      "description": "Classic extreme demon featuring intricate ship sequences and precise cube timing demanding perfection. Balanced difficulty progression with memorable music.",
       "longDescription": "Geometry Dash Cataclysm by Ggb0y is a legendary Extreme Demon level that represents a milestone in the evolution of challenging gameplay. Created during the golden age of 1.9 demons, this level features intricate ship sequences, tight wave sections, and precise cube timing that demand absolute perfection. Known for its balanced difficulty progression and memorable soundtrack, Cataclysm has inspired countless creators and remains a benchmark for modern extreme demons. With its iconic red and black color scheme and meticulously crafted obstacles, this level offers an unforgiving but fair challenge that tests every aspect of your Geometry Dash skills.",
       "category": "geometry-dash",
       "tags": [
@@ -1223,7 +1223,7 @@
       "id": "geometry-dash-bloodbath",
       "title": "Geometry Dash Bloodbath",
       "slug": "geometry-dash-bloodbath",
-      "description": "The most downloaded extreme demon featuring brutal ship flying and frame-perfect timing throughout. This legendary mega-collaboration held #1 for over a year, showcasing unique builder challenges across its intense 100-second duration.",
+      "description": "The most downloaded extreme demon featuring brutal ship flying and frame-perfect timing throughout. This legendary mega-collaboration held #1 for over a year.",
       "longDescription": "Geometry Dash Bloodbath is the most downloaded Extreme Demon in Geometry Dash history, created by a team of legendary builders including Riot, Michigun, and others. This 1.9 mega-collaboration held the #1 spot on the Demonlist for over a year, featuring brutally precise ship flying, chaotic dual sequences, and frame-perfect timing throughout its 100-second duration. With over 7 million downloads and Dimrain47's 'At the Speed of Light' as its soundtrack, Bloodbath represents the pinnacle of collaborative level design. Each section by different creators showcases unique challenges, from Michigun's technical precision to Crack's monster-filled ship mazes.",
       "category": "geometry-dash",
       "tags": [
@@ -1255,7 +1255,7 @@
       "id": "geometry-vibes-x-ball",
       "title": "Geometry Vibes X Ball",
       "slug": "geometry-vibes-x-ball",
-      "description": "Master ball mechanics with rolling physics and gravity switches in this rhythm-based adventure. Navigate obstacle courses requiring precise momentum control and timing while enjoying colorful neon aesthetics and electronic soundtracks.",
+      "description": "Master ball mechanics with rolling physics and gravity switches in this rhythm-based adventure. Navigate obstacle courses requiring precise momentum control.",
       "longDescription": "Geometry Vibes X Ball combines the classic ball gameplay of Geometry Dash with enhanced physics and vibrant visual effects. This game emphasizes the unique rolling mechanics where timing gravity switches becomes crucial for success. With its colorful neon aesthetic and electronic soundtrack, players must navigate through obstacle courses that require precise control of the ball's momentum and gravity changes. The game features multiple difficulty levels, each designed to test different aspects of ball control, from simple gravity flips to complex momentum-based challenges that require perfect timing and spatial awareness.",
       "category": "geometry-dash",
       "tags": [
@@ -1287,7 +1287,7 @@
       "id": "geometry-open-world",
       "title": "Geometry Open World",
       "slug": "geometry-open-world",
-      "description": "Explore a dynamic geometric universe with ship combat, upgrades, and epic boss battles. Combines classic platforming with action-RPG elements, offering freedom to chart your course while battling enemies and collecting power-ups.",
+      "description": "Explore a dynamic geometric universe with ship combat, upgrades, and epic boss battles. Combines classic platforming with action-RPG elements.",
       "longDescription": "Geometry Open World revolutionizes the traditional Geometry Dash formula by introducing open-world exploration, combat mechanics, and strategic upgrades. Players control a geometric ship navigating through a vibrant 2D world filled with enemies, obstacles, and formidable bosses. Unlike linear levels, this game offers freedom to explore different areas, collect power-ups, and upgrade your ship's abilities including shields and cannons. The dynamic gameplay combines classic geometric platforming with action-RPG elements, creating an engaging experience where players chart their own course through treacherous territories while battling various geometric enemies.",
       "category": "geometry-dash",
       "tags": [
@@ -1319,7 +1319,7 @@
       "id": "geometry-vibes",
       "title": "Geometry Vibes",
       "slug": "geometry-vibes",
-      "description": "Feel the rhythm through perfectly synchronized electronic beats and pulsating visual effects. Multiple game modes with distinct themes challenge timing while creating an immersive experience where every action aligns with music.",
+      "description": "Feel the rhythm through perfectly synchronized electronic beats and pulsating visual effects. Multiple game modes with distinct themes challenge timing.",
       "longDescription": "Geometry Vibes captures the essence of rhythm-based platforming with its perfectly synchronized electronic soundtrack and pulsating visual effects. This game emphasizes the musical connection between player actions and audio cues, creating an immersive experience where every jump, flip, and movement aligns with the beat. Featuring multiple game modes with distinct visual themes and musical styles, Geometry Vibes challenges players to maintain perfect timing while navigating through increasingly complex geometric obstacles. The game's vibrant color palette and smooth animations create a mesmerizing visual experience that complements its outstanding audio design.",
       "category": "geometry-dash",
       "tags": [
@@ -1351,7 +1351,7 @@
       "id": "geometry-arrow",
       "title": "Geometry Arrow",
       "slug": "geometry-arrow",
-      "description": "Pilot arrow-shaped spacecraft through geometric mazes using unique diagonal flight mechanics. Master distinctive movement patterns navigating intricate layouts from easy to demon difficulty requiring absolute precision and spatial awareness.",
+      "description": "Pilot arrow-shaped spacecraft through geometric mazes using unique diagonal flight mechanics. Master distinctive movement patterns navigating intricate layouts.",
       "longDescription": "Geometry Arrow offers a fresh take on geometric platforming by introducing arrow-shaped spacecraft navigation with unique diagonal flight patterns. Inspired by Geometry Dash's wave mode, this game features six challenging levels ranging from Easy to Demon difficulty. Players must master the arrow's distinctive flight mechanics: pressing and holding to propel diagonally upward, then releasing to descend. The game emphasizes precision and spatial awareness as players navigate through intricate geometric mazes filled with chaotic blocks, twisting corners, and trap-filled passages that require absolute accuracy to survive.",
       "category": "geometry-dash",
       "tags": [
@@ -1383,7 +1383,7 @@
       "id": "geometry-jump",
       "title": "Geometry Jump",
       "slug": "geometry-jump",
-      "description": "Master fundamental platforming with emphasis on perfect jump timing and momentum control. Clean geometric aesthetic with progressively challenging levels tests pure navigation skill through variable jump heights and precise landings.",
+      "description": "Master fundamental platforming with emphasis on perfect jump timing and momentum control. Clean geometric aesthetic with progressively challenging levels.",
       "longDescription": "Geometry Jump focuses on the fundamental art of platforming with an emphasis on perfect jump timing and momentum control. This game strips away complex mechanics to highlight the pure skill of navigation through geometric obstacles. Players must demonstrate mastery of jump physics, including variable jump heights, momentum conservation, and precise landing techniques. With its clean geometric aesthetic and progressively challenging levels, Geometry Jump serves as both an accessible entry point for newcomers and a skill-testing challenge for experienced players seeking to perfect their fundamental platforming abilities.",
       "category": "geometry-dash",
       "tags": [
@@ -1415,7 +1415,7 @@
       "id": "geometry-subzero",
       "title": "Geometry Subzero",
       "slug": "geometry-subzero",
-      "description": "Brave frozen geometric landscapes in this official expansion with crystalline obstacles and arctic challenges. Three winter-themed levels feature unique ice mechanics, snow-covered platforms, and specially composed electronic music.",
+      "description": "Brave frozen geometric landscapes in this official expansion with crystalline obstacles. Three winter-themed levels feature unique ice mechanics.",
       "longDescription": "Geometry Dash SubZero is the official subzero-themed expansion that brings players into a frozen geometric world filled with crystalline obstacles and ice-cold challenges. Featuring three meticulously crafted levels with winter-themed soundtracks, this game introduces unique visual elements like snowflakes, ice crystals, and arctic lighting effects. Each level presents a different aspect of subzero gameplay, from slippery ice mechanics to snow-covered platforms that require adapted strategies. With its distinctive blue and white color palette and specially composed electronic music, SubZero offers a refreshing take on the classic Geometry Dash formula while maintaining the series' signature challenging gameplay.",
       "category": "geometry-dash",
       "tags": [
@@ -1447,7 +1447,7 @@
       "id": "geometry-freezenova",
       "title": "Geometry Freezenova",
       "slug": "geometry-freezenova",
-      "description": "Experience 10 distinct game modes from Spike Frenzy to Final Lap, each testing different skills. Collect coins to customize cube skins while progressing through gravity chaos, orbital bounces, and combined challenge modes.",
+      "description": "Experience 10 distinct game modes from Spike Frenzy to Final Lap, each testing different skills. Collect coins to customize cube skins while progressing.",
       "longDescription": "Geometry FreezeNova offers a comprehensive geometric platforming experience with 10 distinct game modes, each presenting unique challenges and visual themes. From the basic 'Spikes Frenzy' to the chaotic 'Gravity Chaos' where platforms flip upside down, each mode tests different skills and reflexes. Players progress through increasingly complex scenarios including orbital bounces, directional arrows, and the ultimate 'Final Lap' that combines elements from all previous modes. With customizable cube skins available through coin collection and a focus on rhythm-based gameplay synchronized to electronic music, FreezeNova provides endless variety and replayability for geometric gaming enthusiasts.",
       "category": "geometry-dash",
       "tags": [
@@ -1479,7 +1479,7 @@
       "id": "geometry-game-3d",
       "title": "Geometry Game 3D",
       "slug": "geometry-game-3d",
-      "description": "Revolutionary three-dimensional platforming adding depth and perspective to classic gameplay. Navigate obstacles in full 3D space with dynamic camera angles, multi-layered platforms, and spatial challenges requiring new awareness skills.",
+      "description": "Revolutionary three-dimensional platforming adding depth and perspective to classic gameplay. Navigate obstacles in full 3D space with dynamic.",
       "longDescription": "Geometry Game 3D revolutionizes the traditional geometric platforming formula by introducing three-dimensional gameplay mechanics and spatial challenges. This innovative take on the genre requires players to navigate not just left and right, but also into and out of the screen, creating a truly immersive geometric experience. With enhanced graphics, depth perception challenges, and 3D obstacle navigation, players must master new spatial awareness skills while maintaining the precise timing that defines geometric platformers. The game features dynamic camera angles, multi-layered platforms, and obstacles that utilize the full 3D space to create unique and engaging challenges.",
       "category": "geometry-dash",
       "tags": [
@@ -1491,7 +1491,7 @@
       "thumbnail": "https://images.geometry-dash-lite.org/geometry-game-3d-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/geometry-game-3d-thumbnail.webp",
       "playCount": 780000,
-      "rating": 4.0,
+      "rating": 4,
       "controls": [
         "WASD or Arrow keys for 3D movement",
         "Space to jump with depth awareness",
@@ -1511,7 +1511,7 @@
       "id": "geometry-world",
       "title": "Geometry World",
       "slug": "geometry-world",
-      "description": "Journey through an expansive universe spanning multiple themed worlds with unique mechanics. From neon cities to ancient temples, unlock areas, discover secrets, and experience hundreds of hours of varied geometric challenges.",
+      "description": "Journey through an expansive universe spanning multiple themed worlds with unique mechanics. From neon cities to ancient temples, unlock areas,.",
       "longDescription": "Geometry World presents an ambitious geometric platforming adventure that spans multiple themed worlds, each with its own visual style, soundtrack, and unique gameplay mechanics. Players journey through diverse environments ranging from futuristic neon cities to ancient geometric temples, each world introducing new challenges and mechanical innovations. This comprehensive experience combines the best elements of classic geometric platforming with RPG-style world progression, allowing players to unlock new areas, discover hidden secrets, and experience a cohesive narrative through geometric gameplay. With its vast scope and varied content, Geometry World offers hundreds of hours of geometric challenges across beautifully crafted themed environments.",
       "category": "geometry-dash",
       "tags": [
@@ -1543,7 +1543,7 @@
       "id": "geometry-meltdown",
       "title": "Geometry Meltdown",
       "slug": "geometry-meltdown",
-      "description": "Official RobTop spin-off featuring Seven Seas, Viking Arena, and Airborne Robots with escalating difficulty. Experience collapse mechanics where platforms crumble beneath you, creating intense suspense across three epic themed levels.",
+      "description": "Official RobTop spin-off featuring Seven Seas, Viking Arena, and Airborne Robots with escalating difficulty. Experience collapse mechanics where platforms cr...",
       "longDescription": "Geometry Meltdown is the official RobTop spin-off that brings players into a world of collapse and chaos. Featuring three meticulously crafted levels - Seven Seas, Viking Arena, and Airborne Robots - each with escalating difficulty and unique themes. The Seven Seas offers oceanic challenges with wave-like platforming, Viking Arena presents Nordic-inspired battles with warrior aesthetics, and Airborne Robots delivers high-tech aerial combat. The game introduces collapse mechanics where platforms can crumble beneath you, creating intense moments of suspense. With its signature electronic soundtrack and progressive difficulty curve, Meltdown offers both newcomers and veterans a thrilling geometric experience.",
       "category": "geometry-dash",
       "tags": [
@@ -1575,7 +1575,7 @@
       "id": "geometry-dash-sonic-wave-rebirth",
       "title": "Geometry Dash Sonic Wave Rebirth",
       "slug": "geometry-dash-sonic-wave-rebirth",
-      "description": "Enhanced remake of the legendary Sonic Wave with improved visuals and refined Nine Circles mechanics. Features better visual clarity while maintaining demanding wave sequences requiring pixel-perfect timing and unwavering concentration.",
+      "description": "Enhanced remake of the legendary Sonic Wave with improved visuals and refined Nine Circles mechanics. Features better visual clarity and demanding challenges.",
       "longDescription": "Geometry Dash Sonic Wave Rebirth is the definitive remake of the iconic Sonic Wave, crafted to address the original's controversy while maintaining its legendary difficulty. This version features enhanced visual design, improved decoration, and refined gameplay mechanics that stay true to the Nine Circles formula. Players face the same challenging wave sequences and tight corridors that made the original famous, but with better visual clarity and more polished effects. The level maintains the signature dark blue color scheme while introducing modern 2.0+ decoration elements. Known for its demanding wave sections that require pixel-perfect timing and unwavering concentration, Sonic Wave Rebirth represents the evolution of one of Geometry Dash's most influential extreme demons.",
       "category": "geometry-dash",
       "tags": [
@@ -1607,7 +1607,7 @@
       "id": "geometry-dash-sonic-wave",
       "title": "Geometry Dash Sonic Wave",
       "slug": "geometry-dash-sonic-wave",
-      "description": "The original extreme demon sparking major controversy with unprecedented difficulty through relentless wave sequences. Dark blue Nine Circles style with frame-perfect precision requirements that redefined community limits of possibility.",
+      "description": "The original extreme demon sparking major controversy with unprecedented difficulty through relentless wave sequences. Dark blue Nine Circles style with fram...",
       "longDescription": "Geometry Dash Sonic Wave is the original extreme demon that sparked one of the biggest controversies in Geometry Dash history. Created by Cyclic and verified by Sunix, this level introduced unprecedented difficulty through its relentless wave sequences and tight corridors. Built in the Nine Circles style with a distinctive dark blue color scheme, Sonic Wave features multiple challenging segments including cube sections with precise timings, ship sequences with gravity changes, and the infamous wave portions that require frame-perfect precision. The level's journey from being accused of being impossible to legitimate verification captivated the entire community. With its demanding gameplay that pushes players to their absolute limits, Sonic Wave remains one of the most influential and respected extreme demons in the game's history.",
       "category": "geometry-dash",
       "tags": [
@@ -1639,7 +1639,7 @@
       "id": "geometry-dash-yatagarasu",
       "title": "Geometry Dash Yatagarasu",
       "slug": "geometry-dash-yatagarasu",
-      "description": "Epic mythology-inspired extreme demon mega-collaboration known as 'the final Demon of 2.0'. Diverse builder sections test every skill aspect through challenging sequences creating an atmospheric journey through mystical landscapes.",
+      "description": "Epic mythology-inspired extreme demon mega-collaboration known as 'the final Demon of 2.0'. Diverse builder sections test every skill aspect through.",
       "longDescription": "Geometry Dash Yatagarasu is a legendary extreme demon mega-collaboration hosted by Viprin and Riot, verified and published by TrusTa. Inspired by the three-legged crow from Japanese folklore, this level earned the title 'the final Demon of 2.0' and served as a spiritual successor to Bloodbath. The level features diverse sections created by multiple talented builders, each bringing their unique style while maintaining cohesive gameplay flow. From challenging cube sequences to intense ship flying and precise wave navigation, Yatagarasu tests every aspect of player skill. The level's mythology-inspired decoration creates an atmospheric journey through mystical landscapes, while its demanding gameplay mechanics require thousands of attempts to master. With three secret coins hidden throughout its challenging course, Yatagarasu remains one of the most respected and influential extreme demons in Geometry Dash history.",
       "category": "geometry-dash",
       "tags": [
@@ -1671,7 +1671,7 @@
       "id": "geometry-dash-maze-maps",
       "title": "Geometry Dash Maze Maps",
       "slug": "geometry-dash-maze-maps",
-      "description": "Navigate complex labyrinthine structures combining platforming with maze-solving mechanics. Features branching paths, hidden routes, and puzzle elements requiring spatial reasoning and quick decision-making through intricate pathways.",
+      "description": "Navigate complex labyrinthine structures combining platforming with maze-solving mechanics. Features branching paths and puzzle elements requiring reasoning.",
       "longDescription": "Geometry Dash Maze Maps presents a unique twist on traditional geometric platforming by incorporating complex maze-like structures and navigation challenges. Players must carefully traverse through intricate pathways, dead ends, and hidden routes while maintaining the rhythm-based timing that defines the series. The level features multiple branching paths, secret passages, and puzzle elements that require both platforming skill and spatial reasoning. With its labyrinthine design, players must memorize routes, discover shortcuts, and master the art of quick decision-making when faced with multiple path choices. The maze theme is enhanced by mysterious atmospheric decoration and ambient sound design that creates an immersive exploration experience unlike traditional linear levels.",
       "category": "geometry-dash",
       "tags": [
@@ -1703,7 +1703,7 @@
       "id": "geometry-dash-blast-processing",
       "title": "Geometry Dash Blast Processing",
       "slug": "geometry-dash-blast-processing",
-      "description": "Official level 17 introducing revolutionary wave mode with 3D effects and challenging sequences. Combines traditional modes with game-changing wave mechanics, featuring Waterflame's signature soundtrack and innovative visual design elements.",
+      "description": "Official level 17 introducing revolutionary wave mode with 3D effects and challenging sequences. Combines traditional modes with game-changing wave mechanics...",
       "longDescription": "Geometry Dash Blast Processing is the iconic 17th official level that introduced the game-changing wave mode to the Geometry Dash universe. Created by Neptune with Waterflame's signature soundtrack, this level revolutionized gameplay by featuring the first major wave sequences that would become a series staple. The level combines traditional cube, ship, ball, and UFO segments with the newly introduced wave mode, creating diverse and challenging gameplay experiences. Notable for its 3D visual embellishments and innovative design, Blast Processing requires players to master precise wave navigation through tight corridors while adapting to various game mode transitions. With three hidden coins scattered throughout its course and a perfect blend of challenging but fair gameplay, this level represents a pivotal moment in Geometry Dash evolution.",
       "category": "geometry-dash",
       "tags": [
@@ -1735,7 +1735,7 @@
       "id": "geometry-dash-ultra-violence",
       "title": "Geometry Dash Ultra Violence",
       "slug": "geometry-dash-ultra-violence",
-      "description": "Medium demon featuring spectacular decoration, animated boss battles, and apocalyptic storytelling. Opening chapter of the Apocalypse Trilogy combines cinematic visuals with challenging gameplay creating an immersive narrative experience.",
+      "description": "Medium demon featuring spectacular decoration, animated boss battles, and apocalyptic storytelling. Opening chapter of the Apocalypse Trilogy combines cinema...",
       "longDescription": "Geometry Dash Ultra Violence is an impressive medium demon level created by Xender Game, featuring some of the most spectacular decoration and animated boss battles in the community. As the opening chapter of Xender Game's Apocalypse Trilogy, this level combines engaging storytelling with challenging gameplay mechanics. The level showcases incredible visual effects, dynamic lighting, and cinematic boss encounters that create an immersive apocalyptic atmosphere. Players navigate through diverse sections including intense cube sequences, precise ship flying, and challenging wave segments, all while experiencing the unfolding narrative of a world in chaos. Despite being originally intended as an insane demon, the level's current medium demon rating makes it accessible to a broader range of players while still providing substantial challenge and visual spectacle.",
       "category": "geometry-dash",
       "tags": [
@@ -1767,7 +1767,7 @@
       "id": "geometry-dash-clubstep",
       "title": "Geometry Dash Clubstep",
       "slug": "geometry-dash-clubstep",
-      "description": "The first official demon level featuring deceptive obstacles and complex mechanics requiring 10 coins to unlock. Historic level 14 with fake spikes, gravity manipulation, and 38 devil faces setting standards for future demons.",
+      "description": "The first official demon level featuring deceptive obstacles and complex mechanics. Historic level 14 with fake spikes, gravity manipulation,.",
       "longDescription": "Geometry Dash Clubstep holds the distinguished honor of being the 14th official level and the very first demon difficulty level in Geometry Dash history. Created by Neptune with DJ-Nate's iconic soundtrack, this groundbreaking level introduced players to the concept of demon-level difficulty with its complex mechanics and deceptive design elements. The level features 38 distinctive 'devil face' constructions throughout its course, along with challenging fake spikes, fading blocks, and gravity manipulation sequences that require exceptional skill to navigate. Players must collect 10 secret coins before attempting this level, and three additional secret coins are hidden within the level itself. With its innovative use of confusing fake obstacles and precise timing requirements, Clubstep set the standard for all future demon levels and remains a beloved challenge that tests every aspect of Geometry Dash mastery.",
       "category": "geometry-dash",
       "tags": [
@@ -1799,7 +1799,7 @@
       "id": "geometry-dash-silent-circles",
       "title": "Geometry Dash Silent Circles",
       "slug": "geometry-dash-silent-circles",
-      "description": "Controversial extreme demon once considered humanly impossible with micro-gaps requiring 15+ clicks per second. Silent theme with minimal audio forces pure visual timing through the most demanding wave gameplay ever created.",
+      "description": "Controversial extreme demon once considered humanly impossible with micro-gaps requiring ultra-precise timing. Silent theme forces pure visual timing.",
       "longDescription": "Geometry Dash Silent Circles is an extreme demon level that became the center of one of the most heated controversies in Geometry Dash history. Created by multiple builders in the Nine Circles style, this level was considered humanly impossible for years due to its extremely tight wave sections, requiring inputs faster than 15 clicks per second through micro-gaps. The level's verification journey was fraught with accusations, skepticism, and heated debates within the community. With its distinctive silent theme and minimal audio cues, players must rely purely on visual timing through some of the most demanding wave gameplay ever created. The level's impossibly precise requirements pushed the boundaries of what was considered achievable in Geometry Dash, making its eventual verification a landmark moment that redefined the limits of human capability in the game.",
       "category": "geometry-dash",
       "tags": [
@@ -1831,7 +1831,7 @@
       "id": "geometry-dash-bloodlust",
       "title": "Geometry Dash Bloodlust",
       "slug": "geometry-dash-bloodlust",
-      "description": "Legendary extreme demon achieving #1 Demon List position with revolutionary decoration and visual effects. Combines extremely challenging gameplay with artistic excellence through dynamic backgrounds, particles, and atmospheric hellish landscapes.",
+      "description": "Legendary extreme demon achieving #1 Demon List position with revolutionary decoration. Combines extremely challenging gameplay with artistic excellence thro...",
       "longDescription": "Geometry Dash Bloodlust is a legendary extreme demon created by Knobbelboy that achieved the prestigious #1 position on the official Demon List. This masterpiece showcases some of the most innovative decoration and visual effects ever seen in Geometry Dash, featuring dynamic backgrounds, particle effects, and atmospheric lighting that create an immersive hellish landscape. The level combines extremely challenging gameplay with artistic excellence, requiring precise timing through intense cube sequences, demanding ship sections, and brutal wave segments. Its groundbreaking use of visual effects, including custom animations and seamless transitions between gameplay modes, set new standards for level design in the community. With its epic scale, demanding difficulty, and stunning presentation, Bloodlust represents the pinnacle of extreme demon level creation and remains one of the most respected achievements in Geometry Dash history.",
       "category": "geometry-dash",
       "tags": [
@@ -1863,7 +1863,7 @@
       "id": "geometry-dash-kenos",
       "title": "Geometry Dash Kenos",
       "slug": "geometry-dash-kenos",
-      "description": "Artistic masterpiece extreme demon showcasing unprecedented decoration quality pushing editor boundaries. Breathtaking visual effects, seamless transitions, and cinematic experience merge technical gameplay with extraordinary artistic expression.",
+      "description": "Artistic masterpiece extreme demon showcasing unprecedented decoration quality pushing editor boundaries. Breathtaking visual effects, seamless transitions, ...",
       "longDescription": "Geometry Dash Kenos is an extraordinary extreme demon created by Zobros that represents the absolute pinnacle of artistic achievement in level design. This masterpiece features breathtaking decoration that pushes the boundaries of what's possible within the Geometry Dash editor, incorporating stunning visual effects, seamless transitions, and atmospheric elements that create a truly cinematic experience. The level combines its incredible artistic vision with challenging gameplay that tests players across all skill areas, featuring complex sequences that require precise timing and exceptional focus. From its haunting soundtrack to its meticulously crafted visual storytelling, Kenos demonstrates how technical gameplay and artistic expression can merge to create something truly extraordinary. The level's impact on the community extends far beyond its difficulty rating, inspiring countless creators to pursue higher artistic standards in their own work.",
       "category": "geometry-dash",
       "tags": [
@@ -1895,10 +1895,17 @@
       "id": "speed-stars",
       "title": "Speed Stars",
       "slug": "speed-stars",
-      "description": "Physics-based sprinting game testing rhythm and precision through alternating tap controls. Compete in track events from 60m dashes to 800m runs, mastering realistic running mechanics where mistimed taps cause stumbles.",
+      "description": "Physics-based sprinting game testing rhythm and precision through alternating tap controls. Compete in track events from 60m dashes to 800m runs.",
       "longDescription": "Speed Stars is a physics-based sprinting game that tests your rhythm and precision. Control your athlete by alternating taps to simulate running strides, competing in various track events from explosive 60m dashes to grueling 800m runs. The game features realistic physics where mistimed taps cause stumbles, while perfect rhythm propels you to record-breaking speeds. Choose from different race modes including hurdles that require precise timing to clear obstacles.",
       "category": "",
-      "tags": ["sprinting", "rhythm", "track", "athletics", "sports", "timing"],
+      "tags": [
+        "sprinting",
+        "rhythm",
+        "track",
+        "athletics",
+        "sports",
+        "timing"
+      ],
       "iframeUrl": "https://epicfreegames78.github.io/speed-stars/",
       "thumbnail": "https://images.geometry-dash-lite.org/speed-stars-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/speed-stars-thumbnail.webp",
@@ -1924,10 +1931,17 @@
       "id": "fortnite-unblocked",
       "title": "Fortnite Unblocked",
       "slug": "fortnite-unblocked",
-      "description": "Browser-based battle royale where 100 players fight for survival on a massive island. Build structures, gather resources, collect weapons, and stay within the storm circle while eliminating opponents to achieve victory.",
+      "description": "Browser-based battle royale where 100 players fight for survival on a massive island. Build structures, gather resources, collect weapons, and stay.",
       "longDescription": "Fortnite Unblocked brings the iconic battle royale experience to your browser. Drop onto a massive island with up to 100 players and fight to be the last one standing. Collect weapons, gather resources, and build structures to gain tactical advantages. The game features the classic Fortnite building mechanics, allowing you to construct walls, ramps, and towers for defense or gaining high ground. As the storm closes in, you'll need to stay within the safe zone while eliminating opponents.",
       "category": "",
-      "tags": ["battle royale", "building", "survival", "multiplayer", "shooting", "strategy"],
+      "tags": [
+        "battle royale",
+        "building",
+        "survival",
+        "multiplayer",
+        "shooting",
+        "strategy"
+      ],
       "iframeUrl": "https://gamesfreez.github.io/Fortnite/",
       "thumbnail": "https://images.geometry-dash-lite.org/fortnite-unblocked-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/fortnite-unblocked-thumbnail.webp",
@@ -1955,10 +1969,17 @@
       "id": "slope-2",
       "title": "Slope 2",
       "slug": "slope-2",
-      "description": "The enhanced sequel featuring a ball rolling down infinite slopes at increasing speeds. Navigate narrow passages, avoid red barriers, collect diamonds, and maintain control as acceleration tests reflexes and concentration limits.",
+      "description": "The enhanced sequel featuring a ball rolling down infinite slopes at increasing speeds. Navigate narrow passages, avoid red barriers, collect diamonds,.",
       "longDescription": "Slope 2 is the highly anticipated sequel to the beloved endless runner that captivated millions of players. Control a ball as it rolls down an infinite slope filled with deadly obstacles and treacherous drops. The game features improved physics, enhanced graphics, and even more challenging obstacle patterns than its predecessor. As you progress, the speed increases dramatically, testing your reflexes and concentration to the limit. Navigate through narrow passages, avoid red barriers, and collect diamonds while maintaining perfect control of your ever-accelerating ball.",
       "category": "",
-      "tags": ["endless runner", "ball", "slope", "speed", "reflex", "arcade"],
+      "tags": [
+        "endless runner",
+        "ball",
+        "slope",
+        "speed",
+        "reflex",
+        "arcade"
+      ],
       "iframeUrl": "https://1games.io/embed/slope-2",
       "thumbnail": "https://images.geometry-dash-lite.org/slope-2-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/slope-2-thumbnail.webp",
@@ -1984,10 +2005,17 @@
       "id": "flying-kong",
       "title": "Flying Kong",
       "slug": "flying-kong",
-      "description": "Classic arcade platformer starring a heroic flying gorilla navigating aerial challenges. Master controlled flight through diverse environments filled with obstacles, enemies, and collectibles while enjoying smooth, intuitive flying mechanics.",
+      "description": "Classic arcade platformer starring a heroic flying gorilla navigating aerial challenges. Master controlled flight through diverse environments filled with.",
       "longDescription": "Flying Kong is an exciting arcade platformer that puts you in control of a heroic flying gorilla on an epic adventure. Inspired by classic arcade games, this title combines smooth flight mechanics with challenging platform elements as you soar through diverse environments filled with obstacles, enemies, and collectibles. Master the art of controlled flight while avoiding hazards, collecting power-ups, and defeating enemies across multiple themed worlds. The game features responsive controls that make flying feel natural and intuitive, while progressively challenging levels keep you engaged throughout your aerial journey.",
       "category": "",
-      "tags": ["flying", "gorilla", "arcade", "adventure", "platformer", "retro"],
+      "tags": [
+        "flying",
+        "gorilla",
+        "arcade",
+        "adventure",
+        "platformer",
+        "retro"
+      ],
       "iframeUrl": "https://1games.io/embed/flying-kong",
       "thumbnail": "https://images.geometry-dash-lite.org/flying-kong-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/flying-kong-thumbnail.webp",
@@ -2013,10 +2041,17 @@
       "id": "italian-brainrot-clicker",
       "title": "Italian Brainrot Clicker",
       "slug": "italian-brainrot-clicker",
-      "description": "Viral meme clicker featuring AI-generated Italian characters with absurd names producing hilarious gibberish. Click to spawn bizarre personalities like 'Bombardino Crocodilo' creating chaotic screens of comedic Italian-sounding nonsense.",
+      "description": "Viral meme clicker featuring AI-generated Italian characters with absurd names producing hilarious gibberish. Click to spawn bizarre personalities like 'Bomb...",
       "longDescription": "Italian Brainrot Clicker is a hilariously chaotic clicker game that became a viral sensation thanks to its AI-generated Italian characters with wonderfully absurd names like 'Tralalero Tralala' and 'Bombardino Crocodilo'. Click to spawn these bizarre characters who produce increasingly ridiculous Italian-sounding gibberish and meme-worthy sound effects. The game combines the addictive nature of clicker mechanics with internet meme culture, creating an unexpectedly entertaining experience that's equal parts amusing and bewildering. Watch as your screen fills with these comical characters while earning points to unlock even more outrageous personalities.",
       "category": "",
-      "tags": ["clicker", "meme", "viral", "comedy", "Italian", "absurd"],
+      "tags": [
+        "clicker",
+        "meme",
+        "viral",
+        "comedy",
+        "Italian",
+        "absurd"
+      ],
       "iframeUrl": "https://1games.io/embed/italian-brainrot-clicker",
       "thumbnail": "https://images.geometry-dash-lite.org/italian-brainrot-clicker-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/italian-brainrot-clicker-thumbnail.webp",
@@ -2042,10 +2077,17 @@
       "id": "stickman-clash",
       "title": "Stickman Clash",
       "slug": "stickman-clash",
-      "description": "Physics-based fighting game featuring stickman warriors battling with various weapons in dynamic combat. Master timing, positioning, and weapon mechanics while engaging in brutal battles across different arenas with realistic impacts.",
+      "description": "Physics-based fighting game featuring stickman warriors battling with various weapons in dynamic combat. Master timing, positioning, and weapon mechanics .",
       "longDescription": "Stickman Clash is an action-packed physics-based fighting game that pits stickman warriors against each other in brutal combat scenarios. Choose from a variety of weapons including swords, clubs, spears, and ranged weapons as you engage in epic battles across different arenas. The game features realistic physics that make every hit, throw, and impact feel satisfying and dynamic. Master different fighting techniques, learn to time your attacks perfectly, and develop strategies to overcome opponents with superior gear or numbers. Whether in single combat or chaotic multiplayer battles, victory requires skill, timing, and tactical thinking.",
       "category": "",
-      "tags": ["stickman", "fighting", "physics", "weapons", "combat", "multiplayer"],
+      "tags": [
+        "stickman",
+        "fighting",
+        "physics",
+        "weapons",
+        "combat",
+        "multiplayer"
+      ],
       "iframeUrl": "https://g2.igroutka.ru/lib/crazy/games/stickman-clash/",
       "thumbnail": "https://images.geometry-dash-lite.org/stickman-clash-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/stickman-clash-thumbnail.webp",
@@ -2072,10 +2114,17 @@
       "id": "golf-hit",
       "title": "Golf Hit",
       "slug": "golf-hit",
-      "description": "Precision mini golf with intuitive aim-and-shoot mechanics across creatively designed courses. Navigate complex layouts with ramps, barriers, and moving platforms while calculating angles, power, and timing for perfect shots.",
+      "description": "Precision mini golf with intuitive aim-and-shoot mechanics across creatively designed courses. Navigate complex layouts with ramps, barriers, and moving.",
       "longDescription": "Golf Hit is an engaging mini golf game that tests your precision and strategic thinking across a variety of creatively designed courses. Use intuitive aim-and-shoot mechanics to navigate your ball through increasingly complex layouts filled with ramps, barriers, moving platforms, and tricky obstacles. Each hole presents unique challenges that require you to carefully calculate angles, power, and timing to achieve the perfect shot. The game features multiple themed environments, from classic mini golf courses to more fantastical settings, each with their own physics-based puzzles to solve.",
       "category": "",
-      "tags": ["mini golf", "precision", "aim", "physics", "puzzle", "sports"],
+      "tags": [
+        "mini golf",
+        "precision",
+        "aim",
+        "physics",
+        "puzzle",
+        "sports"
+      ],
       "iframeUrl": "https://1games.io/embed/golf-hit",
       "thumbnail": "https://images.geometry-dash-lite.org/golf-hit-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/golf-hit-thumbnail.webp",
@@ -2102,10 +2151,17 @@
       "id": "chicken-jockey-clicker",
       "title": "Chicken Jockey Clicker",
       "slug": "chicken-jockey-clicker",
-      "description": "Minecraft-inspired clicker celebrating the rare chicken jockey mob combination. Click to spawn baby zombies riding chickens, build collections, upgrade abilities, and enjoy one of gaming's most unexpectedly entertaining interactions.",
+      "description": "Minecraft-inspired clicker celebrating the rare chicken jockey mob combination. Click to spawn baby zombies riding chickens and build amusing collections.",
       "longDescription": "Chicken Jockey Clicker is a delightfully absurd clicker game inspired by one of Minecraft's rarest and most amusing mob combinations - the chicken jockey. This occurs when a baby zombie spawns riding a chicken, creating a hilariously chaotic scene. In this game, you click to spawn and collect these rare creatures, watching as baby zombies ride chickens around your screen in typical Minecraft fashion. Build up your collection, upgrade your spawning abilities, and experience the joy of one of gaming's most unexpectedly entertaining mob interactions. Perfect for Minecraft fans who appreciate the game's quirky and unexpected moments.",
       "category": "",
-      "tags": ["Minecraft", "clicker", "chicken jockey", "mob", "rare", "collection"],
+      "tags": [
+        "Minecraft",
+        "clicker",
+        "chicken jockey",
+        "mob",
+        "rare",
+        "collection"
+      ],
       "iframeUrl": "https://1games.io/embed/chicken-jockey-clicker",
       "thumbnail": "https://images.geometry-dash-lite.org/chicken-jockey-clicker-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/chicken-jockey-clicker-thumbnail.webp",
@@ -2132,10 +2188,17 @@
       "id": "crazy-animal-city",
       "title": "Crazy Animal City",
       "slug": "crazy-animal-city",
-      "description": "Vibrant simulation managing a city populated by animals with unique personalities and behaviors. Watch elephants navigate traffic and penguins run shops while building districts and handling hilarious urban animal situations.",
+      "description": "Vibrant simulation managing a city populated by animals with unique personalities and behaviors. Watch elephants navigate traffic and penguins run shops .",
       "longDescription": "Crazy Animal City is a charming simulation game that brings together the wild and the urban in a delightfully chaotic way. Manage a bustling city populated by various animals, each with their own personalities, needs, and behaviors. Watch as elephants navigate traffic, penguins run ice cream stands, and lions work as taxi drivers in this whimsical world. Build and customize different districts, ensure your animal citizens are happy, and deal with the hilarious situations that arise when the animal kingdom meets city life. The game combines city-building elements with animal care mechanics, creating a unique and entertaining experience.",
       "category": "",
-      "tags": ["animals", "city", "simulation", "management", "funny", "casual"],
+      "tags": [
+        "animals",
+        "city",
+        "simulation",
+        "management",
+        "funny",
+        "casual"
+      ],
       "iframeUrl": "https://1games.io/embed/crazy-animal-city",
       "thumbnail": "https://images.geometry-dash-lite.org/crazy-animal-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/crazy-animal-thumbnail.webp",
@@ -2162,10 +2225,17 @@
       "id": "ragdoll-playground",
       "title": "Ragdoll Playground",
       "slug": "ragdoll-playground",
-      "description": "Physics sandbox offering complete freedom to experiment with ragdoll characters and interactive objects. Create elaborate scenarios, test theories, build contraptions, and enjoy realistic physics simulation focusing on creativity over violence.",
+      "description": "Physics sandbox offering complete freedom to experiment with ragdoll characters. Create elaborate scenarios, test theories, and build creative contraptions.",
       "longDescription": "Ragdoll Playground is an engaging physics sandbox game that gives you complete freedom to experiment with ragdoll characters and a vast array of interactive objects. Create elaborate scenarios using realistic physics simulation, where every impact, explosion, and interaction behaves authentically. The game features various tools, weapons, and environmental hazards that you can use to create everything from simple experiments to complex chain reactions. While the game includes realistic damage and physics effects, it's all about creativity and experimentation rather than gratuitous violence. Build contraptions, test physics theories, or simply enjoy watching the realistic ragdoll physics in action.",
       "category": "",
-      "tags": ["physics", "sandbox", "ragdoll", "simulation", "creative", "experiment"],
+      "tags": [
+        "physics",
+        "sandbox",
+        "ragdoll",
+        "simulation",
+        "creative",
+        "experiment"
+      ],
       "iframeUrl": "https://1games.io/embed/ragdoll-playground",
       "thumbnail": "https://images.geometry-dash-lite.org/ragdoll-playground-thumbnail.webp",
       "screenshot": "https://images.geometry-dash-lite.org/ragdoll-playground-thumbnail.webp",
@@ -2188,4 +2258,4 @@
       "relatedGameIds": []
     }
   ]
-} 
+}
