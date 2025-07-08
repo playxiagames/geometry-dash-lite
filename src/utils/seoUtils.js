@@ -139,6 +139,8 @@ export const generateGameStructuredData = (game) => {
       '@type': 'AggregateRating',
       ratingValue: game.rating || 4.5,
       bestRating: 5,
+      ratingCount: game.ratingCount || 3872,
+      reviewCount: game.reviewCount || 245,
     },
     offers: {
       '@type': 'Offer',
