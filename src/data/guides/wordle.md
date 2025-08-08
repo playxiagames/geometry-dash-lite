@@ -1,4 +1,4 @@
-# Wordle - Complete Strategy Guide
+# Wordle Complete Strategy Guide
 
 ## Basic Strategy
 
@@ -47,6 +47,62 @@ Wordle is the viral word puzzle phenomenon that challenges players to guess a hi
 **Position Ignoring**: Not utilizing the positional information from yellow letters leads to inefficient guessing. Always consider where yellow letters might fit in remaining positions.
 
 **Pattern Blindness**: Missing common English word patterns or endings that would be obvious given the available information. Develop familiarity with typical word structures.
+
+## Statistical Analysis and Word Selection
+
+**Letter Frequency Distribution**: Understanding the statistical frequency of letters in 5-letter English words can significantly improve your strategy. The most common letters in order are: E, A, R, I, O, T, N, S. Vowels appear in 97% of 5-letter words, making them essential to test early.
+
+**Optimal Starting Word Research**: Studies have analyzed thousands of Wordle solutions to identify mathematically optimal starting words. SLATE, CRANE, and TRACE perform exceptionally well because they test high-frequency letters in common positions. These words typically eliminate 60-70% of possible solutions in one guess.
+
+**Position-Based Letter Frequency**: Different positions favor different letters. Position 1 commonly features S, C, B, T, P. Position 5 frequently ends with S, E, D, Y, R. Middle positions (2-4) often contain vowels and liquid consonants (R, L). Use this knowledge to predict likely letter placements.
+
+**Double Letter Strategy**: Approximately 31% of Wordle answers contain repeated letters. Common double letter words include those with double L (SKILL, STILL), double S (CLASS, GRASS), double E (SWEET, STEEL), and double O (GOOSE, LOOSE). Don't overlook these possibilities in later guesses.
+
+## Advanced Pattern Recognition Techniques
+
+**Common Word Endings**: Recognize frequent 5-letter word endings to speed up solving. Popular endings include -ING, -ION, -TION (truncated), -LY, -ER, -ED, -AL, -IC. When you identify letters that suggest these patterns, consider words that fit these common structures.
+
+**Consonant Cluster Identification**: Understanding common consonant combinations helps predict word structure. Frequent clusters include ST-, SP-, SC-, -NT, -ND, -ST, -CH, -TH, -SH. These patterns appear regularly in English and can guide letter placement decisions.
+
+**Vowel Pattern Analysis**: Different vowel arrangements create distinct word families. Patterns like A-E (FRAME, SPACE), O-E (PHONE, STONE), I-E (PRIME, SHINE) are extremely common. Identifying the vowel pattern early helps narrow possibilities significantly.
+
+**Morphological Awareness**: Understanding word formation helps predict structures. Many words have prefixes (UN-, RE-, IN-) or suffixes (-ED, -ER, -LY). Recognizing these patterns from partial information accelerates solving.
+
+## Psychological Aspects and Mental Game
+
+**Pressure Management**: Wordle's daily limit creates unique pressure compared to unlimited puzzle games. Develop strategies to stay calm and think clearly when facing your final guesses. Take breaks between guesses to avoid rushed decisions.
+
+**Confirmation Bias Avoidance**: Don't get locked into early theories about the word. Stay flexible and consider alternative possibilities even when one solution seems obvious. This mental flexibility prevents tunnel vision that leads to failures.
+
+**Pattern Matching vs. Systematic Thinking**: Balance intuitive pattern recognition with systematic logical elimination. Both approaches are valuable, but systematic thinking provides more consistent results, especially in difficult puzzles.
+
+**Error Recovery Strategies**: When you realize you've made a suboptimal guess, don't panic. Use the information gained to inform better decisions. Even "bad" guesses provide valuable information about what the word isn't.
+
+## Daily Puzzle Optimization
+
+**Consistent Starting Strategy**: Develop a reliable 2-3 word opening sequence that you use consistently. This builds muscle memory and ensures you gather similar information patterns daily, making subsequent decisions easier.
+
+**Time Management**: Unlike timed puzzles, Wordle allows unlimited thinking time between guesses. Use this advantage to thoroughly consider all possibilities before making each guess. Rushing leads to mistakes.
+
+**Streak Maintenance**: Protecting your solving streak requires balancing aggressive play (trying to solve quickly) with conservative play (ensuring you solve at all). Prioritize solving over speed when your streak is at stake.
+
+**Learning from Failures**: When you don't solve a puzzle, analyze what went wrong. Was it poor letter choice, missed patterns, or psychological pressure? Use failures as learning opportunities to improve future performance.
+
+## Community and Competitive Elements
+
+**Sharing Strategy**: The daily communal aspect of Wordle creates opportunities to discuss strategies. Engage with others to learn new approaches, but avoid spoilers that ruin the puzzle for others.
+
+**Score Optimization**: Some players focus on minimizing average guesses needed. This requires aggressive information-gathering strategies and willingness to take calculated risks on early solutions.
+
+**Variation Games**: Understanding core Wordle strategy helps with variations like Dordle (two words), Quordle (four words), or Absurdle (adversarial). The fundamental principles transfer while requiring adaptation to new constraints.
+
+## Conclusion: Mastering Daily Word Puzzles
+
+Wordle represents the perfect balance of accessibility and depth in puzzle design. While anyone can play, consistent success requires developing systematic strategies, understanding language patterns, and maintaining disciplined thinking under pressure. The daily nature creates a unique gaming experience that rewards both analytical thinking and vocabulary knowledge.
+
+Success in Wordle isn't just about knowing words—it's about efficient information gathering, logical deduction, and strategic thinking. Master these skills, and you'll not only improve your Wordle performance but also develop cognitive abilities that transfer to many other problem-solving contexts.
+
+The five-letter grid awaits your next guess. Will you solve today's puzzle efficiently?
 
 ## Score Optimization
 

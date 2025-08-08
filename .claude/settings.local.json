@@ -11,7 +11,9 @@
       "Bash(sed:*)",
       "Bash(rm:*)",
       "Bash(mv:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(find:*)",
+      "Bash(jq:*)"
     ],
     "deny": []
   }

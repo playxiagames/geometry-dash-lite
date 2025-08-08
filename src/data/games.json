@@ -815,7 +815,10 @@
         "Same strategic principles apply",
         "Good for learning minesweeper basics"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "google-minesweeper.md",
+      "difficulty": 4,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 23,
@@ -846,7 +849,10 @@
         "Experiment with different block combinations",
         "Explore to find rare materials and biomes"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "minecraft.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 24,
@@ -876,7 +882,10 @@
         "Game speed increases over time",
         "Focus on rhythm and timing"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "dinosaur-game.md",
+      "difficulty": 2,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 25,
@@ -906,7 +915,10 @@
         "Don't grow too fast in tight spaces",
         "Think several moves ahead"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "snake-game.md",
+      "difficulty": 2,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 26,
@@ -2022,7 +2034,10 @@
         "Collect materials by harvesting objects in the environment",
         "Listen for enemy footsteps and gunfire to locate opponents"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "fortnite-unblocked.md",
+      "difficulty": 5,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 61,
@@ -2058,7 +2073,10 @@
         "Don't panic when speed increases - stay focused",
         "Practice makes perfect - each run teaches you new patterns"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "slope-2.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 62,
