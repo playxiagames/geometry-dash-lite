@@ -19,4 +19,4 @@
 
 # 预连接到关键域名
 /*
-  Link: <https://1games.io>; rel=preconnect; crossorigin, <https://scratch.mit.edu>; rel=preconnect; crossorigin 
+  Link: <https://1games.io>; rel=preconnect; crossOrigin, <https://scratch.mit.edu>; rel=preconnect; crossOrigin 

@@ -256,7 +256,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <script defer data-domain="geometry-dash-lite.org" src="https://click.pageview.click/js/script.js"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2966211794899578" crossorigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2966211794899578" crossOrigin="anonymous"></script>
       </head>
       <body>
         <ThemeProvider>

@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation';
+import { promises as fs } from 'fs';
+import path from 'path';
 import Layout from '../../../components/Layout';
 import GamePlayer from '../../../components/GamePlayer';
 import { GameGrid, SidebarGameList } from '../../../components/GameCard';
@@ -11,6 +13,20 @@ import {
   generateGameMetadata 
 } from '../../../utils/gameData';
 import { generateGamePageMetadata, generateGameStructuredData } from '../../../utils/seoUtils';
+
+// 加载游戏攻略内容
+async function loadGuideContent(guideFile) {
+  if (!guideFile) return null;
+  
+  try {
+    const guidePath = path.join(process.cwd(), 'src', 'data', 'guides', guideFile);
+    const content = await fs.readFile(guidePath, 'utf8');
+    return content;
+  } catch (error) {
+    console.error('Failed to load guide:', error);
+    return null;
+  }
+}
 
 // 验证游戏 slug 是否有效
 function isValidGameSlug(slug) {
@@ -67,7 +83,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function GamePage({ params }) {
+export default async function GamePage({ params }) {
   // 验证 slug 格式
   if (!isValidGameSlug(params.gameSlug)) {
     notFound();
@@ -82,6 +98,9 @@ export default function GamePage({ params }) {
   // 获取相关游戏
   const relatedGames = getRandomGames(6, game.id);
   const moreGames = getRandomGames(12, game.id);
+
+  // 加载攻略内容
+  const guideContent = await loadGuideContent(game.guideFile);
 
   // 面包屑导航
   const breadcrumbItems = [
@@ -139,8 +158,8 @@ export default function GamePage({ params }) {
         </div>
 
         {/* Game Strategy Guide */}
-        {game.guideFile && (
-          <GameGuide guideFile={game.guideFile} game={game} />
+        {guideContent && (
+          <GameGuide guideContent={guideContent} game={game} />
         )}
       </div>
     </Layout>

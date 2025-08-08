@@ -253,7 +253,10 @@
         "geometry-dash-breeze",
         "geometry-dash-world",
         "geometry-dash"
-      ]
+      ],
+      "guideFile": "geometry-dash-wave.md",
+      "difficulty": 4,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 7,
@@ -293,7 +296,10 @@
         "geometry-dash-breeze",
         "geometry-dash-world",
         "geometry-dash"
-      ]
+      ],
+      "guideFile": "geometry-dash-spam.md",
+      "difficulty": 5,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 8,
@@ -333,7 +339,10 @@
         "geometry-dash-spam",
         "geometry-dash-world",
         "geometry-dash"
-      ]
+      ],
+      "guideFile": "geometry-dash-breeze.md",
+      "difficulty": 2,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 9,
@@ -369,7 +378,10 @@
         "retro-bowl-unblocked",
         "retro-bowl-25",
         "retro-bowl-3kh0"
-      ]
+      ],
+      "guideFile": "retro-bowl.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 10,
@@ -403,7 +415,10 @@
       ],
       "relatedGameIds": [
         "google-doodle-baseball"
-      ]
+      ],
+      "guideFile": "doodle-baseball.md",
+      "difficulty": 2,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 11,
@@ -436,7 +451,10 @@
       ],
       "relatedGameIds": [
         ""
-      ]
+      ],
+      "guideFile": "wordle.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 12,
@@ -466,7 +484,10 @@
         "Don't rush to move cards to foundations",
         "Plan several moves ahead when possible"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "solitaire.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 13,
@@ -496,7 +517,10 @@
         "Look for naked and hidden singles",
         "Take notes to track possible numbers"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "sudoku.md",
+      "difficulty": 4,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 14,
@@ -526,7 +550,10 @@
         "Save power pellets for strategic moments",
         "Clear one side of the maze at a time"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "pac-man.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 15,
@@ -556,7 +583,10 @@
         "Don't let the ball get past your paddle",
         "Target blocks strategically for better angles"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "atari-breakout.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 16,
