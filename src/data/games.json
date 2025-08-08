@@ -616,7 +616,10 @@
         "Adjust your power based on distance",
         "Follow through with your mouse movement"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "basketball.md",
+      "difficulty": 2,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 17,
@@ -648,7 +651,10 @@
       ],
       "relatedGameIds": [
         "2048-drop"
-      ]
+      ],
+      "guideFile": "2048.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 18,
@@ -710,7 +716,10 @@
         "Listen for rhythm patterns",
         "Don't be afraid to experiment with weird combos"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "sprunki.md",
+      "difficulty": 2,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 20,
@@ -740,7 +749,10 @@
         "Complete daily challenges for rewards",
         "Save up coins for character upgrades"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "subway-surfers.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 21,
@@ -770,7 +782,10 @@
         "Flag suspected mines to avoid mistakes",
         "Look for patterns in number arrangements"
       ],
-      "relatedGameIds": []
+      "relatedGameIds": [],
+      "guideFile": "minesweeper.md",
+      "difficulty": 4,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 22,
