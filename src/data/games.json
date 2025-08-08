@@ -38,7 +38,10 @@
         "geometry-dash-spam",
         "geometry-dash-breeze",
         "geometry-dash-world"
-      ]
+      ],
+      "guideFile": "geometry-dash-lite.md",
+      "difficulty": 2,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 2,
@@ -78,7 +81,10 @@
         "geometry-dash-spam",
         "geometry-dash-breeze",
         "geometry-dash-world"
-      ]
+      ],
+      "guideFile": "geometry-dash.md",
+      "difficulty": 4,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 3,
@@ -118,7 +124,10 @@
         "geometry-dash-spam",
         "geometry-dash-breeze",
         "geometry-dash"
-      ]
+      ],
+      "guideFile": "geometry-dash-world.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 4,
@@ -158,7 +167,10 @@
         "geometry-dash-breeze",
         "geometry-dash-world",
         "geometry-dash"
-      ]
+      ],
+      "guideFile": "geometry-dash-subzero.md",
+      "difficulty": 3,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 5,
@@ -198,7 +210,10 @@
         "geometry-dash-breeze",
         "geometry-dash-world",
         "geometry-dash"
-      ]
+      ],
+      "guideFile": "geometry-dash-meltdown.md",
+      "difficulty": 4,
+      "lastUpdated": "2025-01-08"
     },
     {
       "number": 6,

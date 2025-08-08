@@ -4,6 +4,7 @@ import GamePlayer from '../../../components/GamePlayer';
 import { GameGrid, SidebarGameList } from '../../../components/GameCard';
 import { GameDescription } from '../../../components/Layout';
 import { Breadcrumb } from '../../../components/Navigation';
+import GameGuide from '../../../components/GameGuide';
 import { 
   getGameBySlug, 
   getRandomGames,
@@ -136,6 +137,11 @@ export default function GamePage({ params }) {
         <div className="mt-8">
           <GameDescription game={game} />
         </div>
+
+        {/* Game Strategy Guide */}
+        {game.guideFile && (
+          <GameGuide guideFile={game.guideFile} game={game} />
+        )}
       </div>
     </Layout>
   );
