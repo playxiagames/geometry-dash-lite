@@ -1,0 +1,278 @@
+{
+  "blogPosts": [
+    {
+      "slug": "top-10-browser-games-2025",
+      "title": "Top 10 Browser Games 2025: The Ultimate Gaming Experience",
+      "excerpt": "Discover the most engaging and addictive browser games of 2025. From puzzle adventures to action-packed challenges, explore games that deliver console-quality experiences directly in your web browser.",
+      "category": "rankings",
+      "tags": ["browser games", "top games", "2025", "rankings", "reviews"],
+      "author": "Gaming Expert Team",
+      "publishDate": "2025-01-08",
+      "readTime": 12,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/top-browser-games-2025.webp",
+      "featured": true
+    },
+    {
+      "slug": "geometry-dash-complete-review",
+      "title": "Geometry Dash Complete Review: Master the Ultimate Rhythm Challenge",
+      "excerpt": "An in-depth analysis of Geometry Dash's gameplay mechanics, level design, and why it remains the gold standard for rhythm-based platformers. Learn advanced strategies and hidden secrets.",
+      "category": "reviews",
+      "tags": ["geometry dash", "rhythm games", "platformer", "review", "analysis"],
+      "author": "Alex Johnson",
+      "publishDate": "2025-01-07",
+      "readTime": 15,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/geometry-dash-review.webp",
+      "featured": true
+    },
+    {
+      "slug": "hardest-geometry-dash-levels-ranked",
+      "title": "Hardest Geometry Dash Levels Ranked: The Ultimate Challenge Guide",
+      "excerpt": "Explore the most difficult Geometry Dash levels that will test your skills to the limit. From Bloodbath to Tartarus, discover what makes these levels legendary among players.",
+      "category": "rankings",
+      "tags": ["geometry dash", "difficult levels", "challenge", "rankings", "extreme"],
+      "author": "Pro Gamer Mike",
+      "publishDate": "2025-01-06",
+      "readTime": 10,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/hardest-gd-levels.webp",
+      "featured": false
+    },
+    {
+      "slug": "master-2048-strategy-guide",
+      "title": "How to Master 2048: Advanced Strategies for High Scores",
+      "excerpt": "Learn proven techniques and strategies to consistently reach higher scores in 2048. Discover corner strategies, merge patterns, and advanced tactics used by top players.",
+      "category": "tips",
+      "tags": ["2048", "strategy", "tips", "puzzle games", "high score"],
+      "author": "Puzzle Master Sarah",
+      "publishDate": "2025-01-05",
+      "readTime": 8,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/2048-strategy.webp",
+      "featured": false
+    },
+    {
+      "slug": "browser-gaming-trends-2025",
+      "title": "Browser Gaming Trends 2025: The Future of Web-Based Entertainment",
+      "excerpt": "Explore the latest trends shaping browser gaming in 2025, from WebGL advancements to cross-platform play. Discover how web games are competing with traditional gaming platforms.",
+      "category": "news",
+      "tags": ["browser gaming", "trends", "2025", "web games", "industry"],
+      "author": "Tech Analyst David",
+      "publishDate": "2025-01-04",
+      "readTime": 11,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/browser-gaming-trends.webp",
+      "featured": true
+    },
+    {
+      "slug": "retro-bowl-comprehensive-review",
+      "title": "Retro Bowl Review: Nostalgic Football Gaming at Its Best",
+      "excerpt": "Dive deep into Retro Bowl's pixelated world of American football. Discover why this simple yet engaging sports game has captured millions of players worldwide with its perfect blend of strategy and action.",
+      "category": "reviews",
+      "tags": ["retro bowl", "sports games", "football", "strategy", "retro gaming"],
+      "author": "Sports Game Reviewer Tom",
+      "publishDate": "2025-01-03",
+      "readTime": 13,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/retro-bowl-review.webp",
+      "featured": false
+    },
+    {
+      "slug": "best-puzzle-games-browser",
+      "title": "Best Puzzle Games in Browser: Mind-Bending Challenges Await",
+      "excerpt": "Challenge your intellect with the most engaging puzzle games available in your browser. From classic Sudoku to innovative new concepts, discover games that will keep your mind sharp.",
+      "category": "rankings",
+      "tags": ["puzzle games", "brain games", "sudoku", "minesweeper", "thinking"],
+      "author": "Puzzle Enthusiast Lisa",
+      "publishDate": "2025-01-02",
+      "readTime": 9,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/best-puzzle-games.webp",
+      "featured": false
+    },
+    {
+      "slug": "improve-reaction-time-gaming",
+      "title": "10 Ways to Improve Your Gaming Reaction Time",
+      "excerpt": "Enhance your gaming performance with proven techniques to boost reaction time. Learn exercises, practice methods, and lifestyle tips that will make you a faster, more responsive player.",
+      "category": "tips",
+      "tags": ["reaction time", "gaming skills", "improvement", "training", "performance"],
+      "author": "Performance Coach Maria",
+      "publishDate": "2025-01-01",
+      "readTime": 7,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/reaction-time-tips.webp",
+      "featured": false
+    },
+    {
+      "slug": "pacman-strategy-complete-guide",
+      "title": "Pac-Man Mastery: Complete Strategy Guide for High Scores",
+      "excerpt": "Master the classic arcade game with advanced Pac-Man strategies. Learn ghost patterns, optimal paths, power pellet timing, and secret techniques to dominate the maze and achieve record scores.",
+      "category": "tips",
+      "tags": ["pacman", "classic games", "strategy", "arcade", "high score"],
+      "author": "Arcade Legend Steve",
+      "publishDate": "2024-12-30",
+      "readTime": 14,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/pacman-strategy.webp",
+      "featured": false
+    },
+    {
+      "slug": "subway-surfers-endless-runner-review",
+      "title": "Subway Surfers Review: The King of Endless Runners",
+      "excerpt": "Explore what makes Subway Surfers the most popular endless runner game. From its vibrant graphics to addictive gameplay mechanics, discover why millions of players can't stop running.",
+      "category": "reviews",
+      "tags": ["subway surfers", "endless runner", "mobile gaming", "casual games", "action"],
+      "author": "Mobile Game Expert Anna",
+      "publishDate": "2024-12-29",
+      "readTime": 11,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/subway-surfers-review.webp",
+      "featured": false
+    },
+    {
+      "slug": "classic-vs-modern-browser-games",
+      "title": "Classic vs Modern Browser Games: Evolution of Web Gaming",
+      "excerpt": "Compare the golden age of Flash games with today's HTML5 masterpieces. Discover how browser games have evolved in terms of graphics, gameplay complexity, and player engagement over the decades.",
+      "category": "reviews",
+      "tags": ["browser games", "evolution", "flash games", "html5", "comparison"],
+      "author": "Gaming Historian Robert",
+      "publishDate": "2024-12-28",
+      "readTime": 16,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/classic-vs-modern.webp",
+      "featured": false
+    },
+    {
+      "slug": "best-action-games-browser-2025",
+      "title": "Best Action Games in Browser 2025: Adrenaline-Pumping Adventures",
+      "excerpt": "Get your heart racing with the most thrilling action games available in your browser. From high-speed chases to intense battles, discover games that deliver non-stop excitement without downloads.",
+      "category": "rankings",
+      "tags": ["action games", "browser games", "2025", "excitement", "adventure"],
+      "author": "Action Game Specialist Chris",
+      "publishDate": "2024-12-27",
+      "readTime": 10,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/best-action-games.webp",
+      "featured": false
+    },
+    {
+      "slug": "gaming-ergonomics-health-tips",
+      "title": "Gaming Ergonomics: Stay Healthy During Long Gaming Sessions",
+      "excerpt": "Protect your health while gaming with expert ergonomic advice. Learn about proper posture, eye strain prevention, hand care, and creating the perfect gaming setup for comfort and performance.",
+      "category": "tips",
+      "tags": ["health", "ergonomics", "gaming setup", "wellness", "prevention"],
+      "author": "Health Expert Dr. Jennifer",
+      "publishDate": "2024-12-26",
+      "readTime": 9,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/gaming-ergonomics.webp",
+      "featured": false
+    },
+    {
+      "slug": "minesweeper-advanced-techniques",
+      "title": "Minesweeper Advanced Techniques: From Beginner to Expert",
+      "excerpt": "Master the classic puzzle game with advanced Minesweeper techniques. Learn pattern recognition, probability calculations, and expert strategies that will help you solve even the most challenging grids.",
+      "category": "tips",
+      "tags": ["minesweeper", "strategy", "puzzle", "techniques", "expert"],
+      "author": "Logic Puzzle Master Kevin",
+      "publishDate": "2024-12-25",
+      "readTime": 12,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/minesweeper-advanced.webp",
+      "featured": false
+    },
+    {
+      "slug": "basketball-browser-games-review",
+      "title": "Basketball Browser Games Review: Shoot Your Way to Victory",
+      "excerpt": "Score big with the best basketball games available in your browser. From arcade-style shootouts to realistic simulations, discover games that bring the excitement of basketball to your screen.",
+      "category": "reviews",
+      "tags": ["basketball", "sports games", "browser games", "arcade", "simulation"],
+      "author": "Sports Gaming Fan Marcus",
+      "publishDate": "2024-12-24",
+      "readTime": 8,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/basketball-games.webp",
+      "featured": false
+    },
+    {
+      "slug": "webgl-gaming-revolution",
+      "title": "WebGL Gaming Revolution: The Future is in Your Browser",
+      "excerpt": "Discover how WebGL technology is revolutionizing browser gaming with console-quality graphics and performance. Explore the technical advances that are making web games more powerful than ever before.",
+      "category": "news",
+      "tags": ["webgl", "technology", "browser games", "graphics", "innovation"],
+      "author": "Tech Developer Rachel",
+      "publishDate": "2024-12-23",
+      "readTime": 13,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/webgl-revolution.webp",
+      "featured": false
+    },
+    {
+      "slug": "wordle-winning-strategies",
+      "title": "Wordle Winning Strategies: Crack the Code Every Time",
+      "excerpt": "Master the viral word puzzle game with proven Wordle strategies. Learn the best starting words, elimination techniques, and pattern recognition skills to improve your success rate.",
+      "category": "tips",
+      "tags": ["wordle", "word games", "strategy", "puzzle", "vocabulary"],
+      "author": "Word Game Expert Patricia",
+      "publishDate": "2024-12-22",
+      "readTime": 6,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/wordle-strategies.webp",
+      "featured": false
+    },
+    {
+      "slug": "solitaire-variations-guide",
+      "title": "Solitaire Variations: Beyond the Classic Card Game",
+      "excerpt": "Explore the rich world of Solitaire variations beyond the classic Klondike. Discover Spider, FreeCell, Pyramid, and other engaging variants that will challenge your card game skills in new ways.",
+      "category": "reviews",
+      "tags": ["solitaire", "card games", "variations", "classic games", "strategy"],
+      "author": "Card Game Connoisseur James",
+      "publishDate": "2024-12-21",
+      "readTime": 11,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/solitaire-variations.webp",
+      "featured": false
+    },
+    {
+      "slug": "casual-vs-hardcore-gaming",
+      "title": "Casual vs Hardcore Gaming: Finding Your Perfect Match",
+      "excerpt": "Understand the differences between casual and hardcore gaming experiences. Discover which style suits your lifestyle, time constraints, and gaming preferences for maximum enjoyment.",
+      "category": "reviews",
+      "tags": ["casual gaming", "hardcore gaming", "lifestyle", "preferences", "analysis"],
+      "author": "Gaming Lifestyle Advisor Emma",
+      "publishDate": "2024-12-20",
+      "readTime": 10,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/casual-vs-hardcore.webp",
+      "featured": false
+    },
+    {
+      "slug": "most-addictive-browser-games",
+      "title": "Most Addictive Browser Games: Warning - Extremely Engaging Content",
+      "excerpt": "Discover the most addictive browser games that will keep you playing for hours. From simple concepts to complex challenges, these games have the perfect formula for engagement and replay value.",
+      "category": "rankings",
+      "tags": ["addictive games", "engaging", "browser games", "time-wasters", "fun"],
+      "author": "Addiction Specialist Dr. Michael",
+      "publishDate": "2024-12-19",
+      "readTime": 14,
+      "thumbnail": "https://images.geometry-dash-lite.org/blog/addictive-games.webp",
+      "featured": false
+    }
+  ],
+  "categories": {
+    "rankings": {
+      "name": "Rankings",
+      "description": "Top lists, game rankings, and comprehensive comparisons",
+      "color": "purple"
+    },
+    "reviews": {
+      "name": "Reviews", 
+      "description": "In-depth game analysis and professional reviews",
+      "color": "blue"
+    },
+    "tips": {
+      "name": "Tips",
+      "description": "Strategies, guides, and improvement techniques",
+      "color": "green"
+    },
+    "news": {
+      "name": "News",
+      "description": "Latest gaming trends and industry updates",
+      "color": "orange"
+    }
+  },
+  "popularTags": [
+    "browser games",
+    "geometry dash", 
+    "strategy",
+    "puzzle games",
+    "reviews",
+    "tips",
+    "2025",
+    "arcade",
+    "casual games",
+    "rankings"
+  ]
+}

@@ -45,6 +45,12 @@
         "url": "/all-games/"
       },
       {
+        "type": "page",
+        "id": "blog",
+        "title": "Blog",
+        "url": "/blog/"
+      },
+      {
         "type": "game",
         "id": "dinosaur-game",
         "title": "Dinosaur Game",

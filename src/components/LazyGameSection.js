@@ -3,6 +3,9 @@
 import { Suspense } from 'react';
 import { GameGrid } from './GameCard';
 import { GameGridSkeleton } from './Skeleton';
+import BlogPost from './BlogPost';
+import blogData from '../data/blog.json';
+const { blogPosts } = blogData;
 
 // 游戏网格的骨架屏
 const GameGridSuspense = ({ children, gridCols = "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6", skeletonCount = 6 }) => (
@@ -128,6 +131,35 @@ const LazyGameSection = ({
           </GameGridSuspense>
         </div>
       )}
+
+      {/* Blog Articles Section */}
+      <div className="mt-8">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-left">📝 Latest Gaming Insights</h2>
+          <a 
+            href="/blog/"
+            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium text-sm transition-colors"
+          >
+            View All Articles →
+          </a>
+        </div>
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-3 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 text-sm">
+            🧠 Expert tips, comprehensive reviews, and gaming insights to enhance your playing experience!
+          </p>
+        </div>
+        
+        {/* Featured Blog Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogPosts.slice(0, 3).map((post) => (
+            <BlogPost 
+              key={post.slug} 
+              post={post} 
+              variant="featured"
+            />
+          ))}
+        </div>
+      </div>
 
       {/* SEO Content Section - 主要H1标签 */}
       <div className="mt-8 bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">

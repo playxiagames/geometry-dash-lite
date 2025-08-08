@@ -1,4 +1,6 @@
 import { getAllGames, getAllCategories } from '../utils/gameData';
+import blogData from '../data/blog.json';
+const { blogPosts } = blogData;
 
 export default function sitemap() {
   const baseUrl = 'https://geometry-dash-lite.org';
@@ -48,6 +50,15 @@ export default function sitemap() {
         
       case 'category':
         // 分类页面：如果该分类下有游戏更新，认为分类页面也更新了
+        return currentDate;
+        
+      case 'blog':
+        // 博客首页：如果有新文章发布，认为首页也更新了
+        if (blogPosts && blogPosts.length > 0) {
+          // 获取最新文章的发布时间
+          const latestPostDate = Math.max(...blogPosts.map(post => new Date(post.publishDate)));
+          return new Date(latestPostDate);
+        }
         return currentDate;
         
       default:
@@ -105,7 +116,51 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/blog/`,
+      lastModified: getContentLastModified('blog'),
+      changeFrequency: 'daily',
+      priority: 0.8, // 博客首页高优先级
+    },
   ];
+
+  // 博客文章页面
+  const blogPages = blogPosts.map((post) => {
+    // 基于文章类型和特色状态设置priority
+    let blogPriority = 0.6; // 基础priority
+    
+    // 特色文章加权
+    if (post.featured) {
+      blogPriority += 0.1;
+    }
+    
+    // 根据文章类型调整priority
+    if (post.category === 'rankings') {
+      blogPriority += 0.1; // 排名类文章更受欢迎
+    } else if (post.category === 'reviews') {
+      blogPriority += 0.05; // 评测类文章较受欢迎
+    }
+    
+    // 根据发布时间调整priority (新文章优先级更高)
+    const publishDate = new Date(post.publishDate);
+    const daysSincePublish = (currentDate - publishDate) / (1000 * 60 * 60 * 24);
+    
+    if (daysSincePublish <= 7) {
+      blogPriority += 0.1; // 一周内的新文章
+    } else if (daysSincePublish <= 30) {
+      blogPriority += 0.05; // 一个月内的文章
+    }
+    
+    // 确保priority合理
+    blogPriority = Math.min(blogPriority, 0.85);
+    
+    return {
+      url: `${baseUrl}/blog/${post.slug}/`,
+      lastModified: new Date(post.publishDate),
+      changeFrequency: 'monthly', // 博客文章相对稳定
+      priority: Number(blogPriority.toFixed(2)),
+    };
+  });
 
   // 动态游戏页面 - 基于游戏受欢迎程度和评分优化priority
   const gamePages = games.map((game) => {
@@ -181,6 +236,7 @@ export default function sitemap() {
   // 合并所有页面并按priority排序
   const allPages = [
     ...staticPages,
+    ...blogPages,
     ...gamePages,
     ...categoryPages,
   ];
