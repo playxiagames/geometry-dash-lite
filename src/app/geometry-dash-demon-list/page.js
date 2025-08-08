@@ -65,10 +65,10 @@ const getRankBadge = (position) => {
 };
 
 const getDifficultyColor = (requirement) => {
-  if (requirement >= 75) return 'text-red-600 font-bold';
-  if (requirement >= 70) return 'text-orange-600 font-bold';
-  if (requirement >= 65) return 'text-yellow-600 font-bold';
-  return 'text-green-600 font-bold';
+  if (requirement >= 75) return 'text-red-600 dark:text-red-400 font-bold';
+  if (requirement >= 70) return 'text-orange-600 dark:text-orange-400 font-bold';
+  if (requirement >= 65) return 'text-yellow-600 dark:text-yellow-400 font-bold';
+  return 'text-green-600 dark:text-green-400 font-bold';
 };
 
 export default function GeometryDashDemonListPage() {
@@ -120,12 +120,12 @@ export default function GeometryDashDemonListPage() {
       </div>
 
       {/* Breadcrumb */}
-      <nav className="bg-white border-b border-gray-200 py-3">
+      <nav className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-gray-600 py-3 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <span>/</span>
-            <span className="text-gray-900">Geometry Dash Demon List</span>
+          <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
+            <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
+            <span className="text-gray-900 dark:text-white font-medium">Geometry Dash Demon List</span>
           </div>
         </div>
       </nav>
@@ -133,9 +133,9 @@ export default function GeometryDashDemonListPage() {
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         
         {/* Introduction */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">About the Geometry Dash Demon List</h2>
-          <div className="prose prose-lg max-w-none text-gray-700">
+        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 mb-8 transition-colors">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">About the Geometry Dash Demon List</h2>
+          <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
             <p className="mb-4">
               The <strong>Geometry Dash Demon List</strong> serves as the ultimate authority for ranking extreme demon levels within the Geometry Dash community. 
               This comprehensive <strong>Geometry Dash Demon List</strong> evaluates levels based on their difficulty, requiring frame-perfect inputs, 
@@ -155,26 +155,26 @@ export default function GeometryDashDemonListPage() {
 
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 text-center transition-colors">
             <div className="text-3xl font-bold text-blue-600">50</div>
-            <div className="text-gray-600">Extreme Demons</div>
+            <div className="text-gray-600 dark:text-gray-300">Extreme Demons</div>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 text-center transition-colors">
             <div className="text-3xl font-bold text-orange-600">75%</div>
-            <div className="text-gray-600">Avg. Requirement</div>
+            <div className="text-gray-600 dark:text-gray-300">Avg. Requirement</div>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 text-center transition-colors">
             <div className="text-3xl font-bold text-indigo-600">2025</div>
-            <div className="text-gray-600">Current Year</div>
+            <div className="text-gray-600 dark:text-gray-300">Current Year</div>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 text-center transition-colors">
             <div className="text-3xl font-bold text-purple-600">∞</div>
-            <div className="text-gray-600">Attempts Needed</div>
+            <div className="text-gray-600 dark:text-gray-300">Attempts Needed</div>
           </div>
         </div>
 
         {/* Official Website Notice */}
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 rounded-lg p-6 mb-8">
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-l-4 border-blue-500 rounded-lg p-6 mb-8 transition-colors">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0">
               <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
@@ -184,10 +184,10 @@ export default function GeometryDashDemonListPage() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-200 mb-2">
                 📊 Official Demon List Information
               </h3>
-              <p className="text-blue-800 mb-3">
+              <p className="text-blue-800 dark:text-blue-300 mb-3">
                 This ranking showcases the top 50 extreme demon levels based on official data. 
                 For the complete, up-to-date rankings with all demons and detailed statistics, 
                 please visit the official platform.
@@ -221,24 +221,24 @@ export default function GeometryDashDemonListPage() {
         </div>
 
         {/* Rankings Grid */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="px-6 py-4 bg-gray-900 text-white">
+        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden transition-colors">
+          <div className="px-6 py-4 bg-gray-900 dark:bg-slate-700 text-white">
             <h2 className="text-2xl font-bold">Top 50 Extreme Demon Rankings</h2>
-            <p className="text-gray-300 mt-2">The most challenging extreme demon levels ranked by difficulty • Based on official data</p>
+            <p className="text-gray-300 dark:text-gray-200 mt-2">The most challenging extreme demon levels ranked by difficulty • Based on official data</p>
           </div>
           
-          <div className="divide-y divide-gray-200">
+          <div className="divide-y divide-gray-200 dark:divide-gray-600">
             {topDemons.map((demon) => {
               const rankBadge = getRankBadge(demon.position);
               
               return (
-                <div key={demon.id} className="p-6 hover:bg-gray-50 transition-colors">
+                <div key={demon.id} className="p-6 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors">
                   <div className="flex flex-col lg:flex-row gap-6">
                     
                     {/* Left Side: Rank, Badge, and Thumbnail */}
                     <div className="flex flex-col items-center lg:items-start gap-4 lg:min-w-[280px]">
                       {/* Rank Number */}
-                      <div className="text-4xl lg:text-5xl font-bold text-gray-900">
+                      <div className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
                         #{demon.position}
                       </div>
                       
@@ -285,28 +285,28 @@ export default function GeometryDashDemonListPage() {
 
                     {/* Right Side: Level Information */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                         {demon.name}
                       </h3>
                       
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base mb-6">
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 p-3 bg-blue-50 rounded-lg">
-                          <span className="font-semibold text-gray-700 text-sm">Publisher:</span>
-                          <span className={demon.publisher.banned ? 'line-through text-red-500' : 'text-blue-600 font-bold'}>
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                          <span className="font-semibold text-gray-700 dark:text-gray-300 text-sm">Publisher:</span>
+                          <span className={demon.publisher.banned ? 'line-through text-red-500 dark:text-red-400' : 'text-blue-600 dark:text-blue-400 font-bold'}>
                             {demon.publisher.name}
                           </span>
                         </div>
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 p-3 bg-green-50 rounded-lg">
-                          <span className="font-semibold text-gray-700 text-sm">Verifier:</span>
-                          <span className={demon.verifier.banned ? 'line-through text-red-500' : 'text-green-600 font-bold'}>
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                          <span className="font-semibold text-gray-700 dark:text-gray-300 text-sm">Verifier:</span>
+                          <span className={demon.verifier.banned ? 'line-through text-red-500 dark:text-red-400' : 'text-green-600 dark:text-green-400 font-bold'}>
                             {demon.verifier.name}
                           </span>
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-3 mb-6 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg">
+                      <div className="flex items-center gap-3 mb-6 p-4 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-slate-700 dark:to-slate-600 rounded-lg">
                         <div className="flex items-center gap-2">
-                          <span className="font-semibold text-gray-700">Difficulty:</span>
+                          <span className="font-semibold text-gray-700 dark:text-gray-300">Difficulty:</span>
                           <span className={`font-bold text-xl ${getDifficultyColor(demon.requirement)}`}>
                             {demon.requirement}% Requirement
                           </span>
@@ -334,13 +334,13 @@ export default function GeometryDashDemonListPage() {
         </div>
 
         {/* Understanding the Demon List */}
-        <div className="mt-12 bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Understanding the Geometry Dash Demon List</h2>
+        <div className="mt-12 bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 transition-colors">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Understanding the Geometry Dash Demon List</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">🏆 Ranking Criteria</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">🏆 Ranking Criteria</h3>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• <strong>Technical Difficulty:</strong> Frame-perfect inputs and precise timing requirements</li>
                 <li>• <strong>Consistency:</strong> Ability to repeatedly execute difficult sections</li>
                 <li>• <strong>Length:</strong> Duration of challenging gameplay segments</li>
@@ -350,23 +350,23 @@ export default function GeometryDashDemonListPage() {
             </div>
             
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">💀 Difficulty Levels</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">💀 Difficulty Levels</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-red-600 rounded-full"></div>
-                  <span><strong>75%+ Requirement:</strong> Nearly Impossible</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>75%+ Requirement:</strong> Nearly Impossible</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-orange-600 rounded-full"></div>
-                  <span><strong>70-74% Requirement:</strong> Extremely Difficult</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>70-74% Requirement:</strong> Extremely Difficult</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-yellow-600 rounded-full"></div>
-                  <span><strong>65-69% Requirement:</strong> Very Difficult</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>65-69% Requirement:</strong> Very Difficult</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-                  <span><strong>60-64% Requirement:</strong> Challenging</span>
+                  <span className="text-gray-700 dark:text-gray-300"><strong>60-64% Requirement:</strong> Challenging</span>
                 </div>
               </div>
             </div>
@@ -400,9 +400,9 @@ export default function GeometryDashDemonListPage() {
         </div>
 
         {/* Community Impact */}
-        <div className="mt-8 bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">🌍 Impact on the Geometry Dash Community</h2>
-          <div className="prose prose-lg max-w-none text-gray-700">
+        <div className="mt-8 bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 transition-colors">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">🌍 Impact on the Geometry Dash Community</h2>
+          <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
             <p className="mb-4">
               The <strong>Geometry Dash Demon List</strong> has evolved into more than just a ranking system—it's become the cornerstone of competitive achievement within the Geometry Dash community. 
               This <strong>Geometry Dash Demon List</strong> drives innovation in level creation, pushes the boundaries of what's considered possible, and creates a shared language for discussing extreme difficulty.
@@ -419,22 +419,22 @@ export default function GeometryDashDemonListPage() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center bg-gray-900 rounded-lg p-8 text-white">
+        <div className="mt-12 text-center bg-gray-900 dark:bg-slate-700 rounded-lg p-8 text-white transition-colors">
           <h2 className="text-3xl font-bold mb-4">Ready to Take on the Challenge?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 dark:text-gray-200 mb-6 max-w-2xl mx-auto">
             Think you have what it takes to conquer the <strong>Geometry Dash Demon List</strong>? Start with easier demons and work your way up to these legendary levels. 
             Every expert was once a beginner, and every completion starts with a single attempt.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               🎮 Play Geometry Dash Lite
             </Link>
             <Link 
               href="/blog/hardest-geometry-dash-levels-ranked/"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="bg-purple-600 dark:bg-purple-500 hover:bg-purple-700 dark:hover:bg-purple-400 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               📖 Read Strategy Guide
             </Link>

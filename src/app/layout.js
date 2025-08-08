@@ -137,16 +137,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* 异步加载非关键CSS */}
-        <link 
-          rel="preload" 
-          href="/_next/static/css/app/layout.css" 
-          as="style" 
-          onLoad="this.onload=null;this.rel='stylesheet'" 
-        />
-        <noscript>
-          <link rel="stylesheet" href="/_next/static/css/app/layout.css" />
-        </noscript>
+        {/* Next.js自动处理CSS优化，无需手动异步加载 */}
         
         {/* Favicon and manifest */}
         <link rel="icon" href="/favicon.ico" sizes="any" />

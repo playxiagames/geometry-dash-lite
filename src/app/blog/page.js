@@ -124,7 +124,7 @@ export default function BlogPage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <Link href={`/blog/${post.slug}/`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                       {post.title}
                     </Link>
                   </h3>
@@ -136,7 +136,7 @@ export default function BlogPage() {
                       {post.readTime} min read
                     </span>
                     <Link 
-                      href={`/blog/${post.slug}`}
+                      href={`/blog/${post.slug}/`}
                       className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors"
                     >
                       Read More →
@@ -165,7 +165,7 @@ export default function BlogPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <Link href={`/blog/${post.slug}/`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                     {post.title}
                   </Link>
                 </h3>
@@ -177,7 +177,7 @@ export default function BlogPage() {
                     {post.readTime} min read
                   </span>
                   <Link 
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.slug}/`}
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors"
                   >
                     Read More →

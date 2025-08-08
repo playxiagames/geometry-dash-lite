@@ -35,7 +35,7 @@ export default function BlogPost({ post, variant = 'card' }) {
             </span>
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
-            <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
+            <Link href={`/blog/${post.slug}/`} className="hover:text-blue-600 transition-colors">
               {post.title}
             </Link>
           </h3>
@@ -47,7 +47,7 @@ export default function BlogPost({ post, variant = 'card' }) {
               {post.readTime} min read
             </span>
             <Link 
-              href={`/blog/${post.slug}`}
+              href={`/blog/${post.slug}/`}
               className="text-blue-600 hover:text-blue-800 font-medium text-sm"
             >
               Read More →
@@ -70,7 +70,7 @@ export default function BlogPost({ post, variant = 'card' }) {
           </span>
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">
-          <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
+          <Link href={`/blog/${post.slug}/`} className="hover:text-blue-600 transition-colors">
             {post.title}
           </Link>
         </h3>
@@ -83,7 +83,7 @@ export default function BlogPost({ post, variant = 'card' }) {
             <span>{post.readTime} min read</span>
           </div>
           <Link 
-            href={`/blog/${post.slug}`}
+            href={`/blog/${post.slug}/`}
             className="text-blue-600 hover:text-blue-800 font-medium text-sm"
           >
             Read More →
@@ -113,7 +113,7 @@ export default function BlogPost({ post, variant = 'card' }) {
               </span>
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-1 line-clamp-2">
-              <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
+              <Link href={`/blog/${post.slug}/`} className="hover:text-blue-600 transition-colors">
                 {post.title}
               </Link>
             </h4>
@@ -125,7 +125,7 @@ export default function BlogPost({ post, variant = 'card' }) {
                 {post.readTime} min read
               </span>
               <Link 
-                href={`/blog/${post.slug}`}
+                href={`/blog/${post.slug}/`}
                 className="text-blue-600 hover:text-blue-800 font-medium text-xs"
               >
                 Read →
@@ -158,7 +158,7 @@ export default function BlogPost({ post, variant = 'card' }) {
           </span>
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
-          <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
+          <Link href={`/blog/${post.slug}/`} className="hover:text-blue-600 transition-colors">
             {post.title}
           </Link>
         </h3>
@@ -172,7 +172,7 @@ export default function BlogPost({ post, variant = 'card' }) {
             <span>{post.readTime} min read</span>
           </div>
           <Link 
-            href={`/blog/${post.slug}`}
+            href={`/blog/${post.slug}/`}
             className="text-blue-600 hover:text-blue-800 font-medium text-sm"
           >
             Read More →

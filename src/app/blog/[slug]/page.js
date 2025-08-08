@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.excerpt,
       type: 'article',
-      url: `https://geometry-dash-lite.org/blog/${post.slug}`,
+      url: `https://geometry-dash-lite.org/blog/${post.slug}/`,
       images: [
         {
           url: post.thumbnail,
@@ -190,7 +190,7 @@ export default async function BlogPostPage({ params }) {
             <div className="flex items-center space-x-2">
               <span className="text-sm text-gray-600 dark:text-gray-300">Share:</span>
               <a 
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://geometry-dash-lite.org/blog/${post.slug}`)}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://geometry-dash-lite.org/blog/${post.slug}/`)}`}
                 className="text-blue-500 hover:text-blue-700 text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -199,7 +199,7 @@ export default async function BlogPostPage({ params }) {
               </a>
               <span className="text-gray-300 dark:text-gray-600">|</span>
               <a 
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://geometry-dash-lite.org/blog/${post.slug}`)}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://geometry-dash-lite.org/blog/${post.slug}/`)}`}
                 className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
