@@ -10,7 +10,8 @@
       "Bash(grep:*)",
       "Bash(sed:*)",
       "Bash(rm:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(pkill:*)"
     ],
     "deny": []
   }

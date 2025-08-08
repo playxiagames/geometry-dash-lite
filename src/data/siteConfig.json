@@ -51,16 +51,10 @@
         "url": "/blog/"
       },
       {
-        "type": "game",
-        "id": "dinosaur-game",
-        "title": "Dinosaur Game",
-        "url": "/games/dinosaur-game/"
-      },
-      {
-        "type": "game",
-        "id": "subway-surfers",
-        "title": "Subway Surfers",
-        "url": "/games/subway-surfers/"
+        "type": "page",
+        "id": "geometry-dash-demon-list",
+        "title": "Geometry Dash Demon List",
+        "url": "/geometry-dash-demon-list/"
       }
     ]
   },

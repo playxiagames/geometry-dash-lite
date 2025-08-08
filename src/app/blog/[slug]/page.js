@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Layout from '../../../components/Layout';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
@@ -134,7 +135,8 @@ export default async function BlogPostPage({ params }) {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <Layout>
+      <div>
       {/* 结构化数据 */}
       <script
         type="application/ld+json"
@@ -319,6 +321,7 @@ export default async function BlogPostPage({ params }) {
           ← Back to Blog
         </Link>
       </div>
-    </div>
+      </div>
+    </Layout>
   );
 }

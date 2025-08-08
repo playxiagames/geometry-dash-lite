@@ -88,7 +88,7 @@ Related Games
 - Categories: Reviews, Rankings, Tips, News
 
 #### Content Types:
-1. **Game Rankings** - "Top 10 Browser Games 2024"
+1. **Game Rankings** - "Top 10 Browser Games 2025"
 2. **In-depth Reviews** - 2000+ word game reviews
 3. **Tutorial Content** - "How to Master Geometry Dash"
 4. **Industry Analysis** - Browser gaming trends

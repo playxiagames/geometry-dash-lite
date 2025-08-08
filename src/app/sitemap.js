@@ -122,6 +122,12 @@ export default function sitemap() {
       changeFrequency: 'daily',
       priority: 0.8, // 博客首页高优先级
     },
+    {
+      url: `${baseUrl}/geometry-dash-demon-list/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8, // 几何冲刺恶魔排行榜高优先级
+    },
   ];
 
   // 博客文章页面

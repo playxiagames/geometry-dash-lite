@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Layout from '../../components/Layout';
 import blogData from '../../data/blog.json';
 const { blogPosts } = blogData;
 
@@ -56,7 +57,8 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <Layout>
+      <div>
       {/* 结构化数据 */}
       <script
         type="application/ld+json"
@@ -206,6 +208,7 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </div>
+      </div>
+    </Layout>
   );
 }
