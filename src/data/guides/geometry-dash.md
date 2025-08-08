@@ -1,4 +1,4 @@
-# Geometry Dash - Complete Strategy Guide
+
 
 ## Basic Strategy
 

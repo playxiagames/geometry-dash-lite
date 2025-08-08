@@ -1,4 +1,4 @@
-# Geometry Dash Spam - Complete Strategy Guide
+
 
 ## Basic Strategy
 

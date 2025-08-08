@@ -1,4 +1,4 @@
-# Sprunki - Complete Strategy Guide
+
 
 ## Basic Strategy
 

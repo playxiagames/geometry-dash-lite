@@ -1,4 +1,4 @@
-# Atari Breakout - Complete Strategy Guide
+
 
 ## Basic Strategy
 

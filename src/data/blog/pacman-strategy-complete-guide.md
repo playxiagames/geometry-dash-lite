@@ -1,4 +1,4 @@
-# Pac-Man Mastery: Complete Strategy Guide for High Scores
+
 
 Pac-Man isn't just about randomly eating dots and avoiding ghosts – it's a game of patterns, timing, and strategic thinking. This comprehensive guide will transform you from a casual player into a Pac-Man master, revealing the secrets that professional players use to achieve record-breaking scores.
 

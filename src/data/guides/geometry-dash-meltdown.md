@@ -1,4 +1,4 @@
-# Geometry Dash Meltdown - Complete Strategy Guide
+
 
 ## Basic Strategy
 

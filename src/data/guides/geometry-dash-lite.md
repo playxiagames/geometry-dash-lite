@@ -1,4 +1,4 @@
-# Geometry Dash Lite - Complete Strategy Guide
+
 
 ## Basic Strategy
 

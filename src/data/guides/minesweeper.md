@@ -1,4 +1,4 @@
-# Minesweeper - Complete Strategy Guide
+
 
 ## Basic Strategy
 

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { getAllGames, getAllCategories } from '../../utils/gameData';
 import { generatePageMetadata } from '../../utils/seoUtils';
+import blogData from '../../data/blog.json';
+const { blogPosts } = blogData;
 
 // Generate page metadata
 export async function generateMetadata() {
@@ -14,10 +16,16 @@ export async function generateMetadata() {
 export default function SitemapPage() {
   const games = getAllGames();
   const categories = getAllCategories();
+  
+  // 获取已发布的blog文章
+  const publishedBlogPosts = blogPosts.filter(post => post.published !== false);
 
   // Static pages
   const staticPages = [
     { title: 'Home', url: '/', description: 'Explore the best online games', icon: '🏠' },
+    { title: 'Blog', url: '/blog/', description: 'Gaming tips, reviews and rankings', icon: '📝' },
+    { title: 'Geometry Dash Demon List', url: '/geometry-dash-demon-list/', description: 'Official demon difficulty rankings', icon: '👹' },
+    { title: 'All Games', url: '/all-games/', description: 'Browse all available games', icon: '🎮' },
     { title: 'About Us', url: '/about/', description: 'Learn about our mission and team', icon: 'ℹ️' },
     { title: 'Contact Us', url: '/contact/', description: 'Get in touch with us', icon: '📧' },
     { title: 'Privacy Policy', url: '/privacy/', description: 'Learn how we protect your privacy', icon: '🔒' },
@@ -40,29 +48,33 @@ export default function SitemapPage() {
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
           <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 text-center">
             <div className="text-3xl font-bold text-blue-600 mb-2">{staticPages.length}</div>
             <div className="text-gray-600 dark:text-gray-300">Main Pages</div>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 text-center">
             <div className="text-3xl font-bold text-green-600 mb-2">{categories.length}</div>
-            <div className="text-gray-600 dark:text-gray-300">Game Categories</div>
+            <div className="text-gray-600 dark:text-gray-300">Categories</div>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 text-center">
             <div className="text-3xl font-bold text-purple-600 mb-2">{games.length}</div>
-            <div className="text-gray-600 dark:text-gray-300">Featured Games</div>
+            <div className="text-gray-600 dark:text-gray-300">Games</div>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">{staticPages.length + categories.length + games.length}</div>
+            <div className="text-3xl font-bold text-red-600 mb-2">{publishedBlogPosts.length}</div>
+            <div className="text-gray-600 dark:text-gray-300">Blog Posts</div>
+          </div>
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 text-center">
+            <div className="text-3xl font-bold text-orange-600 mb-2">{staticPages.length + categories.length + games.length + publishedBlogPosts.length}</div>
             <div className="text-gray-600 dark:text-gray-300">Total Pages</div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
           
           {/* Main Pages */}
-          <div className="lg:col-span-1">
+          <div className="xl:col-span-1">
             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                 <span className="mr-3">🏠</span>
@@ -95,7 +107,7 @@ export default function SitemapPage() {
           </div>
 
           {/* Game Categories */}
-          <div className="lg:col-span-1">
+          <div className="xl:col-span-1">
             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                 <span className="mr-3">🎮</span>
@@ -127,14 +139,53 @@ export default function SitemapPage() {
             </div>
           </div>
 
+          {/* Blog Articles */}
+          <div className="xl:col-span-1">
+            <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                <span className="mr-3">📝</span>
+                Blog Articles
+              </h2>
+              <div className="space-y-3 max-h-[926px] overflow-y-auto">
+                {publishedBlogPosts.map((post, index) => (
+                  <Link
+                    key={index}
+                    href={`/blog/${post.slug}/`}
+                    className="block p-3 border border-gray-200 dark:border-slate-600 rounded-lg hover:border-red-300 dark:hover:border-red-500 hover:shadow-md transition-all duration-200 group"
+                  >
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-gradient-to-r from-red-400 to-pink-400 rounded-lg flex items-center justify-center mr-3 group-hover:scale-105 transition-transform flex-shrink-0">
+                        <span className="text-white font-bold text-xs">
+                          {post.category === 'rankings' ? '🏆' : post.category === 'reviews' ? '⭐' : post.category === 'tips' ? '💡' : '📰'}
+                        </span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-medium text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors line-clamp-2 text-sm">
+                          {post.title}
+                        </h3>
+                        <div className="flex items-center mt-1 text-xs text-gray-600 dark:text-gray-300">
+                          <span className="capitalize">{post.category}</span>
+                          <span className="mx-2">•</span>
+                          <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                          <span className="mx-2">•</span>
+                          <span>{post.readTime}min read</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Featured Games */}
-          <div className="lg:col-span-1">
+          <div className="xl:col-span-1">
             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                 <span className="mr-3">🌟</span>
                 Featured Games
               </h2>
-              <div className="space-y-3 max-h-96 overflow-y-auto">
+              <div className="space-y-3 max-h-[926px] overflow-y-auto">
                 {games.map((game, index) => (
                   <Link
                     key={index}

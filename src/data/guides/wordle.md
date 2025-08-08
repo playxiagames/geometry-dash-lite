@@ -1,4 +1,4 @@
-# Wordle Complete Strategy Guide
+
 
 ## Basic Strategy
 

@@ -1,4 +1,4 @@
-# Retro Bowl - Complete Strategy Guide
+
 
 ## Basic Strategy
 

@@ -1,4 +1,4 @@
-# Basketball - Complete Strategy Guide
+
 
 ## Basic Strategy
 

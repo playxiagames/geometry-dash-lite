@@ -1,4 +1,4 @@
-# Geometry Dash Wave - Complete Strategy Guide
+
 
 ## Basic Strategy
 

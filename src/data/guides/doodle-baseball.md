@@ -1,4 +1,4 @@
-# Doodle Baseball - Complete Strategy Guide
+
 
 ## Basic Strategy
 

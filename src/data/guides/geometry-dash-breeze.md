@@ -1,4 +1,4 @@
-# Geometry Dash Breeze - Complete Strategy Guide
+
 
 ## Basic Strategy
 

@@ -1,4 +1,4 @@
-# Subway Surfers - Complete Strategy Guide
+
 
 ## Basic Strategy
 

@@ -1,4 +1,4 @@
-# Chrome Dinosaur Game Complete Strategy Guide
+
 
 The Chrome Dinosaur Game, also known as T-Rex Runner, has become an iconic browser game that millions encounter during internet outages. What seems like a simple endless runner actually contains layers of strategy, timing mechanics, and scoring optimization that separate casual players from true masters. This comprehensive guide will teach you everything you need to know to achieve high scores and master this deceptively challenging game.
 

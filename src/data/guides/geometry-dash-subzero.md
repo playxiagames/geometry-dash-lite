@@ -1,4 +1,4 @@
-# Geometry Dash SubZero - Complete Strategy Guide
+
 
 ## Basic Strategy
 

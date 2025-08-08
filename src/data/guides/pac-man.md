@@ -1,4 +1,4 @@
-# Pac-Man - Complete Strategy Guide
+
 
 ## Basic Strategy
 

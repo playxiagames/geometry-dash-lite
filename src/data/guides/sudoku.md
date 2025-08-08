@@ -1,4 +1,4 @@
-# Sudoku - Complete Strategy Guide
+
 
 ## Basic Strategy
 

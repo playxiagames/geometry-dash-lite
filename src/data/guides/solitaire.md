@@ -1,4 +1,4 @@
-# Solitaire - Complete Strategy Guide
+
 
 ## Basic Strategy
 
