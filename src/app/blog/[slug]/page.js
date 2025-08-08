@@ -57,7 +57,9 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  // 只为已发布的文章生成静态页面
+  const publishedPosts = blogPosts.filter(post => post.published !== false);
+  return publishedPosts.map((post) => ({
     slug: post.slug,
   }));
 }
@@ -79,7 +81,8 @@ async function getBlogContent(slug) {
 export default async function BlogPostPage({ params }) {
   const post = blogPosts.find(p => p.slug === params.slug);
   
-  if (!post) {
+  // 检查文章是否存在且已发布
+  if (!post || post.published === false) {
     notFound();
   }
 
@@ -89,9 +92,10 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
-  // Get related posts
+  // Get related posts - 只显示已发布的相关文章
   const relatedPosts = blogPosts
-    .filter(p => p.slug !== params.slug && (
+    .filter(p => p.slug !== params.slug && 
+                 p.published !== false && (
       p.category === post.category || 
       p.tags.some(tag => post.tags.includes(tag))
     ))

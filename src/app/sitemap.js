@@ -54,9 +54,10 @@ export default function sitemap() {
         
       case 'blog':
         // 博客首页：如果有新文章发布，认为首页也更新了
-        if (blogPosts && blogPosts.length > 0) {
-          // 获取最新文章的发布时间
-          const latestPostDate = Math.max(...blogPosts.map(post => new Date(post.publishDate)));
+        const publishedPosts = blogPosts.filter(post => post.published !== false);
+        if (publishedPosts && publishedPosts.length > 0) {
+          // 获取最新已发布文章的发布时间
+          const latestPostDate = Math.max(...publishedPosts.map(post => new Date(post.publishDate)));
           return new Date(latestPostDate);
         }
         return currentDate;
@@ -130,8 +131,9 @@ export default function sitemap() {
     },
   ];
 
-  // 博客文章页面
-  const blogPages = blogPosts.map((post) => {
+  // 博客文章页面 - 只包含已发布的文章
+  const publishedBlogPosts = blogPosts.filter(post => post.published !== false);
+  const blogPages = publishedBlogPosts.map((post) => {
     // 基于文章类型和特色状态设置priority
     let blogPriority = 0.6; // 基础priority
     

@@ -23,7 +23,9 @@ const categories = {
 };
 
 export default function BlogPage() {
-  const sortedPosts = blogPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+  // 只显示已发布的文章
+  const publishedPosts = blogPosts.filter(post => post.published !== false);
+  const sortedPosts = publishedPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
   const featuredPosts = sortedPosts.slice(0, 3);
   const recentPosts = sortedPosts.slice(3, 10);
 

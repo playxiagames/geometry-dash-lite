@@ -10,7 +10,8 @@
       "publishDate": "2025-01-08",
       "readTime": 12,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/top-browser-games-2025.webp",
-      "featured": true
+      "featured": true,
+      "published": true
     },
     {
       "slug": "geometry-dash-complete-review",
@@ -22,7 +23,8 @@
       "publishDate": "2025-01-07",
       "readTime": 15,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/geometry-dash-review.webp",
-      "featured": true
+      "featured": true,
+      "published": true
     },
     {
       "slug": "hardest-geometry-dash-levels-ranked",
@@ -34,7 +36,8 @@
       "publishDate": "2025-01-06",
       "readTime": 10,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/hardest-gd-levels.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "master-2048-strategy-guide",
@@ -46,7 +49,8 @@
       "publishDate": "2025-01-05",
       "readTime": 8,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/2048-strategy.webp",
-      "featured": false
+      "featured": false,
+      "published": true
     },
     {
       "slug": "browser-gaming-trends-2025",
@@ -58,7 +62,8 @@
       "publishDate": "2025-01-04",
       "readTime": 11,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/browser-gaming-trends.webp",
-      "featured": true
+      "featured": true,
+      "published": true
     },
     {
       "slug": "retro-bowl-comprehensive-review",
@@ -70,7 +75,8 @@
       "publishDate": "2025-01-03",
       "readTime": 13,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/retro-bowl-review.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "best-puzzle-games-browser",
@@ -82,7 +88,8 @@
       "publishDate": "2025-01-02",
       "readTime": 9,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/best-puzzle-games.webp",
-      "featured": false
+      "featured": false,
+      "published": true
     },
     {
       "slug": "improve-reaction-time-gaming",
@@ -94,7 +101,8 @@
       "publishDate": "2025-01-01",
       "readTime": 7,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/reaction-time-tips.webp",
-      "featured": false
+      "featured": false,
+      "published": true
     },
     {
       "slug": "pacman-strategy-complete-guide",
@@ -106,7 +114,8 @@
       "publishDate": "2024-12-30",
       "readTime": 14,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/pacman-strategy.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "subway-surfers-endless-runner-review",
@@ -118,7 +127,8 @@
       "publishDate": "2024-12-29",
       "readTime": 11,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/subway-surfers-review.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "classic-vs-modern-browser-games",
@@ -130,7 +140,8 @@
       "publishDate": "2024-12-28",
       "readTime": 16,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/classic-vs-modern.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "best-action-games-browser-2025",
@@ -142,7 +153,8 @@
       "publishDate": "2024-12-27",
       "readTime": 10,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/best-action-games.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "gaming-ergonomics-health-tips",
@@ -154,7 +166,8 @@
       "publishDate": "2024-12-26",
       "readTime": 9,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/gaming-ergonomics.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "minesweeper-advanced-techniques",
@@ -166,7 +179,8 @@
       "publishDate": "2024-12-25",
       "readTime": 12,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/minesweeper-advanced.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "basketball-browser-games-review",
@@ -178,7 +192,8 @@
       "publishDate": "2024-12-24",
       "readTime": 8,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/basketball-games.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "webgl-gaming-revolution",
@@ -190,7 +205,8 @@
       "publishDate": "2024-12-23",
       "readTime": 13,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/webgl-revolution.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "wordle-winning-strategies",
@@ -202,7 +218,8 @@
       "publishDate": "2024-12-22",
       "readTime": 6,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/wordle-strategies.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "solitaire-variations-guide",
@@ -214,7 +231,8 @@
       "publishDate": "2024-12-21",
       "readTime": 11,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/solitaire-variations.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "casual-vs-hardcore-gaming",
@@ -226,7 +244,8 @@
       "publishDate": "2024-12-20",
       "readTime": 10,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/casual-vs-hardcore.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "slug": "most-addictive-browser-games",
@@ -238,7 +257,8 @@
       "publishDate": "2024-12-19",
       "readTime": 14,
       "thumbnail": "https://images.geometry-dash-lite.org/blog/addictive-games.webp",
-      "featured": false
+      "featured": false,
+      "published": false
     }
   ],
   "categories": {
