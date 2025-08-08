@@ -25,14 +25,13 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${post.title} | Gaming Blog`,
+    title: `${post.title}`,
     description: post.excerpt,
-    keywords: post.tags.join(', '),
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
-      url: `https://games.github.io/blog/${post.slug}`,
+      url: `https://geometry-dash-lite.org/blog/${post.slug}`,
       images: [
         {
           url: post.thumbnail,
@@ -148,14 +147,14 @@ export default async function BlogPostPage({ params }) {
       />
       
       {/* Breadcrumb */}
-      <nav className="bg-gray-50 py-4">
+      <nav className="bg-gray-50 dark:bg-slate-800 py-4 transition-colors">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <span>/</span>
-            <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-            <span>/</span>
-            <span className="text-gray-900">{post.title}</span>
+          <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
+            <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
+            <Link href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</Link>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
+            <span className="text-gray-900 dark:text-white font-medium">{post.title}</span>
           </div>
         </div>
       </nav>
@@ -169,17 +168,17 @@ export default async function BlogPostPage({ params }) {
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
             {post.title}
           </h1>
           
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             {post.excerpt}
           </p>
           
-          <div className="flex items-center justify-between flex-wrap gap-4 pb-8 border-b border-gray-200">
+          <div className="flex items-center justify-between flex-wrap gap-4 pb-8 border-b border-gray-200 dark:border-gray-600">
             <div className="flex items-center space-x-4">
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-gray-600 dark:text-gray-300">
                 <span className="font-medium">By {post.author}</span>
                 <span className="mx-2">•</span>
                 <time dateTime={post.publishDate}>{publishDate}</time>
@@ -189,18 +188,18 @@ export default async function BlogPostPage({ params }) {
             </div>
             
             <div className="flex items-center space-x-2">
-              <span className="text-sm text-gray-600">Share:</span>
+              <span className="text-sm text-gray-600 dark:text-gray-300">Share:</span>
               <a 
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://games.github.io/blog/${post.slug}`)}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://geometry-dash-lite.org/blog/${post.slug}`)}`}
                 className="text-blue-500 hover:text-blue-700 text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Twitter
               </a>
-              <span className="text-gray-300">|</span>
+              <span className="text-gray-300 dark:text-gray-600">|</span>
               <a 
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://games.github.io/blog/${post.slug}`)}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://geometry-dash-lite.org/blog/${post.slug}`)}`}
                 className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -223,30 +222,30 @@ export default async function BlogPostPage({ params }) {
         )}
 
         {/* Content */}
-        <div className="prose prose-lg prose-gray max-w-none mb-12">
+        <div className="prose prose-lg prose-gray dark:prose-invert max-w-none mb-12">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeHighlight]}
             components={{
-              h1: ({children}) => <h1 className="text-3xl font-bold mt-8 mb-4 text-gray-900">{children}</h1>,
-              h2: ({children}) => <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">{children}</h2>,
-              h3: ({children}) => <h3 className="text-xl font-bold mt-6 mb-3 text-gray-900">{children}</h3>,
-              p: ({children}) => <p className="mb-6 leading-relaxed text-gray-700">{children}</p>,
-              ul: ({children}) => <ul className="mb-6 list-disc list-inside space-y-2 text-gray-700">{children}</ul>,
-              ol: ({children}) => <ol className="mb-6 list-decimal list-inside space-y-2 text-gray-700">{children}</ol>,
+              h1: ({children}) => <h1 className="text-3xl font-bold mt-8 mb-4 text-gray-900 dark:text-white">{children}</h1>,
+              h2: ({children}) => <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-white">{children}</h2>,
+              h3: ({children}) => <h3 className="text-xl font-bold mt-6 mb-3 text-gray-900 dark:text-white">{children}</h3>,
+              p: ({children}) => <p className="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">{children}</p>,
+              ul: ({children}) => <ul className="mb-6 list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">{children}</ul>,
+              ol: ({children}) => <ol className="mb-6 list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">{children}</ol>,
               li: ({children}) => <li className="leading-relaxed">{children}</li>,
               blockquote: ({children}) => (
-                <blockquote className="border-l-4 border-blue-500 pl-6 py-2 mb-6 italic text-gray-600 bg-gray-50 rounded-r">
+                <blockquote className="border-l-4 border-blue-500 pl-6 py-2 mb-6 italic text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-slate-700 rounded-r">
                   {children}
                 </blockquote>
               ),
               code: ({children}) => (
-                <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800">
+                <code className="bg-gray-100 dark:bg-slate-700 px-2 py-1 rounded text-sm font-mono text-gray-800 dark:text-gray-200">
                   {children}
                 </code>
               ),
               pre: ({children}) => (
-                <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto mb-6">
+                <pre className="bg-gray-900 dark:bg-slate-800 text-white dark:text-gray-100 p-4 rounded-lg overflow-x-auto mb-6">
                   {children}
                 </pre>
               ),
@@ -258,11 +257,11 @@ export default async function BlogPostPage({ params }) {
 
         {/* Tags */}
         {post.tags && post.tags.length > 0 && (
-          <div className="mb-12 pb-8 border-b border-gray-200">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Tags</h3>
+          <div className="mb-12 pb-8 border-b border-gray-200 dark:border-gray-600">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Tags</h3>
             <div className="flex flex-wrap gap-2">
               {post.tags.map(tag => (
-                <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors">
+                <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors">
                   #{tag}
                 </span>
               ))}
@@ -273,14 +272,14 @@ export default async function BlogPostPage({ params }) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="bg-gray-50 py-12">
+        <section className="bg-gray-50 dark:bg-slate-800 py-12 transition-colors">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
               Related Articles
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedPosts.map(relatedPost => (
-                <article key={relatedPost.slug} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <article key={relatedPost.slug} className="bg-white dark:bg-slate-700 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
                   <div className="aspect-w-16 aspect-h-9">
                     <img 
                       src={relatedPost.thumbnail} 
@@ -294,17 +293,17 @@ export default async function BlogPostPage({ params }) {
                         {categories[relatedPost.category].name}
                       </span>
                     </div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                      <Link href={`/blog/${relatedPost.slug}`} className="hover:text-blue-600 transition-colors">
+                    <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
+                      <Link href={`/blog/${relatedPost.slug}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         {relatedPost.title}
                       </Link>
                     </h4>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
                       {relatedPost.excerpt}
                     </p>
                     <Link 
                       href={`/blog/${relatedPost.slug}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                      className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors"
                     >
                       Read More →
                     </Link>
@@ -320,7 +319,7 @@ export default async function BlogPostPage({ params }) {
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Link 
           href="/blog"
-          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+          className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors"
         >
           ← Back to Blog
         </Link>
