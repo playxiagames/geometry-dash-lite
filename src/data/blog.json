@@ -112,7 +112,7 @@
       "readTime": 13,
       "thumbnail": "/blog/retro-bowl-comprehensive-review.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "best-puzzle-games-browser",
@@ -169,7 +169,7 @@
       "readTime": 14,
       "thumbnail": "/blog/pacman-strategy-complete-guide.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "subway-surfers-endless-runner-review",
