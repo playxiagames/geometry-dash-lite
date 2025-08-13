@@ -188,7 +188,7 @@
       "readTime": 11,
       "thumbnail": "/blog/subway-surfers-endless-runner-review.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "classic-vs-modern-browser-games",
@@ -207,7 +207,7 @@
       "readTime": 16,
       "thumbnail": "/blog/classic-vs-modern-browser-games.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "best-action-games-browser-2025",
