@@ -226,7 +226,7 @@
       "readTime": 10,
       "thumbnail": "/blog/best-action-games-browser-2025.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "gaming-ergonomics-health-tips",
@@ -245,7 +245,7 @@
       "readTime": 9,
       "thumbnail": "/blog/gaming-ergonomics-health-tips.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "minesweeper-advanced-techniques",
