@@ -264,7 +264,7 @@
       "readTime": 12,
       "thumbnail": "/blog/minesweeper-advanced-techniques.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "basketball-browser-games-review",
@@ -283,7 +283,7 @@
       "readTime": 8,
       "thumbnail": "/blog/basketball-browser-games-review.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "webgl-gaming-revolution",
