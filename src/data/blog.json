@@ -302,7 +302,7 @@
       "readTime": 13,
       "thumbnail": "/blog/webgl-gaming-revolution.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "wordle-winning-strategies",
@@ -321,7 +321,7 @@
       "readTime": 6,
       "thumbnail": "/blog/wordle-winning-strategies.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "solitaire-variations-guide",
