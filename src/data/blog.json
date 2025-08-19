@@ -340,7 +340,7 @@
       "readTime": 11,
       "thumbnail": "/blog/solitaire-variations-guide.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "casual-vs-hardcore-gaming",
@@ -359,7 +359,7 @@
       "readTime": 10,
       "thumbnail": "/blog/casual-vs-hardcore-gaming.svg",
       "featured": false,
-      "published": false
+      "published": true
     },
     {
       "slug": "most-addictive-browser-games",
