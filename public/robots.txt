@@ -15,5 +15,4 @@ Allow: /manifest.json
 # Sitemap
 Sitemap: https://geometry-dash-lite.org/sitemap.xml
 
-# Crawl delay (optional)
-Crawl-delay: 1 
+# No crawl delay - let Googlebot crawl freely 

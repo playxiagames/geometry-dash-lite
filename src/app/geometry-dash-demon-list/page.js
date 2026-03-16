@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import demonListData from '../../data/geometry-dash-demon-list-2025.json';
+import demonListData from '../../data/geometry-dash-demon-list-2026.json';
 
 export const metadata = {
-  title: 'Geometry Dash Demon List 2025 - Official Rankings',
-  description: 'Official Geometry Dash Demon List 2025 ranking the hardest extreme demon levels. Top 50 impossible challenges that push human skill limits.',
+  title: 'Geometry Dash Demon List 2026 - Official Rankings',
+  description: 'Official Geometry Dash Demon List 2026 ranking the hardest extreme demon levels. Top 50 impossible challenges that push human skill limits.',
   openGraph: {
-    title: 'Geometry Dash Demon List 2025 - Official Rankings',
+    title: 'Geometry Dash Demon List 2026 - Official Rankings',
     description: 'The ultimate ranking of the hardest Geometry Dash demon levels. Challenge yourself with the most extreme user-created content.',
     type: 'website',
     url: 'https://geometry-dash-lite.org/geometry-dash-demon-list/',
@@ -15,13 +15,13 @@ export const metadata = {
         url: 'https://images.geometry-dash-lite.org/demon-list-ranking.webp',
         width: 1200,
         height: 630,
-        alt: 'Geometry Dash Demon List 2025 Rankings',
+        alt: 'Geometry Dash Demon List 2026 Rankings',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Geometry Dash Demon List 2025 - Official Rankings',
+    title: 'Geometry Dash Demon List 2026 - Official Rankings',
     description: 'The ultimate ranking of the hardest Geometry Dash demon levels.',
     images: ['https://images.geometry-dash-lite.org/demon-list-ranking.webp'],
   },
@@ -76,7 +76,7 @@ export default function GeometryDashDemonListPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Geometry Dash Demon List 2025 Rankings",
+    "name": "Geometry Dash Demon List 2026 Rankings",
     "description": "Official ranking of the hardest Geometry Dash extreme demon levels",
     "url": "https://geometry-dash-lite.org/geometry-dash-demon-list/",
     "numberOfItems": topDemons.length,
@@ -103,7 +103,7 @@ export default function GeometryDashDemonListPage() {
         <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              ⚡ Geometry Dash Demon List 2025
+              ⚡ Geometry Dash Demon List 2026
             </h1>
             <p className="text-xl text-blue-100 max-w-4xl mx-auto mb-8">
               Welcome to the official <strong>Geometry Dash Demon List</strong> - the definitive ranking of the most challenging extreme demon levels ever created. 
@@ -164,7 +164,7 @@ export default function GeometryDashDemonListPage() {
             <div className="text-gray-600 dark:text-gray-300">Avg. Requirement</div>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 text-center transition-colors">
-            <div className="text-3xl font-bold text-indigo-600">2025</div>
+            <div className="text-3xl font-bold text-indigo-600">2026</div>
             <div className="text-gray-600 dark:text-gray-300">Current Year</div>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 text-center transition-colors">

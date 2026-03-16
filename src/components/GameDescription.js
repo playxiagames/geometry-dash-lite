@@ -89,6 +89,44 @@ const GameDescription = ({ game, className = '', hideTitle = false }) => {
             </div>
           </div>
         )}
+
+        {/* FAQ Section */}
+        {game.faq && game.faq.length > 0 && (
+          <div className="mb-6">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-left">❓ Frequently Asked Questions</h3>
+            <div className="space-y-3">
+              {game.faq.map((item, index) => (
+                <details key={index} className="bg-gray-50 dark:bg-slate-700 rounded-lg group">
+                  <summary className="flex items-center justify-between cursor-pointer p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-slate-600 rounded-lg transition-colors">
+                    <span>{item.q}</span>
+                    <span className="ml-2 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <div className="px-4 pb-4 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    {item.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+            {/* FAQ Schema */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": game.faq.map(item => ({
+                    "@type": "Question",
+                    "name": item.q,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": item.a
+                    }
+                  }))
+                })
+              }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
