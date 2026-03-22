@@ -444,7 +444,8 @@
       ],
       "guideFile": "geometry-dash-wave.md",
       "difficulty": 4,
-      "lastUpdated": "2025-01-08"
+      "lastUpdated": "2025-01-08",
+      "isNew": true
     },
     {
       "number": 7,
@@ -515,7 +516,8 @@
           "q": "Are spam levels harder than demon levels?",
           "a": "Spam levels present a different type of challenge than traditional demon levels. While demons test overall skill, pattern recognition, and consistency, spam levels specifically challenge your clicking speed and rapid-fire reflexes. Some players find spam easier, others find it harder - it depends on your natural clicking ability and practice with rapid input sequences."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 8,
@@ -590,7 +592,8 @@
       ],
       "guideFile": "geometry-dash-breeze.md",
       "difficulty": 2,
-      "lastUpdated": "2025-01-08"
+      "lastUpdated": "2025-01-08",
+      "isNew": true
     },
     {
       "number": 9,
@@ -1757,7 +1760,8 @@
           "q": "Can I play custom levels in Geometry Dash 3D?",
           "a": "Geometry Dash 3D focuses on curated 3D-enhanced levels designed specifically to showcase the dimensional gameplay mechanics. Unlike the full Geometry Dash with its level editor, this version prioritizes quality over quantity, offering carefully crafted stages that demonstrate what's possible when rhythm platforming meets three-dimensional design. Each level is optimized for the 3D experience."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 28,
@@ -1816,7 +1820,8 @@
           "q": "Can I play with friends in multiplayer mode?",
           "a": "Yes, the multiplayer racing mode supports competitive play where you and friends face identical monster waves simultaneously. You can compare scores and survival times to see who has the best piloting skills. The shared challenge creates exciting competition as you watch each other dodge attacks and try to outlast opponents."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 29,
@@ -2476,7 +2481,8 @@
           "q": "Is X Ball suitable for beginners or experienced players?",
           "a": "X Ball works for both skill levels. Beginners can learn ball mode mechanics in a focused environment without the complexity of multiple game modes. Experienced players will appreciate the advanced challenges that push ball mode to its limits. The difficulty progression accommodates different skill levels while maintaining the core gravity-switching focus."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 40,
@@ -2536,7 +2542,8 @@
           "q": "Is there a story or objective in Geometry Open World?",
           "a": "The game focuses on exploration and challenge completion rather than narrative. Your objective is to navigate the interconnected world, complete challenges to unlock new areas and abilities, and discover all the hidden content scattered throughout the zones. The satisfaction comes from mastering challenges and uncovering secrets through exploration."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 41,
@@ -2596,7 +2603,8 @@
           "q": "Can I play Geometry Vibes to relax or is it always challenging?",
           "a": "The game includes both casual modes designed for relaxation and stress relief, and challenge modes for players seeking to perfect their timing. You can choose your experience based on your mood—play casually to enjoy the music and visuals, or push yourself in challenge mode to master rhythm precision."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 42,
@@ -3076,7 +3084,8 @@
           "q": "Who has verified Sonic Wave Rebirth?",
           "a": "Sonic Wave Rebirth was verified by top Geometry Dash players after extensive testing and balancing. The level has been beaten by only a small number of elite players worldwide, making it one of the rarest completions in the game. Each verification represents hundreds of hours of dedicated practice and represents the absolute peak of human capability in rhythm-based platforming games."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 50,
@@ -3256,7 +3265,8 @@
           "q": "Is Maze Maps suitable for beginners?",
           "a": "Maze Maps offers varying difficulty depending on which paths you choose, making it accessible to different skill levels. Beginners can explore easier routes while advanced players can challenge themselves with harder paths. The maze concept adds complexity beyond just mechanical difficulty, so even experienced players will find the navigation aspect challenging. Practice mode is highly recommended for first-time players to learn the layout."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 53,
@@ -3624,7 +3634,8 @@
           "q": "What practice strategies work best for Kenos?",
           "a": "Break the level into manageable sections and master each individually in practice mode. Focus heavily on the wave sections as they're the main difficulty barrier. Use start positions to practice transitions between sections. Study top players' runs to learn optimal movement patterns. Build consistency in easier sections before tackling the hardest parts. Practice the ending extensively so you don't choke after long attempts. Take breaks to maintain mental freshness."
         }
-      ]
+      ],
+      "isNew": true
     },
     {
       "number": 59,

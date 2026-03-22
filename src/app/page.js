@@ -18,6 +18,7 @@ import {
   getFeaturedGames,
   getPopularGames, 
   getGeometryDashGames,
+  getNewGames,
   getCategoryPreviewGames,
   getAllCategories,
   getMoreGamesForHomepage,
@@ -55,6 +56,7 @@ export default function HomePage() {
   const sidebarGames = getSidebarRecommendedGames(mainGame.id, 7);
   const geometryDashGames = getGeometryDashGames();
   const popularGames = getPopularGames();
+  const newGames = getNewGames(8);
   const allGames = getAllGames(); // 用于获取游戏总数
   
   // 获取分类预览游戏
@@ -68,6 +70,7 @@ export default function HomePage() {
     ...sidebarGames.map(g => g.id),
     ...geometryDashGames.map(g => g.id),
     ...popularGames.map(g => g.id),
+    ...newGames.map(g => g.id),
     ...googleGamesPreview.map(g => g.id),
     ...js13kGamesPreview.map(g => g.id)
   ];
@@ -113,6 +116,7 @@ export default function HomePage() {
           <LazyGameSection
             geometryDashGames={geometryDashGames}
             popularGames={popularGames}
+            newGames={newGames}
             googleGamesPreview={googleGamesPreview}
             js13kGamesPreview={js13kGamesPreview}
             moreGames={moreGames}

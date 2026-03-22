@@ -18,6 +18,7 @@ const GameGridSuspense = ({ children, gridCols = "grid-cols-2 sm:grid-cols-3 md:
 const LazyGameSection = ({ 
   geometryDashGames,
   popularGames,
+  newGames,
   googleGamesPreview,
   js13kGamesPreview,
   moreGames,
@@ -46,6 +47,28 @@ const LazyGameSection = ({
       </div>
 
       {/* Popular Games Grid */}
+      {newGames && newGames.length > 0 && (
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-left">
+              🆕 Latest Releases
+            </h2>
+            <span className="text-sm text-gray-500 dark:text-gray-400">
+              {newGames.length} new games
+            </span>
+          </div>
+          <div className="bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-lg p-4 mb-4">
+            <p className="text-gray-700 dark:text-gray-300 text-sm">
+              ✨ Fresh additions to our collection! New Geometry Dash variants, fan-made levels, and unique spin-offs featuring the latest gameplay mechanics.
+            </p>
+          </div>
+          <GameGridSuspense>
+            <GameGrid games={newGames} />
+          </GameGridSuspense>
+        </div>
+      )}
+
+      {/* Trending Games Grid */}
       <div className="mt-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-left">🔥 Trending Now</h2>
         <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-3 mb-4">
@@ -165,7 +188,7 @@ const LazyGameSection = ({
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 <a href="/geometry-dash-demon-list/" className="hover:text-blue-600 transition-colors">
-                  Geometry Dash Demon List 2025
+                  Geometry Dash Demon List 2026
                 </a>
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">

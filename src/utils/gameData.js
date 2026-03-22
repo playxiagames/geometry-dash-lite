@@ -220,6 +220,12 @@ export const getGeometryDashGames = () => {
   return sortGamesByPriority(geometryDashGames);
 };
 
+// 获取最新/最近添加的游戏
+export const getNewGames = (count = 8) => {
+  const newGames = gamesData.games.filter(game => game.isNew === true);
+  return sortGamesByPriority(newGames).slice(0, count);
+};
+
 // 获取侧边栏推荐游戏 - 同系列游戏 + 热门游戏的组合
 export const getSidebarRecommendedGames = (mainGameId, count = 8) => {
   const mainGame = getGameById(mainGameId);
