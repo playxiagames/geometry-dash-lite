@@ -1,6 +1,63 @@
 {
   "blogPosts": [
     {
+      "slug": "geometry-dash-2-2-complete-guide",
+      "title": "Geometry Dash 2.2: Complete Guide to Every New Feature",
+      "excerpt": "Everything you need to know about Geometry Dash 2.2 — new game modes, the Platformer mode, camera controls, new triggers, and how to master the update that changed everything.",
+      "category": "tips",
+      "tags": [
+        "geometry dash",
+        "2.2 update",
+        "guide",
+        "new features",
+        "platformer mode"
+      ],
+      "author": "Gaming Expert Team",
+      "publishDate": "2026-03-22",
+      "readTime": 10,
+      "thumbnail": "/blog/geometry-dash-2-2-complete-guide.svg",
+      "featured": true,
+      "published": true
+    },
+    {
+      "slug": "geometry-dash-extreme-demons-2026",
+      "title": "Top 20 Extreme Demon Levels in Geometry Dash (2026 Ranking)",
+      "excerpt": "The definitive ranking of the hardest Geometry Dash levels in 2026. From Silent Clubstep to Acheron — see which extreme demons top the Demon List and what makes them so brutally difficult.",
+      "category": "rankings",
+      "tags": [
+        "geometry dash",
+        "extreme demon",
+        "demon list",
+        "hardest levels",
+        "2026"
+      ],
+      "author": "Gaming Expert Team",
+      "publishDate": "2026-03-21",
+      "readTime": 12,
+      "thumbnail": "/blog/geometry-dash-extreme-demons-2026.svg",
+      "featured": true,
+      "published": true
+    },
+    {
+      "slug": "geometry-dash-practice-tips-improve-fast",
+      "title": "How to Get Good at Geometry Dash: 10 Practice Tips That Actually Work",
+      "excerpt": "Stop dying at the same spot. These 10 proven practice strategies will help you beat harder levels, improve your timing, and progress from Easy Demons to Extreme Demons faster.",
+      "category": "tips",
+      "tags": [
+        "geometry dash",
+        "tips",
+        "practice",
+        "improve",
+        "strategy"
+      ],
+      "author": "Gaming Expert Team",
+      "publishDate": "2026-03-20",
+      "readTime": 8,
+      "thumbnail": "/blog/geometry-dash-practice-tips.svg",
+      "featured": false,
+      "published": true
+    },
+    {
       "slug": "top-10-browser-games-2025",
       "title": "Top 10 Browser Games 2026: The Ultimate Gaming Experience",
       "excerpt": "Discover the most engaging and addictive browser games of 2026. From puzzle adventures to action-packed challenges, explore games that deliver console-quality experiences directly in your web browser.",
@@ -32,7 +89,7 @@
         "analysis"
       ],
       "author": "Alex Johnson",
-      "publishDate": "2025-07-28",
+      "publishDate": "2026-07-28",
       "readTime": 15,
       "thumbnail": "/blog/geometry-dash-complete-review.svg",
       "featured": true,
@@ -70,7 +127,7 @@
         "high score"
       ],
       "author": "Puzzle Master Sarah",
-      "publishDate": "2025-07-27",
+      "publishDate": "2026-07-27",
       "readTime": 8,
       "thumbnail": "/blog/master-2048-strategy-guide.svg",
       "featured": false,
@@ -108,7 +165,7 @@
         "retro gaming"
       ],
       "author": "Sports Game Reviewer Tom",
-      "publishDate": "2025-07-23",
+      "publishDate": "2026-07-23",
       "readTime": 13,
       "thumbnail": "/blog/retro-bowl-comprehensive-review.svg",
       "featured": false,
@@ -127,7 +184,7 @@
         "thinking"
       ],
       "author": "Puzzle Enthusiast Lisa",
-      "publishDate": "2025-07-22",
+      "publishDate": "2026-07-22",
       "readTime": 9,
       "thumbnail": "/blog/best-puzzle-games-browser.svg",
       "featured": false,
@@ -146,7 +203,7 @@
         "performance"
       ],
       "author": "Performance Coach Maria",
-      "publishDate": "2025-07-20",
+      "publishDate": "2026-07-20",
       "readTime": 7,
       "thumbnail": "/blog/improve-reaction-time-gaming.svg",
       "featured": false,
@@ -165,7 +222,7 @@
         "high score"
       ],
       "author": "Arcade Legend Steve",
-      "publishDate": "2025-08-01",
+      "publishDate": "2026-08-01",
       "readTime": 14,
       "thumbnail": "/blog/pacman-strategy-complete-guide.svg",
       "featured": false,
@@ -184,7 +241,7 @@
         "action"
       ],
       "author": "Mobile Game Expert Anna",
-      "publishDate": "2025-08-02",
+      "publishDate": "2026-08-02",
       "readTime": 11,
       "thumbnail": "/blog/subway-surfers-endless-runner-review.svg",
       "featured": false,
@@ -203,7 +260,7 @@
         "comparison"
       ],
       "author": "Gaming Historian Robert",
-      "publishDate": "2025-08-03",
+      "publishDate": "2026-08-03",
       "readTime": 16,
       "thumbnail": "/blog/classic-vs-modern-browser-games.svg",
       "featured": false,
@@ -241,7 +298,7 @@
         "prevention"
       ],
       "author": "Health Expert Dr. Jennifer",
-      "publishDate": "2025-08-07",
+      "publishDate": "2026-08-07",
       "readTime": 9,
       "thumbnail": "/blog/gaming-ergonomics-health-tips.svg",
       "featured": false,
@@ -260,7 +317,7 @@
         "expert"
       ],
       "author": "Logic Puzzle Master Kevin",
-      "publishDate": "2025-08-08",
+      "publishDate": "2026-08-08",
       "readTime": 12,
       "thumbnail": "/blog/minesweeper-advanced-techniques.svg",
       "featured": false,
@@ -279,7 +336,7 @@
         "simulation"
       ],
       "author": "Sports Gaming Fan Marcus",
-      "publishDate": "2025-08-08",
+      "publishDate": "2026-08-08",
       "readTime": 8,
       "thumbnail": "/blog/basketball-browser-games-review.svg",
       "featured": false,
@@ -298,7 +355,7 @@
         "innovation"
       ],
       "author": "Tech Developer Rachel",
-      "publishDate": "2025-08-09",
+      "publishDate": "2026-08-09",
       "readTime": 13,
       "thumbnail": "/blog/webgl-gaming-revolution.svg",
       "featured": false,
@@ -317,7 +374,7 @@
         "vocabulary"
       ],
       "author": "Word Game Expert Patricia",
-      "publishDate": "2025-08-12",
+      "publishDate": "2026-08-12",
       "readTime": 6,
       "thumbnail": "/blog/wordle-winning-strategies.svg",
       "featured": false,
@@ -336,7 +393,7 @@
         "strategy"
       ],
       "author": "Card Game Connoisseur James",
-      "publishDate": "2025-08-13",
+      "publishDate": "2026-08-13",
       "readTime": 11,
       "thumbnail": "/blog/solitaire-variations-guide.svg",
       "featured": false,
@@ -355,7 +412,7 @@
         "analysis"
       ],
       "author": "Gaming Lifestyle Advisor Emma",
-      "publishDate": "2025-08-14",
+      "publishDate": "2026-08-14",
       "readTime": 10,
       "thumbnail": "/blog/casual-vs-hardcore-gaming.svg",
       "featured": false,
@@ -374,7 +431,7 @@
         "fun"
       ],
       "author": "Addiction Specialist Dr. Michael",
-      "publishDate": "2025-08-14",
+      "publishDate": "2026-08-14",
       "readTime": 14,
       "thumbnail": "/blog/most-addictive-browser-games.svg",
       "featured": false,
