@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "Geometry Dash Lite - Play Geometry Dash Online Free",
+    "name": "Geometry Dash Lite - Play Free Browser Game Online",
     "shortName": "Geometry Dash Lite", 
-    "description": "Play Geometry Dash Lite online for free! Ultimate rhythm-based platformer with challenging levels. No download required - play directly in your browser!",
+    "description": "Play Geometry Dash Lite online for free in your browser! The ultimate rhythm-based browser game with challenging levels. No download needed - instant play on any device!",
     "url": "https://geometry-dash-lite.org/",
     "contactEmail": "contact@geometry-dash-lite.org",
     "logo": "/images/logo.png",
@@ -81,6 +81,6 @@
         "external": false
       }
     ],
-    "copyright": "© 2025 Geometry Dash Lite. All rights reserved."
+    "copyright": "© 2026 Geometry Dash Lite. All rights reserved."
   }
 } 

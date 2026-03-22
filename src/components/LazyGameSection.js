@@ -237,26 +237,26 @@ const LazyGameSection = ({
       {/* SEO Content Section - 主要H1标签 */}
       <div className="mt-8 bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-left">
-          Play Geometry Dash Lite - Free Online Game
+          Play Geometry Dash Lite - Free Online Browser Game
         </h2>
         
         <div className="prose prose-lg max-w-none text-left">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            Welcome to the ultimate <strong>Geometry Dash Lite</strong> online experience! Our platform offers you the chance to play 
-            this addictive rhythm-based platformer directly in your browser - no downloads required! 
+            Welcome to the ultimate <strong>Geometry Dash Lite browser game</strong> experience! Play 
+            this addictive rhythm-based platformer directly in your browser - no downloads, no installs, completely free! 
           </p>
 
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            <strong>Geometry Dash Lite</strong> is the perfect introduction to the world of geometric challenges. Navigate your way through 
+            <strong>Geometry Dash Lite</strong> is the perfect free browser game for fans of rhythm-based challenges. Navigate your way through 
             a series of obstacle courses, each perfectly synchronized to an energetic soundtrack. With simple one-touch gameplay 
             that's easy to learn but hard to master, you'll find yourself coming back for "just one more try" again and again.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-left">🎮 Why Play Geometry Dash Lite Online?</h3>
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-left">🎮 Why Play Geometry Dash Lite in Your Browser?</h3>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mb-4">
-            <li><strong>Instant Play:</strong> No downloads or installations needed</li>
-            <li><strong>Free Access:</strong> Play the full game completely free</li>
-            <li><strong>Mobile Friendly:</strong> Works perfectly on phones, tablets, and computers</li>
+            <li><strong>Instant Play:</strong> No downloads or installations — play this browser game instantly</li>
+            <li><strong>Free Access:</strong> Play the full Geometry Dash Lite browser game completely free</li>
+            <li><strong>Works Everywhere:</strong> Play on phones, tablets, Chromebooks, and desktop browsers</li>
             <li><strong>Regular Updates:</strong> Access to the latest versions and bug fixes</li>
             <li><strong>Safe & Secure:</strong> Play safely in your browser without security concerns</li>
           </ul>
@@ -272,8 +272,8 @@ const LazyGameSection = ({
 
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             Ready to test your reflexes and rhythm? Click the play button above and dive into the world of 
-            <strong> Geometry Dash Lite</strong>. Whether you're a newcomer to the series or a veteran player, 
-            this online version provides the perfect platform to enjoy this beloved indie game sensation.
+            <strong> Geometry Dash Lite</strong> — the best free browser game for rhythm platformer fans. Whether you're a newcomer to the series or a veteran player, 
+            this online browser version provides the perfect platform to enjoy this beloved indie game sensation.
           </p>
         </div>
       </div>
