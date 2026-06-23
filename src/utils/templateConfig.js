@@ -27,10 +27,6 @@ export const getTemplateConfig = () => {
     seo: {
       googleAnalyticsId: siteConfigData.analytics?.googleAnalyticsId || null
     },
-    external: {
-      imageDomains: ["1games.io", "scratch.mit.edu"],
-      gameSources: ["iframe", "scratch", "external"]
-    },
     social: {
       twitter: "",
       facebook: "",
@@ -68,12 +64,4 @@ export const getMetadataBaseUrl = () => {
 export const isFeatureEnabled = (featureName) => {
   const config = getTemplateConfig();
   return config.features[featureName] || false;
-};
-
-/**
- * Get external domains for Next.js image configuration
- */
-export const getExternalImageDomains = () => {
-  const config = getTemplateConfig();
-  return config.external.imageDomains;
 }; 
