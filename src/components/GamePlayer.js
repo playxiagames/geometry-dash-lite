@@ -36,11 +36,8 @@ const GamePlayer = ({ game, className = '', showSkeleton = false, priority = fal
     const gameUrl = game.iframeUrl?.toLowerCase() || '';
     
     // 自托管的 TurboWarp 打包游戏单文件较大(7-26MB),给足加载时间
-    if (gameUrl.includes('game.geometry-dash-unblocked.com')) return 180000;
+    if (gameUrl.includes('games.playxia.com')) return 180000;
 
-    // Scratch游戏通常加载较慢
-    if (gameUrl.includes('scratch')) return 150000;
-    
     // Unity WebGL游戏
     if (gameUrl.includes('unity') || gameUrl.includes('.unity3d')) return 200000;
     

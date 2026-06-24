@@ -82,8 +82,7 @@ export default function RootLayout({ children }) {
         
         {/* Performance optimization - preconnect to external domains */}
         <link rel="preconnect" href="https://1games.io" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://scratch.mit.edu" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://game.geometry-dash-unblocked.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://games.playxia.com" crossOrigin="anonymous" />
         {gaId && process.env.NODE_ENV === 'production' && (
           <>
             <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -232,8 +231,7 @@ export default function RootLayout({ children }) {
         
         {/* 预加载关键游戏资源 */}
         <link rel="dns-prefetch" href="//1games.io" />
-        <link rel="dns-prefetch" href="//scratch.mit.edu" />
-        <link rel="dns-prefetch" href="//game.geometry-dash-unblocked.com" />
+        <link rel="dns-prefetch" href="//games.playxia.com" />
         
         {/* Structured data */}
         <script

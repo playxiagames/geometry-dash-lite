@@ -163,7 +163,7 @@ export function PreloadCriticalResources({ gameSlug, preloadImages = [] }) {
     });
 
     // 预连接到游戏域名
-    const gameOrigins = ['https://1games.io', 'https://scratch.mit.edu', 'https://game.geometry-dash-unblocked.com'];
+    const gameOrigins = ['https://1games.io', 'https://games.playxia.com'];
     gameOrigins.forEach(origin => {
       const link = document.createElement('link');
       link.rel = 'preconnect';
