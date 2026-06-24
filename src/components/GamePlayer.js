@@ -290,6 +290,12 @@ const GamePlayer = ({ game, className = '', showSkeleton = false, priority = fal
         </div>
       </div>
 
+      {/* 常驻提示：首次加载较慢（R2 缓存预热） */}
+      <div className="mb-2 flex items-start gap-2 rounded-md border border-blue-100 dark:border-blue-800/40 bg-blue-50 dark:bg-blue-900/20 px-3 py-2 text-xs text-blue-700 dark:text-blue-300">
+        <span className="flex-shrink-0">💡</span>
+        <span>First load may take a little longer while the game caches — it runs much faster every time after that.</span>
+      </div>
+
       {/* Game Container */}
       <div 
         ref={gameContainerRef}
