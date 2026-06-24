@@ -379,6 +379,9 @@ const GamePlayer = ({ game, className = '', showSkeleton = false, priority = fal
                     <p className="text-sm text-gray-300">
                       {Math.round(loadingProgress)}% complete
                     </p>
+                    <p className="text-xs text-gray-400 mt-3 leading-relaxed">
+                      💡 The first load may take a little longer while the game caches in your browser — it will start much faster every time after this. Thanks for your patience!
+                    </p>
                     {loadingStage === 'ready' && (
                       <p className="text-xs text-blue-400 animate-pulse">
                         Finalizing game initialization...
